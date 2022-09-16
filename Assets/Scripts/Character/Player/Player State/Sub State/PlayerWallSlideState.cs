@@ -1,9 +1,9 @@
-﻿using Character.Player.Data;
-using Character.Player.Player_FSM;
-using Character.Player.Player_State.Super_State;
+﻿using PlayerManager.Data;
+using PlayerManager.Player_FSM;
+using PlayerManager.Player_State.Super_State;
 using UnityEngine;
 
-namespace Character.Player.Player_State.Sub_State
+namespace PlayerManager.Player_State.Sub_State
 {
     public class PlayerWallSlideState : PlayerTouchingWallState
     {
@@ -22,13 +22,6 @@ namespace Character.Player.Player_State.Sub_State
             }
             
             playerManager.SetVelocityY(-playerData.wallSlideVelocity);
-
-            if (grabInput && playerManager.Input.MovementInput.y >= 0f)
-            {
-                stateMachine.ChangeState(playerManager.WallGrabState);
-                return;
-            }
-            
         }
     }
 }

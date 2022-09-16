@@ -1,9 +1,9 @@
-﻿using Character.Player.Data;
-using Character.Player.Player_FSM;
-using Character.Player.Player_State.Super_State;
+﻿using PlayerManager.Player_State.Super_State;
+using PlayerManager.Data;
+using PlayerManager.Player_FSM;
 using UnityEngine;
 
-namespace Character.Player.Player_State.Sub_State
+namespace PlayerManager.Player_State.Sub_State
 {
     public class PlayerInAirState : PlayerState
     {
@@ -14,6 +14,7 @@ namespace Character.Player.Player_State.Sub_State
         private bool _isJumping;
         private bool _isGrounded;
         private bool _isTouchingWall;
+        private bool _isTouchingLedge;
         private bool _coyoteTime;
         
         public PlayerInAirState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
@@ -36,11 +37,19 @@ namespace Character.Player.Player_State.Sub_State
             
             playerManager.CheckPlayerFlip();
             
+            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(playerManager.Rb.velocity.x));
             playerManager.Anim.SetFloat("velocityY", playerManager.Rb.velocity.y);
 
             if (_jumpInput && playerManager.JumpState.CheckAmountOfJumps())
             {
                 stateMachine.ChangeState(playerManager.JumpState);
+                playerManager.Input.UseJumpInput();
+                return;
+            }
+
+            if (_isTouchingWall && !_isTouchingLedge)
+            {
+                stateMachine.ChangeState(playerManager.LedgeClimbState);
                 return;
             }
 
@@ -50,18 +59,6 @@ namespace Character.Player.Player_State.Sub_State
                 return;
             }
 
-            if (_jumpInput && _isTouchingWall)
-            {
-                stateMachine.ChangeState(playerManager.WallJumpState);
-                return;
-            }
-            
-            if (_isTouchingWall && _grabInput)
-            {
-                stateMachine.ChangeState(playerManager.WallGrabState);
-                return;
-            }
-                
             if (_isTouchingWall && playerManager.Input.InputDirection == playerManager.PlayerDirection && playerManager.Rb.velocity.y < 0f)
             {
                 stateMachine.ChangeState(playerManager.WallSlideState);
@@ -77,6 +74,12 @@ namespace Character.Player.Player_State.Sub_State
             
             _isGrounded = playerManager.CheckGrounded();
             _isTouchingWall = playerManager.CheckWall();
+            _isTouchingLedge = playerManager.CheckLedge();
+            
+            if (_isTouchingWall && !_isTouchingLedge)
+            {
+                playerManager.LedgeClimbState.SetPosition(playerManager.transform.position);
+            }
         }
 
         private void CheckCoyoteTime()

@@ -1,8 +1,8 @@
-﻿using Character.Player.Data;
-using Character.Player.Player_FSM;
+﻿using PlayerManager.Data;
+using PlayerManager.Player_FSM;
 using UnityEngine;
 
-namespace Character.Player.Player_State.Super_State
+namespace PlayerManager.Player_State.Super_State
 {
     public class PlayerGroundState : PlayerState
     {
@@ -35,6 +35,7 @@ namespace Character.Player.Player_State.Super_State
             
             if (_jumpInput && playerManager.JumpState.CheckAmountOfJumps())
             {
+                playerManager.Input.UseJumpInput();
                 stateMachine.ChangeState(playerManager.JumpState);
                 return;
             }
@@ -43,12 +44,6 @@ namespace Character.Player.Player_State.Super_State
             {
                 playerManager.InAirState.StartCoyoteTime();
                 stateMachine.ChangeState(playerManager.InAirState);
-                return;
-            }
-
-            if (_isTouchingWall && _grabInput)
-            {
-                stateMachine.ChangeState(playerManager.WallGrabState);
                 return;
             }
         }

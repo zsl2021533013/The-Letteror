@@ -1,7 +1,7 @@
-using Character.Player.Data;
+using PlayerManager.Data;
 using UnityEngine;
 
-namespace Character.Player.Player_FSM
+namespace PlayerManager.Player_FSM
 {
     public class PlayerState
     {

@@ -1,8 +1,8 @@
-﻿using Character.Player.Data;
-using Character.Player.Player_FSM;
+﻿using PlayerManager.Data;
+using PlayerManager.Player_FSM;
 using UnityEngine;
 
-namespace Character.Player.Player_State.Super_State
+namespace PlayerManager.Player_State.Super_State
 {
     public class PlayerTouchingWallState : PlayerState
     {
@@ -22,6 +22,7 @@ namespace Character.Player.Player_State.Super_State
             base.OnEnter();
             
             playerManager.JumpState.ResetAmountOfJumps();
+            playerManager.Input.UseJumpInput();
         }
 
         public override void OnUpdate()

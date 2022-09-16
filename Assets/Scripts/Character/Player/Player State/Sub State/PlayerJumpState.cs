@@ -1,9 +1,9 @@
-﻿using Character.Player.Data;
-using Character.Player.Player_FSM;
-using Character.Player.Player_State.Super_State;
+﻿using PlayerManager.Data;
+using PlayerManager.Player_FSM;
+using PlayerManager.Player_State.Super_State;
 using UnityEngine;
 
-namespace Character.Player.Player_State.Sub_State
+namespace PlayerManager.Player_State.Sub_State
 {
     public class PlayerJumpState : PlayerAbilityState
     {
@@ -23,7 +23,6 @@ namespace Character.Player.Player_State.Sub_State
             isAbilityDone = true;
             DecreaseAmountOfJumps();
             playerManager.InAirState.StartJumping();
-            playerManager.Input.UseJumpInput();
         }
         
         public bool CheckAmountOfJumps() => amountOfJumpsLeft > 0;

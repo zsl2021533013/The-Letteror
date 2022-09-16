@@ -1,13 +1,13 @@
 using System;
-using Character.Player.Data;
-using Character.Player.Input_System;
-using Character.Player.Manager;
-using Character.Player.Player_State.Sub_State;
-using Character.Player.Player_State.Super_State;
+using PlayerManager.Player_State.Super_State;
+using PlayerManager.Data;
+using PlayerManager.Input_System;
+using PlayerManager.Manager;
+using PlayerManager.Player_State.Sub_State;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Character.Player.Player_FSM
+namespace PlayerManager.Player_FSM
 {
     public class PlayerManager : MonoBehaviour
     {
@@ -18,6 +18,7 @@ namespace Character.Player.Player_FSM
         
         [SerializeField] private Transform groundSensor;
         [SerializeField] private Transform wallSensor;
+        [SerializeField] private Transform ledgeSensor;
 
         #endregion
 
@@ -30,9 +31,9 @@ namespace Character.Player.Player_FSM
         public PlayerJumpState JumpState { get; private set; }
         public PlayerInAirState InAirState { get; private set; }
         public PlayerLandState LandState { get; private set; }
-        public PlayerWallGrabState WallGrabState { get; private set; }
         public PlayerWallSlideState WallSlideState { get; private set; }
         public PlayerWallJumpState WallJumpState { get; private set; }
+        public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         
         #endregion
 
@@ -79,11 +80,16 @@ namespace Character.Player.Player_FSM
             JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
             InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
             LandState = new PlayerLandState(this, StateMachine, playerData, "land");
-            WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
             WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
             WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
+            LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeGrab");
         }
 
+        public void SetVelocity(Vector2 velocity)
+        {
+            Rb.velocity = velocity;
+        }
+        
         public void SetVelocity(float velocity, Vector2 angle,int direction)
         {
             angle.Normalize();
@@ -124,11 +130,33 @@ namespace Character.Player.Player_FSM
             return isTouchingWall;
         }
 
+        public bool CheckLedge()
+        {
+            bool isTouchingLedge = Physics2D.Raycast(ledgeSensor.position, Vector2.right * PlayerDirection,
+                playerData.wallCheckDistance, playerData.groundLayerMask);
+            return isTouchingLedge;
+        }
+        
         #endregion
 
         public void AnimationTrigger() => StateMachine.CurrentState.AnimatonTrigger();
 
         public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinish();
+        
+        public Vector2 DetermineCornerPosition()
+        {
+            RaycastHit2D hitX = Physics2D.Raycast(wallSensor.position, Vector2.right * PlayerDirection,
+                playerData.wallCheckDistance, playerData.groundLayerMask);
+            float distanceX = hitX.distance + 0.01f;
+            
+            Vector2 detectPosition = (Vector2)ledgeSensor.position + new Vector2(distanceX * PlayerDirection, 0f);
+            float detectDistance = ledgeSensor.position.y - wallSensor.position.y;
+            RaycastHit2D hitY = Physics2D.Raycast(detectPosition, Vector2.down,
+                detectDistance, playerData.groundLayerMask);
+            float distanceY = hitY.distance + 0.01f;
+
+            return new Vector2(wallSensor.position.x + distanceX * PlayerDirection, ledgeSensor.position.y - distanceY);
+        }
         
         private void OnDrawGizmos()
         {

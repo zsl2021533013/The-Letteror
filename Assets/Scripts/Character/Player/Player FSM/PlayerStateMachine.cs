@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Character.Player.Player_FSM
+namespace PlayerManager.Player_FSM
 {
     public class PlayerStateMachine
     {
