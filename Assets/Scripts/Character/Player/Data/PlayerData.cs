@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace PlayerManager.Data
+namespace Character.Player.Data
 {
     [CreateAssetMenu(fileName = "New Player Data",menuName = "Data/Player Data/Base Data")]
     public class PlayerData : ScriptableObject
@@ -11,7 +10,7 @@ namespace PlayerManager.Data
         
         [Header(("Jump State"))]
         public float jumpVelocity;
-        public int amountOfJumps;
+        public int amountOfJump;
         
         [Header("In Air State")]
         public float coyoteTime;
@@ -31,6 +30,10 @@ namespace PlayerManager.Data
         [Header("Ledge Climb State")] 
         public Vector2 startOffset;
         public Vector2 stopOffset;
+
+        [Header("Dash State")] 
+        public float dashVelocity;
+        public int amountOfDash;
         
         [Header("Sensors Attribute")] 
         public Vector2 groundSensorSize;

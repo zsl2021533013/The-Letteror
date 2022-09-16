@@ -1,25 +1,32 @@
-﻿using PlayerManager.Player_State.Super_State;
-using PlayerManager.Data;
-using PlayerManager.Player_FSM;
+﻿using Character.Player.Data;
+using Character.Player.Manager;
+using Character.Player.Player_FSM;
 using UnityEngine;
 
-namespace PlayerManager.Player_State.Sub_State
+namespace Character.Player.Player_State.Sub_State.Air_State
 {
-    public class PlayerInAirState : PlayerState
+    public class PlayerAirState : PlayerState
     {
         private Vector2 _movementInput;
         private bool _jumpInput;
         private bool _jumpInputStop;
-        private bool _grabInput;
+        private bool _dashInput;
         private bool _isJumping;
         private bool _isGrounded;
         private bool _isTouchingWall;
         private bool _isTouchingLedge;
         private bool _coyoteTime;
         
-        public PlayerInAirState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
+        public PlayerAirState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
             string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
         {
+        }
+
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            playerManager.Input.ResetDashInput();
         }
 
         public override void OnUpdate()
@@ -29,7 +36,7 @@ namespace PlayerManager.Player_State.Sub_State
             _movementInput = playerManager.Input.MovementInput;
             _jumpInput = playerManager.Input.JumpInput;
             _jumpInputStop = playerManager.Input.JumpInputStop;
-            _grabInput = playerManager.Input.GrabInput;
+            _dashInput = playerManager.Input.DashInput;
             
             CheckJumping();
             
@@ -40,22 +47,29 @@ namespace PlayerManager.Player_State.Sub_State
             playerManager.Anim.SetFloat("velocityX", Mathf.Abs(playerManager.Rb.velocity.x));
             playerManager.Anim.SetFloat("velocityY", playerManager.Rb.velocity.y);
 
-            if (_jumpInput && playerManager.JumpState.CheckAmountOfJumps())
+            if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
             {
                 stateMachine.ChangeState(playerManager.JumpState);
-                playerManager.Input.UseJumpInput();
+                playerManager.Input.ResetJumpInput();
                 return;
             }
-
-            if (_isTouchingWall && !_isTouchingLedge)
+            
+            if (_dashInput && playerManager.DashState.CheckAmountOfDash())
             {
-                stateMachine.ChangeState(playerManager.LedgeClimbState);
+                playerManager.Input.ResetDashInput();
+                stateMachine.ChangeState(playerManager.DashState);
                 return;
             }
 
             if (_isGrounded && playerManager.Rb.velocity.y < 0.01f)
             {
                 stateMachine.ChangeState(playerManager.LandState);
+                return;
+            }
+            
+            if (_isTouchingWall && !_isTouchingLedge && !_isGrounded)
+            {
+                stateMachine.ChangeState(playerManager.LedgeClimbState);
                 return;
             }
 
@@ -91,7 +105,7 @@ namespace PlayerManager.Player_State.Sub_State
             }
         }
 
-        private void CheckJumping()
+        private void CheckJumping() // 用于制作可控的跳跃高度
         {
             if (_isJumping)
             {

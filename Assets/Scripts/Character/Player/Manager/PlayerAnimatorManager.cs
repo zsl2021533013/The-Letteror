@@ -1,11 +1,10 @@
-using PlayerManager.Player_FSM;
 using UnityEngine;
 
-namespace PlayerManager.Manager
+namespace Character.Player.Manager
 {
     public class PlayerAnimatorManager : MonoBehaviour
     {
-        public Player_FSM.PlayerManager PlayerManager { get; set; }
+        public PlayerManager PlayerManager { get; set; }
 
         public void AnimationFinish() => PlayerManager.StateMachine.CurrentState.AnimationFinish();
     }

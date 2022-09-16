@@ -1,8 +1,9 @@
-﻿using PlayerManager.Data;
-using PlayerManager.Player_FSM;
+﻿using Character.Player.Data;
+using Character.Player.Manager;
+using Character.Player.Player_FSM;
 using UnityEngine;
 
-namespace PlayerManager.Player_State.Sub_State
+namespace Character.Player.Player_State.Sub_State.Wall_State
 {
     public class PlayerLedgeClimbState : PlayerState
     {
@@ -12,7 +13,7 @@ namespace PlayerManager.Player_State.Sub_State
         private Vector2 _stopPosition;
         private bool _jumpInput;
         
-        public PlayerLedgeClimbState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
+        public PlayerLedgeClimbState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
             string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
         {
         }
@@ -21,7 +22,7 @@ namespace PlayerManager.Player_State.Sub_State
         {
             base.OnEnter();
             
-            playerManager.JumpState.ResetAmountOfJumps();
+            playerManager.JumpState.ResetAmountOfJump();
             
             playerManager.SetVelocity(Vector2.zero);
             playerManager.transform.position = _detectedPosition;

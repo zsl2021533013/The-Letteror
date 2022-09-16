@@ -1,13 +1,14 @@
-﻿using PlayerManager.Data;
-using PlayerManager.Player_FSM;
-using PlayerManager.Player_State.Super_State;
+﻿using Character.Player.Data;
+using Character.Player.Manager;
+using Character.Player.Player_FSM;
+using Character.Player.Player_State.Super_State;
 using UnityEngine;
 
-namespace PlayerManager.Player_State.Sub_State
+namespace Character.Player.Player_State.Sub_State.Wall_State
 {
     public class PlayerWallJumpState : PlayerAbilityState
     {
-        public PlayerWallJumpState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine,
+        public PlayerWallJumpState(PlayerManager playerManager, PlayerStateMachine stateMachine,
             PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
         {
         }

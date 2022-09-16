@@ -1,19 +1,21 @@
-﻿using PlayerManager.Data;
-using PlayerManager.Player_FSM;
+﻿using Character.Player.Data;
+using Character.Player.Manager;
+using Character.Player.Player_FSM;
 using UnityEngine;
 
-namespace PlayerManager.Player_State.Super_State
+namespace Character.Player.Player_State.Super_State
 {
     public class PlayerGroundState : PlayerState
     {
         protected Vector2 movementInput;
 
         private bool _jumpInput;
+        private bool _dashInput;
         private bool _grabInput;
         private bool _isGrounded;
         private bool _isTouchingWall;
         
-        public PlayerGroundState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
+        public PlayerGroundState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
             string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
         {
         }
@@ -22,28 +24,38 @@ namespace PlayerManager.Player_State.Super_State
         {
             base.OnEnter();
 
-            playerManager.Input.UseJumpInput();
-            playerManager.JumpState.ResetAmountOfJumps();
+            playerManager.Input.ResetJumpInput();
+            playerManager.Input.ResetDashInput();
+            playerManager.JumpState.ResetAmountOfJump();
+            playerManager.DashState.ResetAmountOfDash();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
+            
             movementInput = playerManager.Input.MovementInput;
             _jumpInput = playerManager.Input.JumpInput;
-            _grabInput = playerManager.Input.GrabInput;
+            _dashInput = playerManager.Input.DashInput;
             
-            if (_jumpInput && playerManager.JumpState.CheckAmountOfJumps())
+            if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
             {
-                playerManager.Input.UseJumpInput();
+                playerManager.Input.ResetJumpInput();
                 stateMachine.ChangeState(playerManager.JumpState);
+                return;
+            }
+
+            if (_dashInput && playerManager.DashState.CheckAmountOfDash())
+            {
+                playerManager.Input.ResetDashInput();
+                stateMachine.ChangeState(playerManager.DashState);
                 return;
             }
 
             if (!_isGrounded)
             {
-                playerManager.InAirState.StartCoyoteTime();
-                stateMachine.ChangeState(playerManager.InAirState);
+                playerManager.AirState.StartCoyoteTime();
+                stateMachine.ChangeState(playerManager.AirState);
                 return;
             }
         }

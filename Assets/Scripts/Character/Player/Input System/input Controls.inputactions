@@ -24,9 +24,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Grab",
+                    "name": "Dash",
                     "type": "Button",
-                    "id": "f5841963-a638-446b-a9d9-5c2ec1bb2302",
+                    "id": "4d74cd24-51d1-4d5a-91d2-10731df670c8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -124,23 +124,23 @@
                 },
                 {
                     "name": "",
-                    "id": "11c9bcde-ef0a-47a0-9613-a24f61a26bd5",
-                    "path": "<Keyboard>/ctrl",
+                    "id": "a52c86e6-dc37-4f27-85e8-625421bbc3c4",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyborad",
-                    "action": "Grab",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "2f7738c0-4f54-4874-85ce-57bad7b97200",
-                    "path": "<XInputController>/rightTrigger",
+                    "id": "7fad1dbc-f8aa-4b22-af2b-8be02dd1895a",
+                    "path": "<XInputController>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "XBox",
-                    "action": "Grab",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

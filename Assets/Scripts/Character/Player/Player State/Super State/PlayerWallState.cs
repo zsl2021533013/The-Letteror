@@ -1,10 +1,10 @@
-﻿using PlayerManager.Data;
-using PlayerManager.Player_FSM;
-using UnityEngine;
+﻿using Character.Player.Data;
+using Character.Player.Manager;
+using Character.Player.Player_FSM;
 
-namespace PlayerManager.Player_State.Super_State
+namespace Character.Player.Player_State.Super_State
 {
-    public class PlayerTouchingWallState : PlayerState
+    public class PlayerWallState : PlayerState
     {
         protected bool grabInput;
         protected bool jumpInput;
@@ -12,7 +12,7 @@ namespace PlayerManager.Player_State.Super_State
         private bool _isGrounded;
         protected bool _isTouchingWall;
         
-        public PlayerTouchingWallState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine,
+        public PlayerWallState(PlayerManager playerManager, PlayerStateMachine stateMachine,
             PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
         {
         }
@@ -21,15 +21,15 @@ namespace PlayerManager.Player_State.Super_State
         {
             base.OnEnter();
             
-            playerManager.JumpState.ResetAmountOfJumps();
-            playerManager.Input.UseJumpInput();
+            playerManager.JumpState.ResetAmountOfJump();
+            playerManager.Input.ResetJumpInput();
+            playerManager.DashState.ResetAmountOfDash();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            grabInput = playerManager.Input.GrabInput;
             jumpInput = playerManager.Input.JumpInput;
             
             if (_isGrounded && !grabInput)
@@ -40,14 +40,14 @@ namespace PlayerManager.Player_State.Super_State
 
             if (_isTouchingWall && jumpInput)
             {
-                playerManager.Input.UseJumpInput();
+                playerManager.Input.ResetJumpInput();
                 stateMachine.ChangeState(playerManager.WallJumpState);
                 return;
             }
             
             if (!_isTouchingWall)
             {
-                stateMachine.ChangeState(playerManager.InAirState);
+                stateMachine.ChangeState(playerManager.AirState);
                 return;
             }
         }

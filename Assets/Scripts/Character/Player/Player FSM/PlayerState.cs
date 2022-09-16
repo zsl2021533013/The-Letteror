@@ -1,7 +1,8 @@
-using PlayerManager.Data;
+using Character.Player.Data;
+using Character.Player.Manager;
 using UnityEngine;
 
-namespace PlayerManager.Player_FSM
+namespace Character.Player.Player_FSM
 {
     public class PlayerState
     {
@@ -52,12 +53,6 @@ namespace PlayerManager.Player_FSM
 
         public virtual void DoChecks()
         {
-            
-        }
-
-        public virtual void AnimatonTrigger()
-        {
-            
         }
 
         public virtual void AnimationFinish() => isAnimationFinished = true;

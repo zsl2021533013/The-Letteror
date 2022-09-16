@@ -1,14 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace PlayerManager.Input_System
+namespace Character.Player.Input_System
 {
-    public class InputHandler : MonoBehaviour
+    public class PlayerInputHandler : MonoBehaviour
     {
         public Vector2 MovementInput { get; private set; }
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
-        public bool GrabInput { get; private set; }
+        public bool DashInput { get; private set; }
         
         public int InputDirection
         {
@@ -41,20 +42,17 @@ namespace PlayerManager.Input_System
             }
         }
 
-        public void UseJumpInput() => JumpInput = false;
-        
-        public void OnGrabInput(InputAction.CallbackContext ctx)
+        public void ResetJumpInput() => JumpInput = false;
+
+        public void OnDashInput(InputAction.CallbackContext ctx)
         {
             if (ctx.started)
             {
-                GrabInput = true;
-            }
-
-            if (ctx.canceled)
-            {
-                GrabInput = false;
+                DashInput = true;
             }
         }
+
+        public void ResetDashInput() => DashInput = false;
     }
     
 }

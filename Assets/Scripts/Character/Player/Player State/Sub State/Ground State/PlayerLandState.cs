@@ -1,13 +1,13 @@
-﻿using PlayerManager.Data;
-using PlayerManager.Player_FSM;
-using PlayerManager.Player_State.Super_State;
-using UnityEngine;
+﻿using Character.Player.Data;
+using Character.Player.Manager;
+using Character.Player.Player_FSM;
+using Character.Player.Player_State.Super_State;
 
-namespace PlayerManager.Player_State.Sub_State
+namespace Character.Player.Player_State.Sub_State.Ground_State
 {
     public class PlayerLandState : PlayerGroundState
     {
-        public PlayerLandState(Player_FSM.PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
+        public PlayerLandState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
             string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
         {
         }

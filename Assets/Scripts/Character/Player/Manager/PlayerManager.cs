@@ -1,13 +1,13 @@
-using System;
-using PlayerManager.Player_State.Super_State;
-using PlayerManager.Data;
-using PlayerManager.Input_System;
-using PlayerManager.Manager;
-using PlayerManager.Player_State.Sub_State;
+using Character.Player.Data;
+using Character.Player.Input_System;
+using Character.Player.Player_FSM;
+using Character.Player.Player_State.Sub_State.Ability_State;
+using Character.Player.Player_State.Sub_State.Air_State;
+using Character.Player.Player_State.Sub_State.Ground_State;
+using Character.Player.Player_State.Sub_State.Wall_State;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace PlayerManager.Player_FSM
+namespace Character.Player.Manager
 {
     public class PlayerManager : MonoBehaviour
     {
@@ -29,15 +29,16 @@ namespace PlayerManager.Player_FSM
         public PlayerIdleState IdleState { get; private set; }
         public PlayerMoveState MoveState { get; private set; }
         public PlayerJumpState JumpState { get; private set; }
-        public PlayerInAirState InAirState { get; private set; }
+        public PlayerAirState AirState { get; private set; }
         public PlayerLandState LandState { get; private set; }
         public PlayerWallSlideState WallSlideState { get; private set; }
         public PlayerWallJumpState WallJumpState { get; private set; }
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
+        public PlayerDashState DashState { get; private set; }
         
         #endregion
 
-        public InputHandler Input { get; private set; }
+        public PlayerInputHandler Input { get; private set; }
 
         public Rigidbody2D Rb { get; private set; }
         
@@ -50,7 +51,7 @@ namespace PlayerManager.Player_FSM
         private void Awake()
         {
             InitializeFsm();
-            Input = GetComponent<InputHandler>();
+            Input = GetComponent<PlayerInputHandler>();
             Rb = GetComponent<Rigidbody2D>();
             Anim = GetComponentInChildren<Animator>();
             AnimatorManager = GetComponentInChildren<PlayerAnimatorManager>();
@@ -78,11 +79,12 @@ namespace PlayerManager.Player_FSM
             IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
             MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
             JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
-            InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
+            AirState = new PlayerAirState(this, StateMachine, playerData, "inAir");
             LandState = new PlayerLandState(this, StateMachine, playerData, "land");
             WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
             WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
             LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeGrab");
+            DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         }
 
         public void SetVelocity(Vector2 velocity)
@@ -138,9 +140,7 @@ namespace PlayerManager.Player_FSM
         }
         
         #endregion
-
-        public void AnimationTrigger() => StateMachine.CurrentState.AnimatonTrigger();
-
+        
         public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinish();
         
         public Vector2 DetermineCornerPosition()
