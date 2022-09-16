@@ -49,7 +49,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
 
             if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
             {
-                stateMachine.ChangeState(playerManager.JumpState);
+                stateMachine.TranslateToState(playerManager.JumpState);
                 playerManager.Input.ResetJumpInput();
                 return;
             }
@@ -57,25 +57,26 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             if (_dashInput && playerManager.DashState.CheckAmountOfDash())
             {
                 playerManager.Input.ResetDashInput();
-                stateMachine.ChangeState(playerManager.DashState);
+                stateMachine.TranslateToState(playerManager.DashState);
                 return;
             }
 
             if (_isGrounded && playerManager.Rb.velocity.y < 0.01f)
             {
-                stateMachine.ChangeState(playerManager.LandState);
+                stateMachine.TranslateToState(playerManager.LandState);
                 return;
             }
             
             if (_isTouchingWall && !_isTouchingLedge && !_isGrounded)
             {
-                stateMachine.ChangeState(playerManager.LedgeClimbState);
+                stateMachine.TranslateToState(playerManager.LedgeClimbState);
                 return;
             }
 
-            if (_isTouchingWall && playerManager.Input.InputDirection == playerManager.PlayerDirection && playerManager.Rb.velocity.y < 0f)
+            if (_isTouchingWall && playerManager.Input.InputDirection == playerManager.PlayerDirection &&
+                playerManager.Rb.velocity.y < 0.1f) 
             {
-                stateMachine.ChangeState(playerManager.WallSlideState);
+                stateMachine.TranslateToState(playerManager.WallSlideState);
                 return;
             }
         }

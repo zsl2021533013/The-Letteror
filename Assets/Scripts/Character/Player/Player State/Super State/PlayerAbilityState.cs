@@ -31,11 +31,11 @@ namespace Character.Player.Player_State.Super_State
             {
                 if (isGrounded && playerManager.Rb.velocity.y < 0.01f)
                 {
-                    stateMachine.ChangeState(playerManager.IdleState);
+                    stateMachine.TranslateToState(playerManager.IdleState);
                 }
                 else
                 {
-                    stateMachine.ChangeState(playerManager.AirState);
+                    stateMachine.TranslateToState(playerManager.AirState);
                 }
             }
         }

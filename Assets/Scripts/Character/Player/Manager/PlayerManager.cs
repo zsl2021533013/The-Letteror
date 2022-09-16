@@ -35,6 +35,7 @@ namespace Character.Player.Manager
         public PlayerWallJumpState WallJumpState { get; private set; }
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
+        public PlayerRollState RollState { get; private set; }
         
         #endregion
 
@@ -85,6 +86,7 @@ namespace Character.Player.Manager
             WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
             LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeGrab");
             DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
+            RollState = new PlayerRollState(this, StateMachine, playerData, "roll");
         }
 
         public void SetVelocity(Vector2 velocity)

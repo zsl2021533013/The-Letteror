@@ -10,7 +10,7 @@ namespace Character.Player.Player_FSM
             CurrentState.OnEnter();
         }
 
-        public void ChangeState(PlayerState playerState)
+        public void TranslateToState(PlayerState playerState)
         {
             CurrentState.OnExit();
             CurrentState = playerState;

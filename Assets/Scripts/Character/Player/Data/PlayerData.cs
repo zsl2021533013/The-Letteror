@@ -34,6 +34,9 @@ namespace Character.Player.Data
         [Header("Dash State")] 
         public float dashVelocity;
         public int amountOfDash;
+
+        [Header("Roll State")] 
+        public float rollVelocity;
         
         [Header("Sensors Attribute")] 
         public Vector2 groundSensorSize;

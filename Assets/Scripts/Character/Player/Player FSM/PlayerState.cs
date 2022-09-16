@@ -31,7 +31,7 @@ namespace Character.Player.Player_FSM
             playerManager.Anim.SetBool(_animBoolName, true);
             isAnimationFinished = false;
             isStateFinished = false;
-            //Debug.Log("Enter " + _animBoolName + " State");
+            Debug.Log("Enter " + _animBoolName + " State");
         }
 
         public virtual void OnExit()

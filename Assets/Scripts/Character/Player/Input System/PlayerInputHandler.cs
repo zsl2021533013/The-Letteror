@@ -10,6 +10,7 @@ namespace Character.Player.Input_System
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
         public bool DashInput { get; private set; }
+        public bool RollInput { get; private set; }
         
         public int InputDirection
         {
@@ -32,6 +33,7 @@ namespace Character.Player.Input_System
         {
             if (ctx.started)
             {
+                Debug.Log(1);
                 JumpInput = true;
                 JumpInputStop = false;
             }
@@ -42,8 +44,6 @@ namespace Character.Player.Input_System
             }
         }
 
-        public void ResetJumpInput() => JumpInput = false;
-
         public void OnDashInput(InputAction.CallbackContext ctx)
         {
             if (ctx.started)
@@ -52,7 +52,22 @@ namespace Character.Player.Input_System
             }
         }
 
+        public void OnRollInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                RollInput = true;
+            }
+        }
+
+        #region Reset Trigger
+        
+        public void ResetJumpInput() => JumpInput = false;
         public void ResetDashInput() => DashInput = false;
+        public void ResetRollInput() => RollInput = false;
+
+        #endregion
+        
     }
     
 }

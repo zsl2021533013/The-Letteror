@@ -34,20 +34,20 @@ namespace Character.Player.Player_State.Super_State
             
             if (_isGrounded && !grabInput)
             {
-                stateMachine.ChangeState(playerManager.IdleState);
+                stateMachine.TranslateToState(playerManager.IdleState);
                 return;
             }
 
             if (_isTouchingWall && jumpInput)
             {
                 playerManager.Input.ResetJumpInput();
-                stateMachine.ChangeState(playerManager.WallJumpState);
+                stateMachine.TranslateToState(playerManager.WallJumpState);
                 return;
             }
             
             if (!_isTouchingWall)
             {
-                stateMachine.ChangeState(playerManager.AirState);
+                stateMachine.TranslateToState(playerManager.AirState);
                 return;
             }
         }

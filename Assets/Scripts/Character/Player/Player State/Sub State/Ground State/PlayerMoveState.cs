@@ -29,7 +29,7 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
             
             if (Mathf.Abs(movementInput.x) <= 0.1f)
             {
-                stateMachine.ChangeState(playerManager.IdleState);
+                stateMachine.TranslateToState(playerManager.IdleState);
             }
         }
     }

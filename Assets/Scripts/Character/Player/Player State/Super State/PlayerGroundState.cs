@@ -11,9 +11,8 @@ namespace Character.Player.Player_State.Super_State
 
         private bool _jumpInput;
         private bool _dashInput;
-        private bool _grabInput;
+        private bool _rollInput;
         private bool _isGrounded;
-        private bool _isTouchingWall;
         
         public PlayerGroundState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
             string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
@@ -37,25 +36,33 @@ namespace Character.Player.Player_State.Super_State
             movementInput = playerManager.Input.MovementInput;
             _jumpInput = playerManager.Input.JumpInput;
             _dashInput = playerManager.Input.DashInput;
+            _rollInput = playerManager.Input.RollInput;
             
             if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
             {
                 playerManager.Input.ResetJumpInput();
-                stateMachine.ChangeState(playerManager.JumpState);
+                stateMachine.TranslateToState(playerManager.JumpState);
                 return;
             }
 
             if (_dashInput && playerManager.DashState.CheckAmountOfDash())
             {
                 playerManager.Input.ResetDashInput();
-                stateMachine.ChangeState(playerManager.DashState);
+                stateMachine.TranslateToState(playerManager.DashState);
                 return;
             }
-
+            
             if (!_isGrounded)
             {
                 playerManager.AirState.StartCoyoteTime();
-                stateMachine.ChangeState(playerManager.AirState);
+                stateMachine.TranslateToState(playerManager.AirState);
+                return;
+            }
+            
+            if (_rollInput)
+            {
+                playerManager.Input.ResetRollInput();
+                stateMachine.TranslateToState(playerManager.RollState);
                 return;
             }
         }
@@ -65,7 +72,6 @@ namespace Character.Player.Player_State.Super_State
             base.DoChecks();
 
             _isGrounded = playerManager.CheckGrounded();
-            _isTouchingWall = playerManager.CheckWall();
         }
     }
 }

@@ -18,11 +18,11 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
 
             if (movementInput.x != 0f)
             {
-                stateMachine.ChangeState(playerManager.MoveState);
+                stateMachine.TranslateToState(playerManager.MoveState);
             }
             else if(isAnimationFinished)
             {
-                stateMachine.ChangeState(playerManager.IdleState);
+                stateMachine.TranslateToState(playerManager.IdleState);
             }
         }
     }

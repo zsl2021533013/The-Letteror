@@ -47,7 +47,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 
             if (_jumpInput)
             {
-                stateMachine.ChangeState(playerManager.WallJumpState);
+                stateMachine.TranslateToState(playerManager.WallJumpState);
                 return;
             }
         }

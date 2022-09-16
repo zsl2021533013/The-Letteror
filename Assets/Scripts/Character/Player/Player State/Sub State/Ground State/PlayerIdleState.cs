@@ -30,7 +30,7 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
             
             if (movementInput.x != 0f)
             {
-                stateMachine.ChangeState(playerManager.MoveState);
+                stateMachine.TranslateToState(playerManager.MoveState);
             }
         }
     }
