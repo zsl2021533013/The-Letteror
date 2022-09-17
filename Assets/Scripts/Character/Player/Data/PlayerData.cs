@@ -37,6 +37,11 @@ namespace Character.Player.Data
 
         [Header("Roll State")] 
         public float rollVelocity;
+
+        [Header("Attack State")] 
+        public float attackVelocity1;
+        public float attackVelocity2;
+        public float attackVelocity3;
         
         [Header("Sensors Attribute")] 
         public Vector2 groundSensorSize;

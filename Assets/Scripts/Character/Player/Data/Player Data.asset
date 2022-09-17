@@ -27,6 +27,9 @@ MonoBehaviour:
   dashVelocity: 30
   amountOfDash: 1
   rollVelocity: 10
+  attackVelocity1: 0.5
+  attackVelocity2: 0.5
+  attackVelocity3: 1
   groundSensorSize: {x: 0.65, y: 0.5}
   groundLayerMask:
     serializedVersion: 2

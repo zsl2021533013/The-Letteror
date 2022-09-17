@@ -20,7 +20,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             base.OnEnter();
 
             _startPosition = playerManager.transform.position;
-            playerManager.FreezePlayer(_startPosition);
+            playerManager.SetVelocityX(playerData.attackVelocity3 * playerManager.PlayerDirection);
+            playerManager.FreezePlayerY(_startPosition);
         }
 
         public override void OnUpdate()
@@ -32,7 +33,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
                 return;
             }
             
-            playerManager.FreezePlayer(_startPosition);
+            playerManager.FreezePlayerY(_startPosition);
         }
     }
 }

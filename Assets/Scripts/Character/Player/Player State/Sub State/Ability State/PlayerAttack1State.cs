@@ -23,7 +23,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             base.OnEnter();
 
             _startPosition = playerManager.transform.position;
-            playerManager.FreezePlayer(_startPosition);
+            playerManager.SetVelocityX(playerData.attackVelocity1 * playerManager.PlayerDirection);
+            playerManager.FreezePlayerY(_startPosition);
         }
 
         public override void OnUpdate()
@@ -37,7 +38,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 
             UpdateInput(playerManager.Input);
 
-            playerManager.FreezePlayer(_startPosition);
+            playerManager.FreezePlayerY(_startPosition);
         }
 
         protected override void OnAnimationFinish()
