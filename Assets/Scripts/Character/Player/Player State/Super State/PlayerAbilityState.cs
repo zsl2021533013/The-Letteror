@@ -27,6 +27,11 @@ namespace Character.Player.Player_State.Super_State
         {
             base.OnUpdate();
 
+            if (isAnimationFinish)
+            {
+                OnAnimationFinish();
+            }
+            
             if (isAbilityDone)
             {
                 if (isGrounded && playerManager.Rb.velocity.y < 0.01f)
@@ -45,6 +50,11 @@ namespace Character.Player.Player_State.Super_State
             base.DoChecks();
 
             isGrounded = playerManager.CheckGrounded();
+        }
+
+        protected virtual void OnAnimationFinish()
+        {
+            isAbilityDone = true;
         }
     }
 }

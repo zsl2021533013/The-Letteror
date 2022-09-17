@@ -23,22 +23,15 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 
             _startPosition = playerManager.transform.position;
             DecreaseAmountOfDash();
-            playerManager.SetVelocityY(0f);
             playerManager.SetVelocityX(playerData.dashVelocity * playerManager.PlayerDirection);
+            playerManager.FreezePlayerY(_startPosition);
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            HoldPositionY();
-            
-            playerManager.SetVelocityY(0f);
-            
-            if (isAnimationFinished)
-            {
-                isAbilityDone = true;
-            }
+            playerManager.FreezePlayerY(_startPosition);
         }
 
         public bool CheckAmountOfDash() => _amountOfDashLeft > 0;
@@ -46,12 +39,5 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         public void ResetAmountOfDash() => _amountOfDashLeft = playerData.amountOfDash;
 
         public void DecreaseAmountOfDash() => --_amountOfDashLeft;
-
-        private void HoldPositionY()
-        {
-            _currentPosition = playerManager.transform.position;
-            _currentPosition.y = _startPosition.y;
-            playerManager.transform.position = _currentPosition;
-        }
     }
 }

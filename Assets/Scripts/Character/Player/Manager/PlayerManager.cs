@@ -36,6 +36,9 @@ namespace Character.Player.Manager
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
+        public PlayerAttack1State Attack1State { get; private set; }
+        public PlayerAttack2State Attack2State { get; private set; }
+        public PlayerAttack3State Attack3State { get; private set; }
         
         #endregion
 
@@ -87,7 +90,12 @@ namespace Character.Player.Manager
             LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeGrab");
             DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
             RollState = new PlayerRollState(this, StateMachine, playerData, "roll");
+            Attack1State = new PlayerAttack1State(this, StateMachine, playerData, "attack1");
+            Attack2State = new PlayerAttack2State(this, StateMachine, playerData, "attack2");
+            Attack3State = new PlayerAttack3State(this, StateMachine, playerData, "attack3");
         }
+
+        #region Physic Function
 
         public void SetVelocity(Vector2 velocity)
         {
@@ -109,6 +117,27 @@ namespace Character.Player.Manager
         {
             Rb.velocity = new Vector2(Rb.velocity.x, velocityY);
         }
+
+        public void FreezePlayer(Vector2 position)
+        {
+            Rb.velocity = Vector2.zero;
+            transform.position = position;
+        }
+        
+        public void FreezePlayerX(Vector2 position)
+        {
+            Rb.velocity = new Vector2(0f, Rb.velocity.y);
+            transform.position = new Vector2(position.x, transform.position.y);
+        }
+        
+        public void FreezePlayerY(Vector2 position)
+        {
+            Rb.velocity = new Vector2(Rb.velocity.x, 0f);
+            transform.position = new Vector2(transform.position.x, position.y);
+        }
+
+        #endregion
+        
 
         #region Check Functions
         

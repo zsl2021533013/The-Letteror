@@ -24,16 +24,12 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
             
             playerManager.JumpState.ResetAmountOfJump();
             
-            playerManager.SetVelocity(Vector2.zero);
             playerManager.transform.position = _detectedPosition;
             _cornerPosition = playerManager.DetermineCornerPosition();
 
-            _startPosition.Set(_cornerPosition.x - (playerManager.PlayerDirection * playerData.startOffset.x),
-                _cornerPosition.y - playerData.startOffset.y);
-            _stopPosition.Set(_cornerPosition.x + (playerManager.PlayerDirection * playerData.startOffset.x),
-                _cornerPosition.y + playerData.startOffset.y);
+            SetStartPosition();
 
-            playerManager.transform.position = _startPosition;
+            playerManager.FreezePlayer(_startPosition);
         }
 
         public override void OnUpdate()
@@ -42,8 +38,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 
             _jumpInput = playerManager.Input.JumpInput;
 
-            playerManager.SetVelocity(Vector2.zero);
-            playerManager.transform.position = _startPosition;
+            playerManager.FreezePlayer(_startPosition);
 
             if (_jumpInput)
             {
@@ -53,5 +48,13 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         }
 
         public void SetPosition(Vector2 position) => _detectedPosition = position;
+
+        private void SetStartPosition()
+        {
+            _startPosition.Set(_cornerPosition.x - (playerManager.PlayerDirection * playerData.startOffset.x),
+                _cornerPosition.y - playerData.startOffset.y);
+            _stopPosition.Set(_cornerPosition.x + (playerManager.PlayerDirection * playerData.startOffset.x),
+                _cornerPosition.y + playerData.startOffset.y);
+        }
     }
 }

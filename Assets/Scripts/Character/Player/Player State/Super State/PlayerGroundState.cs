@@ -1,4 +1,5 @@
 ﻿using Character.Player.Data;
+using Character.Player.Input_System;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Character.Player.Player_State.Super_State
         private bool _jumpInput;
         private bool _dashInput;
         private bool _rollInput;
+        private bool _attackInput;
         private bool _isGrounded;
         
         public PlayerGroundState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
@@ -25,6 +27,7 @@ namespace Character.Player.Player_State.Super_State
 
             playerManager.Input.ResetJumpInput();
             playerManager.Input.ResetDashInput();
+            playerManager.Input.ResetAttackInput();
             playerManager.JumpState.ResetAmountOfJump();
             playerManager.DashState.ResetAmountOfDash();
         }
@@ -33,10 +36,7 @@ namespace Character.Player.Player_State.Super_State
         {
             base.OnUpdate();
             
-            movementInput = playerManager.Input.MovementInput;
-            _jumpInput = playerManager.Input.JumpInput;
-            _dashInput = playerManager.Input.DashInput;
-            _rollInput = playerManager.Input.RollInput;
+            UpdateInput(playerManager.Input);
             
             if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
             {
@@ -52,17 +52,24 @@ namespace Character.Player.Player_State.Super_State
                 return;
             }
             
-            if (!_isGrounded)
-            {
-                playerManager.AirState.StartCoyoteTime();
-                stateMachine.TranslateToState(playerManager.AirState);
-                return;
-            }
-            
             if (_rollInput)
             {
                 playerManager.Input.ResetRollInput();
                 stateMachine.TranslateToState(playerManager.RollState);
+                return;
+            }
+
+            if (_attackInput)
+            {
+                playerManager.Input.ResetAttackInput();
+                stateMachine.TranslateToState(playerManager.Attack1State);
+                return;
+            }
+            
+            if (!_isGrounded)
+            {
+                playerManager.AirState.StartCoyoteTime();
+                stateMachine.TranslateToState(playerManager.AirState);
                 return;
             }
         }
@@ -72,6 +79,15 @@ namespace Character.Player.Player_State.Super_State
             base.DoChecks();
 
             _isGrounded = playerManager.CheckGrounded();
+        }
+
+        private void UpdateInput(PlayerInputHandler input)
+        {
+            movementInput = input.MovementInput;
+            _jumpInput = input.JumpInput;
+            _dashInput = input.DashInput;
+            _rollInput = input.RollInput;
+            _attackInput = input.AttackInput;
         }
     }
 }

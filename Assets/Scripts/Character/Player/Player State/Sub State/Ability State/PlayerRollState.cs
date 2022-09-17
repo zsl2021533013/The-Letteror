@@ -20,15 +20,5 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             playerManager.SetVelocityY(0f);
             playerManager.SetVelocityX(playerData.rollVelocity * playerManager.PlayerDirection);
         }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-            
-            if (isAnimationFinished)
-            {
-                isAbilityDone = true;
-            }
-        }
     }
 }

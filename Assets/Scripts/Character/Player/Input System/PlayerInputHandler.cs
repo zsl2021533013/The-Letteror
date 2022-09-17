@@ -11,6 +11,7 @@ namespace Character.Player.Input_System
         public bool JumpInputStop { get; private set; }
         public bool DashInput { get; private set; }
         public bool RollInput { get; private set; }
+        public bool AttackInput { get; private set; }
         
         public int InputDirection
         {
@@ -24,6 +25,8 @@ namespace Character.Player.Input_System
             }
         }
 
+        #region Input Event
+
         public void OnMoveInput(InputAction.CallbackContext ctx)
         {
             MovementInput = ctx.ReadValue<Vector2>();
@@ -33,7 +36,6 @@ namespace Character.Player.Input_System
         {
             if (ctx.started)
             {
-                Debug.Log(1);
                 JumpInput = true;
                 JumpInputStop = false;
             }
@@ -60,14 +62,26 @@ namespace Character.Player.Input_System
             }
         }
 
+        public void OnAttackInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                AttackInput = true;
+            }
+        }
+
+        #endregion
+        
+
         #region Reset Trigger
         
         public void ResetJumpInput() => JumpInput = false;
         public void ResetDashInput() => DashInput = false;
         public void ResetRollInput() => RollInput = false;
+        public void ResetAttackInput() => AttackInput = false;
 
         #endregion
-        
+
     }
     
 }

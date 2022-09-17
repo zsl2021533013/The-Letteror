@@ -20,7 +20,7 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
             {
                 stateMachine.TranslateToState(playerManager.MoveState);
             }
-            else if(isAnimationFinished)
+            else if(isAnimationFinish)
             {
                 stateMachine.TranslateToState(playerManager.IdleState);
             }

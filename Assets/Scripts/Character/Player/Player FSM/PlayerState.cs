@@ -10,7 +10,7 @@ namespace Character.Player.Player_FSM
         protected PlayerStateMachine stateMachine;
         protected PlayerData playerData;
         protected float startTime;
-        protected bool isAnimationFinished;
+        protected bool isAnimationFinish;
         protected bool isStateFinished;
 
         private string _animBoolName;
@@ -29,9 +29,9 @@ namespace Character.Player.Player_FSM
             startTime = Time.time;
             DoChecks();
             playerManager.Anim.SetBool(_animBoolName, true);
-            isAnimationFinished = false;
+            isAnimationFinish = false;
             isStateFinished = false;
-            Debug.Log("Enter " + _animBoolName + " State");
+            //Debug.Log("Enter " + _animBoolName + " State");
         }
 
         public virtual void OnExit()
@@ -55,6 +55,6 @@ namespace Character.Player.Player_FSM
         {
         }
 
-        public virtual void AnimationFinish() => isAnimationFinished = true;
+        public virtual void AnimationFinish() => isAnimationFinish = true;
     }
 }

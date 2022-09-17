@@ -11,6 +11,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         private bool _jumpInput;
         private bool _jumpInputStop;
         private bool _dashInput;
+        private bool _attackInput;
         private bool _isJumping;
         private bool _isGrounded;
         private bool _isTouchingWall;
@@ -27,6 +28,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             base.OnEnter();
             
             playerManager.Input.ResetDashInput();
+            playerManager.Input.ResetAttackInput();
         }
 
         public override void OnUpdate()
@@ -37,6 +39,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             _jumpInput = playerManager.Input.JumpInput;
             _jumpInputStop = playerManager.Input.JumpInputStop;
             _dashInput = playerManager.Input.DashInput;
+            _attackInput = playerManager.Input.AttackInput;
             
             CheckJumping();
             
@@ -58,6 +61,13 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             {
                 playerManager.Input.ResetDashInput();
                 stateMachine.TranslateToState(playerManager.DashState);
+                return;
+            }
+
+            if (_attackInput)
+            {
+                playerManager.Input.ResetAttackInput();
+                stateMachine.TranslateToState(playerManager.Attack1State);
                 return;
             }
 

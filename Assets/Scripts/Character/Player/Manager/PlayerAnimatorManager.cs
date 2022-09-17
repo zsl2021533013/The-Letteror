@@ -7,5 +7,7 @@ namespace Character.Player.Manager
         public PlayerManager PlayerManager { get; set; }
 
         public void AnimationFinish() => PlayerManager.StateMachine.CurrentState.AnimationFinish();
+
+        public void ResetAttackInput() => PlayerManager.Input.ResetAttackInput();
     }
 }
