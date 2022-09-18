@@ -6,14 +6,16 @@ namespace Character.Player.Player_FSM
 {
     public class PlayerState
     {
-        protected PlayerManager playerManager;
-        protected PlayerStateMachine stateMachine;
-        protected PlayerData playerData;
-        protected float startTime;
+        public bool IsStateEnable { get; set; }
+
         protected bool isAnimationFinish;
         protected bool isStateFinished;
+        protected readonly PlayerManager playerManager;
+        protected readonly PlayerStateMachine stateMachine;
+        protected readonly PlayerData playerData;
+        protected float startTime;
 
-        private string _animBoolName;
+        private readonly string _animBoolName;
 
         public PlayerState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
             string animBoolName)
@@ -22,6 +24,7 @@ namespace Character.Player.Player_FSM
             this.stateMachine = stateMachine;
             this.playerData = playerData;
             this._animBoolName = animBoolName;
+            IsStateEnable = false;
         }
 
         public virtual void OnEnter()
