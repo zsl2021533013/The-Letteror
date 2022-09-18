@@ -11,9 +11,9 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         private int _amountOfDashLeft;
         private Vector2 _startPosition;
         private Vector2 _currentPosition;
-        
-        public PlayerDashState(PlayerManager playerManager, PlayerStateMachine stateMachine,
-            PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+
+        public PlayerDashState(PlayerManager playerManager,
+            PlayerData playerData, string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -23,15 +23,15 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 
             _startPosition = playerManager.transform.position;
             DecreaseAmountOfDash();
-            playerManager.SetVelocityX(playerData.dashVelocity * playerManager.PlayerDirection);
-            playerManager.FreezePlayerY(_startPosition);
+            coreManager.MoveCore.SetVelocityX(playerData.dashVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.FreezeY(_startPosition);
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            playerManager.FreezePlayerY(_startPosition);
+            coreManager.MoveCore.FreezeY(_startPosition);
         }
 
         public bool CheckAmountOfDash() => _amountOfDashLeft > 0;

@@ -10,8 +10,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
     {
         private int _amountOfJumpsLeft;
         
-        public PlayerJumpState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerJumpState(PlayerManager playerManager, PlayerData playerData,
+            string animBoolName) : base(playerManager, playerData, animBoolName)
         {
             _amountOfJumpsLeft = playerData.amountOfJump;
         }
@@ -20,7 +20,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
             
-            playerManager.SetVelocityY(playerData.jumpVelocity);
+            coreManager.MoveCore.SetVelocityY(playerData.jumpVelocity);
             isAbilityDone = true;
             DecreaseAmountOfJumps();
             playerManager.AirState.StartJumping();

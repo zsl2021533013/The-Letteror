@@ -1,3 +1,4 @@
+using Character.Core;
 using Character.Player.Data;
 using Character.Player.Manager;
 using UnityEngine;
@@ -13,17 +14,18 @@ namespace Character.Player.Player_FSM
         protected readonly PlayerManager playerManager;
         protected readonly PlayerStateMachine stateMachine;
         protected readonly PlayerData playerData;
+        protected readonly CoreManager coreManager;
         protected float startTime;
 
         private readonly string _animBoolName;
 
-        public PlayerState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName)
+        public PlayerState(PlayerManager playerManager, PlayerData playerData, string animBoolName)
         {
             this.playerManager = playerManager;
-            this.stateMachine = stateMachine;
             this.playerData = playerData;
-            this._animBoolName = animBoolName;
+            _animBoolName = animBoolName;
+            stateMachine = playerManager.StateMachine;
+            coreManager = playerManager.CoreManager;
             IsStateEnable = false;
         }
 

@@ -10,9 +10,10 @@ namespace Character.Player.Player_State.Super_State
         protected bool isAbilityDone;
 
         private bool isGrounded;
-        
-        public PlayerAbilityState(PlayerManager playerManager, PlayerStateMachine stateMachine,
-            PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+
+
+        public PlayerAbilityState(PlayerManager playerManager, PlayerData playerData, string animBoolName) : base(
+            playerManager, playerData, animBoolName)
         {
         }
 
@@ -34,7 +35,7 @@ namespace Character.Player.Player_State.Super_State
             
             if (isAbilityDone)
             {
-                if (isGrounded && playerManager.Rb.velocity.y < 0.01f)
+                if (isGrounded && coreManager.MoveCore.CurrentVelocity.y < 0.01f)
                 {
                     stateMachine.TranslateToState(playerManager.IdleState);
                 }
@@ -49,7 +50,7 @@ namespace Character.Player.Player_State.Super_State
         {
             base.DoChecks();
 
-            isGrounded = playerManager.CheckGrounded();
+            isGrounded = coreManager.SenseCore.Ground;
         }
 
         protected virtual void OnAnimationFinish()

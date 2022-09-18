@@ -15,9 +15,9 @@ namespace Character.Player.Player_State.Super_State
         private bool _rollInput;
         private bool _attackInput;
         private bool _isGrounded;
-        
-        public PlayerGroundState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+
+        public PlayerGroundState(PlayerManager playerManager, PlayerData playerData, string animBoolName) : base(
+            playerManager, playerData, animBoolName)
         {
         }
 
@@ -78,7 +78,7 @@ namespace Character.Player.Player_State.Super_State
         {
             base.DoChecks();
 
-            _isGrounded = playerManager.CheckGrounded();
+            _isGrounded = coreManager.SenseCore.Ground;
         }
 
         private void UpdateInput(PlayerInputHandler input)

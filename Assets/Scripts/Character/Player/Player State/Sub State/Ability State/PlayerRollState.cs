@@ -1,6 +1,5 @@
 ﻿using Character.Player.Data;
 using Character.Player.Manager;
-using Character.Player.Player_FSM;
 using Character.Player.Player_State.Super_State;
 using UnityEngine;
 
@@ -8,8 +7,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 {
     public class PlayerRollState : PlayerAbilityState
     {
-        public PlayerRollState(PlayerManager playerManager, PlayerStateMachine stateMachine,
-            PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerRollState(PlayerManager playerManager,
+            PlayerData playerData, string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -17,8 +16,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
             
-            playerManager.SetVelocityY(0f);
-            playerManager.SetVelocityX(playerData.rollVelocity * playerManager.PlayerDirection);
+            coreManager.MoveCore.SetVelocityY(0f);
+            coreManager.MoveCore.SetVelocityX(playerData.rollVelocity * coreManager.MoveCore.Direction);
         }
     }
 }

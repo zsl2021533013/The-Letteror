@@ -11,10 +11,11 @@ namespace Character.Player.Player_State.Super_State
         
         private bool _isGrounded;
         protected bool _isTouchingWall;
-        
-        public PlayerWallState(PlayerManager playerManager, PlayerStateMachine stateMachine,
-            PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+
+        public PlayerWallState(PlayerManager playerManager, PlayerData playerData, string animBoolName) : base(
+            playerManager, playerData, animBoolName)
         {
+            
         }
 
         public override void OnEnter()
@@ -56,8 +57,8 @@ namespace Character.Player.Player_State.Super_State
         {
             base.DoChecks();
 
-            _isGrounded = playerManager.CheckGrounded();
-            _isTouchingWall = playerManager.CheckWall();
+            _isGrounded = coreManager.SenseCore.Ground;
+            _isTouchingWall = coreManager.SenseCore.WallFront;
         }
     }
 }

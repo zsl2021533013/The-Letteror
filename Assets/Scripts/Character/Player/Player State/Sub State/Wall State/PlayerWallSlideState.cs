@@ -7,8 +7,8 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 {
     public class PlayerWallSlideState : PlayerWallState
     {
-        public PlayerWallSlideState(PlayerManager playerManager, PlayerStateMachine stateMachine,
-            PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerWallSlideState(PlayerManager playerManager,
+            PlayerData playerData, string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -21,7 +21,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
                 return;
             }
             
-            playerManager.SetVelocityY(-playerData.wallSlideVelocity);
+            coreManager.MoveCore.SetVelocityY(-playerData.wallSlideVelocity);
         }
     }
 }

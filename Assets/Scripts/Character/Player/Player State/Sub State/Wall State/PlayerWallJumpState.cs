@@ -8,8 +8,8 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 {
     public class PlayerWallJumpState : PlayerAbilityState
     {
-        public PlayerWallJumpState(PlayerManager playerManager, PlayerStateMachine stateMachine,
-            PlayerData playerData, string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerWallJumpState(PlayerManager playerManager,
+            PlayerData playerData, string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -18,8 +18,8 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnEnter();
             
-            playerManager.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, -playerManager.PlayerDirection);
-            playerManager.CheckPlayerFlip();
+            coreManager.MoveCore.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, -coreManager.MoveCore.Direction);
+            coreManager.MoveCore.CheckFlip(playerManager.Input.MovementInput.x);
             playerManager.JumpState.DecreaseAmountOfJumps();
         }
 
@@ -27,8 +27,8 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnUpdate();
             
-            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(playerManager.Rb.velocity.x));
-            playerManager.Anim.SetFloat("velocityY", playerManager.Rb.velocity.y);
+            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+            playerManager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
 
             if (Time.time > startTime + playerData.wallJumpTime)
             {

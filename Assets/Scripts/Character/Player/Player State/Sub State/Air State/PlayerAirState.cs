@@ -18,8 +18,8 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         private bool _isTouchingLedge;
         private bool _coyoteTime;
         
-        public PlayerAirState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerAirState(PlayerManager playerManager, PlayerData playerData,
+            string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -43,12 +43,12 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             
             CheckJumping();
             
-            playerManager.SetVelocityX(playerData.movementVelocity * _movementInput.x);
+            coreManager.MoveCore.SetVelocityX(playerData.movementVelocity * _movementInput.x);
             
-            playerManager.CheckPlayerFlip();
+            coreManager.MoveCore.CheckFlip(playerManager.Input.MovementInput.x);
             
-            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(playerManager.Rb.velocity.x));
-            playerManager.Anim.SetFloat("velocityY", playerManager.Rb.velocity.y);
+            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+            playerManager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
 
             if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
             {
@@ -71,7 +71,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
                 return;
             }
 
-            if (_isGrounded && playerManager.Rb.velocity.y < 0.01f)
+            if (_isGrounded && coreManager.MoveCore.CurrentVelocity.y < 0.01f)
             {
                 stateMachine.TranslateToState(playerManager.LandState);
                 return;
@@ -83,8 +83,8 @@ namespace Character.Player.Player_State.Sub_State.Air_State
                 return;
             }
 
-            if (_isTouchingWall && playerManager.Input.InputDirection == playerManager.PlayerDirection &&
-                playerManager.Rb.velocity.y < 0.1f) 
+            if (_isTouchingWall && playerManager.Input.InputDirection == coreManager.MoveCore.Direction &&
+                coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
                 stateMachine.TranslateToState(playerManager.WallSlideState);
                 return;
@@ -97,9 +97,9 @@ namespace Character.Player.Player_State.Sub_State.Air_State
 
             CheckCoyoteTime();
             
-            _isGrounded = playerManager.CheckGrounded();
-            _isTouchingWall = playerManager.CheckWall();
-            _isTouchingLedge = playerManager.CheckLedge();
+            _isGrounded = coreManager.SenseCore.Ground;
+            _isTouchingWall = coreManager.SenseCore.WallFront;
+            _isTouchingLedge = coreManager.SenseCore.Ledge;
             
             if (_isTouchingWall && !_isTouchingLedge)
             {
@@ -120,7 +120,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         {
             if (_isJumping)
             {
-                if (playerManager.Rb.velocity.y < 0.01f)
+                if (coreManager.MoveCore.CurrentVelocity.y < 0.01f)
                 {
                     _isJumping = false;
                     return;
@@ -128,7 +128,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
                 
                 if (_jumpInputStop)
                 {
-                    playerManager.SetVelocityY(playerManager.Rb.velocity.y * playerData.variableJumpHeightMultiplier);
+                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
                     _isJumping = false;
                     return;
                 }

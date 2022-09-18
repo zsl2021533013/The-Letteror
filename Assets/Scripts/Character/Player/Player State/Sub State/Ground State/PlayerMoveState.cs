@@ -8,8 +8,8 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
 {
     public class PlayerMoveState : PlayerGroundState
     {
-        public PlayerMoveState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerMoveState(PlayerManager playerManager, PlayerData playerData,
+            string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -22,10 +22,10 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
                 return;
             }
             
-            playerManager.SetVelocityX(playerData.movementVelocity * movementInput.x);
-            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(playerManager.Rb.velocity.x));
+            coreManager.MoveCore.SetVelocityX(playerData.movementVelocity * movementInput.x);
+            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
             
-            playerManager.CheckPlayerFlip();
+            coreManager.MoveCore.CheckFlip(playerManager.Input.MovementInput.x);
             
             if (Mathf.Abs(movementInput.x) <= 0.1f)
             {

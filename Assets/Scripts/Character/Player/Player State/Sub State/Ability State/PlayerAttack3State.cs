@@ -9,9 +9,9 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
     public class PlayerAttack3State : PlayerAbilityState
     {
         private Vector2 _startPosition;
-        
-        public PlayerAttack3State(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+
+        public PlayerAttack3State(PlayerManager playerManager, PlayerData playerData,
+            string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -20,8 +20,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             base.OnEnter();
 
             _startPosition = playerManager.transform.position;
-            playerManager.SetVelocityX(playerData.attackVelocity3 * playerManager.PlayerDirection);
-            playerManager.FreezePlayerY(_startPosition);
+            coreManager.MoveCore.SetVelocityX(playerData.attackVelocity3 * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.FreezeY(_startPosition);
         }
 
         public override void OnUpdate()
@@ -33,7 +33,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
                 return;
             }
             
-            playerManager.FreezePlayerY(_startPosition);
+            coreManager.MoveCore.FreezeY(_startPosition);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         private Vector2 _startPosition;
         private bool _attackInput;
         
-        public PlayerAttack1State(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerAttack1State(PlayerManager playerManager, PlayerData playerData,
+            string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
@@ -23,8 +23,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             base.OnEnter();
 
             _startPosition = playerManager.transform.position;
-            playerManager.SetVelocityX(playerData.attackVelocity1 * playerManager.PlayerDirection);
-            playerManager.FreezePlayerY(_startPosition);
+            coreManager.MoveCore.SetVelocityX(playerData.attackVelocity1 * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.FreezeY(_startPosition);
         }
 
         public override void OnUpdate()
@@ -38,7 +38,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 
             UpdateInput(playerManager.Input);
 
-            playerManager.FreezePlayerY(_startPosition);
+            coreManager.MoveCore.FreezeY(_startPosition);
         }
 
         protected override void OnAnimationFinish()

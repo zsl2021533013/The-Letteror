@@ -1,3 +1,4 @@
+using Character.Core;
 using Character.Player.Data;
 using Character.Player.Input_System;
 using Character.Player.Player_FSM;
@@ -13,14 +14,6 @@ namespace Character.Player.Manager
     {
         [Header("Player Data")]
         [SerializeField] private PlayerData playerData;
-        
-        #region Sensor
-        
-        [SerializeField] private Transform groundSensor;
-        [SerializeField] private Transform wallSensor;
-        [SerializeField] private Transform ledgeSensor;
-
-        #endregion
 
         #region Player FSM Attrbute
         
@@ -42,15 +35,18 @@ namespace Character.Player.Manager
         
         #endregion
 
-        public PlayerInputHandler Input { get; private set; }
+        #region Componenets
 
+        public PlayerInputHandler Input { get; private set; }
         public Rigidbody2D Rb { get; private set; }
-        
         public Animator Anim { get; private set; }
+        public CoreManager CoreManager { get; private set; }
+
+        #endregion
         
         public PlayerAnimatorManager AnimatorManager { get; private set; }
-
-        public int PlayerDirection => transform.localScale.x < 0 ? -1 : 1;
+        
+        private Vector2 _tempVector2;
 
         private void Awake()
         {
@@ -69,6 +65,7 @@ namespace Character.Player.Manager
 
         private void Update()
         {
+            CoreManager.OnUpdate();
             StateMachine.CurrentState.OnUpdate();
         }
 
@@ -79,120 +76,36 @@ namespace Character.Player.Manager
 
         private void InitializeFsm()
         {
+            CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
+            
             StateMachine = new PlayerStateMachine();
-            IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
-            MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
-            JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
-            AirState = new PlayerAirState(this, StateMachine, playerData, "inAir");
-            LandState = new PlayerLandState(this, StateMachine, playerData, "land");
-            WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
-            WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
-            LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeGrab");
-            DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
-            RollState = new PlayerRollState(this, StateMachine, playerData, "roll");
-            Attack1State = new PlayerAttack1State(this, StateMachine, playerData, "attack1");
-            Attack2State = new PlayerAttack2State(this, StateMachine, playerData, "attack2");
-            Attack3State = new PlayerAttack3State(this, StateMachine, playerData, "attack3");
+            IdleState = new PlayerIdleState(this, playerData, "idle");
+            MoveState = new PlayerMoveState(this, playerData, "move");
+            JumpState = new PlayerJumpState(this, playerData, "inAir");
+            AirState = new PlayerAirState(this, playerData, "inAir");
+            LandState = new PlayerLandState(this, playerData, "land");
+            WallSlideState = new PlayerWallSlideState(this, playerData, "wallSlide");
+            WallJumpState = new PlayerWallJumpState(this, playerData, "inAir");
+            LedgeClimbState = new PlayerLedgeClimbState(this, playerData, "ledgeGrab");
+            DashState = new PlayerDashState(this, playerData, "dash");
+            RollState = new PlayerRollState(this, playerData, "roll");
+            Attack1State = new PlayerAttack1State(this, playerData, "attack1");
+            Attack2State = new PlayerAttack2State(this, playerData, "attack2");
+            Attack3State = new PlayerAttack3State(this, playerData, "attack3");
         }
-
-        #region Physic Function
-
-        public void SetVelocity(Vector2 velocity)
-        {
-            Rb.velocity = velocity;
-        }
-        
-        public void SetVelocity(float velocity, Vector2 angle,int direction)
-        {
-            angle.Normalize();
-            Rb.velocity = new Vector2(velocity * angle.x * direction, velocity * angle.y);
-        }
-        
-        public void SetVelocityX(float velocityX)
-        {
-            Rb.velocity = new Vector2(velocityX, Rb.velocity.y);
-        }
-        
-        public void SetVelocityY(float velocityY)
-        {
-            Rb.velocity = new Vector2(Rb.velocity.x, velocityY);
-        }
-
-        public void FreezePlayer(Vector2 position)
-        {
-            Rb.velocity = Vector2.zero;
-            transform.position = position;
-        }
-        
-        public void FreezePlayerX(Vector2 position)
-        {
-            Rb.velocity = new Vector2(0f, Rb.velocity.y);
-            transform.position = new Vector2(position.x, transform.position.y);
-        }
-        
-        public void FreezePlayerY(Vector2 position)
-        {
-            Rb.velocity = new Vector2(Rb.velocity.x, 0f);
-            transform.position = new Vector2(transform.position.x, position.y);
-        }
-
-        #endregion
-        
 
         #region Check Functions
+
         
-        public void CheckPlayerFlip()
-        {
-            if (Input.MovementInput.x != 0f && Input.InputDirection == -PlayerDirection)
-            {
-                transform.localScale = new Vector3(Input.InputDirection, 1, 1);
-            }
-        }
-
-        public bool CheckGrounded()
-        {
-            bool isGrounded = Physics2D.OverlapBox(groundSensor.position, playerData.groundSensorSize, 0f,
-                playerData.groundLayerMask);
-            return isGrounded;
-        }
-
-        public bool CheckWall()
-        {
-            bool isTouchingWall = Physics2D.Raycast(wallSensor.position, Vector2.right * PlayerDirection,
-                playerData.wallCheckDistance, playerData.groundLayerMask);
-            return isTouchingWall;
-        }
-
-        public bool CheckLedge()
-        {
-            bool isTouchingLedge = Physics2D.Raycast(ledgeSensor.position, Vector2.right * PlayerDirection,
-                playerData.wallCheckDistance, playerData.groundLayerMask);
-            return isTouchingLedge;
-        }
         
         #endregion
         
         public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinish();
-        
-        public Vector2 DetermineCornerPosition()
-        {
-            RaycastHit2D hitX = Physics2D.Raycast(wallSensor.position, Vector2.right * PlayerDirection,
-                playerData.wallCheckDistance, playerData.groundLayerMask);
-            float distanceX = hitX.distance + 0.01f;
-            
-            Vector2 detectPosition = (Vector2)ledgeSensor.position + new Vector2(distanceX * PlayerDirection, 0f);
-            float detectDistance = ledgeSensor.position.y - wallSensor.position.y;
-            RaycastHit2D hitY = Physics2D.Raycast(detectPosition, Vector2.down,
-                detectDistance, playerData.groundLayerMask);
-            float distanceY = hitY.distance + 0.01f;
 
-            return new Vector2(wallSensor.position.x + distanceX * PlayerDirection, ledgeSensor.position.y - distanceY);
-        }
-        
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(groundSensor.position, playerData.groundSensorSize);
+            Gizmos.DrawWireCube( CoreManager.SenseCore.GroundSensor.position, playerData.groundSensorSize);
         }
     }
 }

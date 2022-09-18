@@ -7,8 +7,8 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
 {
     public class PlayerLandState : PlayerGroundState
     {
-        public PlayerLandState(PlayerManager playerManager, PlayerStateMachine stateMachine, PlayerData playerData,
-            string animBoolName) : base(playerManager, stateMachine, playerData, animBoolName)
+        public PlayerLandState(PlayerManager playerManager, PlayerData playerData,
+            string animBoolName) : base(playerManager, playerData, animBoolName)
         {
         }
 
