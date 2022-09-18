@@ -787,12 +787,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Tile Set_29: -2091178133
-      Tile Set_22: 2128554146
+      Tile Set_31: 1954688598
       Tile Set_28: 1221005236
       Tile Set_17: 1721047554
       Tile Set_16: 2038319560
       Tile Set_10: -370816249
-      Tile Set_31: 1954688598
       Tile Set_7: 1178594183
       Tile Set_19: 41932322
       Tile Set_9: 1626845175
@@ -812,6 +811,7 @@ TextureImporter:
       Tile Set_3: -326105242
       Tile Set_27: -1969224817
       Tile Set_0: -2096661406
+      Tile Set_22: 2128554146
       Tile Set_1: -714277308
       Tile Set_4: -1243550782
       Tile Set_15: -327655635
