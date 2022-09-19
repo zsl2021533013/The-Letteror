@@ -16,7 +16,9 @@ namespace Character.Player.Manager
         [SerializeField] private PlayerData playerData;
 
         [Header("Player Ability Active")] 
+        public bool isDoubleJumpEnable;
         public bool isWallSlideEnable;
+        public bool isDashEnable;
         
         #region Player FSM Attribute
         
@@ -94,8 +96,7 @@ namespace Character.Player.Manager
             Attack2State = new PlayerAttack2State(this, playerData, "attack2");
             Attack3State = new PlayerAttack3State(this, playerData, "attack3");
         }
-        
-        
+
         public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinish();
     }
 }

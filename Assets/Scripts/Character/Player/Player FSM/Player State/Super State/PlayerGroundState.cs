@@ -45,7 +45,7 @@ namespace Character.Player.Player_State.Super_State
                 return;
             }
 
-            if (_dashInput && playerManager.DashState.CheckAmountOfDash())
+            if (playerManager.isDashEnable && _dashInput && playerManager.DashState.CheckAmountOfDash())
             {
                 playerManager.Input.ResetDashInput();
                 stateMachine.TranslateToState(playerManager.DashState);

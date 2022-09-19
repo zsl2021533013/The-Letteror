@@ -25,8 +25,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             DecreaseAmountOfJumps();
             playerManager.AirState.StartJumping();
         }
-        
-        public bool CheckAmountOfJump() => _amountOfJumpsLeft > 0;
+
+        public bool CheckAmountOfJump() => _amountOfJumpsLeft - (playerManager.isDoubleJumpEnable ? 0 : 1) > 0;
 
         public void ResetAmountOfJump() => _amountOfJumpsLeft = playerData.amountOfJump;
 
