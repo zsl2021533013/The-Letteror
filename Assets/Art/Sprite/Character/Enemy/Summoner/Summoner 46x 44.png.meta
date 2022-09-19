@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0638d1febde56024fa663225b7f46626
+guid: 47896a0658c7ad6408db0734a9ef1936
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_0
+      name: Summoner 46x 44_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 165
-        width: 62
-        height: 33
+        y: 176
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41a1b9b48bf630c469b36dc1730e1c92
-      internalID: 802320997
+      spriteID: df6a4a40494892f42bed61aaab77b69d
+      internalID: -863803995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_1
+      name: Summoner 46x 44_1
       rect:
         serializedVersion: 2
-        x: 62
-        y: 165
-        width: 62
-        height: 33
+        x: 46
+        y: 176
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 304c980643d8c13458907eb5705581fc
-      internalID: -872563507
+      spriteID: 554dbb269ab586045afcecd4e3d6ea13
+      internalID: 1311381287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_2
+      name: Summoner 46x 44_2
       rect:
         serializedVersion: 2
-        x: 124
-        y: 165
-        width: 62
-        height: 33
+        x: 92
+        y: 176
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63bd5d59f19e498469b0036d364479d0
-      internalID: -847325668
+      spriteID: 6d9cfeb958f6eb745abe705bc37e8e2c
+      internalID: -1529620402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_3
+      name: Summoner 46x 44_3
       rect:
         serializedVersion: 2
-        x: 186
-        y: 165
-        width: 62
-        height: 33
+        x: 138
+        y: 176
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0286265f4387986429125e22e5c9c893
-      internalID: 603538752
+      spriteID: ee6baf83c04d5194b9b6adf86bd77c57
+      internalID: -1097781757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_4
+      name: Summoner 46x 44_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 132
-        width: 62
-        height: 33
+        x: 184
+        y: 176
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 014782e99ec34b340b765b67979ac658
-      internalID: 366122024
+      spriteID: 00e639eddd04df54aaf50094a8bf582c
+      internalID: 55506941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_5
+      name: Summoner 46x 44_5
       rect:
         serializedVersion: 2
-        x: 62
-        y: 132
-        width: 62
-        height: 33
+        x: 230
+        y: 176
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,167 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9fc56d589579441973044fd6c4007e
-      internalID: -401648269
+      spriteID: 719f7ef42a9c5734b919c0d8ec66415e
+      internalID: 1890606936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_6
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c89d613f64a42b54a98bfa7cdf7a2a5e
-      internalID: 1262678165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_7
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b98a898c3da858045934e7da3ba7a368
-      internalID: -1026437434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_8
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02de95efb699948408be2c87fb43e0e9
-      internalID: -2055149508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_9
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64e3aea2312e1dc449b1f923123807ed
-      internalID: -597670744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_10
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dfdbad84d0670843a73e9e5f2c192f1
-      internalID: 1201811071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_11
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e07f10ac3ececf348a069452cad54d09
-      internalID: 2019406601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_12
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 132
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb40fda10c4d642478d137abd903627f
-      internalID: 2037094201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_13
+      name: Summoner 46x 44_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 99
-        width: 62
-        height: 33
+        y: 132
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f37111b4d98b22242b8ce8fb0447c015
-      internalID: -1526571820
+      spriteID: 230f4101489e4eb4cb6c0b22e54aa290
+      internalID: -953497892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_14
+      name: Summoner 46x 44_7
       rect:
         serializedVersion: 2
-        x: 62
-        y: 99
-        width: 62
-        height: 33
+        x: 46
+        y: 132
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bed8f8847ff4d8d4bad930f04789a745
-      internalID: 515302659
+      spriteID: c5fdb86e92de2234c85d5569297179fd
+      internalID: 1965877115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_15
+      name: Summoner 46x 44_8
       rect:
         serializedVersion: 2
-        x: 124
-        y: 99
-        width: 62
-        height: 33
+        x: 92
+        y: 132
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ca6ac1d4d93ed045aa07dec85859010
-      internalID: -501350986
+      spriteID: 15e4c8348848b7e4eadf09880a6f4449
+      internalID: 1028245779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_16
+      name: Summoner 46x 44_9
       rect:
         serializedVersion: 2
-        x: 186
-        y: 99
-        width: 62
-        height: 33
+        x: 138
+        y: 132
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef73c9cdc1358764eb2baf7bcd8faff4
-      internalID: 1312257600
+      spriteID: 443f40d5b5f36fb408f5f7649994e713
+      internalID: 864347166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_17
+      name: Summoner 46x 44_10
       rect:
         serializedVersion: 2
-        x: 248
-        y: 99
-        width: 62
-        height: 33
+        x: 184
+        y: 132
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,20 +328,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b8cf8d70732c2442be34ce0a4a34440
-      internalID: 133686986
+      spriteID: 23a50a5b75c9e82478750a9b96b7accc
+      internalID: -825444017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_18
+      name: Summoner 46x 44_11
       rect:
         serializedVersion: 2
-        x: 310
-        y: 99
-        width: 62
-        height: 33
+        x: 230
+        y: 132
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,41 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32a8eeeec7332ae43be86424f2c9a1e6
-      internalID: -1942664077
+      spriteID: 380b553b6d23dc04d85e418f14a33154
+      internalID: 532723505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_19
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 99
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 638ea4388e274954e8ae8ea9349f6e6f
-      internalID: -212218925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_20
+      name: Summoner 46x 44_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 62
-        height: 33
+        y: 88
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,20 +370,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 023cb8640c59ccc41ba651ae699b07c3
-      internalID: -709799669
+      spriteID: 6b89b603eeb0f15499f5eb17a5206810
+      internalID: -894646353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_21
+      name: Summoner 46x 44_13
       rect:
         serializedVersion: 2
-        x: 62
-        y: 66
-        width: 62
-        height: 33
+        x: 46
+        y: 88
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,20 +391,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdd0a181a6eb90541b95092b8df9b39f
-      internalID: -781361000
+      spriteID: a4be4b1e5c0a0254c91613662215ed16
+      internalID: -1989804743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_22
+      name: Summoner 46x 44_14
       rect:
         serializedVersion: 2
-        x: 124
-        y: 66
-        width: 62
-        height: 33
+        x: 92
+        y: 88
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,20 +412,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a0829e0c3edced4c890bd1ea2c1f0f1
-      internalID: 1447212874
+      spriteID: 2395630623d72c44687423c6d5fd8752
+      internalID: -2136101861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_23
+      name: Summoner 46x 44_15
       rect:
         serializedVersion: 2
-        x: 186
-        y: 66
-        width: 62
-        height: 33
+        x: 138
+        y: 88
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,20 +433,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47e1937a20364db4d81cbf88a7210153
-      internalID: -105868483
+      spriteID: 5cae95a2bfc92d14ca1d30ae3fad0a82
+      internalID: 1347176693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_24
+      name: Summoner 46x 44_16
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 88
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8708af668dca37c4597b871b29c0b76b
+      internalID: -1889648829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner 46x 44_17
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 88
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4344ff266c1ecc04fb56b3e8885b2db4
+      internalID: 430920073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner 46x 44_18
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 88
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de861d9af9d80104f90ad9bd49c71834
+      internalID: 909545625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner 46x 44_19
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 88
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ffe006a26cd944db9db1882a7f8478
+      internalID: 484479631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner 46x 44_20
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 88
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88df3e5ca4967c46a40dabefc8dbe9f
+      internalID: -678310255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner 46x 44_21
       rect:
         serializedVersion: 2
         x: 0
-        y: 33
-        width: 62
-        height: 33
+        y: 44
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,20 +559,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8ace20736b1e58499e2325786b70db3
-      internalID: 420326080
+      spriteID: 8f31cca35e2a2e746bb55a08a5ed4ea7
+      internalID: -1046888583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_25
+      name: Summoner 46x 44_22
       rect:
         serializedVersion: 2
-        x: 62
-        y: 33
-        width: 62
-        height: 33
+        x: 46
+        y: 44
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,20 +580,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aa8b38a338b72d4b8722305ebc82fb0
-      internalID: -1325657932
+      spriteID: e25b98c115bc7f9498a19e7bb15740a3
+      internalID: 833063729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_26
+      name: Summoner 46x 44_23
       rect:
         serializedVersion: 2
-        x: 124
-        y: 33
-        width: 62
-        height: 33
+        x: 92
+        y: 44
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,20 +601,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c461a8f47000e249bd09f554c1bd897
-      internalID: 1481252204
+      spriteID: 24d40d06869f359448bfa47da97bb3da
+      internalID: -215616980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_27
+      name: Summoner 46x 44_24
       rect:
         serializedVersion: 2
-        x: 186
-        y: 33
-        width: 62
-        height: 33
+        x: 138
+        y: 44
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,104 +622,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9857a77932a044ca955a2f0d1b7aad
-      internalID: -1269264063
+      spriteID: 6df1b906f7a1985468cd7fd7e142fc2e
+      internalID: -1278895183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_28
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 33
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d26bc7d1629cfae409eaa24839a78c91
-      internalID: 610163588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_29
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 33
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02f8bfc76fd853749965a031ddd6ddb9
-      internalID: 2084433222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_30
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 33
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afe7c63250417fc41bc46e305f6a4aec
-      internalID: -2117782585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_31
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 33
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c253626425405c41a9576bf6cebaf73
-      internalID: 1412765356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_32
+      name: Summoner 46x 44_25
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -790,20 +643,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f64106ed4af9f94e812c87bc11da0cf
-      internalID: -47251763
+      spriteID: 15c7232e9185b734aa511aa5716d8ed3
+      internalID: -285315951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_33
+      name: Summoner 46x 44_26
       rect:
         serializedVersion: 2
-        x: 62
+        x: 46
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,20 +664,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29d8640baf50f2f478dbea8315cb9f08
-      internalID: -713070278
+      spriteID: ccf359113bde1184aa64f1b8a848b430
+      internalID: -1251095681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_34
+      name: Summoner 46x 44_27
       rect:
         serializedVersion: 2
-        x: 124
+        x: 92
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -832,20 +685,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 123aed77fef944b4e94c9845dca34ede
-      internalID: -1645452103
+      spriteID: b03ca1f41ec73984a98135ff843aa337
+      internalID: 1339314516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_35
+      name: Summoner 46x 44_28
       rect:
         serializedVersion: 2
-        x: 186
+        x: 138
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,20 +706,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34c332387398894bb700c8f9108d20b
-      internalID: -1993797127
+      spriteID: e091269214065404f9dfd4348265e598
+      internalID: 2005456812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_36
+      name: Summoner 46x 44_29
       rect:
         serializedVersion: 2
-        x: 248
+        x: 184
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,20 +727,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a6bb4be3758cb944b8d3caa90eafa5a
-      internalID: -1213617312
+      spriteID: 394d469976e2588429554f54ea159aac
+      internalID: 1338959988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_37
+      name: Summoner 46x 44_30
       rect:
         serializedVersion: 2
-        x: 310
+        x: 230
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,20 +748,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a088711f24240e4bb93ca0ed4b97c9f
-      internalID: 62921918
+      spriteID: 2948f604bfb43704f8ad407a76780cb6
+      internalID: -883236531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_38
+      name: Summoner 46x 44_31
       rect:
         serializedVersion: 2
-        x: 372
+        x: 276
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,20 +769,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 676bf52cbb61b7c41ac864a5a2d482d6
-      internalID: -658669558
+      spriteID: 9083bb7f85030064c9ee92e581c5a646
+      internalID: 288210249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_39
+      name: Summoner 46x 44_32
       rect:
         serializedVersion: 2
-        x: 434
+        x: 322
         y: 0
-        width: 62
-        height: 33
+        width: 46
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -937,71 +790,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97b0600b70d91f043a564c2bf2eafbc8
-      internalID: 934197866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_40
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 0
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b357d2cca413c8342ab0250db56669a1
-      internalID: 1659856300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_41
-      rect:
-        serializedVersion: 2
-        x: 558
-        y: 0
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f98be99488136e64ca702451d262b5a3
-      internalID: -1481066630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghoul Sprite Sheet 62 x 33_42
-      rect:
-        serializedVersion: 2
-        x: 620
-        y: 0
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2449ed6b632d5b49baffbcb1db89813
-      internalID: 767796849
+      spriteID: 690effed1713aef45969854e73d9a697
+      internalID: 557645193
       vertices: []
       indices: 
       edges: []
@@ -1017,49 +807,39 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ghoul Sprite Sheet 62 x 33_3: 603538752
-      Ghoul Sprite Sheet 62 x 33_0: 802320997
-      Ghoul Sprite Sheet 62 x 33_28: 610163588
-      Ghoul Sprite Sheet 62 x 33_18: -1942664077
-      Ghoul Sprite Sheet 62 x 33_33: -713070278
-      Ghoul Sprite Sheet 62 x 33_31: 1412765356
-      Ghoul Sprite Sheet 62 x 33_5: -401648269
-      Ghoul Sprite Sheet 62 x 33_22: 1447212874
-      Ghoul Sprite Sheet 62 x 33_10: 1201811071
-      Ghoul Sprite Sheet 62 x 33_34: -1645452103
-      Ghoul Sprite Sheet 62 x 33_37: 62921918
-      Ghoul Sprite Sheet 62 x 33_15: -501350986
-      Ghoul Sprite Sheet 62 x 33_39: 934197866
-      Ghoul Sprite Sheet 62 x 33_21: -781361000
-      Ghoul Sprite Sheet 62 x 33_42: 767796849
-      Ghoul Sprite Sheet 62 x 33_14: 515302659
-      Ghoul Sprite Sheet 62 x 33_25: -1325657932
-      Ghoul Sprite Sheet 62 x 33_17: 133686986
-      Ghoul Sprite Sheet 62 x 33_26: 1481252204
-      Ghoul Sprite Sheet 62 x 33_30: -2117782585
-      Ghoul Sprite Sheet 62 x 33_27: -1269264063
-      Ghoul Sprite Sheet 62 x 33_7: -1026437434
-      Ghoul Sprite Sheet 62 x 33_16: 1312257600
-      Ghoul Sprite Sheet 62 x 33_40: 1659856300
-      Ghoul Sprite Sheet 62 x 33_4: 366122024
-      Ghoul Sprite Sheet 62 x 33_6: 1262678165
-      Ghoul Sprite Sheet 62 x 33_9: -597670744
-      Ghoul Sprite Sheet 62 x 33_11: 2019406601
-      Ghoul Sprite Sheet 62 x 33_35: -1993797127
-      Ghoul Sprite Sheet 62 x 33_38: -658669558
-      Ghoul Sprite Sheet 62 x 33_41: -1481066630
-      Ghoul Sprite Sheet 62 x 33_12: 2037094201
-      Ghoul Sprite Sheet 62 x 33_2: -847325668
-      Ghoul Sprite Sheet 62 x 33_29: 2084433222
-      Ghoul Sprite Sheet 62 x 33_13: -1526571820
-      Ghoul Sprite Sheet 62 x 33_23: -105868483
-      Ghoul Sprite Sheet 62 x 33_20: -709799669
-      Ghoul Sprite Sheet 62 x 33_32: -47251763
-      Ghoul Sprite Sheet 62 x 33_8: -2055149508
-      Ghoul Sprite Sheet 62 x 33_19: -212218925
-      Ghoul Sprite Sheet 62 x 33_1: -872563507
-      Ghoul Sprite Sheet 62 x 33_36: -1213617312
-      Ghoul Sprite Sheet 62 x 33_24: 420326080
+      Summoner 46x 44_1: 1311381287
+      Summoner 46x 44_3: -1097781757
+      Summoner 46x 44_12: -894646353
+      Summoner 46x 44_31: 288210249
+      Summoner 46x 44_16: -1889648829
+      Summoner 46x 44_11: 532723505
+      Summoner 46x 44_22: 833063729
+      Summoner 46x 44_18: 909545625
+      Summoner 46x 44_25: -285315951
+      Summoner 46x 44_17: 430920073
+      Summoner 46x 44_20: -678310255
+      Summoner 46x 44_2: -1529620402
+      Summoner 46x 44_28: 2005456812
+      Summoner 46x 44_24: -1278895183
+      Summoner 46x 44_27: 1339314516
+      Summoner 46x 44_10: -825444017
+      Summoner 46x 44_13: -1989804743
+      Summoner 46x 44_14: -2136101861
+      Summoner 46x 44_32: 557645193
+      Summoner 46x 44_0: -863803995
+      Summoner 46x 44_4: 55506941
+      Summoner 46x 44_30: -883236531
+      Summoner 46x 44_21: -1046888583
+      Summoner 46x 44_23: -215616980
+      Summoner 46x 44_8: 1028245779
+      Summoner 46x 44_15: 1347176693
+      Summoner 46x 44_19: 484479631
+      Summoner 46x 44_5: 1890606936
+      Summoner 46x 44_6: -953497892
+      Summoner 46x 44_26: -1251095681
+      Summoner 46x 44_29: 1338959988
+      Summoner 46x 44_7: 1965877115
+      Summoner 46x 44_9: 864347166
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
