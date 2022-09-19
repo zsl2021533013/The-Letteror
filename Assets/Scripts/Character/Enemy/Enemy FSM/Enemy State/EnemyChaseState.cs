@@ -7,7 +7,8 @@ namespace Character.Enemy.Enemy_State
 {
     public class EnemyChaseState : EnemyState
     {
-        private bool _isDetectingPlayer;
+        private bool _isDetectingPlayerFront;
+        private bool _isDetectingPlayerBack;
         
         public EnemyChaseState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(enemyManager,
             enemyData, animBoolName)
@@ -18,9 +19,20 @@ namespace Character.Enemy.Enemy_State
         {
             base.OnUpdate();
 
-            if (_isDetectingPlayer)
+            if (_isDetectingPlayerFront)
             {
                 coreManager.MoveCore.SetVelocityX(enemyData.moveVelocity * coreManager.MoveCore.Direction);
+                return;
+            }
+
+            if (_isDetectingPlayerBack)
+            {
+                coreManager.MoveCore.Flip();
+            }
+            
+            if (!_isDetectingPlayerFront && !_isDetectingPlayerBack)
+            {
+                stateMachine.TranslateToState(enemyManager.IdleState);
             }
         }
         
@@ -28,7 +40,8 @@ namespace Character.Enemy.Enemy_State
         {
             base.DoChecks();
 
-            _isDetectingPlayer = coreManager.SenseCore.PlayerFront;
+            _isDetectingPlayerFront = coreManager.SenseCore.PlayerFront;
+            _isDetectingPlayerBack = coreManager.SenseCore.PlayerBack;
         }
     }
 }

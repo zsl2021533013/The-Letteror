@@ -7,7 +7,7 @@ namespace Character.Enemy.Enemy_State
 {
     public class EnemyIdleState : EnemyState
     {
-        private bool _isDetectingPlayer;
+        private bool _isDetectingPlayerFront;
         
         public EnemyIdleState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(enemyManager,
             enemyData, animBoolName)
@@ -18,7 +18,7 @@ namespace Character.Enemy.Enemy_State
         {
             base.OnUpdate();
 
-            if (_isDetectingPlayer)
+            if (_isDetectingPlayerFront)
             {
                 stateMachine.TranslateToState(enemyManager.ChaseState);
             }
@@ -28,7 +28,7 @@ namespace Character.Enemy.Enemy_State
         {
             base.DoChecks();
 
-            _isDetectingPlayer = coreManager.SenseCore.PlayerFront;
+            _isDetectingPlayerFront = coreManager.SenseCore.PlayerFront;
         }
     }
 }

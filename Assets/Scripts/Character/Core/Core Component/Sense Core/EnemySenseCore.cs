@@ -26,7 +26,8 @@ namespace Character.Core.Core_Component
         
         [Header("Player Sensor")] // 只有 enemy 会调用
         [SerializeField] private LayerMask playerLayerMask;
-        [SerializeField] private float playerCheckDistance;
+        [SerializeField] private float playerFrontCheckDistance;
+        [SerializeField] private float playerBackCheckDistance;
 
 
         public bool Ground => Physics2D.OverlapBox(groundSensor.position, 
@@ -39,7 +40,10 @@ namespace Character.Core.Core_Component
             wallCheckDistance, groundLayerMask);
         
         public bool PlayerFront => Physics2D.Raycast(playerSensor.position,
-            Vector2.right * coreManager.MoveCore.Direction, playerCheckDistance, playerLayerMask);
+            Vector2.right * coreManager.MoveCore.Direction, playerFrontCheckDistance, playerLayerMask);
+        
+        public bool PlayerBack => Physics2D.Raycast(playerSensor.position,
+            Vector2.left * coreManager.MoveCore.Direction, playerBackCheckDistance, playerLayerMask);
 
         protected void OnDrawGizmosSelected()
         {
@@ -47,7 +51,8 @@ namespace Character.Core.Core_Component
             Gizmos.DrawWireCube( groundSensor.position, groundSensorSize);
 
             Gizmos.color = Color.red;
-            Gizmos.DrawRay(playerSensor.position, playerSensor.right * playerCheckDistance);
+            Gizmos.DrawRay(playerSensor.position, playerSensor.right * playerFrontCheckDistance);
+            Gizmos.DrawRay(playerSensor.position, -playerSensor.right * playerBackCheckDistance);
         }
     }
 }

@@ -56485,7 +56485,8 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  playerCheckDistance: 6
+  playerFrontCheckDistance: 6
+  playerBackCheckDistance: 2
 --- !u!1 &982978421
 GameObject:
   m_ObjectHideFlags: 0
@@ -70181,8 +70182,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857471836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.22, y: -3.46, z: -0.021972502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.22, y: -3.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1191966392}
