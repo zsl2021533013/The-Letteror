@@ -83,7 +83,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
                 return;
             }
 
-            if (_isTouchingWall && playerManager.Input.InputDirection == coreManager.MoveCore.Direction &&
+            if (playerManager.isWallSlideEnable && _isTouchingWall && playerManager.Input.InputDirection == coreManager.MoveCore.Direction &&
                 coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
                 stateMachine.TranslateToState(playerManager.WallSlideState);

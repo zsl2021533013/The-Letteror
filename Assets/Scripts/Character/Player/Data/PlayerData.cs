@@ -19,9 +19,6 @@ namespace Character.Player.Data
         [Header("Wall Slide State")] 
         public float wallSlideVelocity;
 
-        [Header("Wall Climb State")] 
-        public float wallClimbVelocity;
-
         [Header("Wall Jump State")] 
         public float wallJumpVelocity;
         public float wallJumpTime;
@@ -29,7 +26,6 @@ namespace Character.Player.Data
 
         [Header("Ledge Climb State")] 
         public Vector2 startOffset;
-        public Vector2 stopOffset;
 
         [Header("Dash State")] 
         public float dashVelocity;
@@ -42,10 +38,5 @@ namespace Character.Player.Data
         public float attackVelocity1;
         public float attackVelocity2;
         public float attackVelocity3;
-        
-        [Header("Sensors Attribute")] 
-        public Vector2 groundSensorSize;
-        public LayerMask groundLayerMask;
-        public float wallCheckDistance;
     }
 }

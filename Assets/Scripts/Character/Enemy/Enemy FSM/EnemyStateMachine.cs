@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Character.Enemy.Enemy_FSM
 {
-    public class EnemyStateMachine : MonoBehaviour
+    public class EnemyStateMachine
     {
         public EnemyState CurrentState { get; private set; }
 

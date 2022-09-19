@@ -14,7 +14,7 @@ namespace Character.Player.Player_FSM
         protected readonly PlayerManager playerManager;
         protected readonly PlayerStateMachine stateMachine;
         protected readonly PlayerData playerData;
-        protected readonly CoreManager coreManager;
+        protected readonly PlayerCoreManager coreManager;
         protected float startTime;
 
         private readonly string _animBoolName;

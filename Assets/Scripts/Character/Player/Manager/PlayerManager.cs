@@ -15,7 +15,10 @@ namespace Character.Player.Manager
         [Header("Player Data")]
         [SerializeField] private PlayerData playerData;
 
-        #region Player FSM Attrbute
+        [Header("Player Ability Active")] 
+        public bool isWallSlideEnable;
+        
+        #region Player FSM Attribute
         
         public PlayerStateMachine StateMachine { get; private set; }
         
@@ -38,9 +41,8 @@ namespace Character.Player.Manager
         #region Componenets
 
         public PlayerInputHandler Input { get; private set; }
-        public Rigidbody2D Rb { get; private set; }
         public Animator Anim { get; private set; }
-        public CoreManager CoreManager { get; private set; }
+        public PlayerCoreManager CoreManager { get; private set; }
 
         #endregion
         
@@ -52,7 +54,6 @@ namespace Character.Player.Manager
         {
             InitializeFsm();
             Input = GetComponent<PlayerInputHandler>();
-            Rb = GetComponent<Rigidbody2D>();
             Anim = GetComponentInChildren<Animator>();
             AnimatorManager = GetComponentInChildren<PlayerAnimatorManager>();
             AnimatorManager.PlayerManager = this;
@@ -76,7 +77,7 @@ namespace Character.Player.Manager
 
         private void InitializeFsm()
         {
-            CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
+            CoreManager = GetComponentInChildren<PlayerCoreManager>(); // CoreManager 要在最开始获取
             
             StateMachine = new PlayerStateMachine();
             IdleState = new PlayerIdleState(this, playerData, "idle");
@@ -93,19 +94,8 @@ namespace Character.Player.Manager
             Attack2State = new PlayerAttack2State(this, playerData, "attack2");
             Attack3State = new PlayerAttack3State(this, playerData, "attack3");
         }
-
-        #region Check Functions
-
         
-        
-        #endregion
         
         public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinish();
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube( CoreManager.SenseCore.GroundSensor.position, playerData.groundSensorSize);
-        }
     }
 }

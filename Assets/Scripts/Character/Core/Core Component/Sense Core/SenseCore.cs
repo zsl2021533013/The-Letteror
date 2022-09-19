@@ -10,13 +10,17 @@ namespace Character.Core.Core_Component
         
         [Header("Sensors")]
         [SerializeField] private Transform groundSensor;
-        [SerializeField] private Transform wallSensor;
-        [SerializeField] private Transform ledgeSensor;
+        [SerializeField] protected Transform wallSensor;
+        [SerializeField] protected Transform ledgeSensor;
 
-        [Header("Sensors Attitude")] 
+        [Header("Ground Senesor")]
+        [SerializeField]
+        protected LayerMask groundLayerMask;
         [SerializeField] private Vector2 groundSensorSize;
-        [SerializeField] private LayerMask groundLayerMask;
-        [SerializeField] private float wallCheckDistance;
+        
+        [Header("Wall Sensor")]
+        [SerializeField]
+        protected float wallCheckDistance;
 
 
         public bool Ground => Physics2D.OverlapBox(groundSensor.position, 
@@ -27,5 +31,11 @@ namespace Character.Core.Core_Component
 
         public bool Ledge => Physics2D.Raycast(ledgeSensor.position, Vector2.right * coreManager.MoveCore.Direction,
             wallCheckDistance, groundLayerMask);
+
+        protected virtual void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireCube( groundSensor.position, groundSensorSize);
+        }
     }
 }

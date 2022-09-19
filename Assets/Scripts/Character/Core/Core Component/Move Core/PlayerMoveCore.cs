@@ -1,18 +1,17 @@
-﻿using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Character.Core.Core_Component
 {
-    public class MoveCore : CoreComponent
+    public class PlayerMoveCore : PlayerCoreComponent
     {
         public Rigidbody2D Rb { get; private set; }
         
         public Vector2 CurrentVelocity { get; private set; }
         public int Direction => _transform.localScale.x > 0f ? 1 : -1;
-        
-        private Transform _transform;
+
+        protected Transform _transform;
         private Vector2 _tempVector2;
-        private Vector3 _tempVector3;
+        protected Vector3 _tempVector3;
 
         protected override void Awake()
         {
