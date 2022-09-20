@@ -1,4 +1,5 @@
-﻿using Character.Player.Data;
+﻿using Character.Core.Core_Component;
+using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 using Character.Player.Player_State.Super_State;
@@ -25,7 +26,11 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
             coreManager.MoveCore.SetVelocityX(playerData.movementVelocity * movementInput.x);
             playerManager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
             
-            coreManager.MoveCore.CheckFlip(playerManager.Input.MovementInput.x);
+            if (!(coreManager.MoveCore as PlayerMoveCore))
+            {
+                Debug.LogError("Missing Player Move Core");
+            }
+            (coreManager.MoveCore as PlayerMoveCore).CheckFlip(playerManager.Input.MovementInput.x);
             
             if (Mathf.Abs(movementInput.x) <= 0.1f)
             {

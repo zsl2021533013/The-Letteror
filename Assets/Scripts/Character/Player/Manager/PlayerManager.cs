@@ -44,7 +44,7 @@ namespace Character.Player.Manager
 
         public PlayerInputHandler Input { get; private set; }
         public Animator Anim { get; private set; }
-        public PlayerCoreManager CoreManager { get; private set; }
+        public CoreManager CoreManager { get; private set; }
 
         #endregion
         
@@ -79,7 +79,7 @@ namespace Character.Player.Manager
 
         private void InitializeFsm()
         {
-            CoreManager = GetComponentInChildren<PlayerCoreManager>(); // CoreManager 要在最开始获取
+            CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
             
             StateMachine = new PlayerStateMachine();
             IdleState = new PlayerIdleState(this, playerData, "idle");

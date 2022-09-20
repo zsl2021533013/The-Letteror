@@ -11,10 +11,11 @@ namespace Character.Player.Player_FSM
 
         protected bool isAnimationFinish;
         protected bool isStateFinished;
-        protected readonly PlayerManager playerManager;
-        protected readonly PlayerStateMachine stateMachine;
-        protected readonly PlayerData playerData;
-        protected readonly PlayerCoreManager coreManager;
+        protected PlayerManager playerManager;
+        protected PlayerStateMachine stateMachine;
+        protected PlayerData playerData;
+        protected CoreManager coreManager;
+        protected PlayerCoreManager playerCoreManger;
         protected float startTime;
 
         private readonly string _animBoolName;

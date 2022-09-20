@@ -2,35 +2,8 @@
 
 namespace Character.Core.Core_Component
 {
-    public class PlayerSenseCore : PlayerCoreComponent
+    public class PlayerSenseCore : SenseCore
     {
-        public Transform GroundSensor => groundSensor;
-        public Transform WallSensor => wallSensor;
-        public Transform LedgeSensor => ledgeSensor;
-        
-        [Header("Sensors")]
-        [SerializeField] private Transform groundSensor;
-        [SerializeField] protected Transform wallSensor;
-        [SerializeField] protected Transform ledgeSensor;
-
-        [Header("Ground Sensor")]
-        [SerializeField]
-        protected LayerMask groundLayerMask;
-        [SerializeField] private Vector2 groundSensorSize;
-        
-        [Header("Wall Sensor")]
-        [SerializeField]
-        protected float wallCheckDistance;
-
-        public bool Ground => Physics2D.OverlapBox(groundSensor.position, 
-            groundSensorSize, 0f, groundLayerMask);
-
-        public bool WallFront => Physics2D.Raycast(wallSensor.position, Vector2.right * coreManager.MoveCore.Direction,
-            wallCheckDistance, groundLayerMask);
-
-        public bool Ledge => Physics2D.Raycast(ledgeSensor.position, Vector2.right * coreManager.MoveCore.Direction,
-            wallCheckDistance, groundLayerMask);
-
         public Vector2 GetCornerPosition() // 只有 player 会调用
         {
             RaycastHit2D hitX = Physics2D.Raycast(coreManager.SenseCore.WallSensor.position,
@@ -47,12 +20,6 @@ namespace Character.Core.Core_Component
 
             return new Vector2(wallSensor.position.x + distanceX * coreManager.MoveCore.Direction,
                 ledgeSensor.position.y - distanceY);
-        }
-        
-        protected virtual void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube( groundSensor.position, groundSensorSize);
         }
     }
 }

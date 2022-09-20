@@ -1,4 +1,5 @@
-﻿using Character.Player.Data;
+﻿using Character.Core.Core_Component;
+using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 using UnityEngine;
@@ -25,7 +26,12 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
             playerManager.JumpState.ResetAmountOfJump();
             
             playerManager.transform.position = _detectedPosition;
-            _cornerPosition = coreManager.SenseCore.GetCornerPosition();
+
+            if (!(coreManager.SenseCore as PlayerSenseCore))
+            {
+                Debug.LogError("Missing Player Sense Core");
+            }
+            _cornerPosition = (coreManager.SenseCore as PlayerSenseCore).GetCornerPosition();
 
             SetStartPosition();
 

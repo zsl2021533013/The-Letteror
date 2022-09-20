@@ -1,4 +1,5 @@
-﻿using Character.Player.Data;
+﻿using Character.Core.Core_Component;
+using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 using Character.Player.Player_State.Super_State;
@@ -19,7 +20,11 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
             base.OnEnter();
             
             coreManager.MoveCore.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, -coreManager.MoveCore.Direction);
-            coreManager.MoveCore.CheckFlip(playerManager.Input.MovementInput.x);
+            if (!(coreManager.MoveCore as PlayerMoveCore))
+            {
+                Debug.LogError("Missing Player Move Core");
+            }
+            (coreManager.MoveCore as PlayerMoveCore).CheckFlip(playerManager.Input.MovementInput.x);
             playerManager.JumpState.DecreaseAmountOfJumps();
         }
 
