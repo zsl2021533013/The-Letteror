@@ -28,7 +28,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnUpdate();
 
-            if (isStateFinished)
+            if (IsStateFinished)
             {
                 return;
             }

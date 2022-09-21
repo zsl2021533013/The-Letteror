@@ -16,7 +16,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnUpdate();
 
-            if (isStateFinished)
+            if (IsStateFinished)
             {
                 return;
             }

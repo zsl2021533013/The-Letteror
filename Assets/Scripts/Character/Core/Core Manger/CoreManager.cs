@@ -9,7 +9,7 @@ namespace Character.Core
         public MoveCore MoveCore { get; private set; }
         public SenseCore SenseCore { get; private set; }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             MoveCore = GetComponentInChildren<MoveCore>();
             SenseCore = GetComponentInChildren<SenseCore>();

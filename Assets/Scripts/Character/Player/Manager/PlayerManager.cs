@@ -1,4 +1,5 @@
 using Character.Core;
+using Character.Core.Core_Component;
 using Character.Player.Data;
 using Character.Player.Input_System;
 using Character.Player.Player_FSM;
@@ -6,6 +7,7 @@ using Character.Player.Player_State.Sub_State.Ability_State;
 using Character.Player.Player_State.Sub_State.Air_State;
 using Character.Player.Player_State.Sub_State.Ground_State;
 using Character.Player.Player_State.Sub_State.Wall_State;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 namespace Character.Player.Manager
@@ -44,11 +46,11 @@ namespace Character.Player.Manager
 
         public PlayerInputHandler Input { get; private set; }
         public Animator Anim { get; private set; }
-        public CoreManager CoreManager { get; private set; }
+        public PlayerCoreManager CoreManager { get; private set; }
 
         #endregion
         
-        public PlayerAnimatorManager AnimatorManager { get; private set; }
+        public PlayerAnimationManager AnimationManager { get; private set; }
         
         private Vector2 _tempVector2;
 
@@ -57,8 +59,7 @@ namespace Character.Player.Manager
             InitializeFsm();
             Input = GetComponent<PlayerInputHandler>();
             Anim = GetComponentInChildren<Animator>();
-            AnimatorManager = GetComponentInChildren<PlayerAnimatorManager>();
-            AnimatorManager.PlayerManager = this;
+            AnimationManager = GetComponentInChildren<PlayerAnimationManager>();
         }
 
         private void Start()
@@ -79,7 +80,7 @@ namespace Character.Player.Manager
 
         private void InitializeFsm()
         {
-            CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
+            CoreManager = GetComponentInChildren<PlayerCoreManager>(); // CoreManager 要在最开始获取
             
             StateMachine = new PlayerStateMachine();
             IdleState = new PlayerIdleState(this, playerData, "idle");

@@ -78,7 +78,7 @@ namespace Character.Player.Player_State.Super_State
         {
             base.DoChecks();
 
-            _isGrounded = coreManager.SenseCore.Ground;
+            _isGrounded = coreManager.SenseCore.DetectGround;
         }
 
         private void UpdateInput(PlayerInputHandler input)

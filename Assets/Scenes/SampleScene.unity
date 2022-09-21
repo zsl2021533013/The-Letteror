@@ -55190,7 +55190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 75737338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf2bf5ed10e4920bd0bbf9fddc81b8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4547c92d38e0453d9488878a739199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &85212152
@@ -55570,10 +55570,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 18.579496, y: 10.327446}
-      - {x: -12.281595, y: 10.395211}
-      - {x: -12.199495, y: -6.0079827}
-      - {x: 18.748615, y: -6.1207504}
+    - - {x: 29.991735, y: 2.203396}
+      - {x: 25.248499, y: 22.269615}
+      - {x: -17.296272, y: 23.267939}
+      - {x: -26.807392, y: 2.7660556}
+      - {x: -20.867462, y: -8.871956}
+      - {x: -10.907052, y: -11.02266}
+      - {x: 26.089687, y: -6.2758446}
 --- !u!4 &201865372
 Transform:
   m_ObjectHideFlags: 0
@@ -56475,17 +56478,18 @@ MonoBehaviour:
   groundSensor: {fileID: 706317636}
   wallSensor: {fileID: 832973607}
   ledgeSensor: {fileID: 425267335}
-  playerSensor: {fileID: 800474909}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  groundSensorSize: {x: 0.32, y: 0.52}
+  groundSensorSize: {x: 0.48, y: 0.52}
   wallCheckDistance: 0.5
+  playerSensor: {fileID: 800474909}
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
   playerFrontCheckDistance: 6
   playerBackCheckDistance: 2
+  attackDistance: 2
 --- !u!1 &982978421
 GameObject:
   m_ObjectHideFlags: 0
@@ -56631,6 +56635,7 @@ GameObject:
   - component: {fileID: 1191966392}
   - component: {fileID: 1191966394}
   - component: {fileID: 1191966393}
+  - component: {fileID: 1191966395}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -56646,7 +56651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191966391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56725,6 +56730,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1191966395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191966391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd8ef424bb749d9bec764c6ffc52398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192942598
 GameObject:
   m_ObjectHideFlags: 0
@@ -70151,7 +70168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719251473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326c5a50d9c94aa49927da58b7194164, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f89e8d892d147d48ee94b5af68a536e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1857471836
@@ -70181,7 +70198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857471836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.22, y: -3.46, z: 0}
+  m_LocalPosition: {x: 8.09, y: -3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70224,7 +70241,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13085413, y: -0.24507695}
+  m_Offset: {x: -0.033606052, y: -0.24507695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -70235,7 +70252,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55944157, y: 1.4393572}
+  m_Size: {x: 0.4376192, y: 1.4393572}
   m_EdgeRadius: 0
 --- !u!114 &1857471840
 MonoBehaviour:

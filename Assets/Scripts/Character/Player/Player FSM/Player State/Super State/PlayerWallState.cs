@@ -57,8 +57,8 @@ namespace Character.Player.Player_State.Super_State
         {
             base.DoChecks();
 
-            _isGrounded = coreManager.SenseCore.Ground;
-            _isTouchingWall = coreManager.SenseCore.WallFront;
+            _isGrounded = coreManager.SenseCore.DetectGround;
+            _isTouchingWall = coreManager.SenseCore.DetectWall;
         }
     }
 }

@@ -12,6 +12,10 @@ namespace Character.Player.Player_FSM
 
         public void TranslateToState(PlayerState playerState)
         {
+            if (CurrentState.IsStateFinished)
+            {
+                return;
+            }
             CurrentState.OnExit();
             CurrentState = playerState;
             CurrentState.OnEnter();

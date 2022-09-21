@@ -1,14 +1,13 @@
-﻿using Character.Enemy.Data;
-using Character.Enemy.Enemy_FSM;
+﻿using Character.Core.Core_Component;
+using Character.Enemy.Data;
+using Character.Enemy.Enemy_FSM.Enemy_State.Super_State;
 using Character.Enemy.Manager;
-using UnityEngine;
 
-namespace Character.Enemy.Enemy_State
+namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
 {
-    public class EnemyChaseState : EnemyState
+    public class EnemyChaseState : EnemyGroundState
     {
-        private bool _isDetectingPlayerFront;
-        private bool _isDetectingPlayerBack;
+        private bool _inFlipRange;
         
         public EnemyChaseState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(enemyManager,
             enemyData, animBoolName)
@@ -19,20 +18,21 @@ namespace Character.Enemy.Enemy_State
         {
             base.OnUpdate();
 
-            if (_isDetectingPlayerFront)
+            if (inChaseRange && !inAttackRange)
             {
                 coreManager.MoveCore.SetVelocityX(enemyData.moveVelocity * coreManager.MoveCore.Direction);
                 return;
             }
 
-            if (_isDetectingPlayerBack)
+            if (_inFlipRange)
             {
-                coreManager.MoveCore.Flip();
+                ((EnemyMoveCore)coreManager.MoveCore).Flip();
             }
             
-            if (!_isDetectingPlayerFront && !_isDetectingPlayerBack)
+            if (!inChaseRange && !_inFlipRange)
             {
                 stateMachine.TranslateToState(enemyManager.IdleState);
+                return;
             }
         }
         
@@ -40,8 +40,8 @@ namespace Character.Enemy.Enemy_State
         {
             base.DoChecks();
 
-            _isDetectingPlayerFront = coreManager.SenseCore.PlayerFront;
-            _isDetectingPlayerBack = coreManager.SenseCore.PlayerBack;
+            _inFlipRange = ((EnemySenseCore)coreManager.SenseCore).InFlipRange;
+            inAttackRange = ((EnemySenseCore)coreManager.SenseCore).InAttackRange;
         }
     }
 }

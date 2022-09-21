@@ -6,8 +6,18 @@ namespace Character.Core.Core_Component
     {
         public void Flip()
         {
-            _tempVector3.Set(-_transform.localScale.x, 1, 1);
-            _transform.localScale = _tempVector3;
+            tempVector3.Set(-transform.localScale.x, 1, 1);
+            transform.localScale = tempVector3;
+        }
+
+        public bool JudgeArrive(float positionX)
+        {
+            if (Mathf.Abs(Position.x - positionX) < 0.1f)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

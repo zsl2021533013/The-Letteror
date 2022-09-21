@@ -7,19 +7,17 @@ namespace Character.Player.Player_FSM
 {
     public class PlayerState
     {
-        public bool IsStateEnable { get; set; }
-
-        protected bool isAnimationFinish;
-        protected bool isStateFinished;
+        public bool IsStateFinished { get; private set; }
+        
         protected PlayerManager playerManager;
         protected PlayerStateMachine stateMachine;
         protected PlayerData playerData;
         protected CoreManager coreManager;
-        protected PlayerCoreManager playerCoreManger;
         protected float startTime;
+        protected bool isAnimationFinish;
 
-        private readonly string _animBoolName;
-
+        private string _animBoolName;
+        
         public PlayerState(PlayerManager playerManager, PlayerData playerData, string animBoolName)
         {
             this.playerManager = playerManager;
@@ -27,7 +25,6 @@ namespace Character.Player.Player_FSM
             _animBoolName = animBoolName;
             stateMachine = playerManager.StateMachine;
             coreManager = playerManager.CoreManager;
-            IsStateEnable = false;
         }
 
         public virtual void OnEnter()
@@ -36,14 +33,14 @@ namespace Character.Player.Player_FSM
             DoChecks();
             playerManager.Anim.SetBool(_animBoolName, true);
             isAnimationFinish = false;
-            isStateFinished = false;
+            IsStateFinished = false;
             //Debug.Log("Enter " + _animBoolName + " State");
         }
 
         public virtual void OnExit()
         {
             playerManager.Anim.SetBool(_animBoolName, false);
-            isStateFinished = true; //必须要写，因为父类 return 子类中不会 return，需要用 bool 传递一下
+            IsStateFinished = true; //必须要写，因为父类 return 子类中不会 return，需要用 bool 传递一下
             //Debug.Log("Exit " + _animBoolName + " State");
         }
 
@@ -61,6 +58,6 @@ namespace Character.Player.Player_FSM
         {
         }
 
-        public virtual void AnimationFinish() => isAnimationFinish = true;
+        public void AnimationFinish() => isAnimationFinish = true;
     }
 }

@@ -10,8 +10,7 @@ namespace Character.Player.Player_State.Super_State
         protected bool isAbilityDone;
 
         private bool isGrounded;
-
-
+        
         public PlayerAbilityState(PlayerManager playerManager, PlayerData playerData, string animBoolName) : base(
             playerManager, playerData, animBoolName)
         {
@@ -50,7 +49,7 @@ namespace Character.Player.Player_State.Super_State
         {
             base.DoChecks();
 
-            isGrounded = coreManager.SenseCore.Ground;
+            isGrounded = coreManager.SenseCore.DetectGround;
         }
 
         protected virtual void OnAnimationFinish()

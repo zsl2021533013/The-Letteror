@@ -7,15 +7,17 @@ namespace Character.Enemy.Enemy_FSM
 {
     public class EnemyState
     {
+        public bool IsStateFinished { get; private set; }
+        
         protected EnemyStateMachine stateMachine;
-        protected EnemyCoreManager coreManager;    
+        protected CoreManager coreManager;    
         protected EnemyManager enemyManager;
         protected EnemyData enemyData;
+        protected float startTime;
+        protected bool isAnimationFinish;
 
-        public float startTime { get; protected set; }
-
-        protected string _animBoolName;
-
+        private string _animBoolName;
+        
         public EnemyState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName)
         {
             this.enemyManager = enemyManager;
@@ -30,12 +32,15 @@ namespace Character.Enemy.Enemy_FSM
             startTime = Time.time;
             enemyManager.Anim.SetBool(_animBoolName, true);
             DoChecks();
-            Debug.Log("Enter " + _animBoolName + " State");
+            isAnimationFinish = false;
+            IsStateFinished = false;
+            //Debug.Log("Enter " + _animBoolName + " State");
         }
 
         public virtual void OnExit()
         {
             enemyManager.Anim.SetBool(_animBoolName, false);
+            IsStateFinished = true;
             //Debug.Log("Exit " + _animBoolName + " State");
         }
 
@@ -53,5 +58,7 @@ namespace Character.Enemy.Enemy_FSM
         {
 
         }
+        
+        public void AnimationFinish() => isAnimationFinish = true;
     }
 }

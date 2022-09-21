@@ -1,33 +1,22 @@
-﻿using System;
-using Character.Core.Core_Component;
+﻿using Character.Core.Core_Component;
 using UnityEngine;
 
 namespace Character.Core
 {
-    public class PlayerCoreManager : MonoBehaviour
+    public class PlayerCoreManager : CoreManager
     {
-        public PlayerMoveCore MoveCore { get; private set; }
-        public PlayerSenseCore SenseCore { get; private set; }
-
-        private void Awake()
+        protected override void Awake()
         {
-            MoveCore = GetComponentInChildren<PlayerMoveCore>();
-            SenseCore = GetComponentInChildren<PlayerSenseCore>();
+            base.Awake();
 
-            if (!MoveCore)
+            if (!(MoveCore is PlayerMoveCore))
             {
-                Debug.LogError("Missing MoveCore in CoreManager");
+                Debug.LogError("Missing Player Move Core");
             }
-
-            if (!SenseCore)
+            if (!(SenseCore is PlayerSenseCore))
             {
-                Debug.LogError("Missing SenseCore in CoreManager");
+                Debug.LogError("Missing Player Sense Core");
             }
-        }
-
-        public void OnUpdate()
-        {
-            MoveCore.OnUpdate();
         }
     }
 }

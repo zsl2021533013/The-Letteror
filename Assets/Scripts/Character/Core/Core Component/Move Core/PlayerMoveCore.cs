@@ -14,8 +14,8 @@ namespace Character.Core.Core_Component
                 
             if (inputDirection == -Direction)
             {
-                _tempVector3.Set(inputDirection, 1, 1);
-                _transform.localScale = _tempVector3;
+                tempVector3.Set(inputDirection, 1, 1);
+                transform.localScale = tempVector3;
             }
         }
     }

@@ -45,12 +45,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             CheckJumping();
             
             coreManager.MoveCore.SetVelocityX(playerData.movementVelocity * _movementInput.x);
-
-            if (!(coreManager.MoveCore as PlayerMoveCore))
-            {
-                Debug.LogError("Missing Player Move Core");
-            }
-            (coreManager.MoveCore as PlayerMoveCore).CheckFlip(playerManager.Input.MovementInput.x);
+            ((PlayerMoveCore)coreManager.MoveCore).CheckFlip(playerManager.Input.MovementInput.x);
             
             playerManager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
             playerManager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
@@ -102,9 +97,9 @@ namespace Character.Player.Player_State.Sub_State.Air_State
 
             CheckCoyoteTime();
             
-            _isGrounded = coreManager.SenseCore.Ground;
-            _isTouchingWall = coreManager.SenseCore.WallFront;
-            _isTouchingLedge = coreManager.SenseCore.Ledge;
+            _isGrounded = coreManager.SenseCore.DetectGround;
+            _isTouchingWall = coreManager.SenseCore.DetectWall;
+            _isTouchingLedge = coreManager.SenseCore.DetectLedge;
             
             if (_isTouchingWall && !_isTouchingLedge)
             {

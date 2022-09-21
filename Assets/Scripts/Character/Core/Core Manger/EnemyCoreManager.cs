@@ -3,30 +3,20 @@ using UnityEngine;
 
 namespace Character.Core
 {
-    public class EnemyCoreManager : MonoBehaviour
+    public class EnemyCoreManager : CoreManager
     {
-        public EnemyMoveCore MoveCore { get; private set; }
-        public EnemySenseCore SenseCore { get; private set; }
-
-        private void Awake()
+        protected override void Awake()
         {
-            MoveCore = GetComponentInChildren<EnemyMoveCore>();
-            SenseCore = GetComponentInChildren<EnemySenseCore>();
+            base.Awake();
 
-            if (!MoveCore)
+            if (!(MoveCore is EnemyMoveCore))
             {
-                Debug.LogError("Missing MoveCore in CoreManager");
+                Debug.LogError("Missing Enemy Move Core");
             }
-
-            if (!SenseCore)
+            if (!(SenseCore is EnemySenseCore))
             {
-                Debug.LogError("Missing SenseCore in CoreManager");
+                Debug.LogError("Missing Enemy Sense Core");
             }
-        }
-
-        public void OnUpdate()
-        {
-            MoveCore.OnUpdate();
         }
     }
 }

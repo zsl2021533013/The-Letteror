@@ -23,13 +23,13 @@ namespace Character.Core.Core_Component
         protected float wallCheckDistance;
 
 
-        public bool Ground => Physics2D.OverlapBox(groundSensor.position, 
+        public bool DetectGround => Physics2D.OverlapBox(groundSensor.position, 
             groundSensorSize, 0f, groundLayerMask);
 
-        public bool WallFront => Physics2D.Raycast(wallSensor.position, Vector2.right * coreManager.MoveCore.Direction,
+        public bool DetectWall => Physics2D.Raycast(wallSensor.position, Vector2.right * coreManager.MoveCore.Direction,
             wallCheckDistance, groundLayerMask);
 
-        public bool Ledge => Physics2D.Raycast(ledgeSensor.position, Vector2.right * coreManager.MoveCore.Direction,
+        public bool DetectLedge => Physics2D.Raycast(ledgeSensor.position, Vector2.right * coreManager.MoveCore.Direction,
             wallCheckDistance, groundLayerMask);
 
         protected virtual void OnDrawGizmosSelected()

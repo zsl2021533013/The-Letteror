@@ -18,7 +18,7 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
         {
             base.OnUpdate();
 
-            if (isStateFinished)
+            if (IsStateFinished)
             {
                 return;
             }

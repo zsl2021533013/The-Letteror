@@ -14,6 +14,10 @@ namespace Character.Enemy.Enemy_FSM
 
         public void TranslateToState(EnemyState playerState)
         {
+            if (CurrentState.IsStateFinished)
+            {
+                return;
+            }
             CurrentState.OnExit();
             CurrentState = playerState;
             CurrentState.OnEnter();

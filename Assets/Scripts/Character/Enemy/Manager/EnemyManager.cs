@@ -2,7 +2,9 @@
 using Character.Core;
 using Character.Enemy.Data;
 using Character.Enemy.Enemy_FSM;
-using Character.Enemy.Enemy_State;
+using Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ability_State;
+using Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Character.Enemy.Manager
@@ -16,6 +18,8 @@ namespace Character.Enemy.Manager
         public EnemyStateMachine StateMachine { get; private set; }
         public EnemyIdleState IdleState { get; private set; }
         public EnemyChaseState ChaseState { get; private set; }
+        public EnemyAttackState AttackState { get; private set; }
+        public EnemyPatrolState PatrolState { get; private set; }
 
         #endregion
 
@@ -55,6 +59,15 @@ namespace Character.Enemy.Manager
             StateMachine = new EnemyStateMachine();
             IdleState = new EnemyIdleState(this, enemyData, "idle");
             ChaseState = new EnemyChaseState(this, enemyData, "move");
+            AttackState = new EnemyAttackState(this, enemyData, "attack");
+            PatrolState = new EnemyPatrolState(this, enemyData, "move");
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position, Vector3.right * enemyData.patrolRange);
+            Gizmos.DrawRay(transform.position, Vector3.left * enemyData.patrolRange);
         }
     }
 }
