@@ -1,4 +1,6 @@
-﻿using Character.Core.Core_Component;
+﻿using Character.Base.Base_Manager;
+using Character.Core.Core_Component;
+using Character.Core.Core_Component.Move_Core;
 using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
@@ -13,9 +15,9 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         private Vector2 _startPosition;
         private Vector2 _stopPosition;
         private bool _jumpInput;
-        
-        public PlayerLedgeClimbState(PlayerManager playerManager, PlayerData playerData,
-            string animBoolName) : base(playerManager, playerData, animBoolName)
+
+        public PlayerLedgeClimbState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -23,14 +25,10 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnEnter();
             
-            playerManager.JumpState.ResetAmountOfJump();
+            ((PlayerManager)characterManager).JumpState.ResetAmountOfJump();
             
-            playerManager.transform.position = _detectedPosition;
-
-            if (!(coreManager.SenseCore as PlayerSenseCore))
-            {
-                Debug.LogError("Missing Player Sense Core");
-            }
+            ((PlayerManager)characterManager).transform.position = _detectedPosition;
+            
             _cornerPosition = (coreManager.SenseCore as PlayerSenseCore).GetCornerPosition();
 
             SetStartPosition();
@@ -42,13 +40,13 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnUpdate();
 
-            _jumpInput = playerManager.Input.JumpInput;
+            _jumpInput = ((PlayerManager)characterManager).Input.JumpInput;
 
             coreManager.MoveCore.Freeze(_startPosition);
 
             if (_jumpInput)
             {
-                stateMachine.TranslateToState(playerManager.WallJumpState);
+                stateMachine.TranslateToState(((PlayerManager)characterManager).WallJumpState);
                 return;
             }
         }
@@ -57,10 +55,10 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 
         private void SetStartPosition()
         {
-            _startPosition.Set(_cornerPosition.x - (coreManager.MoveCore.Direction * playerData.startOffset.x),
-                _cornerPosition.y - playerData.startOffset.y);
-            _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * playerData.startOffset.x),
-                _cornerPosition.y + playerData.startOffset.y);
+            _startPosition.Set(_cornerPosition.x - (coreManager.MoveCore.Direction * ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.x),
+                _cornerPosition.y - ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.y);
+            _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.x),
+                _cornerPosition.y + ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.y);
         }
     }
 }

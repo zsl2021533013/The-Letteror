@@ -1,4 +1,5 @@
 ﻿using Character.Core.Core_Component;
+using Character.Core.Core_Component.Move_Core;
 using UnityEngine;
 
 namespace Character.Core

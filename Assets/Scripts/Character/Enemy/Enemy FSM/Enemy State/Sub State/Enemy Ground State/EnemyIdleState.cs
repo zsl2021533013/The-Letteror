@@ -1,4 +1,6 @@
-﻿using Character.Core.Core_Component;
+﻿using Character.Base_Manager;
+using Character.Base.Base_Manager;
+using Character.Core.Core_Component;
 using Character.Enemy.Data;
 using Character.Enemy.Enemy_FSM.Enemy_State.Super_State;
 using Character.Enemy.Manager;
@@ -8,8 +10,8 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
 {
     public class EnemyIdleState : EnemyGroundState
     {
-        public EnemyIdleState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(enemyManager,
-            enemyData, animBoolName)
+        public EnemyIdleState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -24,9 +26,9 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.OnUpdate();
             
-            if (Time.time > startTime + enemyData.waitTime)
+            if (Time.time > startTime + ((EnemyMoveCore)coreManager.MoveCore).EnemyData.waitTime)
             {
-                stateMachine.TranslateToState(enemyManager.PatrolState);
+                stateMachine.TranslateToState(((EnemyManager)characterManager).PatrolState);
                 return;
             }
         }

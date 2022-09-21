@@ -1,4 +1,6 @@
-﻿using Character.Core.Core_Component;
+﻿using Character.Base_Manager;
+using Character.Base.Base_Manager;
+using Character.Core.Core_Component;
 using Character.Enemy.Data;
 using Character.Enemy.Manager;
 using UnityEngine;
@@ -9,10 +11,10 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Super_State
     {
         protected bool inChaseRange;
         protected bool inAttackRange;
-        
-        
-        public EnemyGroundState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(
-            enemyManager, enemyData, animBoolName)
+
+
+        public EnemyGroundState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -22,13 +24,13 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Super_State
             
             if (inChaseRange && !inAttackRange)
             {
-                stateMachine.TranslateToState(enemyManager.ChaseState);
+                stateMachine.TranslateToState(((EnemyManager)characterManager).ChaseState);
                 return;
             }
             
-            if (inAttackRange && enemyManager.AttackState.AttackEnable)
+            if (inAttackRange && ((EnemyManager)characterManager).AttackState.AttackEnable)
             {
-                stateMachine.TranslateToState(enemyManager.AttackState);
+                stateMachine.TranslateToState(((EnemyManager)characterManager).AttackState);
                 return;
             }
         }

@@ -1,4 +1,7 @@
-﻿using Character.Enemy.Data;
+﻿using Character.Base_Manager;
+using Character.Base.Base_Manager;
+using Character.Core.Core_Component;
+using Character.Enemy.Data;
 using Character.Enemy.Manager;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -7,12 +10,14 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ability_State
 {
     public class EnemyAttackState : EnemyState
     {
-        public bool AttackEnable => Time.time > startTime + enemyData.attackCoolDown;
-        
-        public EnemyAttackState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(
-            enemyManager, enemyData, animBoolName)
+        public EnemyAttackState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
+
+        public bool AttackEnable => Time.time > startTime + ((EnemyMoveCore)coreManager.MoveCore).EnemyData.attackCoolDown;
+        
+        
 
         public override void OnEnter()
         {
@@ -27,7 +32,7 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ability_State
 
             if (isAnimationFinish)
             {
-                stateMachine.TranslateToState(enemyManager.IdleState);
+                stateMachine.TranslateToState(((EnemyManager)characterManager).IdleState);
             }
         }
     }

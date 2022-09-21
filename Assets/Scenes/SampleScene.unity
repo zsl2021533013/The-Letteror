@@ -55690,7 +55690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e073fb9ddefb8104dadf467a17b350e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: e755e1c4aa4a16a42ada440694be53ad, type: 2}
   isDoubleJumpEnable: 0
   isWallSlideEnable: 0
   isDashEnable: 0
@@ -55863,6 +55862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda9855884a44954bda8487e25b6bfaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: e755e1c4aa4a16a42ada440694be53ad, type: 2}
 --- !u!1 &312125134
 GameObject:
   m_ObjectHideFlags: 0
@@ -70125,6 +70125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3b643257af45a6b87f708103e7cc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
 --- !u!1 &1719251473
 GameObject:
   m_ObjectHideFlags: 0
@@ -70266,7 +70267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8decc5bee8c44449d7100f3bd40ece7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
 --- !u!1 &2005506032
 GameObject:
   m_ObjectHideFlags: 0

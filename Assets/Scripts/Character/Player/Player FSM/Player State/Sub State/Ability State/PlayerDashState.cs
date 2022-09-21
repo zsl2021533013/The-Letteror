@@ -1,4 +1,6 @@
-﻿using Character.Player.Data;
+﻿using Character.Base.Base_Manager;
+using Character.Core.Core_Component.Move_Core;
+using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 using Character.Player.Player_State.Super_State;
@@ -12,8 +14,9 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         private Vector2 _startPosition;
         private Vector2 _currentPosition;
 
-        public PlayerDashState(PlayerManager playerManager,
-            PlayerData playerData, string animBoolName) : base(playerManager, playerData, animBoolName)
+
+        public PlayerDashState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -21,9 +24,9 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition = playerManager.transform.position;
+            _startPosition = ((PlayerManager)characterManager).transform.position;
             DecreaseAmountOfDash();
-            coreManager.MoveCore.SetVelocityX(playerData.dashVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.dashVelocity * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);
         }
 
@@ -36,7 +39,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 
         public bool CheckAmountOfDash() => _amountOfDashLeft > 0;
 
-        public void ResetAmountOfDash() => _amountOfDashLeft = playerData.amountOfDash;
+        public void ResetAmountOfDash() => _amountOfDashLeft = ((PlayerMoveCore)coreManager.MoveCore).PlayerData.amountOfDash;
 
         public void DecreaseAmountOfDash() => --_amountOfDashLeft;
     }

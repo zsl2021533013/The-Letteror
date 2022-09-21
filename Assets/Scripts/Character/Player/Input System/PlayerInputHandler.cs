@@ -25,6 +25,8 @@ namespace Character.Player.Input_System
             }
         }
 
+        
+        
         #region Input Event
 
         public void OnMoveInput(InputAction.CallbackContext ctx)

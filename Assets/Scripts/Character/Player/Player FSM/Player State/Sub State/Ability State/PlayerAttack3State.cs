@@ -1,4 +1,6 @@
-﻿using Character.Player.Data;
+﻿using Character.Base.Base_Manager;
+using Character.Core.Core_Component.Move_Core;
+using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 using Character.Player.Player_State.Super_State;
@@ -10,8 +12,9 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
     {
         private Vector2 _startPosition;
 
-        public PlayerAttack3State(PlayerManager playerManager, PlayerData playerData,
-            string animBoolName) : base(playerManager, playerData, animBoolName)
+
+        public PlayerAttack3State(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -19,8 +22,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition = playerManager.transform.position;
-            coreManager.MoveCore.SetVelocityX(playerData.attackVelocity3 * coreManager.MoveCore.Direction);
+            _startPosition = ((PlayerManager)characterManager).transform.position;
+            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.attackVelocity3 * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);
         }
 
@@ -28,7 +31,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnUpdate();
 
-            if (IsStateFinished)
+            if (isStateFinished)
             {
                 return;
             }

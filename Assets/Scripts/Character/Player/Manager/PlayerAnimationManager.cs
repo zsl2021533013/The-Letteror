@@ -1,19 +1,12 @@
 using System;
+using Character.Base_Manager;
+using Character.Base.Base_Manager;
 using UnityEngine;
 
 namespace Character.Player.Manager
 {
-    public class PlayerAnimationManager : MonoBehaviour
+    public class PlayerAnimationManager : CharacterAnimationManager
     {
-        private PlayerManager _manager;
-
-        private void Awake()
-        {
-            _manager = GetComponentInParent<PlayerManager>();
-        }
-
-        public void AnimationFinish() => _manager.StateMachine.CurrentState.AnimationFinish();
-
-        public void ResetAttackInput() => _manager.Input.ResetAttackInput();
+        public void ResetAttackInput() => ((PlayerManager)manager).Input.ResetAttackInput();
     }
 }

@@ -1,30 +1,21 @@
-using Character.Core;
-using Character.Core.Core_Component;
-using Character.Player.Data;
+using Character.Base.Base_Manager;
 using Character.Player.Input_System;
-using Character.Player.Player_FSM;
 using Character.Player.Player_State.Sub_State.Ability_State;
 using Character.Player.Player_State.Sub_State.Air_State;
 using Character.Player.Player_State.Sub_State.Ground_State;
 using Character.Player.Player_State.Sub_State.Wall_State;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 namespace Character.Player.Manager
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : CharacterManager
     {
-        [Header("Player Data")]
-        [SerializeField] private PlayerData playerData;
-
         [Header("Player Ability Active")] 
         public bool isDoubleJumpEnable;
         public bool isWallSlideEnable;
         public bool isDashEnable;
         
         #region Player FSM Attribute
-        
-        public PlayerStateMachine StateMachine { get; private set; }
         
         public PlayerIdleState IdleState { get; private set; }
         public PlayerMoveState MoveState { get; private set; }
@@ -41,63 +32,40 @@ namespace Character.Player.Manager
         public PlayerAttack3State Attack3State { get; private set; }
         
         #endregion
-
-        #region Componenets
-
+        
         public PlayerInputHandler Input { get; private set; }
-        public Animator Anim { get; private set; }
-        public PlayerCoreManager CoreManager { get; private set; }
-
-        #endregion
         
-        public PlayerAnimationManager AnimationManager { get; private set; }
-        
-        private Vector2 _tempVector2;
-
-        private void Awake()
+        protected override void Awake()
         {
-            InitializeFsm();
+            base.Awake();
+            
             Input = GetComponent<PlayerInputHandler>();
-            Anim = GetComponentInChildren<Animator>();
-            AnimationManager = GetComponentInChildren<PlayerAnimationManager>();
         }
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
+            
             StateMachine.Initialize(IdleState);
         }
 
-        private void Update()
+        protected override void InitializeFsm()
         {
-            CoreManager.OnUpdate();
-            StateMachine.CurrentState.OnUpdate();
-        }
-
-        private void FixedUpdate()
-        {
-            StateMachine.CurrentState.OnFixedUpdate();
-        }
-
-        private void InitializeFsm()
-        {
-            CoreManager = GetComponentInChildren<PlayerCoreManager>(); // CoreManager 要在最开始获取
+            base.InitializeFsm();
             
-            StateMachine = new PlayerStateMachine();
-            IdleState = new PlayerIdleState(this, playerData, "idle");
-            MoveState = new PlayerMoveState(this, playerData, "move");
-            JumpState = new PlayerJumpState(this, playerData, "inAir");
-            AirState = new PlayerAirState(this, playerData, "inAir");
-            LandState = new PlayerLandState(this, playerData, "land");
-            WallSlideState = new PlayerWallSlideState(this, playerData, "wallSlide");
-            WallJumpState = new PlayerWallJumpState(this, playerData, "inAir");
-            LedgeClimbState = new PlayerLedgeClimbState(this, playerData, "ledgeGrab");
-            DashState = new PlayerDashState(this, playerData, "dash");
-            RollState = new PlayerRollState(this, playerData, "roll");
-            Attack1State = new PlayerAttack1State(this, playerData, "attack1");
-            Attack2State = new PlayerAttack2State(this, playerData, "attack2");
-            Attack3State = new PlayerAttack3State(this, playerData, "attack3");
+            IdleState = new PlayerIdleState(this, "idle");
+            MoveState = new PlayerMoveState(this, "move");
+            JumpState = new PlayerJumpState(this, "inAir");
+            AirState = new PlayerAirState(this, "inAir");
+            LandState = new PlayerLandState(this, "land");
+            WallSlideState = new PlayerWallSlideState(this, "wallSlide");
+            WallJumpState = new PlayerWallJumpState(this, "inAir");
+            LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
+            DashState = new PlayerDashState(this, "dash");
+            RollState = new PlayerRollState(this, "roll");
+            Attack1State = new PlayerAttack1State(this, "attack1");
+            Attack2State = new PlayerAttack2State(this, "attack2");
+            Attack3State = new PlayerAttack3State(this, "attack3");
         }
-
-        public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinish();
     }
 }

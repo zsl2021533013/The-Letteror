@@ -1,4 +1,5 @@
-﻿using Character.Player.Data;
+﻿using Character.Base.Base_Manager;
+using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
 
@@ -12,43 +13,43 @@ namespace Character.Player.Player_State.Super_State
         private bool _isGrounded;
         protected bool _isTouchingWall;
 
-        public PlayerWallState(PlayerManager playerManager, PlayerData playerData, string animBoolName) : base(
-            playerManager, playerData, animBoolName)
+
+        public PlayerWallState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
-            
         }
 
         public override void OnEnter()
         {
             base.OnEnter();
             
-            playerManager.JumpState.ResetAmountOfJump();
-            playerManager.Input.ResetJumpInput();
-            playerManager.DashState.ResetAmountOfDash();
+            ((PlayerManager)characterManager).JumpState.ResetAmountOfJump();
+            ((PlayerManager)characterManager).Input.ResetJumpInput();
+            ((PlayerManager)characterManager).DashState.ResetAmountOfDash();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            jumpInput = playerManager.Input.JumpInput;
+            jumpInput = ((PlayerManager)characterManager).Input.JumpInput;
             
             if (_isGrounded && !grabInput)
             {
-                stateMachine.TranslateToState(playerManager.IdleState);
+                stateMachine.TranslateToState(((PlayerManager)characterManager).IdleState);
                 return;
             }
 
             if (_isTouchingWall && jumpInput)
             {
-                playerManager.Input.ResetJumpInput();
-                stateMachine.TranslateToState(playerManager.WallJumpState);
+                ((PlayerManager)characterManager).Input.ResetJumpInput();
+                stateMachine.TranslateToState(((PlayerManager)characterManager).WallJumpState);
                 return;
             }
             
             if (!_isTouchingWall)
             {
-                stateMachine.TranslateToState(playerManager.AirState);
+                stateMachine.TranslateToState(((PlayerManager)characterManager).AirState);
                 return;
             }
         }

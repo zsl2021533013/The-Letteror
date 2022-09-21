@@ -1,4 +1,6 @@
-﻿using Character.Player.Data;
+﻿using Character.Base.Base_Manager;
+using Character.Core.Core_Component.Move_Core;
+using Character.Player.Data;
 using Character.Player.Input_System;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
@@ -12,9 +14,10 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
     {
         private Vector2 _startPosition;
         private bool _attackInput;
-        
-        public PlayerAttack1State(PlayerManager playerManager, PlayerData playerData,
-            string animBoolName) : base(playerManager, playerData, animBoolName)
+
+
+        public PlayerAttack1State(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -22,8 +25,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition = playerManager.transform.position;
-            coreManager.MoveCore.SetVelocityX(playerData.attackVelocity1 * coreManager.MoveCore.Direction);
+            _startPosition = ((PlayerManager)characterManager).transform.position;
+            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.attackVelocity1 * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);
         }
 
@@ -31,12 +34,12 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnUpdate();
 
-            if (IsStateFinished)
+            if (isStateFinished)
             {
                 return;
             }
 
-            UpdateInput(playerManager.Input);
+            UpdateInput(((PlayerManager)characterManager).Input);
 
             coreManager.MoveCore.FreezeY(_startPosition);
         }
@@ -45,8 +48,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             if (_attackInput)
             {
-                stateMachine.TranslateToState(playerManager.Attack2State);
-                playerManager.Input.ResetAttackInput();
+                stateMachine.TranslateToState(((PlayerManager)characterManager).Attack2State);
+                ((PlayerManager)characterManager).Input.ResetAttackInput();
             }
             else
             {

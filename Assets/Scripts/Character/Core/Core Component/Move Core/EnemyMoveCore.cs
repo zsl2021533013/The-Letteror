@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using Character.Enemy.Data;
+using UnityEngine;
 
 namespace Character.Core.Core_Component
 {
     public class EnemyMoveCore : MoveCore
     {
+        [SerializeField] private EnemyData enemyData;
+        public EnemyData EnemyData => enemyData;
+        
         public void Flip()
         {
             tempVector3.Set(-transform.localScale.x, 1, 1);
@@ -18,6 +22,13 @@ namespace Character.Core.Core_Component
             }
 
             return false;
+        }
+        
+        private void OnDrawGizmosSelected()
+        {
+            /*Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position, Vector3.right * enemyData.patrolRange);
+            Gizmos.DrawRay(transform.position, Vector3.left * enemyData.patrolRange);*/
         }
     }
 }

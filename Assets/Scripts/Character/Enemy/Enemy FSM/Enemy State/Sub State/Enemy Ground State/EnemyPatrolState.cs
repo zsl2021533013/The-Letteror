@@ -1,4 +1,6 @@
-﻿using Character.Core;
+﻿using Character.Base_Manager;
+using Character.Base.Base_Manager;
+using Character.Core;
 using Character.Core.Core_Component;
 using Character.Enemy.Data;
 using Character.Enemy.Enemy_FSM.Enemy_State.Super_State;
@@ -13,9 +15,10 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         private float _startPositionX;
         private float _targetX;
         private int _moveDirection;
-        
-        public EnemyPatrolState(EnemyManager enemyManager, EnemyData enemyData, string animBoolName) : base(
-            enemyManager, enemyData, animBoolName)
+
+
+        public EnemyPatrolState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
             _startPositionX = coreManager.MoveCore.Position.x;
         }
@@ -31,18 +34,18 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.OnUpdate();
             
-            coreManager.MoveCore.SetVelocityX(enemyData.moveVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(((EnemyMoveCore)coreManager.MoveCore).EnemyData.moveVelocity * coreManager.MoveCore.Direction);
             
             if (((EnemyMoveCore)coreManager.MoveCore).JudgeArrive(_targetX))
             {
-                stateMachine.TranslateToState(enemyManager.IdleState);
+                stateMachine.TranslateToState(((EnemyManager)characterManager).IdleState);
                 return;
             }
         }
 
         private void SetTargetX()
         {
-            _targetX = _startPositionX + Random.Range(-enemyData.patrolRange, enemyData.patrolRange);
+            _targetX = _startPositionX + Random.Range(-((EnemyMoveCore)coreManager.MoveCore).EnemyData.patrolRange, ((EnemyMoveCore)coreManager.MoveCore).EnemyData.patrolRange);
 
             _moveDirection = _targetX > coreManager.MoveCore.Position.x ? 1 : -1;
             if (_moveDirection == -coreManager.MoveCore.Direction)

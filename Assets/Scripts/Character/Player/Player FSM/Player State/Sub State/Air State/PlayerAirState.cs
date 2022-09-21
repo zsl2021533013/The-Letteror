@@ -1,4 +1,6 @@
-﻿using Character.Core.Core_Component;
+﻿using Character.Base.Base_Manager;
+using Character.Core.Core_Component;
+using Character.Core.Core_Component.Move_Core;
 using Character.Player.Data;
 using Character.Player.Manager;
 using Character.Player.Player_FSM;
@@ -18,9 +20,10 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         private bool _isTouchingWall;
         private bool _isTouchingLedge;
         private bool _coyoteTime;
-        
-        public PlayerAirState(PlayerManager playerManager, PlayerData playerData,
-            string animBoolName) : base(playerManager, playerData, animBoolName)
+
+
+        public PlayerAirState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+            animBoolName)
         {
         }
 
@@ -28,65 +31,65 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         {
             base.OnEnter();
             
-            playerManager.Input.ResetDashInput();
-            playerManager.Input.ResetAttackInput();
+            ((PlayerManager)characterManager).Input.ResetDashInput();
+            ((PlayerManager)characterManager).Input.ResetAttackInput();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            _movementInput = playerManager.Input.MovementInput;
-            _jumpInput = playerManager.Input.JumpInput;
-            _jumpInputStop = playerManager.Input.JumpInputStop;
-            _dashInput = playerManager.Input.DashInput;
-            _attackInput = playerManager.Input.AttackInput;
+            _movementInput = ((PlayerManager)characterManager).Input.MovementInput;
+            _jumpInput = ((PlayerManager)characterManager).Input.JumpInput;
+            _jumpInputStop = ((PlayerManager)characterManager).Input.JumpInputStop;
+            _dashInput = ((PlayerManager)characterManager).Input.DashInput;
+            _attackInput = ((PlayerManager)characterManager).Input.AttackInput;
             
             CheckJumping();
             
-            coreManager.MoveCore.SetVelocityX(playerData.movementVelocity * _movementInput.x);
-            ((PlayerMoveCore)coreManager.MoveCore).CheckFlip(playerManager.Input.MovementInput.x);
+            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.movementVelocity * _movementInput.x);
+            ((PlayerMoveCore)coreManager.MoveCore).CheckFlip(((PlayerManager)characterManager).Input.MovementInput.x);
             
-            playerManager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
-            playerManager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
+            ((PlayerManager)characterManager).Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+            ((PlayerManager)characterManager).Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
 
-            if (_jumpInput && playerManager.JumpState.CheckAmountOfJump())
+            if (_jumpInput && ((PlayerManager)characterManager).JumpState.CheckAmountOfJump())
             {
-                stateMachine.TranslateToState(playerManager.JumpState);
-                playerManager.Input.ResetJumpInput();
+                stateMachine.TranslateToState(((PlayerManager)characterManager).JumpState);
+                ((PlayerManager)characterManager).Input.ResetJumpInput();
                 return;
             }
             
-            if (playerManager.isDashEnable && _dashInput && playerManager.DashState.CheckAmountOfDash())
+            if (((PlayerManager)characterManager).isDashEnable && _dashInput && ((PlayerManager)characterManager).DashState.CheckAmountOfDash())
             {
-                playerManager.Input.ResetDashInput();
-                stateMachine.TranslateToState(playerManager.DashState);
+                ((PlayerManager)characterManager).Input.ResetDashInput();
+                stateMachine.TranslateToState(((PlayerManager)characterManager).DashState);
                 return;
             }
 
             if (_attackInput)
             {
-                playerManager.Input.ResetAttackInput();
-                stateMachine.TranslateToState(playerManager.Attack1State);
+                ((PlayerManager)characterManager).Input.ResetAttackInput();
+                stateMachine.TranslateToState(((PlayerManager)characterManager).Attack1State);
                 return;
             }
 
             if (_isGrounded && coreManager.MoveCore.CurrentVelocity.y < 0.01f)
             {
-                stateMachine.TranslateToState(playerManager.LandState);
+                stateMachine.TranslateToState(((PlayerManager)characterManager).LandState);
                 return;
             }
             
             if (_isTouchingWall && !_isTouchingLedge && !_isGrounded)
             {
-                stateMachine.TranslateToState(playerManager.LedgeClimbState);
+                stateMachine.TranslateToState(((PlayerManager)characterManager).LedgeClimbState);
                 return;
             }
 
-            if (playerManager.isWallSlideEnable && _isTouchingWall && playerManager.Input.InputDirection == coreManager.MoveCore.Direction &&
+            if (((PlayerManager)characterManager).isWallSlideEnable && _isTouchingWall && ((PlayerManager)characterManager).Input.InputDirection == coreManager.MoveCore.Direction &&
                 coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
-                stateMachine.TranslateToState(playerManager.WallSlideState);
+                stateMachine.TranslateToState(((PlayerManager)characterManager).WallSlideState);
                 return;
             }
         }
@@ -103,16 +106,16 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             
             if (_isTouchingWall && !_isTouchingLedge)
             {
-                playerManager.LedgeClimbState.SetPosition(playerManager.transform.position);
+                ((PlayerManager)characterManager).LedgeClimbState.SetPosition(((PlayerManager)characterManager).transform.position);
             }
         }
 
         private void CheckCoyoteTime()
         {
-            if (_coyoteTime && Time.time > startTime + playerData.coyoteTime)
+            if (_coyoteTime && Time.time > startTime + ((PlayerMoveCore)coreManager.MoveCore).PlayerData.coyoteTime)
             {
                 _coyoteTime = false;
-                playerManager.JumpState.DecreaseAmountOfJumps();
+                ((PlayerManager)characterManager).JumpState.DecreaseAmountOfJumps();
             }
         }
 
@@ -128,7 +131,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
                 
                 if (_jumpInputStop)
                 {
-                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
+                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * ((PlayerMoveCore)coreManager.MoveCore).PlayerData.variableJumpHeightMultiplier);
                     _isJumping = false;
                     return;
                 }

@@ -1,16 +1,9 @@
-﻿using UnityEngine;
+﻿using Character.Base_Manager;
+using UnityEngine;
 
 namespace Character.Enemy.Manager
 {
-    public class EnemyAnimationManager : MonoBehaviour
+    public class EnemyAnimationManager : CharacterAnimationManager
     {
-        private EnemyManager _manager;
-        
-        private void Awake()
-        {
-            _manager = GetComponentInParent<EnemyManager>();
-        }
-
-        public void AnimationFinish() => _manager.StateMachine.CurrentState.AnimationFinish();
     }
 }
