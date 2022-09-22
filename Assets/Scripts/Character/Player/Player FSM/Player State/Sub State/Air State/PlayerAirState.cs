@@ -22,7 +22,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         private bool _coyoteTime;
 
 
-        public PlayerAirState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerAirState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -31,65 +31,65 @@ namespace Character.Player.Player_State.Sub_State.Air_State
         {
             base.OnEnter();
             
-            ((PlayerManager)characterManager).Input.ResetDashInput();
-            ((PlayerManager)characterManager).Input.ResetAttackInput();
+           manager.Input.ResetDashInput();
+           manager.Input.ResetAttackInput();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            _movementInput = ((PlayerManager)characterManager).Input.MovementInput;
-            _jumpInput = ((PlayerManager)characterManager).Input.JumpInput;
-            _jumpInputStop = ((PlayerManager)characterManager).Input.JumpInputStop;
-            _dashInput = ((PlayerManager)characterManager).Input.DashInput;
-            _attackInput = ((PlayerManager)characterManager).Input.AttackInput;
+            _movementInput =manager.Input.MovementInput;
+            _jumpInput =manager.Input.JumpInput;
+            _jumpInputStop =manager.Input.JumpInputStop;
+            _dashInput =manager.Input.DashInput;
+            _attackInput =manager.Input.AttackInput;
             
             CheckJumping();
             
-            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.movementVelocity * _movementInput.x);
-            ((PlayerMoveCore)coreManager.MoveCore).CheckFlip(((PlayerManager)characterManager).Input.MovementInput.x);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.movementVelocity * _movementInput.x);
+            coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
             
-            ((PlayerManager)characterManager).Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
-            ((PlayerManager)characterManager).Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
+           manager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+           manager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
 
-            if (_jumpInput && ((PlayerManager)characterManager).JumpState.CheckAmountOfJump())
+            if (_jumpInput &&manager.JumpState.CheckAmountOfJump())
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).JumpState);
-                ((PlayerManager)characterManager).Input.ResetJumpInput();
+                stateMachine.TranslateToState(manager.JumpState);
+               manager.Input.ResetJumpInput();
                 return;
             }
             
-            if (((PlayerManager)characterManager).isDashEnable && _dashInput && ((PlayerManager)characterManager).DashState.CheckAmountOfDash())
+            if (manager.isDashEnable && _dashInput &&manager.DashState.CheckAmountOfDash())
             {
-                ((PlayerManager)characterManager).Input.ResetDashInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).DashState);
+               manager.Input.ResetDashInput();
+                stateMachine.TranslateToState(manager.DashState);
                 return;
             }
 
             if (_attackInput)
             {
-                ((PlayerManager)characterManager).Input.ResetAttackInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).Attack1State);
+               manager.Input.ResetAttackInput();
+                stateMachine.TranslateToState(manager.Attack1State);
                 return;
             }
 
             if (_isGrounded && coreManager.MoveCore.CurrentVelocity.y < 0.01f)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).LandState);
+                stateMachine.TranslateToState(manager.LandState);
                 return;
             }
             
             if (_isTouchingWall && !_isTouchingLedge && !_isGrounded)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).LedgeClimbState);
+                stateMachine.TranslateToState(manager.LedgeClimbState);
                 return;
             }
 
-            if (((PlayerManager)characterManager).isWallSlideEnable && _isTouchingWall && ((PlayerManager)characterManager).Input.InputDirection == coreManager.MoveCore.Direction &&
+            if (manager.isWallSlideEnable && _isTouchingWall &&manager.Input.InputDirection == coreManager.MoveCore.Direction &&
                 coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).WallSlideState);
+                stateMachine.TranslateToState(manager.WallSlideState);
                 return;
             }
         }
@@ -106,16 +106,16 @@ namespace Character.Player.Player_State.Sub_State.Air_State
             
             if (_isTouchingWall && !_isTouchingLedge)
             {
-                ((PlayerManager)characterManager).LedgeClimbState.SetPosition(((PlayerManager)characterManager).transform.position);
+               manager.LedgeClimbState.SetPosition(manager.transform.position);
             }
         }
 
         private void CheckCoyoteTime()
         {
-            if (_coyoteTime && Time.time > startTime + ((PlayerMoveCore)coreManager.MoveCore).PlayerData.coyoteTime)
+            if (_coyoteTime && Time.time > startTime + coreManager.MoveCore.PlayerData.coyoteTime)
             {
                 _coyoteTime = false;
-                ((PlayerManager)characterManager).JumpState.DecreaseAmountOfJumps();
+               manager.JumpState.DecreaseAmountOfJumps();
             }
         }
 
@@ -131,7 +131,7 @@ namespace Character.Player.Player_State.Sub_State.Air_State
                 
                 if (_jumpInputStop)
                 {
-                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * ((PlayerMoveCore)coreManager.MoveCore).PlayerData.variableJumpHeightMultiplier);
+                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * coreManager.MoveCore.PlayerData.variableJumpHeightMultiplier);
                     _isJumping = false;
                     return;
                 }

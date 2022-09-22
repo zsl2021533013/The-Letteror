@@ -13,6 +13,8 @@ namespace Character.Enemy.Manager
 {
     public class EnemyManager : CharacterManager
     {
+        public new EnemyCoreManager CoreManager { get; private set; }
+        
         #region FSM Attribute
         
         public EnemyIdleState IdleState { get; private set; }
@@ -22,10 +24,11 @@ namespace Character.Enemy.Manager
 
         #endregion
 
-        private void Awake()
+        protected override void Awake()
         {
-            InitializeFsm();
-            Anim = GetComponentInChildren<Animator>();
+            base.Awake();
+
+            CoreManager = (EnemyCoreManager)base.CoreManager;
         }
 
         protected override void Start()

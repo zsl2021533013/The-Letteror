@@ -14,7 +14,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         private Vector2 _startPosition;
         private bool _attackInput;
 
-        public PlayerAttack2State(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerAttack2State(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -23,8 +23,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition = ((PlayerManager)characterManager).transform.position;
-            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.attackVelocity2 * coreManager.MoveCore.Direction);
+            _startPosition =manager.transform.position;
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.attackVelocity2 * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);
         }
 
@@ -37,7 +37,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
                 return;
             }
 
-            UpdateInput(((PlayerManager)characterManager).Input);
+            UpdateInput(manager.Input);
 
             coreManager.MoveCore.FreezeY(_startPosition);
         }
@@ -46,8 +46,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             if (_attackInput)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).Attack3State);
-                ((PlayerManager)characterManager).Input.ResetAttackInput();
+                stateMachine.TranslateToState(manager.Attack3State);
+               manager.Input.ResetAttackInput();
             }
             else
             {

@@ -10,12 +10,12 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ability_State
 {
     public class EnemyAttackState : EnemyState
     {
-        public EnemyAttackState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public EnemyAttackState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
 
-        public bool AttackEnable => Time.time > startTime + ((EnemyMoveCore)coreManager.MoveCore).EnemyData.attackCoolDown;
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.EnemyData.attackCoolDown;
         
         
 
@@ -32,7 +32,7 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ability_State
 
             if (isAnimationFinish)
             {
-                stateMachine.TranslateToState(((EnemyManager)characterManager).IdleState);
+                stateMachine.TranslateToState(manager.IdleState);
             }
         }
     }

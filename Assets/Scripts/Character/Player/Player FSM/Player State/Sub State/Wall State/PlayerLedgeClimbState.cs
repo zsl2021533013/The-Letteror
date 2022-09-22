@@ -16,7 +16,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         private Vector2 _stopPosition;
         private bool _jumpInput;
 
-        public PlayerLedgeClimbState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerLedgeClimbState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -25,9 +25,9 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnEnter();
             
-            ((PlayerManager)characterManager).JumpState.ResetAmountOfJump();
+           manager.JumpState.ResetAmountOfJump();
             
-            ((PlayerManager)characterManager).transform.position = _detectedPosition;
+           manager.transform.position = _detectedPosition;
             
             _cornerPosition = (coreManager.SenseCore as PlayerSenseCore).GetCornerPosition();
 
@@ -40,13 +40,13 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
         {
             base.OnUpdate();
 
-            _jumpInput = ((PlayerManager)characterManager).Input.JumpInput;
+            _jumpInput =manager.Input.JumpInput;
 
             coreManager.MoveCore.Freeze(_startPosition);
 
             if (_jumpInput)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).WallJumpState);
+                stateMachine.TranslateToState(manager.WallJumpState);
                 return;
             }
         }
@@ -55,10 +55,10 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 
         private void SetStartPosition()
         {
-            _startPosition.Set(_cornerPosition.x - (coreManager.MoveCore.Direction * ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.x),
-                _cornerPosition.y - ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.y);
-            _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.x),
-                _cornerPosition.y + ((PlayerMoveCore)coreManager.MoveCore).PlayerData.startOffset.y);
+            _startPosition.Set(_cornerPosition.x - (coreManager.MoveCore.Direction * coreManager.MoveCore.PlayerData.startOffset.x),
+                _cornerPosition.y - coreManager.MoveCore.PlayerData.startOffset.y);
+            _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * coreManager.MoveCore.PlayerData.startOffset.x),
+                _cornerPosition.y + coreManager.MoveCore.PlayerData.startOffset.y);
         }
     }
 }

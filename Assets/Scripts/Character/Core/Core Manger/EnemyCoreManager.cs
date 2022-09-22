@@ -5,18 +5,24 @@ namespace Character.Core
 {
     public class EnemyCoreManager : CoreManager
     {
+        public new EnemyMoveCore MoveCore { get; private set; } 
+        public new EnemySenseCore SenseCore { get; private set; } 
+        
         protected override void Awake()
         {
             base.Awake();
 
-            if (!(MoveCore is EnemyMoveCore))
+            if (!(base.MoveCore is EnemyMoveCore))
             {
                 Debug.LogError("Missing Enemy Move Core");
             }
-            if (!(SenseCore is EnemySenseCore))
+            if (!(base.SenseCore is EnemySenseCore))
             {
                 Debug.LogError("Missing Enemy Sense Core");
             }
+            
+            MoveCore = (EnemyMoveCore)base.MoveCore;
+            SenseCore = (EnemySenseCore)base.SenseCore;
         }
     }
 }

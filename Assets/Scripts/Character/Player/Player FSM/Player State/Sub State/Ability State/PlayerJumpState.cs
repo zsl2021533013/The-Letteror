@@ -12,10 +12,10 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
     {
         private int _amountOfJumpsLeft;
 
-        public PlayerJumpState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerJumpState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
-            _amountOfJumpsLeft = ((PlayerMoveCore)coreManager.MoveCore).PlayerData.amountOfJump;
+            _amountOfJumpsLeft = coreManager.MoveCore.PlayerData.amountOfJump;
         }
 
         
@@ -23,15 +23,15 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocityY(((PlayerMoveCore)coreManager.MoveCore).PlayerData.jumpVelocity);
+            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.PlayerData.jumpVelocity);
             isAbilityDone = true;
             DecreaseAmountOfJumps();
-            ((PlayerManager)characterManager).AirState.StartJumping();
+           manager.AirState.StartJumping();
         }
 
-        public bool CheckAmountOfJump() => _amountOfJumpsLeft - (((PlayerManager)characterManager).isDoubleJumpEnable ? 0 : 1) > 0;
+        public bool CheckAmountOfJump() => _amountOfJumpsLeft - (manager.isDoubleJumpEnable ? 0 : 1) > 0;
 
-        public void ResetAmountOfJump() => _amountOfJumpsLeft = ((PlayerMoveCore)coreManager.MoveCore).PlayerData.amountOfJump;
+        public void ResetAmountOfJump() => _amountOfJumpsLeft = coreManager.MoveCore.PlayerData.amountOfJump;
 
         public void DecreaseAmountOfJumps() => --_amountOfJumpsLeft;
 

@@ -14,7 +14,7 @@ namespace Character.Player.Player_State.Super_State
         protected bool _isTouchingWall;
 
 
-        public PlayerWallState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerWallState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -23,33 +23,33 @@ namespace Character.Player.Player_State.Super_State
         {
             base.OnEnter();
             
-            ((PlayerManager)characterManager).JumpState.ResetAmountOfJump();
-            ((PlayerManager)characterManager).Input.ResetJumpInput();
-            ((PlayerManager)characterManager).DashState.ResetAmountOfDash();
+           manager.JumpState.ResetAmountOfJump();
+           manager.Input.ResetJumpInput();
+           manager.DashState.ResetAmountOfDash();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            jumpInput = ((PlayerManager)characterManager).Input.JumpInput;
+            jumpInput =manager.Input.JumpInput;
             
             if (_isGrounded && !grabInput)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).IdleState);
+                stateMachine.TranslateToState(manager.IdleState);
                 return;
             }
 
             if (_isTouchingWall && jumpInput)
             {
-                ((PlayerManager)characterManager).Input.ResetJumpInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).WallJumpState);
+               manager.Input.ResetJumpInput();
+                stateMachine.TranslateToState(manager.WallJumpState);
                 return;
             }
             
             if (!_isTouchingWall)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).AirState);
+                stateMachine.TranslateToState(manager.AirState);
                 return;
             }
         }

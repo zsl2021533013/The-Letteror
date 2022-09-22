@@ -11,7 +11,7 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
 {
     public class PlayerMoveState : PlayerGroundState
     {
-        public PlayerMoveState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerMoveState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -25,18 +25,14 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
                 return;
             }
             
-            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.movementVelocity * movementInput.x);
-            ((PlayerManager)characterManager).Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
-            
-            if (!(coreManager.MoveCore as PlayerMoveCore))
-            {
-                Debug.LogError("Missing Player Move Core");
-            }
-            (coreManager.MoveCore as PlayerMoveCore).CheckFlip(((PlayerManager)characterManager).Input.MovementInput.x);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.movementVelocity * movementInput.x);
+            manager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+           
+            coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
             
             if (Mathf.Abs(movementInput.x) <= 0.1f)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).IdleState);
+                stateMachine.TranslateToState(manager.IdleState);
             }
         }
     }

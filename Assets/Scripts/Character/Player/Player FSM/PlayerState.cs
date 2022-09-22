@@ -9,8 +9,13 @@ namespace Character.Player.Player_FSM
 {
     public class PlayerState : CharacterState
     {
-        public PlayerState(CharacterManager characterManager, string animBoolName) : base(characterManager, animBoolName)
+        protected new PlayerManager manager;
+        protected new PlayerCoreManager coreManager;
+        
+        public PlayerState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
+            this.manager = (PlayerManager)manager;
+            coreManager = (PlayerCoreManager)manager.CoreManager;
         }
     }
 }

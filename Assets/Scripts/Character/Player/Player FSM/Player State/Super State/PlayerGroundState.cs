@@ -17,7 +17,7 @@ namespace Character.Player.Player_State.Super_State
         private bool _attackInput;
         private bool _isGrounded;
         
-        public PlayerGroundState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerGroundState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -26,51 +26,51 @@ namespace Character.Player.Player_State.Super_State
         {
             base.OnEnter();
 
-            ((PlayerManager)characterManager).Input.ResetJumpInput();
-            ((PlayerManager)characterManager).Input.ResetDashInput();
-            ((PlayerManager)characterManager).Input.ResetAttackInput();
-            ((PlayerManager)characterManager).JumpState.ResetAmountOfJump();
-            ((PlayerManager)characterManager).DashState.ResetAmountOfDash();
+           manager.Input.ResetJumpInput();
+           manager.Input.ResetDashInput();
+           manager.Input.ResetAttackInput();
+           manager.JumpState.ResetAmountOfJump();
+           manager.DashState.ResetAmountOfDash();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
             
-            UpdateInput(((PlayerManager)characterManager).Input);
+            UpdateInput(manager.Input);
             
-            if (_jumpInput && ((PlayerManager)characterManager).JumpState.CheckAmountOfJump())
+            if (_jumpInput &&manager.JumpState.CheckAmountOfJump())
             {
-                ((PlayerManager)characterManager).Input.ResetJumpInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).JumpState);
+               manager.Input.ResetJumpInput();
+                stateMachine.TranslateToState(manager.JumpState);
                 return;
             }
 
-            if (((PlayerManager)characterManager).isDashEnable && _dashInput && ((PlayerManager)characterManager).DashState.CheckAmountOfDash())
+            if (manager.isDashEnable && _dashInput &&manager.DashState.CheckAmountOfDash())
             {
-                ((PlayerManager)characterManager).Input.ResetDashInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).DashState);
+               manager.Input.ResetDashInput();
+                stateMachine.TranslateToState(manager.DashState);
                 return;
             }
             
             if (_rollInput)
             {
-                ((PlayerManager)characterManager).Input.ResetRollInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).RollState);
+               manager.Input.ResetRollInput();
+                stateMachine.TranslateToState(manager.RollState);
                 return;
             }
 
             if (_attackInput)
             {
-                ((PlayerManager)characterManager).Input.ResetAttackInput();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).Attack1State);
+               manager.Input.ResetAttackInput();
+                stateMachine.TranslateToState(manager.Attack1State);
                 return;
             }
             
             if (!_isGrounded)
             {
-                ((PlayerManager)characterManager).AirState.StartCoyoteTime();
-                stateMachine.TranslateToState(((PlayerManager)characterManager).AirState);
+               manager.AirState.StartCoyoteTime();
+                stateMachine.TranslateToState(manager.AirState);
                 return;
             }
         }

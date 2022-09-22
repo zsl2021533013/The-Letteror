@@ -13,7 +13,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         private Vector2 _startPosition;
 
 
-        public PlayerAttack3State(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerAttack3State(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -22,8 +22,8 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition = ((PlayerManager)characterManager).transform.position;
-            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.attackVelocity3 * coreManager.MoveCore.Direction);
+            _startPosition =manager.transform.position;
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.attackVelocity3 * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);
         }
 

@@ -8,7 +8,7 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
 {
     public class PlayerLandState : PlayerGroundState
     {
-        public PlayerLandState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerLandState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -19,11 +19,11 @@ namespace Character.Player.Player_State.Sub_State.Ground_State
 
             if (movementInput.x != 0f)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).MoveState);
+                stateMachine.TranslateToState(manager.MoveState);
             }
             else if(isAnimationFinish)
             {
-                stateMachine.TranslateToState(((PlayerManager)characterManager).IdleState);
+                stateMachine.TranslateToState(manager.IdleState);
             }
         }
     }

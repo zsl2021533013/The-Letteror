@@ -9,7 +9,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
 {
     public class PlayerRollState : PlayerAbilityState
     {
-        public PlayerRollState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerRollState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -19,7 +19,7 @@ namespace Character.Player.Player_State.Sub_State.Ability_State
             base.OnEnter();
             
             coreManager.MoveCore.SetVelocityY(0f);
-            coreManager.MoveCore.SetVelocityX(((PlayerMoveCore)coreManager.MoveCore).PlayerData.rollVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.rollVelocity * coreManager.MoveCore.Direction);
         }
     }
 }

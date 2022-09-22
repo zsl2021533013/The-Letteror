@@ -8,7 +8,7 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Super_State
 {
     public class EnemyAbilityState : EnemyState
     {
-        public EnemyAbilityState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public EnemyAbilityState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }

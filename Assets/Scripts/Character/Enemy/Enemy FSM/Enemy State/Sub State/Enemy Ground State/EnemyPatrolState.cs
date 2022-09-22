@@ -17,7 +17,7 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         private int _moveDirection;
 
 
-        public EnemyPatrolState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public EnemyPatrolState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
             _startPositionX = coreManager.MoveCore.Position.x;
@@ -34,23 +34,23 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.OnUpdate();
             
-            coreManager.MoveCore.SetVelocityX(((EnemyMoveCore)coreManager.MoveCore).EnemyData.moveVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.EnemyData.moveVelocity * coreManager.MoveCore.Direction);
             
-            if (((EnemyMoveCore)coreManager.MoveCore).JudgeArrive(_targetX))
+            if (coreManager.MoveCore.JudgeArrive(_targetX))
             {
-                stateMachine.TranslateToState(((EnemyManager)characterManager).IdleState);
+                stateMachine.TranslateToState(manager.IdleState);
                 return;
             }
         }
 
         private void SetTargetX()
         {
-            _targetX = _startPositionX + Random.Range(-((EnemyMoveCore)coreManager.MoveCore).EnemyData.patrolRange, ((EnemyMoveCore)coreManager.MoveCore).EnemyData.patrolRange);
+            _targetX = _startPositionX + Random.Range(-coreManager.MoveCore.EnemyData.patrolRange, coreManager.MoveCore.EnemyData.patrolRange);
 
             _moveDirection = _targetX > coreManager.MoveCore.Position.x ? 1 : -1;
             if (_moveDirection == -coreManager.MoveCore.Direction)
             {
-                ((EnemyMoveCore)coreManager.MoveCore).Flip();
+                coreManager.MoveCore.Flip();
             }
         }
     }

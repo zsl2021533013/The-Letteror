@@ -9,7 +9,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
 {
     public class PlayerWallSlideState : PlayerWallState
     {
-        public PlayerWallSlideState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerWallSlideState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -23,7 +23,7 @@ namespace Character.Player.Player_State.Sub_State.Wall_State
                 return;
             }
             
-            coreManager.MoveCore.SetVelocityY(-((PlayerMoveCore)coreManager.MoveCore).PlayerData.wallSlideVelocity);
+            coreManager.MoveCore.SetVelocityY(-coreManager.MoveCore.PlayerData.wallSlideVelocity);
         }
     }
 }

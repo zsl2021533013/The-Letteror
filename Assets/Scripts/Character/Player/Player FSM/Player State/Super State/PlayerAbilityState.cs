@@ -13,7 +13,7 @@ namespace Character.Player.Player_State.Super_State
         private bool isGrounded;
 
 
-        public PlayerAbilityState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public PlayerAbilityState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -38,11 +38,11 @@ namespace Character.Player.Player_State.Super_State
             {
                 if (isGrounded && coreManager.MoveCore.CurrentVelocity.y < 0.01f)
                 {
-                    stateMachine.TranslateToState(((PlayerManager)characterManager).IdleState);
+                    stateMachine.TranslateToState(manager.IdleState);
                 }
                 else
                 {
-                    stateMachine.TranslateToState(((PlayerManager)characterManager).AirState);
+                    stateMachine.TranslateToState(manager.AirState);
                 }
             }
         }

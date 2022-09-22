@@ -10,8 +10,13 @@ namespace Character.Enemy.Enemy_FSM
 {
     public class EnemyState : CharacterState
     {
-        public EnemyState(CharacterManager characterManager, string animBoolName) : base(characterManager, animBoolName)
+        protected new EnemyManager manager;
+        protected new EnemyCoreManager coreManager;
+
+        public EnemyState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
+            this.manager = (EnemyManager)manager;
+            coreManager = (EnemyCoreManager)manager.CoreManager;
         }
     }
 }

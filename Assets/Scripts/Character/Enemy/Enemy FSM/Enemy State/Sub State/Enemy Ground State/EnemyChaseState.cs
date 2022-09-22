@@ -12,7 +12,7 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         private bool _inFlipRange;
 
 
-        public EnemyChaseState(CharacterManager characterManager, string animBoolName) : base(characterManager,
+        public EnemyChaseState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -23,18 +23,18 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
 
             if (inChaseRange && !inAttackRange)
             {
-                coreManager.MoveCore.SetVelocityX(((EnemyMoveCore)coreManager.MoveCore).EnemyData.moveVelocity * coreManager.MoveCore.Direction);
+                coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.EnemyData.moveVelocity * coreManager.MoveCore.Direction);
                 return;
             }
 
             if (_inFlipRange)
             {
-                ((EnemyMoveCore)coreManager.MoveCore).Flip();
+                coreManager.MoveCore.Flip();
             }
             
             if (!inChaseRange && !_inFlipRange)
             {
-                stateMachine.TranslateToState(((EnemyManager)characterManager).IdleState);
+                stateMachine.TranslateToState(manager.IdleState);
                 return;
             }
         }
@@ -43,8 +43,8 @@ namespace Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.DoChecks();
 
-            _inFlipRange = ((EnemySenseCore)coreManager.SenseCore).InFlipRange;
-            inAttackRange = ((EnemySenseCore)coreManager.SenseCore).InAttackRange;
+            _inFlipRange = coreManager.SenseCore.InFlipRange;
+            inAttackRange = coreManager.SenseCore.InAttackRange;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Character.Base.FSM_Base.Base_State
 {
     public class CharacterState
     {
-        protected CharacterManager characterManager;
+        protected CharacterManager manager;
         protected CharacterStateMachine stateMachine;
         protected CoreManager coreManager;
         protected bool isAnimationFinish;
@@ -19,19 +19,19 @@ namespace Character.Base.FSM_Base.Base_State
 
         private string _animBoolName;
         
-        public CharacterState(CharacterManager characterManager, string animBoolName)
+        public CharacterState(CharacterManager manager, string animBoolName)
         {
-            this.characterManager = characterManager;
+            this.manager = manager;
             _animBoolName = animBoolName;
-            stateMachine = characterManager.StateMachine;
-            coreManager = characterManager.CoreManager;
+            stateMachine = manager.StateMachine;
+            coreManager = manager.CoreManager;
         }
 
         public virtual void OnEnter()
         {
             startTime = Time.time;
             DoChecks();
-            characterManager.Anim.SetBool(_animBoolName, true);
+            manager.Anim.SetBool(_animBoolName, true);
             isAnimationFinish = false;
             isStateFinished = false;
             //Debug.Log("Enter " + _animBoolName + " State");
@@ -39,7 +39,7 @@ namespace Character.Base.FSM_Base.Base_State
 
         public virtual void OnExit()
         {
-            characterManager.Anim.SetBool(_animBoolName, false);
+            manager.Anim.SetBool(_animBoolName, false);
             isStateFinished = true; //必须要写，因为父类 return 子类中不会 return，需要用 bool 传递一下
             //Debug.Log("Exit " + _animBoolName + " State");
         }

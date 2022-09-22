@@ -1,4 +1,5 @@
 using Character.Base.Base_Manager;
+using Character.Core;
 using Character.Player.Input_System;
 using Character.Player.Player_State.Sub_State.Ability_State;
 using Character.Player.Player_State.Sub_State.Air_State;
@@ -14,6 +15,8 @@ namespace Character.Player.Manager
         public bool isDoubleJumpEnable;
         public bool isWallSlideEnable;
         public bool isDashEnable;
+        
+        public PlayerInputHandler Input { get; private set; }
         
         #region Player FSM Attribute
         
@@ -33,12 +36,11 @@ namespace Character.Player.Manager
         
         #endregion
         
-        public PlayerInputHandler Input { get; private set; }
         
         protected override void Awake()
         {
             base.Awake();
-            
+
             Input = GetComponent<PlayerInputHandler>();
         }
 
