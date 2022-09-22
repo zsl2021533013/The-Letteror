@@ -15,7 +15,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
         public override void OnEnter()
         {
             base.OnEnter();
-
+            
             startPosition = coreManager.MoveCore.Position;
         }
     }

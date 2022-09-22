@@ -18,20 +18,20 @@ MonoBehaviour:
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
   wallSlideVelocity: 2
-  wallClimbVelocity: 3
   wallJumpVelocity: 20
   wallJumpTime: 0.1
   wallJumpAngle: {x: 1, y: 2}
   startOffset: {x: 0.35, y: 0.6}
-  stopOffset: {x: 0, y: 0}
   dashVelocity: 30
   amountOfDash: 1
   rollVelocity: 10
-  attackVelocity1: 0.5
-  attackVelocity2: 0.5
-  attackVelocity3: 1
-  groundSensorSize: {x: 0.65, y: 0.5}
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  wallCheckDistance: 0.5
+  groundAttack1VelocityX: 0
+  groundAttack2VelocityX: 0
+  airAttack1VelocityX: 0.5
+  airAttack2VelocityX: 0.8
+  airUpwardsAttackVelocityY: 10
+  airAttackCoolDown: 1
+  specialAttackVelocityX: 20
+  specialUpwardsAttackVelocityY: 20
+  specialDownwardsAttackVelocityY: 0
+  specialAttackCoolDown: 1

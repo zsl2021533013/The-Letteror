@@ -1,5 +1,6 @@
 ﻿using Character.Base.Manager;
 using Character.Player.Core.Core_Component;
+using Character.Player.Input_System;
 using UnityEngine;
 
 namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
@@ -20,12 +21,14 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         public override void OnEnter()
         {
             base.OnEnter();
+
+            ResetTriggers(manager.Input);
             
-           manager.JumpState.ResetAmountOfJump();
+            manager.ResetJumpAndDash();
             
-           manager.transform.position = _detectedPosition;
+            manager.transform.position = _detectedPosition;
             
-            _cornerPosition = (coreManager.SenseCore as PlayerSenseCore).GetCornerPosition();
+            _cornerPosition = coreManager.SenseCore.GetCornerPosition();
 
             SetStartPosition();
 
@@ -36,7 +39,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         {
             base.OnUpdate();
 
-            _jumpInput =manager.Input.JumpInput;
+            _jumpInput = manager.Input.JumpInput;
 
             coreManager.MoveCore.Freeze(_startPosition);
 
@@ -55,6 +58,14 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
                 _cornerPosition.y - coreManager.MoveCore.PlayerData.startOffset.y);
             _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * coreManager.MoveCore.PlayerData.startOffset.x),
                 _cornerPosition.y + coreManager.MoveCore.PlayerData.startOffset.y);
+        }
+        
+        private void ResetTriggers(PlayerInputHandler input)
+        {
+            input.ResetJumpInput();
+            input.ResetDashInput();
+            input.ResetAttackInput();
+            input.ResetSpecialAttackInput();
         }
     }
 }

@@ -6,9 +6,17 @@ namespace Character.Player.Input_System
 {
     public enum AttackType
     {
+        Horizontal,
         Up,
-        Down,
-        Horizontal
+        Down
+    }
+
+    public enum SpecialAttackType
+    {
+        Idle,
+        Dash,
+        Up,
+        Down
     }
     
     public class PlayerInputHandler : MonoBehaviour
@@ -19,6 +27,7 @@ namespace Character.Player.Input_System
         public bool DashInput { get; private set; }
         public bool RollInput { get; private set; }
         public bool AttackInput { get; private set; }
+        public bool SpecialAttackInput { get; private set; }
         
         public int InputDirection
         {
@@ -54,7 +63,28 @@ namespace Character.Player.Input_System
             }
         }
 
-        
+        public SpecialAttackType SpecialAttackDirection
+        {
+            get
+            {
+                if (MovementInput == Vector2.zero)
+                {
+                    return SpecialAttackType.Idle;
+                }
+                
+                if (Mathf.Abs(MovementInput.x) > Mathf.Abs(MovementInput.y))
+                {
+                    return SpecialAttackType.Dash;
+                }
+
+                if (MovementInput.y > 0f)
+                {
+                    return SpecialAttackType.Up;
+                }
+
+                return SpecialAttackType.Down;
+            }
+        }
         
         #region Input Event
 
@@ -100,6 +130,14 @@ namespace Character.Player.Input_System
                 AttackInput = true;
             }
         }
+        
+        public void OnSpecialAttackInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                SpecialAttackInput = true;
+            }
+        }
 
         #endregion
         
@@ -110,7 +148,8 @@ namespace Character.Player.Input_System
         public void ResetDashInput() => DashInput = false;
         public void ResetRollInput() => RollInput = false;
         public void ResetAttackInput() => AttackInput = false;
-
+        public void ResetSpecialAttackInput() => SpecialAttackInput = false;
+        
         #endregion
 
     }

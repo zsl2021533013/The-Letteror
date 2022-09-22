@@ -34,11 +34,20 @@ namespace Character.Player.Core.Data
         [Header("Roll State")] 
         public float rollVelocity;
 
-        [Header("Attack State")] 
-        public float attackVelocity1;
-        public float attackVelocity2;
-        public float attackVelocity3;
-        public float airAttackUpVeclocity;
+        [Header("Ground Attack State")] 
+        public float groundAttack1VelocityX;
+        public float groundAttack2VelocityX;
+        
+        [Header("Air Attack State")]
+        public float airAttack1VelocityX;
+        public float airAttack2VelocityX;
+        public float airUpwardsAttackVelocityY;
         public float airAttackCoolDown;
+        
+        [Header("Special Attack State")]
+        public float specialAttackVelocityX;
+        public float specialUpwardsAttackVelocityY;
+        public float specialDownwardsAttackVelocityY;
+        public float specialAttackCoolDown;
     }
 }

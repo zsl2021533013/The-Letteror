@@ -12,6 +12,7 @@ namespace Character.Player.FSM.Player_State.Super_State
         private bool _dashInput;
         private bool _rollInput;
         private bool _attackInput;
+        private bool _specialAttackInput;
         private bool _isGrounded;
         
         public PlayerGroundState(CharacterManager manager, string animBoolName) : base(manager,
@@ -23,11 +24,8 @@ namespace Character.Player.FSM.Player_State.Super_State
         {
             base.OnEnter();
 
-           manager.Input.ResetJumpInput();
-           manager.Input.ResetDashInput();
-           manager.Input.ResetAttackInput();
-           manager.JumpState.ResetAmountOfJump();
-           manager.DashState.ResetAmountOfDash();
+           ResetTriggers(manager.Input);
+           manager.ResetJumpAndDash();
         }
 
         public override void OnUpdate()
@@ -35,6 +33,19 @@ namespace Character.Player.FSM.Player_State.Super_State
             base.OnUpdate();
             
             UpdateInput(manager.Input);
+            
+            if (_attackInput)
+            {
+               manager.Input.ResetAttackInput();
+                stateMachine.TranslateToState(manager.GroundAttack1State);
+                return;
+            }
+            
+            if (_specialAttackInput)
+            {
+                CheckSpecialAttack();
+                return;
+            }
             
             if (_jumpInput &&manager.JumpState.CheckAmountOfJump())
             {
@@ -57,13 +68,6 @@ namespace Character.Player.FSM.Player_State.Super_State
                 return;
             }
 
-            if (_attackInput)
-            {
-               manager.Input.ResetAttackInput();
-                stateMachine.TranslateToState(manager.GroundAttack1State);
-                return;
-            }
-            
             if (!_isGrounded)
             {
                manager.AirState.StartCoyoteTime();
@@ -86,6 +90,47 @@ namespace Character.Player.FSM.Player_State.Super_State
             _dashInput = input.DashInput;
             _rollInput = input.RollInput;
             _attackInput = input.AttackInput;
+            _specialAttackInput = input.SpecialAttackInput;
+        }
+
+        private void ResetTriggers(PlayerInputHandler input)
+        {
+            input.ResetJumpInput();
+            input.ResetDashInput();
+            input.ResetAttackInput();
+            input.ResetSpecialAttackInput();
+        }
+        
+        private void CheckSpecialAttack()
+        {
+            manager.Input.ResetSpecialAttackInput();
+            switch (manager.Input.SpecialAttackDirection)
+            {
+                case SpecialAttackType.Idle:
+                    if (manager.SpecialIdleAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialIdleAttackState);
+                    }
+                    break;
+                case SpecialAttackType.Dash:
+                    if (manager.SpecialDashAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
+                    }
+                    break;
+                case SpecialAttackType.Up:
+                    if (manager.SpecialUpwardsAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
+                    }
+                    break;
+                default:
+                    if (manager.SpecialIdleAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialIdleAttackState);
+                    }
+                    break;
+            }
         }
     }
 }

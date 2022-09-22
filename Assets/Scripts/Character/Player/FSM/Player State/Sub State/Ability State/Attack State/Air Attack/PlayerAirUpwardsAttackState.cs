@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack
 {
-    public class PlayerAirAttackUpState : PlayerAttackState
+    public class PlayerAirUpwardsAttackState : PlayerAttackState
     {
         public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.PlayerData.airAttackCoolDown;
         
-        public PlayerAirAttackUpState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public PlayerAirUpwardsAttackState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
         
@@ -16,7 +16,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.PlayerData.airAttackUpVeclocity);
+            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.PlayerData.airUpwardsAttackVelocityY);
             coreManager.MoveCore.FreezeX(startPosition);
         }
 

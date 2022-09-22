@@ -1,4 +1,5 @@
 ﻿using Character.Base.Manager;
+using Character.Player.Input_System;
 
 namespace Character.Player.FSM.Player_State.Super_State
 {
@@ -19,10 +20,9 @@ namespace Character.Player.FSM.Player_State.Super_State
         public override void OnEnter()
         {
             base.OnEnter();
-            
-           manager.JumpState.ResetAmountOfJump();
-           manager.Input.ResetJumpInput();
-           manager.DashState.ResetAmountOfDash();
+
+            ResetTriggers(manager.Input);
+            manager.ResetJumpAndDash();
         }
 
         public override void OnUpdate()
@@ -57,6 +57,14 @@ namespace Character.Player.FSM.Player_State.Super_State
 
             _isGrounded = coreManager.SenseCore.DetectGround;
             _isTouchingWall = coreManager.SenseCore.DetectWall;
+        }
+
+        private void ResetTriggers(PlayerInputHandler input)
+        {
+            input.ResetJumpInput();
+            input.ResetDashInput();
+            input.ResetAttackInput();
+            input.ResetSpecialAttackInput();
         }
     }
 }

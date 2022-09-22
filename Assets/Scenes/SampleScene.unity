@@ -55813,6 +55813,23 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5a952b02-b89d-4594-af29-881184bc6b38
     m_ActionName: Player/Attack[/Mouse/leftButton,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 217832840}
+        m_TargetAssemblyTypeName: Character.Player.Input_System.PlayerInputHandler,
+          Assembly-CSharp
+        m_MethodName: OnSpecialAttackInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8443106e-e655-4c9c-8275-de4c54866cbb
+    m_ActionName: Player/Special Attack[/Keyboard/i,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyborad
   m_DefaultActionMap: Player

@@ -1,13 +1,16 @@
 ﻿using Character.Base.Manager;
 using Character.Player.Input_System;
+using UnityEngine;
 
-namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack
+namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack
 {
-    public class PlayerGroundAttack1State : PlayerAttackState
+    public class PlayerAirHorizontalAttack1State : PlayerAttackState
     {
         private bool _attackInput;
         
-        public PlayerGroundAttack1State(CharacterManager manager, string animBoolName) : base(manager,
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.PlayerData.airAttackCoolDown;
+        
+        public PlayerAirHorizontalAttack1State(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -16,29 +19,25 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
             base.OnEnter();
 
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.groundAttack1VelocityX * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.airAttack1VelocityX *
+                                              coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(startPosition);
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
-
-            if (isStateFinished)
-            {
-                return;
-            }
-
+            
             UpdateInput(manager.Input);
-
+            
             coreManager.MoveCore.FreezeY(startPosition);
         }
-
+        
         protected override void OnAnimationFinish()
         {
             if (_attackInput)
             { 
-                stateMachine.TranslateToState(manager.GroundAttack2State); 
+                stateMachine.TranslateToState(manager.AirHorizontalAttack2State); 
                 manager.Input.ResetAttackInput();
             }
             else
@@ -46,7 +45,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
                 isAbilityDone = true;
             }
         }
-
+        
         private void UpdateInput(PlayerInputHandler input)
         {
             _attackInput = input.AttackInput;

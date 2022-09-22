@@ -3,7 +3,7 @@ using Character.Player.FSM.Player_State.Sub_State.Ability_State;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack;
-using Character.Player.FSM.Player_State.Sub_State.Ability_State.Ground_Attack;
+using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Special_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Air_State;
 using Character.Player.FSM.Player_State.Sub_State.Ground_State;
 using Character.Player.FSM.Player_State.Sub_State.Wall_State;
@@ -35,10 +35,14 @@ namespace Character.Player.Manager
         public PlayerRollState RollState { get; private set; }
         public PlayerGroundAttack1State GroundAttack1State { get; private set; }
         public PlayerGroundAttack2State GroundAttack2State { get; private set; }
-        public PlayerGroundAttack3State GroundAttack3State { get; private set; }
-        public PlayerAirAttackHorizontalState AirAttackHorizontalState { get; private set; }
-        public PlayerAirAttackUpState AirAttackUpState { get; private set; }
-        public PlayerAirAttackDownState AirAttackDownState { get; private set; }
+        public PlayerAirHorizontalAttack1State AirHorizontalAttack1State { get; private set; }
+        public PlayerAirHorizontalAttack2State AirHorizontalAttack2State { get; private set; }
+        public PlayerAirUpwardsAttackState AirUpwardsAttackState { get; private set; }
+        public PlayerAirDownwardsAttackState AirDownwardsAttackState { get; private set; }
+        public PlayerSpecialIdleAttackState SpecialIdleAttackState { get; private set; }
+        public PlayerSpecialDashAttackState SpecialDashAttackState { get; private set; }
+        public PlayerSpecialUpwardsAttackState SpecialUpwardsAttackState { get; private set; }
+        public PlayerSpecialDownwardsAttackState SpecialDownwardsAttackState { get; private set; }
         
         #endregion
         
@@ -71,12 +75,27 @@ namespace Character.Player.Manager
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
             RollState = new PlayerRollState(this, "roll");
-            GroundAttack1State = new PlayerGroundAttack1State(this, "attack1");
-            GroundAttack2State = new PlayerGroundAttack2State(this, "attack2");
-            GroundAttack3State = new PlayerGroundAttack3State(this, "attack3");
-            AirAttackHorizontalState = new PlayerAirAttackHorizontalState(this, "attack1");
-            AirAttackUpState = new PlayerAirAttackUpState(this, "attack2");
-            AirAttackDownState = new PlayerAirAttackDownState(this, "attack1");
+
+            #region Attack State 
+            
+            GroundAttack1State = new PlayerGroundAttack1State(this, "groundAttack1");
+            GroundAttack2State = new PlayerGroundAttack2State(this, "groundAttack2");
+            AirHorizontalAttack1State = new PlayerAirHorizontalAttack1State(this, "airHorizontalAttack1");
+            AirHorizontalAttack2State = new PlayerAirHorizontalAttack2State(this, "airHorizontalAttack2");
+            AirUpwardsAttackState = new PlayerAirUpwardsAttackState(this, "airUpwardsAttack");
+            AirDownwardsAttackState = new PlayerAirDownwardsAttackState(this, "airDownwardsAttack");
+            SpecialIdleAttackState = new PlayerSpecialIdleAttackState(this, "groundAttack1");
+            SpecialDashAttackState = new PlayerSpecialDashAttackState(this, "groundAttack1");
+            SpecialUpwardsAttackState = new PlayerSpecialUpwardsAttackState(this, "groundAttack1");
+            SpecialDownwardsAttackState = new PlayerSpecialDownwardsAttackState(this, "groundAttack1");
+
+            #endregion
+        }
+
+        public void ResetJumpAndDash()
+        {
+            JumpState.ResetAmountOfJump();
+            DashState.ResetAmountOfDash();
         }
     }
 }
