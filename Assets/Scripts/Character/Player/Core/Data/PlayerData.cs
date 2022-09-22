@@ -38,5 +38,7 @@ namespace Character.Player.Core.Data
         public float attackVelocity1;
         public float attackVelocity2;
         public float attackVelocity3;
+        public float airAttackUpVeclocity;
+        public float airAttackCoolDown;
     }
 }

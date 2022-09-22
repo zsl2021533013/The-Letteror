@@ -1,17 +1,13 @@
 ﻿using Character.Base.Manager;
-using Character.Player.FSM.Player_State.Super_State;
 using Character.Player.Input_System;
-using UnityEngine;
 
-namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
+namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack
 {
-    public class PlayerAttack1State : PlayerAbilityState
+    public class PlayerGroundAttack1State : PlayerAttackState
     {
-        private Vector2 _startPosition;
         private bool _attackInput;
-
-
-        public PlayerAttack1State(CharacterManager manager, string animBoolName) : base(manager,
+        
+        public PlayerGroundAttack1State(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
         }
@@ -20,9 +16,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition =manager.transform.position;
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.attackVelocity1 * coreManager.MoveCore.Direction);
-            coreManager.MoveCore.FreezeY(_startPosition);
+            coreManager.MoveCore.FreezeY(startPosition);
         }
 
         public override void OnUpdate()
@@ -36,15 +31,15 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
 
             UpdateInput(manager.Input);
 
-            coreManager.MoveCore.FreezeY(_startPosition);
+            coreManager.MoveCore.FreezeY(startPosition);
         }
 
         protected override void OnAnimationFinish()
         {
             if (_attackInput)
-            {
-                stateMachine.TranslateToState(manager.Attack2State);
-               manager.Input.ResetAttackInput();
+            { 
+                stateMachine.TranslateToState(manager.GroundAttack2State); 
+                manager.Input.ResetAttackInput();
             }
             else
             {

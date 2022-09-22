@@ -60,7 +60,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             if (_attackInput)
             {
                manager.Input.ResetAttackInput();
-                stateMachine.TranslateToState(manager.Attack1State);
+                stateMachine.TranslateToState(manager.GroundAttack1State);
                 return;
             }
             

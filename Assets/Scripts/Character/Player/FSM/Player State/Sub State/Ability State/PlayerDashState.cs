@@ -20,7 +20,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            _startPosition =manager.transform.position;
+            _startPosition = coreManager.MoveCore.Position;
             DecreaseAmountOfDash();
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.dashVelocity * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);

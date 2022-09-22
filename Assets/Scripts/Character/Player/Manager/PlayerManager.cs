@@ -1,5 +1,9 @@
 using Character.Base.Manager;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State;
+using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
+using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
+using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack;
+using Character.Player.FSM.Player_State.Sub_State.Ability_State.Ground_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Air_State;
 using Character.Player.FSM.Player_State.Sub_State.Ground_State;
 using Character.Player.FSM.Player_State.Sub_State.Wall_State;
@@ -29,9 +33,12 @@ namespace Character.Player.Manager
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
-        public PlayerAttack1State Attack1State { get; private set; }
-        public PlayerAttack2State Attack2State { get; private set; }
-        public PlayerAttack3State Attack3State { get; private set; }
+        public PlayerGroundAttack1State GroundAttack1State { get; private set; }
+        public PlayerGroundAttack2State GroundAttack2State { get; private set; }
+        public PlayerGroundAttack3State GroundAttack3State { get; private set; }
+        public PlayerAirAttackHorizontalState AirAttackHorizontalState { get; private set; }
+        public PlayerAirAttackUpState AirAttackUpState { get; private set; }
+        public PlayerAirAttackDownState AirAttackDownState { get; private set; }
         
         #endregion
         
@@ -64,9 +71,12 @@ namespace Character.Player.Manager
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
             RollState = new PlayerRollState(this, "roll");
-            Attack1State = new PlayerAttack1State(this, "attack1");
-            Attack2State = new PlayerAttack2State(this, "attack2");
-            Attack3State = new PlayerAttack3State(this, "attack3");
+            GroundAttack1State = new PlayerGroundAttack1State(this, "attack1");
+            GroundAttack2State = new PlayerGroundAttack2State(this, "attack2");
+            GroundAttack3State = new PlayerGroundAttack3State(this, "attack3");
+            AirAttackHorizontalState = new PlayerAirAttackHorizontalState(this, "attack1");
+            AirAttackUpState = new PlayerAirAttackUpState(this, "attack2");
+            AirAttackDownState = new PlayerAirAttackDownState(this, "attack1");
         }
     }
 }

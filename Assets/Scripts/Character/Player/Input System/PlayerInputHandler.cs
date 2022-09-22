@@ -4,6 +4,13 @@ using UnityEngine.InputSystem;
 
 namespace Character.Player.Input_System
 {
+    public enum AttackType
+    {
+        Up,
+        Down,
+        Horizontal
+    }
+    
     public class PlayerInputHandler : MonoBehaviour
     {
         public Vector2 MovementInput { get; private set; }
@@ -22,6 +29,28 @@ namespace Character.Player.Input_System
                     return 0;
                 }
                 return MovementInput.x < 0 ? -1 : 1;
+            }
+        }
+
+        public AttackType AttackDirection
+        {
+            get
+            {
+                if (Mathf.Abs(MovementInput.x) > Mathf.Abs(MovementInput.y) || MovementInput.y == 0f)
+                {
+                    return AttackType.Horizontal;
+                }
+                else
+                {
+                    if (MovementInput.y > 0f)
+                    {
+                        return AttackType.Up;
+                    }
+                    else
+                    {
+                        return AttackType.Down;
+                    }
+                }
             }
         }
 
