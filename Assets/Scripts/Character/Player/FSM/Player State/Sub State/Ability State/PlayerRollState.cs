@@ -1,0 +1,21 @@
+﻿using Character.Base.Manager;
+using Character.Player.FSM.Player_State.Super_State;
+
+namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
+{
+    public class PlayerRollState : PlayerAbilityState
+    {
+        public PlayerRollState(CharacterManager manager, string animBoolName) : base(manager,
+            animBoolName)
+        {
+        }
+
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            coreManager.MoveCore.SetVelocityY(0f);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.rollVelocity * coreManager.MoveCore.Direction);
+        }
+    }
+}

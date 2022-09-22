@@ -1,6 +1,5 @@
 using System;
-using Character.Base_Manager;
-using Character.Base.Base_Manager;
+using Character.Base.Manager;
 using UnityEngine;
 
 namespace Character.Player.Manager

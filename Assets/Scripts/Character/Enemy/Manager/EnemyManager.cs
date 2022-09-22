@@ -1,11 +1,8 @@
 ﻿using System;
-using Character.Base_Manager;
-using Character.Base.Base_Manager;
-using Character.Core;
-using Character.Enemy.Data;
-using Character.Enemy.Enemy_FSM;
-using Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ability_State;
-using Character.Enemy.Enemy_FSM.Enemy_State.Sub_State.Enemy_Ground_State;
+using Character.Base.Manager;
+using Character.Enemy.Core.Core_Manager;
+using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State;
+using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State;
 using Unity.VisualScripting;
 using UnityEngine;
 

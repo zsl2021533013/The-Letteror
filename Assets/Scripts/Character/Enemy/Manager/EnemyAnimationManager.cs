@@ -1,4 +1,4 @@
-﻿using Character.Base_Manager;
+﻿using Character.Base.Manager;
 using UnityEngine;
 
 namespace Character.Enemy.Manager
