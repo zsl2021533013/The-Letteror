@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d814a1b1f57ac3f498517c38bcb30912
+guid: 371d3b47f567b0b45a699ac45298b2d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StandAttackUp_0
+      name: Ground Upwards Attack 90x82_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5dec1c6f4beb814a9f14db07cb0b7a1
-      internalID: -80739906
+      spriteID: 10f45b27fcbe9ad4c8cde4d60d9a99a2
+      internalID: -545999602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StandAttackUp_1
+      name: Ground Upwards Attack 90x82_1
       rect:
         serializedVersion: 2
         x: 90
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6ec6b9f57f02641b1ab5aa5dddf804
-      internalID: 1905764497
+      spriteID: 167b7a11c50ab7649b6e3b1c4244e42b
+      internalID: 730434384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StandAttackUp_2
+      name: Ground Upwards Attack 90x82_2
       rect:
         serializedVersion: 2
         x: 180
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67a8e10ee71c9334ebb27fd4b4d473a7
-      internalID: 1446178157
+      spriteID: 41e395a929f04d742a1f26a8709806dd
+      internalID: 2090333451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StandAttackUp_3
+      name: Ground Upwards Attack 90x82_3
       rect:
         serializedVersion: 2
         x: 270
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97fbcb8e7615f434c8eadcb3be0386da
-      internalID: 104821429
+      spriteID: d2c3bd5e9e8f9dc4ba98c69624094010
+      internalID: -799767475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StandAttackUp_4
+      name: Ground Upwards Attack 90x82_4
       rect:
         serializedVersion: 2
         x: 360
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56acf0571185fee46a801960ab01be62
-      internalID: 222393316
+      spriteID: edb927e15ee8a01488b8c4c7551a06ed
+      internalID: -1302463018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StandAttackUp_5
+      name: Ground Upwards Attack 90x82_5
       rect:
         serializedVersion: 2
         x: 450
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a805fb03349474d80e4110ba9c94ad
-      internalID: -361899579
+      spriteID: 9ddc414e97bc1ae4d8ede3f675c597eb
+      internalID: 470501018
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      StandAttackUp_2: 1446178157
-      StandAttackUp_4: 222393316
-      StandAttackUp_1: 1905764497
-      StandAttackUp_3: 104821429
-      StandAttackUp_0: -80739906
-      StandAttackUp_5: -361899579
+      Ground Upwards Attack 90x82_5: 470501018
+      Ground Upwards Attack 90x82_0: -545999602
+      Ground Upwards Attack 90x82_4: -1302463018
+      Ground Upwards Attack 90x82_3: -799767475
+      Ground Upwards Attack 90x82_1: 730434384
+      Ground Upwards Attack 90x82_2: 2090333451
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
