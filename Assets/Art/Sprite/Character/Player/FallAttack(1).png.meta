@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 959e503d032976e4c94a95d05952e36f
+guid: 92f951d6b775bd94f8e2684b59fc2ee0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpwardsAttack_0
+      name: FallAttack(1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 90
-        height: 37
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6351fac3498b4b4e971926b3cdad569
-      internalID: 1866969967
+      spriteID: 24ed8488c31b3a941a746a6996d93412
+      internalID: 858714282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpwardsAttack_1
+      name: FallAttack(1)_1
       rect:
         serializedVersion: 2
         x: 90
         y: 0
         width: 90
-        height: 37
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 474c4e0b893e5024b924d1b544b346f1
-      internalID: 926838831
+      spriteID: 9378a0a94dcf61f4e90024d14990f93e
+      internalID: -1785628525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpwardsAttack_2
+      name: FallAttack(1)_2
       rect:
         serializedVersion: 2
         x: 180
         y: 0
         width: 90
-        height: 37
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47e3ddc2f58fd4c4ebc99be841ac9b4f
-      internalID: 1059767513
+      spriteID: 0577d986ff0dfb745abcd37c9f415be0
+      internalID: 2094085047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpwardsAttack_3
+      name: FallAttack(1)_3
       rect:
         serializedVersion: 2
         x: 270
         y: 0
         width: 90
-        height: 37
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd8a0bca93bd59944bd6a3d8e8a1d66a
-      internalID: 1932186780
+      spriteID: 1f5a262b81f129b4ea2a189385b8e0f6
+      internalID: -268856357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpwardsAttack_4
+      name: FallAttack(1)_4
       rect:
         serializedVersion: 2
         x: 360
         y: 0
         width: 90
-        height: 37
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6fbdd597a5574b40bbb865c4d08729e
-      internalID: -1253056579
+      spriteID: 2466225f319980f4591c98cd4baa0166
+      internalID: -741884524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpwardsAttack_5
+      name: FallAttack(1)_5
       rect:
         serializedVersion: 2
         x: 450
         y: 0
         width: 90
-        height: 37
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +223,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4d8b898cd7360a4f817bdc7b9a9b81d
-      internalID: -1048349074
+      spriteID: 3e0fd4811b2002345a4890217239853e
+      internalID: 1670931320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FallAttack(1)_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1c31cb54514d4488aa837205e30111
+      internalID: -985314465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FallAttack(1)_7
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b6f0c7cff28cb4f87cba999b6760d4
+      internalID: -2133010102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FallAttack(1)_8
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d28ecaa1b2043d44a6e217eda54ce71
+      internalID: -465017604
       vertices: []
       indices: 
       edges: []
@@ -240,12 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UpwardsAttack_4: -1253056579
-      UpwardsAttack_3: 1932186780
-      UpwardsAttack_0: 1866969967
-      UpwardsAttack_5: -1048349074
-      UpwardsAttack_1: 926838831
-      UpwardsAttack_2: 1059767513
+      FallAttack(1)_6: -985314465
+      FallAttack(1)_3: -268856357
+      FallAttack(1)_1: -1785628525
+      FallAttack(1)_5: 1670931320
+      FallAttack(1)_7: -2133010102
+      FallAttack(1)_0: 858714282
+      FallAttack(1)_4: -741884524
+      FallAttack(1)_2: 2094085047
+      FallAttack(1)_8: -465017604
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,6 @@
 ﻿using Character.Base.Manager;
 using Character.Player.Input_System;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace Character.Player.FSM.Player_State.Super_State
@@ -36,8 +37,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             
             if (_attackInput)
             {
-               manager.Input.ResetAttackInput();
-                stateMachine.TranslateToState(manager.GroundAttack1State);
+                CheckGroundAttack();
                 return;
             }
             
@@ -99,6 +99,20 @@ namespace Character.Player.FSM.Player_State.Super_State
             input.ResetDashInput();
             input.ResetAttackInput();
             input.ResetSpecialAttackInput();
+        }
+        
+        private void CheckGroundAttack()
+        {
+            manager.Input.ResetAttackInput();
+            switch (manager.Input.AttackDirection)
+            {
+                case AttackType.Up:
+                    stateMachine.TranslateToState(manager.GroundUpwardsAttackState);
+                    break;
+                default:
+                    stateMachine.TranslateToState(manager.GroundAttack1State);
+                    break;
+            }
         }
         
         private void CheckSpecialAttack()

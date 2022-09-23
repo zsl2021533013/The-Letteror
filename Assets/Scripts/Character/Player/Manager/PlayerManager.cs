@@ -35,6 +35,7 @@ namespace Character.Player.Manager
         public PlayerRollState RollState { get; private set; }
         public PlayerGroundAttack1State GroundAttack1State { get; private set; }
         public PlayerGroundAttack2State GroundAttack2State { get; private set; }
+        public PlayerGroundUpwardsAttackState GroundUpwardsAttackState { get; private set; } 
         public PlayerAirHorizontalAttack1State AirHorizontalAttack1State { get; private set; }
         public PlayerAirHorizontalAttack2State AirHorizontalAttack2State { get; private set; }
         public PlayerAirUpwardsAttackState AirUpwardsAttackState { get; private set; }
@@ -80,6 +81,7 @@ namespace Character.Player.Manager
             
             GroundAttack1State = new PlayerGroundAttack1State(this, "groundAttack1");
             GroundAttack2State = new PlayerGroundAttack2State(this, "groundAttack2");
+            GroundUpwardsAttackState = new PlayerGroundUpwardsAttackState(this, "groundUpwardsAttack");
             AirHorizontalAttack1State = new PlayerAirHorizontalAttack1State(this, "airHorizontalAttack1");
             AirHorizontalAttack2State = new PlayerAirHorizontalAttack2State(this, "airHorizontalAttack2");
             AirUpwardsAttackState = new PlayerAirUpwardsAttackState(this, "airUpwardsAttack");
