@@ -33,6 +33,11 @@ namespace Character.Player.Manager
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
+        public PlayerGetHitState GetHitState { get; private set; }
+        public PlayerDieState DieState { get; private set; }
+
+        #region Attack State
+        
         public PlayerGroundAttack1State GroundAttack1State { get; private set; }
         public PlayerGroundAttack2State GroundAttack2State { get; private set; }
         public PlayerGroundUpwardsAttackState GroundUpwardsAttackState { get; private set; } 
@@ -44,6 +49,8 @@ namespace Character.Player.Manager
         public PlayerSpecialDashAttackState SpecialDashAttackState { get; private set; }
         public PlayerSpecialUpwardsAttackState SpecialUpwardsAttackState { get; private set; }
         public PlayerSpecialDownwardsAttackState SpecialDownwardsAttackState { get; private set; }
+        
+        #endregion
         
         #endregion
         
@@ -76,6 +83,8 @@ namespace Character.Player.Manager
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
             RollState = new PlayerRollState(this, "roll");
+            GetHitState = new PlayerGetHitState(this, "getHit");
+            DieState = new PlayerDieState(this, "die");
 
             #region Attack State 
             
@@ -98,6 +107,20 @@ namespace Character.Player.Manager
         {
             JumpState.ResetAmountOfJump();
             DashState.ResetAmountOfDash();
+        }
+
+        public override void GetHit()
+        {
+            base.GetHit();
+            
+            StateMachine.TranslateToState(GetHitState);
+        }
+
+        public override void Die()
+        {
+            base.Die();
+            
+            StateMachine.TranslateToState(DieState);
         }
     }
 }

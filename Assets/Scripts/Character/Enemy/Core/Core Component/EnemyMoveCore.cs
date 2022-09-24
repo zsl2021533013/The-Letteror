@@ -6,8 +6,8 @@ namespace Character.Enemy.Core.Core_Component
 {
     public class EnemyMoveCore : MoveCore
     {
-        [SerializeField] private EnemyData enemyData;
-        public EnemyData EnemyData => enemyData;
+        [SerializeField] private EnemyStateMachineData enemyStateMachineData;
+        public EnemyStateMachineData EnemyStateMachineData => enemyStateMachineData;
         
         public void Flip()
         {

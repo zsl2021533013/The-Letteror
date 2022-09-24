@@ -6,6 +6,15 @@ namespace Character.Player.Manager
 {
     public class PlayerAnimationManager : CharacterAnimationManager
     {
-        public void ResetAttackInput() => ((PlayerManager)manager).Input.ResetAttackInput();
+        protected new PlayerManager manager;
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            manager = (PlayerManager)base.manager;
+        }
+
+        public void ResetAttackInput() => manager.Input.ResetAttackInput();
     }
 }

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6582fbd1bd4a6c816fd59bd7a0107c, type: 3}
+  m_Name: Player State Machine Data
+  m_EditorClassIdentifier: 
+  movementVelocity: 10
+  jumpVelocity: 20
+  amountOfJump: 2
+  coyoteTime: 0.2
+  variableJumpHeightMultiplier: 0.5
+  wallSlideVelocity: 2
+  wallJumpVelocity: 20
+  wallJumpTime: 0.1
+  wallJumpAngle: {x: 1, y: 2}
+  startOffset: {x: 0.35, y: 0.6}
+  dashVelocity: 30
+  amountOfDash: 1
+  rollVelocity: 10
+  groundAttack1VelocityX: 0
+  groundAttack2VelocityX: 0
+  airAttack1VelocityX: 0.5
+  airAttack2VelocityX: 0.8
+  airUpwardsAttackVelocityY: 14
+  airAttackCoolDown: 1
+  specialAttackVelocityX: 20
+  specialUpwardsAttackVelocityY: 20
+  specialDownwardsAttackVelocityY: 0
+  specialAttackCoolDown: 1

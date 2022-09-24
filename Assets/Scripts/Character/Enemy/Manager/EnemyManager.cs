@@ -18,6 +18,8 @@ namespace Character.Enemy.Manager
         public EnemyChaseState ChaseState { get; private set; }
         public EnemyAttackState AttackState { get; private set; }
         public EnemyPatrolState PatrolState { get; private set; }
+        public EnemyGetHitState GetHitState { get; private set; }
+        public EnemyDieState DieState { get; private set; }
 
         #endregion
 
@@ -32,7 +34,7 @@ namespace Character.Enemy.Manager
         {
             StateMachine.Initialize(IdleState);
         }
-
+        
         protected override void InitializeFsm()
         {
             base.InitializeFsm();
@@ -41,6 +43,32 @@ namespace Character.Enemy.Manager
             ChaseState = new EnemyChaseState(this, "move");
             AttackState = new EnemyAttackState(this, "attack");
             PatrolState = new EnemyPatrolState(this, "move");
+            GetHitState = new EnemyGetHitState(this, "getHit");
+            DieState = new EnemyDieState(this, "die");
+        }
+
+        public override void GetHit()
+        {
+            base.GetHit();
+
+            if (CoreManager.SenseCore.InFlipRange)
+            {
+                CoreManager.MoveCore.Flip();
+            }
+            
+            StateMachine.TranslateToState(GetHitState);
+        }
+
+        public override void Die()
+        {
+            base.Die();
+            
+            if (CoreManager.SenseCore.InFlipRange)
+            {
+                CoreManager.MoveCore.Flip();
+            }
+            
+            StateMachine.TranslateToState(DieState);
         }
     }
 }

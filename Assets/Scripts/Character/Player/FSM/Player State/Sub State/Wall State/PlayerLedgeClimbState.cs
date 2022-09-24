@@ -54,10 +54,10 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
 
         private void SetStartPosition()
         {
-            _startPosition.Set(_cornerPosition.x - (coreManager.MoveCore.Direction * coreManager.MoveCore.PlayerData.startOffset.x),
-                _cornerPosition.y - coreManager.MoveCore.PlayerData.startOffset.y);
-            _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * coreManager.MoveCore.PlayerData.startOffset.x),
-                _cornerPosition.y + coreManager.MoveCore.PlayerData.startOffset.y);
+            _startPosition.Set(_cornerPosition.x - (coreManager.MoveCore.Direction * coreManager.MoveCore.StateMachineData.startOffset.x),
+                _cornerPosition.y - coreManager.MoveCore.StateMachineData.startOffset.y);
+            _stopPosition.Set(_cornerPosition.x + (coreManager.MoveCore.Direction * coreManager.MoveCore.StateMachineData.startOffset.x),
+                _cornerPosition.y + coreManager.MoveCore.StateMachineData.startOffset.y);
         }
         
         private void ResetTriggers(PlayerInputHandler input)

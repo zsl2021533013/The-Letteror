@@ -6,7 +6,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack
 {
     public class PlayerAirUpwardsAttackState : PlayerAttackState
     {
-        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.PlayerData.airAttackCoolDown;
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.StateMachineData.airAttackCoolDown;
         
         public PlayerAirUpwardsAttackState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
@@ -16,7 +16,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.PlayerData.airUpwardsAttackVelocityY);
+            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.StateMachineData.airUpwardsAttackVelocityY);
             coreManager.MoveCore.FreezeX(startPosition);
         }
 

@@ -5,8 +5,8 @@ namespace Character.Base.Core.Core_Manger
 {
     public class CoreManager : MonoBehaviour
     {
-        public MoveCore MoveCore { get; private set; }
-        public SenseCore SenseCore { get; private set; }
+        public MoveCore MoveCore;
+        public SenseCore SenseCore;
 
         protected virtual void Awake()
         {

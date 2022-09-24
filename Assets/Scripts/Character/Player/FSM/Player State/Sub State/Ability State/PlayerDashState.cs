@@ -22,7 +22,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
 
             _startPosition = coreManager.MoveCore.Position;
             DecreaseAmountOfDash();
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.dashVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.dashVelocity * coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(_startPosition);
         }
 
@@ -35,7 +35,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
 
         public bool CheckAmountOfDash() => _amountOfDashLeft > 0;
 
-        public void ResetAmountOfDash() => _amountOfDashLeft = coreManager.MoveCore.PlayerData.amountOfDash;
+        public void ResetAmountOfDash() => _amountOfDashLeft = coreManager.MoveCore.StateMachineData.amountOfDash;
 
         public void DecreaseAmountOfDash() => --_amountOfDashLeft;
     }

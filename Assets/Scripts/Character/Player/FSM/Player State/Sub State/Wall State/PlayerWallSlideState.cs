@@ -19,7 +19,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
                 return;
             }
             
-            coreManager.MoveCore.SetVelocityY(-coreManager.MoveCore.PlayerData.wallSlideVelocity);
+            coreManager.MoveCore.SetVelocityY(-coreManager.MoveCore.StateMachineData.wallSlideVelocity);
         }
     }
 }

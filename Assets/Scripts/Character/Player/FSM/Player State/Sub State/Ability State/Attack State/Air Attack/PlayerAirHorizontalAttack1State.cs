@@ -8,7 +8,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
     {
         private bool _attackInput;
         
-        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.PlayerData.airAttackCoolDown;
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.StateMachineData.airAttackCoolDown;
         
         public PlayerAirHorizontalAttack1State(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
@@ -19,7 +19,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
             base.OnEnter();
 
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.airAttack1VelocityX *
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.airAttack1VelocityX *
                                               coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(startPosition);
         }

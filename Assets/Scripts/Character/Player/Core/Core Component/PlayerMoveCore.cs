@@ -6,8 +6,8 @@ namespace Character.Player.Core.Core_Component
 {
     public class PlayerMoveCore : MoveCore
     {
-        [SerializeField] private PlayerData playerData;
-        public PlayerData PlayerData => playerData;
+        [SerializeField] private PlayerStateMachineData playerStateMachineData;
+        public PlayerStateMachineData StateMachineData => playerStateMachineData;
         
         public void CheckFlip(float inputX)
         {

@@ -10,13 +10,13 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
         }
 
-        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.PlayerData.airAttackCoolDown;
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.StateMachineData.airAttackCoolDown;
 
         public override void OnEnter()
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.PlayerData.specialUpwardsAttackVelocityY);
+            coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.StateMachineData.specialUpwardsAttackVelocityY);
             coreManager.MoveCore.FreezeX(startPosition);
         }
 

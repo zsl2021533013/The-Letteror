@@ -15,7 +15,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocity(coreManager.MoveCore.PlayerData.wallJumpVelocity, coreManager.MoveCore.PlayerData.wallJumpAngle, -coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocity(coreManager.MoveCore.StateMachineData.wallJumpVelocity, coreManager.MoveCore.StateMachineData.wallJumpAngle, -coreManager.MoveCore.Direction);
 
             coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
             manager.JumpState.DecreaseAmountOfJumps();
@@ -25,10 +25,10 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         {
             base.OnUpdate();
             
-           manager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
-           manager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
+           manager.AnimationManager.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+           manager.AnimationManager.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
 
-            if (Time.time > startTime + coreManager.MoveCore.PlayerData.wallJumpTime)
+            if (Time.time > startTime + coreManager.MoveCore.StateMachineData.wallJumpTime)
             {
                 isAbilityDone = true;
             }

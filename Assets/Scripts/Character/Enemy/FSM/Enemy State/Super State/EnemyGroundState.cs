@@ -16,7 +16,7 @@ namespace Character.Enemy.FSM.Enemy_State.Super_State
         public override void OnUpdate()
         {
             base.OnUpdate();
-            
+
             if (inChaseRange && !inAttackRange)
             {
                 stateMachine.TranslateToState(manager.ChaseState);

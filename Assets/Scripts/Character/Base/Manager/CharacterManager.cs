@@ -6,14 +6,15 @@ namespace Character.Base.Manager
 {
     public class CharacterManager : MonoBehaviour
     {
-        public CharacterStateMachine StateMachine { get; protected set; }
         public CoreManager CoreManager { get; protected set; }
-        public Animator Anim { get; protected set; }
-
+        public CharacterBattleManager BattleManager { get; protected set; }
+        public CharacterAnimationManager AnimationManager { get; protected set; }
+        public CharacterStateMachine StateMachine { get; protected set; }
+        
         protected virtual void Awake()
         {
+            InitializeComponent();
             InitializeFsm();
-            Anim = GetComponentInChildren<Animator>();
         }
 
         protected virtual void Start()
@@ -33,9 +34,37 @@ namespace Character.Base.Manager
 
         protected virtual void InitializeFsm()
         {
-            CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
-            
             StateMachine = new CharacterStateMachine();
+        }
+
+        protected virtual void InitializeComponent()
+        {
+            CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
+            AnimationManager = GetComponentInChildren<CharacterAnimationManager>();
+            BattleManager = GetComponentInChildren<CharacterBattleManager>();
+            
+            if (!CoreManager)
+            {
+                Debug.LogError("Missing Core Manager");
+            }
+
+            if (!AnimationManager)
+            {
+                Debug.LogError("Missing Animation Manager");
+            }
+
+            if (!BattleManager)
+            {
+                Debug.LogError("Missing Battle Manager");
+            }
+        }
+
+        public virtual void GetHit()
+        {
+        }
+
+        public virtual void Die()
+        {
         }
     }
 }

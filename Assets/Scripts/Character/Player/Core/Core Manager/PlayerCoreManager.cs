@@ -24,7 +24,6 @@ namespace Character.Player.Core.Core_Manager
             
             MoveCore = (PlayerMoveCore)base.MoveCore;
             SenseCore = (PlayerSenseCore)base.SenseCore;
-            
         }
     }
 }

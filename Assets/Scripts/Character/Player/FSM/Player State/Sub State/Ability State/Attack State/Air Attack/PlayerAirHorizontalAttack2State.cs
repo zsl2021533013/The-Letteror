@@ -14,7 +14,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
             base.OnEnter();
 
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.airAttack2VelocityX *
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.airAttack2VelocityX *
                                               coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(startPosition);
         }

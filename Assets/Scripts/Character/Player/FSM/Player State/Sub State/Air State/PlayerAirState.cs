@@ -39,11 +39,11 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
 
             CheckJumping();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.movementVelocity * _movementInput.x);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.movementVelocity * _movementInput.x);
             coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
             
-           manager.Anim.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
-           manager.Anim.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
+           manager.AnimationManager.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
+           manager.AnimationManager.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
 
             if (_attackInput)
             {
@@ -119,7 +119,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
 
         private void CheckCoyoteTime()
         {
-            if (_coyoteTime && Time.time > startTime + coreManager.MoveCore.PlayerData.coyoteTime)
+            if (_coyoteTime && Time.time > startTime + coreManager.MoveCore.StateMachineData.coyoteTime)
             {
                 _coyoteTime = false;
                manager.JumpState.DecreaseAmountOfJumps();
@@ -138,7 +138,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                 
                 if (_jumpInputStop)
                 {
-                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * coreManager.MoveCore.PlayerData.variableJumpHeightMultiplier);
+                    coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.CurrentVelocity.y * coreManager.MoveCore.StateMachineData.variableJumpHeightMultiplier);
                     _isJumping = false;
                     return;
                 }

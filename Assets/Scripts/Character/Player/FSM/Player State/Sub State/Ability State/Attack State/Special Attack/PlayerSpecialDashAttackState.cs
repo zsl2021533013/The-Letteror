@@ -9,14 +9,14 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
         }
 
-        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.PlayerData.specialAttackCoolDown;
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.StateMachineData.specialAttackCoolDown;
 
         public override void OnEnter()
         {
             base.OnEnter();
             Debug.Log("Dash Attack");
             Debug.Log(manager.Input.MovementInput);
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.PlayerData.specialAttackVelocityX *
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.specialAttackVelocityX *
                                               coreManager.MoveCore.Direction);
             coreManager.MoveCore.FreezeY(startPosition);
         }
