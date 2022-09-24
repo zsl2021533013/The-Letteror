@@ -55147,6 +55147,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &69011632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69011633}
+  m_Layer: 0
+  m_Name: ---Manager---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69011633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69011632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.2533126, y: -1.8283297, z: 1.2019511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75737338
 GameObject:
   m_ObjectHideFlags: 0
@@ -55356,7 +55387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3825a3e470504d25bd48a9339b60341e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleData: {fileID: 11400000, guid: 126a7600ee8533947bb6888efd8bb1a3, type: 2}
   isImmortal: 0
 --- !u!61 &116546287
 BoxCollider2D:
@@ -55568,7 +55598,7 @@ Transform:
   m_Children:
   - {fileID: 180269517}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201865370
 GameObject:
@@ -55718,7 +55748,7 @@ Transform:
   - {fileID: 2005506033}
   - {fileID: 75737339}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &217832839
 MonoBehaviour:
@@ -55732,6 +55762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e073fb9ddefb8104dadf467a17b350e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Player
   isDoubleJumpEnable: 0
   isWallSlideEnable: 0
   isDashEnable: 0
@@ -56013,7 +56044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609239699
 GameObject:
@@ -56548,7 +56579,8 @@ MonoBehaviour:
     m_Bits: 128
   playerFrontCheckDistance: 6
   playerBackCheckDistance: 2
-  attackDistance: 2
+  attackDistance: 1.5
+  specialAttackDistance: -1
 --- !u!1 &982978421
 GameObject:
   m_ObjectHideFlags: 0
@@ -56815,7 +56847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff69915a866446f9925f4f978e4c491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleData: {fileID: 11400000, guid: 9c80afc8c326c4b4ba7651f565c2c456, type: 2}
   isImmortal: 0
 --- !u!61 &1191966397
 BoxCollider2D:
@@ -56961,6 +56992,55 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 201865371}
   m_Damping: 5
   m_MaxWindowSize: -1
+--- !u!1 &1582466289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582466291}
+  - component: {fileID: 1582466290}
+  m_Layer: 0
+  m_Name: Battle Factory Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1582466290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582466289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9d732fc4e5ea3428ed0998e424bc25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleAttributes:
+  - _name: Player
+    _data: {fileID: 11400000, guid: 126a7600ee8533947bb6888efd8bb1a3, type: 2}
+  - _name: Ghoul
+    _data: {fileID: 11400000, guid: 9c80afc8c326c4b4ba7651f565c2c456, type: 2}
+--- !u!4 &1582466291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582466289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.2533126, y: -1.8283297, z: 1.2019511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613753640
 GameObject:
   m_ObjectHideFlags: 0
@@ -70307,7 +70387,7 @@ Transform:
   - {fileID: 1191966392}
   - {fileID: 1719251474}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1857471838
 Rigidbody2D:
@@ -70368,6 +70448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8decc5bee8c44449d7100f3bd40ece7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Ghoul
 --- !u!1 &2005506032
 GameObject:
   m_ObjectHideFlags: 0

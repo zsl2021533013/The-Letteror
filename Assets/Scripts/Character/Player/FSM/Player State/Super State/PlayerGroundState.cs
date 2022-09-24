@@ -106,7 +106,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             manager.Input.ResetAttackInput();
             switch (manager.Input.AttackDirection)
             {
-                case AttackType.Up:
+                case PlayerAttackType.Up:
                     stateMachine.TranslateToState(manager.GroundUpwardsAttackState);
                     break;
                 default:
@@ -120,19 +120,19 @@ namespace Character.Player.FSM.Player_State.Super_State
             manager.Input.ResetSpecialAttackInput();
             switch (manager.Input.SpecialAttackDirection)
             {
-                case SpecialAttackType.Idle:
+                case PlayerSpecialAttackType.Idle:
                     if (manager.SpecialIdleAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialIdleAttackState);
                     }
                     break;
-                case SpecialAttackType.Dash:
+                case PlayerSpecialAttackType.Dash:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
-                case SpecialAttackType.Up:
+                case PlayerSpecialAttackType.Up:
                     if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);

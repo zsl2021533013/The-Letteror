@@ -6,7 +6,7 @@ namespace Character.Enemy.FSM.Enemy_State.Super_State
     {
         protected bool inChaseRange;
         protected bool inAttackRange;
-
+        protected bool inSpecialAttackRange;
 
         public EnemyGroundState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
@@ -17,17 +17,24 @@ namespace Character.Enemy.FSM.Enemy_State.Super_State
         {
             base.OnUpdate();
 
+            if (inAttackRange && manager.AttackState.AttackEnable)
+            {
+                stateMachine.TranslateToState(manager.AttackState);
+                return;
+            }
+
+            if (inSpecialAttackRange && manager.SpecialAttackState.AttackEnable)
+            {
+                stateMachine.TranslateToState(manager.SpecialAttackState);
+                return;
+            }
+            
             if (inChaseRange && !inAttackRange)
             {
                 stateMachine.TranslateToState(manager.ChaseState);
                 return;
             }
             
-            if (inAttackRange && manager.AttackState.AttackEnable)
-            {
-                stateMachine.TranslateToState(manager.AttackState);
-                return;
-            }
         }
 
         public override void DoChecks()
@@ -36,6 +43,7 @@ namespace Character.Enemy.FSM.Enemy_State.Super_State
             
             inChaseRange = coreManager.SenseCore.InChaseRange;
             inAttackRange = coreManager.SenseCore.InAttackRange;
+            inSpecialAttackRange = coreManager.SenseCore.InSpecialAttackRange;
         }
     }
 }

@@ -1,10 +1,7 @@
-﻿using System;
-using Character.Base.Manager;
+﻿using Character.Base.Manager;
 using Character.Enemy.Core.Core_Manager;
 using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State;
 using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State;
-using Unity.VisualScripting;
-using UnityEngine;
 
 namespace Character.Enemy.Manager
 {
@@ -17,6 +14,7 @@ namespace Character.Enemy.Manager
         public EnemyIdleState IdleState { get; private set; }
         public EnemyChaseState ChaseState { get; private set; }
         public EnemyAttackState AttackState { get; private set; }
+        public EnemySpecialAttackState SpecialAttackState { get; private set; }
         public EnemyPatrolState PatrolState { get; private set; }
         public EnemyGetHitState GetHitState { get; private set; }
         public EnemyDieState DieState { get; private set; }
@@ -42,6 +40,7 @@ namespace Character.Enemy.Manager
             IdleState = new EnemyIdleState(this, "idle");
             ChaseState = new EnemyChaseState(this, "move");
             AttackState = new EnemyAttackState(this, "attack");
+            SpecialAttackState = new EnemySpecialAttackState(this, "specialAttack");
             PatrolState = new EnemyPatrolState(this, "move");
             GetHitState = new EnemyGetHitState(this, "getHit");
             DieState = new EnemyDieState(this, "die");

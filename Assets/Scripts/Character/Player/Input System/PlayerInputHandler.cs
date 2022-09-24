@@ -4,14 +4,14 @@ using UnityEngine.InputSystem;
 
 namespace Character.Player.Input_System
 {
-    public enum AttackType
+    public enum PlayerAttackType
     {
         Horizontal,
         Up,
         Down
     }
 
-    public enum SpecialAttackType
+    public enum PlayerSpecialAttackType
     {
         Idle,
         Dash,
@@ -41,48 +41,48 @@ namespace Character.Player.Input_System
             }
         }
 
-        public AttackType AttackDirection
+        public PlayerAttackType AttackDirection
         {
             get
             {
                 if (Mathf.Abs(MovementInput.x) > Mathf.Abs(MovementInput.y) || MovementInput.y == 0f)
                 {
-                    return AttackType.Horizontal;
+                    return PlayerAttackType.Horizontal;
                 }
                 else
                 {
                     if (MovementInput.y > 0f)
                     {
-                        return AttackType.Up;
+                        return PlayerAttackType.Up;
                     }
                     else
                     {
-                        return AttackType.Down;
+                        return PlayerAttackType.Down;
                     }
                 }
             }
         }
 
-        public SpecialAttackType SpecialAttackDirection
+        public PlayerSpecialAttackType SpecialAttackDirection
         {
             get
             {
                 if (MovementInput == Vector2.zero)
                 {
-                    return SpecialAttackType.Idle;
+                    return PlayerSpecialAttackType.Idle;
                 }
                 
                 if (Mathf.Abs(MovementInput.x) > Mathf.Abs(MovementInput.y))
                 {
-                    return SpecialAttackType.Dash;
+                    return PlayerSpecialAttackType.Dash;
                 }
 
                 if (MovementInput.y > 0f)
                 {
-                    return SpecialAttackType.Up;
+                    return PlayerSpecialAttackType.Up;
                 }
 
-                return SpecialAttackType.Down;
+                return PlayerSpecialAttackType.Down;
             }
         }
         

@@ -150,19 +150,19 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             manager.Input.ResetAttackInput();
             switch (manager.Input.AttackDirection)
             {
-                case AttackType.Horizontal:
+                case PlayerAttackType.Horizontal:
                     if (manager.AirHorizontalAttack1State.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirHorizontalAttack1State);
                     }
                     break;
-                case AttackType.Up:
+                case PlayerAttackType.Up:
                     if (manager.AirUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirUpwardsAttackState);
                     }
                     break;
-                case AttackType.Down:
+                case PlayerAttackType.Down:
                     if (manager.AirDownwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirDownwardsAttackState);
@@ -176,19 +176,19 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             manager.Input.ResetSpecialAttackInput();
             switch (manager.Input.SpecialAttackDirection)
             {
-                case SpecialAttackType.Dash:
+                case PlayerSpecialAttackType.Dash:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
-                case SpecialAttackType.Up:
+                case PlayerSpecialAttackType.Up:
                     if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case SpecialAttackType.Down:
+                case PlayerSpecialAttackType.Down:
                     if (manager.SpecialDownwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDownwardsAttackState);

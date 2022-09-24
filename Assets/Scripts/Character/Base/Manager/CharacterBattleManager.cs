@@ -1,20 +1,22 @@
-﻿using System;
-using Character.Base.Data;
+﻿using Character.Base.Data;
+using Game_Manager;
 using UnityEngine;
 
 namespace Character.Base.Manager
 {
     public class CharacterBattleManager : MonoBehaviour
     {
-        public CharacterBattleData battleData;
         public bool isImmortal;
         
         protected CharacterBattleManager targetBattleManager;
         protected CharacterManager manager;
         
+        private CharacterBattleData battleData;
+        
         protected virtual void Awake()
         {
             manager = GetComponentInParent<CharacterManager>();
+            battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(manager.name));
         }
 
         private void OnTriggerEnter2D(Collider2D col)

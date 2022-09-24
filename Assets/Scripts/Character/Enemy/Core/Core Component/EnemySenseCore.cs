@@ -11,6 +11,7 @@ namespace Character.Enemy.Core.Core_Component
         [SerializeField] private float playerFrontCheckDistance;
         [SerializeField] private float playerBackCheckDistance;
         [SerializeField] private float attackDistance;
+        [SerializeField] private float specialAttackDistance;
 
         public bool InChaseRange => Physics2D.Raycast(playerSensor.position,
             Vector2.right * coreManager.MoveCore.Direction, playerFrontCheckDistance, playerLayerMask);
@@ -21,6 +22,9 @@ namespace Character.Enemy.Core.Core_Component
         public bool InAttackRange => Physics2D.Raycast(playerSensor.position,
             Vector2.right * coreManager.MoveCore.Direction, attackDistance, playerLayerMask);
         
+        public bool InSpecialAttackRange => Physics2D.Raycast(playerSensor.position,
+            Vector2.right * coreManager.MoveCore.Direction, specialAttackDistance, playerLayerMask); 
+        
         protected override void OnDrawGizmosSelected()
         {
             base.OnDrawGizmosSelected();
@@ -28,9 +32,19 @@ namespace Character.Enemy.Core.Core_Component
             Gizmos.color = Color.yellow;
             Gizmos.DrawRay(playerSensor.position, Vector2.right * playerFrontCheckDistance);
             Gizmos.DrawRay(playerSensor.position, Vector2.left * playerBackCheckDistance);
+
+            if (attackDistance > 0)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawRay(playerSensor.position + Vector3.up / 2, Vector2.right * attackDistance);
+            }
+
+            if (specialAttackDistance > 0)
+            {
+                Gizmos.color = Color.magenta;
+                Gizmos.DrawRay(playerSensor.position + Vector3.up, Vector2.right * specialAttackDistance);
+            }
             
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(playerSensor.position, Vector2.right * attackDistance);
         }
     }
 }

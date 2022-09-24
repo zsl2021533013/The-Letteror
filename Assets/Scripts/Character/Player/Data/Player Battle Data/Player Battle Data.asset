@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player Battle Data
   m_EditorClassIdentifier: 
   maxHealth: 5
-  currentHealth: 0
+  currentHealth: 5
   attack: 1

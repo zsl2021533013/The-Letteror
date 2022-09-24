@@ -6,6 +6,7 @@ namespace Character.Base.Manager
 {
     public class CharacterManager : MonoBehaviour
     {
+        public string name;
         public CoreManager CoreManager { get; protected set; }
         public CharacterBattleManager BattleManager { get; protected set; }
         public CharacterAnimationManager AnimationManager { get; protected set; }
