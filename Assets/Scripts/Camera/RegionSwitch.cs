@@ -7,7 +7,6 @@ public class RegionSwitch : MonoBehaviour
     private void Awake()
     {
         CinVC = GetComponentInChildren<CinemachineVirtualCamera>();
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
