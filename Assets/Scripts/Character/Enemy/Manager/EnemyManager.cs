@@ -16,8 +16,8 @@ namespace Character.Enemy.Manager
         public EnemyAttackState AttackState { get; private set; }
         public EnemySpecialAttackState SpecialAttackState { get; private set; }
         public EnemyPatrolState PatrolState { get; private set; }
-        public EnemyGetHitState GetHitState { get; private set; }
-        public EnemyDieState DieState { get; private set; }
+        public EnemyDamagedState DamagedState { get; private set; }
+        public EnemyDeathState DeathState { get; private set; }
 
         #endregion
 
@@ -30,6 +30,8 @@ namespace Character.Enemy.Manager
 
         protected override void Start()
         {
+            base.Start();
+            
             StateMachine.Initialize(IdleState);
         }
         
@@ -42,32 +44,22 @@ namespace Character.Enemy.Manager
             AttackState = new EnemyAttackState(this, "attack");
             SpecialAttackState = new EnemySpecialAttackState(this, "specialAttack");
             PatrolState = new EnemyPatrolState(this, "move");
-            GetHitState = new EnemyGetHitState(this, "getHit");
-            DieState = new EnemyDieState(this, "die");
+            DamagedState = new EnemyDamagedState(this, "damaged");
+            DeathState = new EnemyDeathState(this, "death");
         }
 
         public override void GetHit()
         {
             base.GetHit();
 
-            if (CoreManager.SenseCore.InFlipRange)
-            {
-                CoreManager.MoveCore.Flip();
-            }
-            
-            StateMachine.TranslateToState(GetHitState);
+            StateMachine.TranslateToState(DamagedState);
         }
 
         public override void Die()
         {
             base.Die();
-            
-            if (CoreManager.SenseCore.InFlipRange)
-            {
-                CoreManager.MoveCore.Flip();
-            }
-            
-            StateMachine.TranslateToState(DieState);
+
+            StateMachine.TranslateToState(DeathState);
         }
     }
 }

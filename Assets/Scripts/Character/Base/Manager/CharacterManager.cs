@@ -15,11 +15,11 @@ namespace Character.Base.Manager
         protected virtual void Awake()
         {
             InitializeComponent();
-            InitializeFsm();
         }
 
         protected virtual void Start()
         {
+            InitializeFsm();
         }
 
         protected virtual void Update()

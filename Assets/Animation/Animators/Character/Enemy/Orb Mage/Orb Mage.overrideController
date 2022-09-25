@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Orb Mage
+  m_Controller: {fileID: 9100000, guid: 9ae1cfde8b699e041b1a136ed91986f6, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e848ca5070b63d64a8beb964127b0bd6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 42ff560ea05d00445b86fd9f37602447, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a82b089f0b2de1448991436f347bbf28, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 351eece24dfbd8843ad6a18d3c99c286, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 26bece5f6fda0fa409bb55f584891998, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aafd16c4c41c30b45a11f256b886fced, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4114e151ee3586840bea2cd4ffe00dac, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ecd7c691a90da0142a707b72913387c8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d666cf7175faa964789ce9e76a4a6972, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b5ab0ee2c8114874eb475b74a3a6d5ad, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cbcb3d44d07b60e4cac0e5dd034e64bb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6d933a6a0fc14f24e8269da1f3b8a88c, type: 2}

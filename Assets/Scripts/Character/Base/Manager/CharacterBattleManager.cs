@@ -1,4 +1,5 @@
-﻿using Character.Base.Data;
+﻿using System;
+using Character.Base.Data;
 using Game_Manager;
 using UnityEngine;
 
@@ -16,6 +17,10 @@ namespace Character.Base.Manager
         protected virtual void Awake()
         {
             manager = GetComponentInParent<CharacterManager>();
+        }
+
+        private void Start()
+        {
             battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(manager.name));
         }
 
