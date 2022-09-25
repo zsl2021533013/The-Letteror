@@ -55765,7 +55765,7 @@ MonoBehaviour:
   name: Player
   isDoubleJumpEnable: 0
   isWallSlideEnable: 0
-  isDashEnable: 0
+  isDashEnable: 1
 --- !u!114 &217832840
 MonoBehaviour:
   m_ObjectHideFlags: 0
