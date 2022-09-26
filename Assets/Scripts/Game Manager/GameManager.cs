@@ -7,6 +7,13 @@ namespace Game_Manager
     {
         public Transform PlayerTransform { get; private set; }
 
+        protected override void Awake()
+        {
+            base.Awake();
+            
+            Random.InitState((int)System.DateTime.Now.Ticks);
+        }
+
         public void RegisterPlayer(Transform playerTransform)
         {
             PlayerTransform = playerTransform;

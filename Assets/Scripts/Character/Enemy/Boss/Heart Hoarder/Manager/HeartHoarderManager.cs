@@ -70,10 +70,5 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             Attack3GetUpState = new HeartHoarderAttack3GetUpState(this, "attack3GetUp");
             #endregion
         }
-
-        /*private void OnCollisionStay(Collision collision)
-        {
-            Debug.Log(collision.transform.name);
-        }*/
     }
 }
