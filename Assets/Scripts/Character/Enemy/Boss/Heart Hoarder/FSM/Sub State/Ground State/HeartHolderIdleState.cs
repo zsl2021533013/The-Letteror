@@ -11,7 +11,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         
         public HeartHolderIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
-            _currentState = 3;
+            _currentState = 1;
         }
 
         public override void OnEnter()

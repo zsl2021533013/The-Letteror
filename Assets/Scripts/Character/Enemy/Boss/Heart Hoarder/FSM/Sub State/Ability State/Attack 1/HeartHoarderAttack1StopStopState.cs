@@ -16,15 +16,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         {
             base.OnEnter();
 
-            _startPosition = coreManager.MoveCore.Position; //TODO:不这样写的化会腾一下，真奇怪
-            coreManager.MoveCore.Freeze(_startPosition);
-        }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-            
-            coreManager.MoveCore.Freeze(_startPosition);
+            coreManager.MoveCore.SetVelocityX(0f);
         }
 
         protected override void OnAnimationFinish()
