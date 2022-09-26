@@ -40,7 +40,7 @@ namespace Game_Manager
                 return battleDataDict[name];
             }
 
-            Debug.Log("Can't find" + name + "in factory");
+            Debug.LogError("Can't find" + name + "in factory");
             return default;
         }
     }

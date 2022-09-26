@@ -8,6 +8,7 @@ using Character.Player.FSM.Player_State.Sub_State.Air_State;
 using Character.Player.FSM.Player_State.Sub_State.Ground_State;
 using Character.Player.FSM.Player_State.Sub_State.Wall_State;
 using Character.Player.Input_System;
+using Game_Manager;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Update = Unity.VisualScripting.Update;
@@ -68,6 +69,7 @@ namespace Character.Player.Manager
         {
             base.Start();
             
+            GameManager.Instance.RegisterPlayer(transform);
             StateMachine.Initialize(IdleState);
         }
 
