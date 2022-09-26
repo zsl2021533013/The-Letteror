@@ -14,7 +14,7 @@ namespace Character.Base.FSM.Base_State
         protected bool isStateFinished;
         protected float startTime;
 
-        private string _animBoolName;
+        protected string _animBoolName;
         
         public CharacterState(CharacterManager manager, string animBoolName)
         {

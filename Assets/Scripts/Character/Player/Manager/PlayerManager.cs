@@ -8,7 +8,10 @@ using Character.Player.FSM.Player_State.Sub_State.Air_State;
 using Character.Player.FSM.Player_State.Sub_State.Ground_State;
 using Character.Player.FSM.Player_State.Sub_State.Wall_State;
 using Character.Player.Input_System;
+using Game_Manager;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using Update = Unity.VisualScripting.Update;
 
 namespace Character.Player.Manager
 {
@@ -33,8 +36,8 @@ namespace Character.Player.Manager
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
-        public PlayerGetHitState GetHitState { get; private set; }
-        public PlayerDieState DieState { get; private set; }
+        public PlayerDamagedState DamagedState { get; private set; }
+        public PlayerDeathState DeathState { get; private set; }
 
         #region Attack State
         
@@ -66,7 +69,15 @@ namespace Character.Player.Manager
         {
             base.Start();
             
+            GameManager.Instance.RegisterPlayer(transform);
             StateMachine.Initialize(IdleState);
+        }
+
+        protected override void Update()
+        {
+            base.Update();
+            
+            
         }
 
         protected override void InitializeFsm()
@@ -83,8 +94,8 @@ namespace Character.Player.Manager
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
             RollState = new PlayerRollState(this, "roll");
-            GetHitState = new PlayerGetHitState(this, "getHit");
-            DieState = new PlayerDieState(this, "die");
+            DamagedState = new PlayerDamagedState(this, "damaged");
+            DeathState = new PlayerDeathState(this, "death");
 
             #region Attack State 
             
@@ -103,6 +114,8 @@ namespace Character.Player.Manager
             #endregion
         }
 
+        
+        
         public void ResetJumpAndDash()
         {
             JumpState.ResetAmountOfJump();
@@ -113,14 +126,14 @@ namespace Character.Player.Manager
         {
             base.GetHit();
             
-            StateMachine.TranslateToState(GetHitState);
+            StateMachine.TranslateToState(DamagedState);
         }
 
         public override void Die()
         {
             base.Die();
             
-            StateMachine.TranslateToState(DieState);
+            StateMachine.TranslateToState(DeathState);
         }
     }
 }

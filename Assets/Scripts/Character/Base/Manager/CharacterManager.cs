@@ -6,7 +6,7 @@ namespace Character.Base.Manager
 {
     public class CharacterManager : MonoBehaviour
     {
-        public string name;
+        public new string name;
         public CoreManager CoreManager { get; protected set; }
         public CharacterBattleManager BattleManager { get; protected set; }
         public CharacterAnimationManager AnimationManager { get; protected set; }
@@ -15,11 +15,11 @@ namespace Character.Base.Manager
         protected virtual void Awake()
         {
             InitializeComponent();
-            InitializeFsm();
         }
 
         protected virtual void Start()
         {
+            InitializeFsm();
         }
 
         protected virtual void Update()
