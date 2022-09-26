@@ -122,16 +122,16 @@ namespace Character.Player.Manager
             DashState.ResetAmountOfDash();
         }
 
-        public override void GetHit()
+        public override void Damaged()
         {
-            base.GetHit();
+            base.Damaged();
             
             StateMachine.TranslateToState(DamagedState);
         }
 
-        public override void Die()
+        public override void Death()
         {
-            base.Die();
+            base.Death();
             
             StateMachine.TranslateToState(DeathState);
         }

@@ -1,27 +1,35 @@
 ﻿using System;
 using Character.Base.Data;
 using Game_Manager;
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 namespace Character.Base.Manager
 {
     public class CharacterBattleManager : MonoBehaviour
     {
-        public bool isImmortal;
+        public Material damagedMaterial;
         
         protected CharacterBattleManager targetBattleManager;
         protected CharacterManager manager;
         
-        private CharacterBattleData battleData;
+        private bool _isImmortal;
+        private CharacterBattleData _battleData;
+        private SpriteRenderer _spriteRenderer;
+        private Material _originMaterial;
+
+        public CharacterBattleData BattleData => _battleData;
+        public bool IsImmortal => _isImmortal;
         
         protected virtual void Awake()
         {
             manager = GetComponentInParent<CharacterManager>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Start()
         {
-            battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(manager.name));
+            _battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(manager.name));
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -35,26 +43,41 @@ namespace Character.Base.Manager
 
         public void TryToDamage(CharacterBattleManager targetBattleManager)
         {
-            if (targetBattleManager.isImmortal)
+            if (targetBattleManager.IsImmortal)
             {
                 return;
             }
             
-            targetBattleManager.GetHit(battleData);
+            targetBattleManager.Damaged(_battleData);
         }
 
-        public void GetHit(CharacterBattleData targetBattleData)
+        public void Damaged(CharacterBattleData targetBattleData)
         {
-            battleData.currentHealth -= targetBattleData.attack;
-            if (battleData.currentHealth <= 0)
+            _battleData.health -= targetBattleData.attack;
+            if (_battleData.health <= 0)
             {
-                battleData.currentHealth = 0;
-                manager.Die();
+                _battleData.health = 0;
+                manager.Death();
             }
             else
             {
-                manager.GetHit();
+                manager.Damaged();
             }
         }
+
+        public void Flash()
+        {
+            _originMaterial = _spriteRenderer.material;
+            _spriteRenderer.material = damagedMaterial;
+            Invoke(nameof(ResetMaterial), 0.1f);
+        }
+
+        private void ResetMaterial()
+        {
+            _spriteRenderer.material = _originMaterial;
+        }
+
+        public void StartImmortal() => _isImmortal = true;
+        public void EndImmortal() => _isImmortal = false;
     }
 }

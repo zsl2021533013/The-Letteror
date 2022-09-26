@@ -20,6 +20,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
+            manager.BattleManager.StartImmortal();
+            
             _startPosition = coreManager.MoveCore.Position;
             DecreaseAmountOfDash();
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.dashVelocity * coreManager.MoveCore.Direction);
@@ -31,6 +33,13 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             base.OnUpdate();
 
             coreManager.MoveCore.FreezeY(_startPosition);
+        }
+
+        public override void OnExit()
+        {
+            base.OnExit();
+            
+            manager.BattleManager.EndImmortal();
         }
 
         public bool CheckAmountOfDash() => _amountOfDashLeft > 0;

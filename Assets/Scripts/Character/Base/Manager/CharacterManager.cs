@@ -43,7 +43,7 @@ namespace Character.Base.Manager
             CoreManager = GetComponentInChildren<CoreManager>(); // CoreManager 要在最开始获取
             AnimationManager = GetComponentInChildren<CharacterAnimationManager>();
             BattleManager = GetComponentInChildren<CharacterBattleManager>();
-            
+
             if (!CoreManager)
             {
                 Debug.LogError("Missing Core Manager");
@@ -60,11 +60,11 @@ namespace Character.Base.Manager
             }
         }
 
-        public virtual void GetHit()
+        public virtual void Damaged()
         {
         }
 
-        public virtual void Die()
+        public virtual void Death()
         {
         }
     }

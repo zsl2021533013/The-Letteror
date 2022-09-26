@@ -1,5 +1,6 @@
 ﻿using System;
 using Character.Base.Manager;
+using Character.Enemy.Boss.Heart_Hoarder.FSM.Sub_State.Ability_State;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -33,6 +34,8 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         public HeartHoarderAttack3GetUpState Attack3GetUpState { get; private set; }
         #endregion
 
+        public HeartHoarderDeathState DeathState { get; private set; }
+        
         #endregion
 
         protected override void Start()
@@ -69,6 +72,23 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             Attack3State = new HeartHoarderAttack3State(this, "attack3");
             Attack3GetUpState = new HeartHoarderAttack3GetUpState(this, "attack3GetUp");
             #endregion
+
+            DeathState = new HeartHoarderDeathState(this, "death");
+        }
+
+        public override void Damaged()
+        {
+            base.Damaged();
+            
+            IdleState.UpdateState(BattleManager.BattleData.health);
+            BattleManager.Flash();
+        }
+
+        public override void Death()
+        {
+            base.Death();
+            
+            StateMachine.TranslateToState(DeathState);
         }
     }
 }

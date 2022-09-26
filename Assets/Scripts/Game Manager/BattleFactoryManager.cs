@@ -9,7 +9,7 @@ namespace Game_Manager
 {
     public class BattleFactoryManager : Singleton<BattleFactoryManager>
     {
-        [System.Serializable]
+        [Serializable]
         public struct BattleAttribute
         {
             public string _name;

@@ -12,13 +12,14 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         
         public HeartHoarderLowAppearState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
+            _attackType = 1;
         }
 
         public override void OnEnter()
         {
             base.OnEnter();
 
-            _attackType = Random.Range(0, 2); //TODO:看看如何改进随机算法，目前情况有点极端
+            _attackType = 1 - _attackType; //TODO:看看如何改进随机算法，目前情况有点极端
 
             switch (_attackType)
             {
