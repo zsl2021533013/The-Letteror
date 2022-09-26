@@ -9,18 +9,16 @@ namespace Character.Base.Core.Core_Component
         public Transform LedgeSensor => ledgeSensor;
         
         [Header("Sensors")]
-        [SerializeField] private Transform groundSensor;
-        [SerializeField] protected Transform wallSensor;
-        [SerializeField] protected Transform ledgeSensor;
+        public Transform groundSensor;
+        public Transform wallSensor;
+        public Transform ledgeSensor;
 
-        [Header("Ground Senesor")]
-        [SerializeField]
-        protected LayerMask groundLayerMask;
-        [SerializeField] private Vector2 groundSensorSize;
+        [Header("Ground Sensor")]
+        public LayerMask groundLayerMask;
+        public Vector2 groundSensorSize;
         
         [Header("Wall Sensor")]
-        [SerializeField]
-        protected float wallCheckDistance;
+        public float wallCheckDistance;
 
 
         public bool DetectGround => Physics2D.OverlapBox(groundSensor.position, 

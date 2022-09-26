@@ -17,7 +17,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private bool _isTouchingWall;
         private bool _isTouchingLedge;
         private bool _coyoteTime;
-
+        private Collider2D _oneWayPlatformCollider;
 
         public PlayerAirState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
@@ -77,13 +77,13 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                 return;
             }
             
-            if (_isTouchingWall && !_isTouchingLedge && !_isGrounded)
+            if (_isTouchingWall && !_isTouchingLedge && !_isGrounded && !_oneWayPlatformCollider)
             {
                 stateMachine.TranslateToState(manager.LedgeClimbState);
                 return;
             }
 
-            if (manager.isWallSlideEnable && _isTouchingWall &&manager.Input.InputDirection == coreManager.MoveCore.Direction &&
+            if (manager.isWallSlideEnable && _isTouchingWall && JudgeDirection(manager.Input.InputDirection,coreManager.MoveCore.Direction) &&
                 coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
                 stateMachine.TranslateToState(manager.WallSlideState);
@@ -100,8 +100,9 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             _isGrounded = coreManager.SenseCore.DetectGround;
             _isTouchingWall = coreManager.SenseCore.DetectWall;
             _isTouchingLedge = coreManager.SenseCore.DetectLedge;
+            _oneWayPlatformCollider = coreManager.SenseCore.DetectOneWayPlatform;
             
-            if (_isTouchingWall && !_isTouchingLedge)
+            if (_isTouchingWall && !_isTouchingLedge && !_oneWayPlatformCollider)
             {
                manager.LedgeClimbState.SetPosition(manager.transform.position);
             }
@@ -148,24 +149,24 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private void CheckAirAttack()
         {
             manager.Input.ResetAttackInput();
-            switch (manager.Input.AttackDirection)
+            switch (manager.Input.InputDirection)
             {
-                case PlayerAttackType.Horizontal:
-                    if (manager.AirHorizontalAttack1State.AttackEnable)
-                    {
-                        stateMachine.TranslateToState(manager.AirHorizontalAttack1State);
-                    }
-                    break;
-                case PlayerAttackType.Up:
+                case PlayerInputDirection.Up:
                     if (manager.AirUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirUpwardsAttackState);
                     }
                     break;
-                case PlayerAttackType.Down:
+                case PlayerInputDirection.Down:
                     if (manager.AirDownwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirDownwardsAttackState);
+                    }
+                    break;
+                default:
+                    if (manager.AirHorizontalAttack1State.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.AirHorizontalAttack1State);
                     }
                     break;
             }
@@ -174,33 +175,42 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private void CheckSpecialAttack()
         {
             manager.Input.ResetSpecialAttackInput();
-            switch (manager.Input.SpecialAttackDirection)
+            switch (manager.Input.InputDirection)
             {
-                case PlayerSpecialAttackType.Dash:
-                    if (manager.SpecialDashAttackState.AttackEnable)
-                    {
-                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
-                    }
-                    break;
-                case PlayerSpecialAttackType.Up:
+                case PlayerInputDirection.Up:
                     if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case PlayerSpecialAttackType.Down:
+                case PlayerInputDirection.Down:
                     if (manager.SpecialDownwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDownwardsAttackState);
                     }
                     break;
                 default:
-                    if (manager.SpecialUpwardsAttackState.AttackEnable)
+                    if (manager.SpecialDashAttackState.AttackEnable)
                     {
-                        stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
             }
+        }
+
+        private bool JudgeDirection(PlayerInputDirection inputDirection,int playerDirection)
+        {
+            if (inputDirection == PlayerInputDirection.Right && playerDirection == 1)
+            {
+                return true;
+            }
+            
+            if(inputDirection == PlayerInputDirection.Left && playerDirection == -1)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void ResetTriggers(PlayerInputHandler input)

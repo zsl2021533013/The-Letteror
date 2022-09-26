@@ -15,6 +15,8 @@ namespace Character.Player.FSM.Player_State.Super_State
         private bool _attackInput;
         private bool _specialAttackInput;
         private bool _isGrounded;
+        private PlayerInputDirection _inputDirection;
+        private Collider2D _oneWayPlatformCollider;
         
         public PlayerGroundState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
@@ -45,6 +47,11 @@ namespace Character.Player.FSM.Player_State.Super_State
             {
                 CheckSpecialAttack();
                 return;
+            }
+
+            if (_inputDirection == PlayerInputDirection.Down && _oneWayPlatformCollider)
+            {
+                coreManager.MoveCore.DisableOneWayPlatform(_oneWayPlatformCollider);
             }
             
             if (_jumpInput &&manager.JumpState.CheckAmountOfJump())
@@ -81,6 +88,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             base.DoChecks();
 
             _isGrounded = coreManager.SenseCore.DetectGround;
+            _oneWayPlatformCollider = coreManager.SenseCore.DetectOneWayPlatform;
         }
 
         private void UpdateInput(PlayerInputHandler input)
@@ -91,6 +99,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             _rollInput = input.RollInput;
             _attackInput = input.AttackInput;
             _specialAttackInput = input.SpecialAttackInput;
+            _inputDirection = input.InputDirection;
         }
 
         private void ResetTriggers(PlayerInputHandler input)
@@ -104,9 +113,9 @@ namespace Character.Player.FSM.Player_State.Super_State
         private void CheckGroundAttack()
         {
             manager.Input.ResetAttackInput();
-            switch (manager.Input.AttackDirection)
+            switch (manager.Input.InputDirection)
             {
-                case PlayerAttackType.Up:
+                case PlayerInputDirection.Up:
                     stateMachine.TranslateToState(manager.GroundUpwardsAttackState);
                     break;
                 default:
@@ -118,24 +127,24 @@ namespace Character.Player.FSM.Player_State.Super_State
         private void CheckSpecialAttack()
         {
             manager.Input.ResetSpecialAttackInput();
-            switch (manager.Input.SpecialAttackDirection)
+            switch (manager.Input.InputDirection)
             {
-                case PlayerSpecialAttackType.Idle:
-                    if (manager.SpecialIdleAttackState.AttackEnable)
+                case PlayerInputDirection.Up:
+                    if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
-                        stateMachine.TranslateToState(manager.SpecialIdleAttackState);
+                        stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case PlayerSpecialAttackType.Dash:
+                case PlayerInputDirection.Left:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
-                case PlayerSpecialAttackType.Up:
-                    if (manager.SpecialUpwardsAttackState.AttackEnable)
+                case PlayerInputDirection.Right:
+                    if (manager.SpecialDashAttackState.AttackEnable)
                     {
-                        stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
                 default:

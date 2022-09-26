@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Character.Base.Core.Core_Component
 {
@@ -21,7 +22,12 @@ namespace Character.Base.Core.Core_Component
             transform = Rb.transform;
         }
 
-        public void OnUpdate()
+        protected virtual void Start()
+        {
+            
+        }
+
+        public virtual void OnUpdate()
         {
             CurrentVelocity = Rb.velocity;
         }
