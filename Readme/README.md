@@ -19,3 +19,7 @@ Parallax Controller 使用方法：
 
 Camera Confiner 用法：
 1. 编辑 Camera Confiner 中的 Polygon Collider 2D 大小，即可改变摄像机移动边界
+
+单向平台用法：
+1. 添加 TileMap Collider 2D（勾选复合使用），Composite Collider 2D（勾选由效果器使用），Platform Effector 2D
+将碰撞层级改为 OneWayPlatform
