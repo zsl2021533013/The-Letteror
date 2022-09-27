@@ -7,7 +7,6 @@ namespace Character.Enemy.Boss.Heart_Hoarder.Core.Core_Component
     public class HeartHoarderMoveCore : MoveCore
     {
         [Header("Heart Hoarder Only")] 
-        public float moveVelocity;
         public float leftPointX;
         public float rightPointX;
         public float middlePointX;

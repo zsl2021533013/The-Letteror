@@ -42,6 +42,7 @@ namespace Character.Player.Core.Data
         public float airAttack1VelocityX;
         public float airAttack2VelocityX;
         public float airUpwardsAttackVelocityY;
+        public float airDownwardsAttackVelocityY;
         public float airAttackCoolDown;
         
         [Header("Special Attack State")]

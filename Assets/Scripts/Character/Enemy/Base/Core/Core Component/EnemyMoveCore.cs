@@ -1,14 +1,10 @@
 ﻿using Character.Base.Core.Core_Component;
-using Character.Enemy.Core.Data;
 using UnityEngine;
 
 namespace Character.Enemy.Core.Core_Component
 {
     public class EnemyMoveCore : MoveCore
     {
-        [SerializeField] private EnemyStateMachineData enemyStateMachineData;
-        public EnemyStateMachineData EnemyStateMachineData => enemyStateMachineData;
-        
         public void Flip()
         {
             tempVector3.Set(-transform.localScale.x, 1, 1);

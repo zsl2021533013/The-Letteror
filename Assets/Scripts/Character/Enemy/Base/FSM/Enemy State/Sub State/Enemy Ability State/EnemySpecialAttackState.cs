@@ -10,7 +10,7 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State
         {
         }
         
-        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.EnemyStateMachineData.attackCoolDown;
+        public bool AttackEnable => Time.time > startTime + coreManager.MoveCore.attackCoolDown;
 
         public override void OnEnter()
         {

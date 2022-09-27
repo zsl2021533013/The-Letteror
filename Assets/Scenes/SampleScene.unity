@@ -56291,8 +56291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda9855884a44954bda8487e25b6bfaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 0
+  moveVelocity: 0
+  attackCoolDown: 0
+  patrolRange: 0
   playerStateMachineData: {fileID: 11400000, guid: e755e1c4aa4a16a42ada440694be53ad, type: 2}
-  playerMoveCollider: {fileID: 0}
 --- !u!1 &312125134
 GameObject:
   m_ObjectHideFlags: 0
@@ -57348,7 +57351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3b643257af45a6b87f708103e7cc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStateMachineData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
+  waitTime: 2
+  moveVelocity: 2
+  attackCoolDown: 3
+  patrolRange: 2
 --- !u!1 &868595384
 GameObject:
   m_ObjectHideFlags: 0
@@ -58132,7 +58138,7 @@ Transform:
   m_GameObject: {fileID: 1019329858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.03, y: 1.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1110311241}
@@ -58290,27 +58296,32 @@ PolygonCollider2D:
       - {x: -0.9375, y: 1.09375}
       - {x: -1.125, y: 1.09375}
       - {x: -1.75, y: 0.78125}
-      - {x: -5, y: -2.59375}
+      - {x: -4.808627, y: -2.7577848}
+      - {x: -5.3934197, y: -3.3120117}
       - {x: -6.6875, y: -3.65625}
       - {x: -6.661764, y: -3.78125}
       - {x: -4.625, y: -3.78125}
       - {x: -4.6875, y: -3.59375}
+      - {x: -5.2795744, y: -3.4733174}
       - {x: -4.25, y: -2.53125}
       - {x: -0.8125, y: 0.90625}
-    - - {x: 0.4375, y: -1.40625}
+    - - {x: 0.23393315, y: -1.6607083}
       - {x: -0.1875, y: -1.40625}
-      - {x: -1.125, y: -2.21875}
+      - {x: -0.4634081, y: -2.3714252}
+      - {x: -0.5637722, y: -2.996316}
       - {x: -1.625, y: -3.71875}
       - {x: -1.625, y: -3.78125}
       - {x: 1.75, y: -3.78125}
       - {x: 1.75, y: -3.59375}
-      - {x: 0.9375, y: -2.28125}
+      - {x: 0.6592388, y: -2.931123}
+      - {x: 0.45402908, y: -2.3321419}
     - - {x: 6.9074144, y: -3.6112003}
       - {x: 1.8125, y: 0.90625}
       - {x: 1.0625, y: 1.09375}
       - {x: 0.875, y: 1.09375}
       - {x: 0.8125, y: 0.90625}
-      - {x: 2.625, y: -0.90625}
+      - {x: 2.8031209, y: -0.8808041}
+      - {x: 4.00476, y: -2.0110734}
       - {x: 4.9375, y: -3.28125}
       - {x: 4.625, y: -3.65625}
       - {x: 4.625, y: -3.78125}
@@ -58321,8 +58332,10 @@ PolygonCollider2D:
       - {x: -1.625, y: 1.96875}
       - {x: -1.8125, y: 1.71875}
       - {x: -2.125, y: 1.15625}
-      - {x: -7.5424232, y: -3.7666702}
-      - {x: -7.082856, y: -3.8034344}
+      - {x: -2.391281, y: 0.82520455}
+      - {x: -7.1003222, y: -3.7644758}
+      - {x: -7.5603833, y: -3.5857365}
+      - {x: -7.3977594, y: -3.7194595}
       - {x: -6.9486675, y: -3.8291702}
       - {x: -1.0625, y: 1.46875}
       - {x: -1.0625, y: 1.90625}
@@ -58330,9 +58343,11 @@ PolygonCollider2D:
       - {x: 1.0625, y: 1.84375}
       - {x: 1.0625, y: 1.59375}
       - {x: 1.125, y: 1.34375}
+      - {x: 3.7239366, y: -1.4534975}
+      - {x: 4.280811, y: -2.052864}
       - {x: 6.56802, y: -3.706088}
       - {x: 7.221431, y: -3.6657467}
-      - {x: 2.125, y: 1.34375}
+      - {x: 2.0200317, y: 1.0918269}
       - {x: 1.625, y: 1.96875}
 --- !u!1 &1056072041
 GameObject:
@@ -58378,7 +58393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e5da57ef54311850579834d4bc8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 0
   moveVelocity: 8
+  attackCoolDown: 0
+  patrolRange: 0
   leftPointX: -31
   rightPointX: -7
   middlePointX: -19
@@ -58736,7 +58754,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002922058, y: -0.04231429}
+  m_Offset: {x: -0.06017542, y: -0.9583645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58747,7 +58765,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6343021, y: 3.3588924}
+  m_Size: {x: 2.588521, y: 5.1909933}
   m_EdgeRadius: 0
 --- !u!4 &1110311241
 Transform:
@@ -59771,7 +59789,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3b643257af45a6b87f708103e7cc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStateMachineData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
+  waitTime: 2
+  moveVelocity: 2
+  attackCoolDown: 3
+  patrolRange: 2
 --- !u!1 &1484253846
 GameObject:
   m_ObjectHideFlags: 0
@@ -59816,7 +59837,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3b643257af45a6b87f708103e7cc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStateMachineData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
+  waitTime: 0
+  moveVelocity: 0
+  attackCoolDown: 0
+  patrolRange: 0
 --- !u!1 &1502719107
 GameObject:
   m_ObjectHideFlags: 0
@@ -59938,7 +59962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3b643257af45a6b87f708103e7cc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStateMachineData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
+  waitTime: 2
+  moveVelocity: 2
+  attackCoolDown: 3
+  patrolRange: 2
 --- !u!1 &1568792313
 GameObject:
   m_ObjectHideFlags: 0
@@ -73876,7 +73903,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3b643257af45a6b87f708103e7cc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStateMachineData: {fileID: 11400000, guid: c4508beeddcc9924ab48ba06a8e7134e, type: 2}
+  waitTime: 2
+  moveVelocity: 2
+  attackCoolDown: 3
+  patrolRange: 2
 --- !u!1 &1719251473
 GameObject:
   m_ObjectHideFlags: 0
@@ -74190,7 +74220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e5da57ef54311850579834d4bc8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 0
   moveVelocity: 8
+  attackCoolDown: 0
+  patrolRange: 0
   leftPointX: -31
   rightPointX: -7
   middlePointX: -19

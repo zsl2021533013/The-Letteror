@@ -1,4 +1,5 @@
 using Character.Base.Manager;
+using Character.Player.Core.Core_Manager;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
@@ -23,6 +24,7 @@ namespace Character.Player.Manager
         public bool isDashEnable;
         
         public PlayerInputHandler Input { get; private set; }
+        public new PlayerCoreManager CoreManager { get; private set; }
         
         #region Player FSM Attribute
         
@@ -56,13 +58,13 @@ namespace Character.Player.Manager
         #endregion
         
         #endregion
-        
-        
+
         protected override void Awake()
         {
             base.Awake();
 
             Input = GetComponent<PlayerInputHandler>();
+            CoreManager = (PlayerCoreManager)base.CoreManager;
         }
 
         protected override void Start()
@@ -71,13 +73,6 @@ namespace Character.Player.Manager
             
             GameManager.Instance.RegisterPlayer(transform);
             StateMachine.Initialize(IdleState);
-        }
-
-        protected override void Update()
-        {
-            base.Update();
-            
-            
         }
 
         protected override void InitializeFsm()
@@ -114,12 +109,20 @@ namespace Character.Player.Manager
             #endregion
         }
 
-        
-        
         public void ResetJumpAndDash()
         {
             JumpState.ResetAmountOfJump();
             DashState.ResetAmountOfDash();
+        }
+
+        public override void TryToDamage(CharacterBattleManager targetBattleManager)
+        {
+            base.TryToDamage(targetBattleManager);
+
+            if (StateMachine.CurrentState == AirDownwardsAttackState)
+            {
+                CoreManager.MoveCore.SetVelocityY(CoreManager.MoveCore.StateMachineData.airDownwardsAttackVelocityY);
+            }
         }
 
         public override void Damaged()

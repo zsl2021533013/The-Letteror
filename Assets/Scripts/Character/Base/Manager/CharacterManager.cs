@@ -60,6 +60,11 @@ namespace Character.Base.Manager
             }
         }
 
+        public virtual void TryToDamage(CharacterBattleManager targetBattleManager)
+        {
+            BattleManager.TryToDamage(targetBattleManager);
+        }
+        
         public virtual void Damaged()
         {
         }

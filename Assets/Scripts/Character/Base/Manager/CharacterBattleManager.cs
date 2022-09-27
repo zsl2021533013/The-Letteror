@@ -37,7 +37,7 @@ namespace Character.Base.Manager
             if (col.CompareTag("Player") || col.CompareTag("Enemy"))
             {
                 targetBattleManager = col.GetComponent<CharacterManager>().BattleManager;
-                TryToDamage(targetBattleManager);
+                manager.TryToDamage(targetBattleManager);
             }
         }
 

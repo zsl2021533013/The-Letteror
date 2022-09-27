@@ -11,15 +11,13 @@ namespace Character.Player.Core.Core_Component
         [SerializeField] private PlayerStateMachineData playerStateMachineData;
         public PlayerStateMachineData StateMachineData => playerStateMachineData;
 
-        public Collider2D playerMoveCollider;
-
-        private Coroutine _tempCoroutine;
-
+        public Collider2D PlayerMoveCollider { get; private set; }
+        
         protected override void Awake()
         {
             base.Awake();
 
-            playerMoveCollider = coreManager.CharacterTransform.GetComponent<Collider2D>();
+            PlayerMoveCollider = coreManager.CharacterTransform.GetComponent<Collider2D>();
         }
 
         public void CheckFlip(float inputX)
@@ -39,7 +37,7 @@ namespace Character.Player.Core.Core_Component
 
         public void DisableOneWayPlatform(Collider2D oneWayPlatformCollider)
         {
-            _tempCoroutine = StartCoroutine(WaitAndDisconnectCollider(playerMoveCollider, 
+            StartCoroutine(WaitAndDisconnectCollider(PlayerMoveCollider, 
                 oneWayPlatformCollider, 0.25f));
         }
         

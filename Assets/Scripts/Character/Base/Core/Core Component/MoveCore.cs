@@ -5,6 +5,18 @@ namespace Character.Base.Core.Core_Component
 {
     public class MoveCore : CoreComponent
     {
+        [Header("Idle State")] 
+        public float waitTime;
+        
+        [Header("Move State")] 
+        public float moveVelocity;
+
+        [Header("Attack State")] 
+        public float attackCoolDown;
+
+        [Header("Patrol State")] 
+        public float patrolRange;
+        
         protected new Transform transform;
         protected Vector2 tempVector2;
         protected Vector3 tempVector3;
