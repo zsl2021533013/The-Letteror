@@ -50,7 +50,17 @@ namespace Character.Base.Manager
             
             targetBattleManager.Damaged(_battleData);
         }
-
+        
+        public void TryToDamage(int attack)
+        {
+            if (targetBattleManager.IsImmortal)
+            {
+                return;
+            }
+            
+            targetBattleManager.Damaged(attack);
+        }
+        
         public void Damaged(CharacterBattleData targetBattleData)
         {
             _battleData.health -= targetBattleData.attack;
@@ -65,6 +75,20 @@ namespace Character.Base.Manager
             }
         }
 
+        public void Damaged(int attack)
+        {
+            _battleData.health -= attack;
+            if (_battleData.health <= 0)
+            {
+                _battleData.health = 0;
+                manager.Death();
+            }
+            else
+            {
+                manager.Damaged();
+            }
+        }
+        
         public void Flash()
         {
             _originMaterial = _spriteRenderer.material;
