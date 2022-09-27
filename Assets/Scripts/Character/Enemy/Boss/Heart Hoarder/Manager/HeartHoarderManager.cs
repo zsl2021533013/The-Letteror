@@ -14,7 +14,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 
         #region Attack 1
         public HeartHoarderChaseState ChaseState { get; private set; } 
-        public HeartHoarderAttack1StopStopState Attack1StopStopState { get; private set; }
+        public HeartHoarderAttack1StopState Attack1StopState { get; private set; }
         public HeartHoarderAttack1State Attack1State { get; private set; } 
         public HeartHoarderAttack1GetUpState Attack1GetUpState { get; private set; }
         #endregion
@@ -53,7 +53,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 
             #region Attack 1
             ChaseState = new HeartHoarderChaseState(this, "move");
-            Attack1StopStopState = new HeartHoarderAttack1StopStopState(this, "attack1Stop");
+            Attack1StopState = new HeartHoarderAttack1StopState(this, "attack1Stop");
             Attack1State = new HeartHoarderAttack1State(this, "attack1");
             Attack1GetUpState = new HeartHoarderAttack1GetUpState(this, "attack1GetUp");
             #endregion
@@ -79,8 +79,21 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         public override void Damaged()
         {
             base.Damaged();
-            
-            IdleState.UpdateState(BattleManager.BattleData.health);
+
+            int health = BattleManager.BattleData.health;
+            switch (health)
+            {
+                case > 40:
+                    IdleState.SetState(1);
+                    break;
+                case > 30:
+                    IdleState.SetState(2);
+                    break;
+                case < 20:
+                    IdleState.SetState(3);
+                    break;
+            }
+
             BattleManager.Flash();
         }
 

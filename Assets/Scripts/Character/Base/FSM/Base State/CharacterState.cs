@@ -15,8 +15,8 @@ namespace Character.Base.FSM.Base_State
         protected float startTime;
 
         protected string _animBoolName;
-        
-        public CharacterState(CharacterManager manager, string animBoolName)
+
+        protected CharacterState(CharacterManager manager, string animBoolName)
         {
             this.manager = manager;
             _animBoolName = animBoolName;

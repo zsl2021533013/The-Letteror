@@ -8,6 +8,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
     {
         private int _currentState; //Boss目前状态
         private int _attackType;
+        private int _formerAttackType;
         
         public HeartHolderIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
@@ -18,7 +19,12 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         {
             base.OnEnter();
 
-            _attackType = Random.Range(0, _currentState); //TODO:看看如何改进随机算法，目前情况有点极端
+            _attackType = Random.Range(0, _currentState);
+            if (_attackType == _formerAttackType)
+            {
+                _attackType = (_attackType + 1) % _currentState;
+            }
+            _formerAttackType = _attackType;
 
             switch (_attackType)
             {
@@ -37,20 +43,6 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             }
         }
 
-        public void UpdateState(int health)
-        {
-            if (health > 40)
-            {
-                _currentState = 1;
-            }
-            else if (health > 30)
-            {
-                _currentState = 2;
-            }
-            if (health < 20)
-            {
-                _currentState = 3;
-            }
-        }
+        public void SetState(int currentState) => _currentState = currentState;
     }
 }

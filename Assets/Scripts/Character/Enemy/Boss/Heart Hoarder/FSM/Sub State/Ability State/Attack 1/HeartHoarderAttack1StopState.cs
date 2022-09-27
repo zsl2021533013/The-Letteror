@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Character.Enemy.Boss.Heart_Hoarder
 {
-    public class HeartHoarderAttack1StopStopState : HeartHoarderAbilityState
+    public class HeartHoarderAttack1StopState : HeartHoarderAbilityState
     {
         private Vector2 _startPosition;
         
-        public HeartHoarderAttack1StopStopState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public HeartHoarderAttack1StopState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
 

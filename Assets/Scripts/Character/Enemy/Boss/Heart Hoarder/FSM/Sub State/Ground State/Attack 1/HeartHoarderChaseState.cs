@@ -5,34 +5,22 @@ using UnityEngine;
 
 namespace Character.Enemy.Boss.Heart_Hoarder
 {
-    public class HeartHoarderChaseState : HeartHoarderGroundState
+    public class HeartHoarderChaseState : HeartHoarderState
     {
-        private Transform _playerTransform;
-        
-        private int ChaseDirection => coreManager.MoveCore.Position.x > _playerTransform.position.x ? -1 : 1;
-        private float Distance => Mathf.Abs(coreManager.MoveCore.Position.x - _playerTransform.position.x);
-
         public HeartHoarderChaseState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
-
-        public override void OnEnter()
-        {
-            base.OnEnter();
-
-            _playerTransform = GameManager.Instance.PlayerTransform;
-        }
-
+        
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            coreManager.CharacterTransform.localScale = new Vector3(ChaseDirection, 1, 1);
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * ChaseDirection);
+            coreManager.CharacterTransform.localScale = new Vector3(coreManager.MoveCore.ChaseDirection, 1, 1);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.ChaseDirection);
             
-            if (Distance < 4f)
+            if (coreManager.MoveCore.JudgeArrive())
             {
-                stateMachine.TranslateToState(manager.Attack1StopStopState);
+                stateMachine.TranslateToState(manager.Attack1StopState);
                 return;
             }
         }

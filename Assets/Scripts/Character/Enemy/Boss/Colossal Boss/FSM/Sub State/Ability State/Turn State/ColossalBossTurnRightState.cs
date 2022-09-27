@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ability_State
 {
-    public class ColossalBossBuffState : ColossalBossAbilityState
+    public class ColossalBossTurnRightState : ColossalBossTurnState
     {
-        public ColossalBossBuffState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public ColossalBossTurnRightState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
     }

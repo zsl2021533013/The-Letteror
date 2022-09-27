@@ -25,7 +25,7 @@ namespace Character.Base.Core.Core_Manger
             }
         }
 
-        public void OnUpdate()
+        public virtual void OnUpdate()
         {
             MoveCore.OnUpdate();
         }
