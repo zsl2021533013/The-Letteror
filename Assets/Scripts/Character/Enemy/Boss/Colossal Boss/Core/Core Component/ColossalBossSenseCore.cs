@@ -10,6 +10,9 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
         
         [Header("Colossal Boss Only")]
         public float attackRange;
+        
+        public bool InAttackRange => JudgeArrive(attackRange);
+        public bool InTargetPoint => coreManager.MoveCore.Distance < attackRange;
 
         protected override void Awake()
         {
@@ -17,8 +20,5 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
 
             coreManager = (ColossalBossCoreManager)base.coreManager;
         }
-
-        public bool InAttackRange => JudgeArrive(attackRange);
-        public bool InTargetPoint => coreManager.MoveCore.Distance < attackRange;
     }
 }

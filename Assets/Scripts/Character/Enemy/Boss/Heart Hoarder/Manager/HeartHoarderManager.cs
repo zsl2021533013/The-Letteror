@@ -8,6 +8,8 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 {
     public class HeartHoarderManager : CharacterManager
     {
+        public int CurrentState { get; private set; } 
+        
         #region FSM Attribute
 
         public HeartHolderIdleState IdleState { get; private set; } 
@@ -41,6 +43,8 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         protected override void Start()
         {
             base.Start();
+
+            CurrentState = 1;
             
             StateMachine.Initialize(IdleState);
         }
@@ -84,13 +88,13 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             switch (health)
             {
                 case > 40:
-                    IdleState.SetState(1);
+                    CurrentState = 1;
                     break;
                 case > 30:
-                    IdleState.SetState(2);
+                    CurrentState = 2;
                     break;
                 case < 20:
-                    IdleState.SetState(3);
+                    CurrentState = 3;
                     break;
             }
 

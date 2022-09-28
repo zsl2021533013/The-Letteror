@@ -7,6 +7,8 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
 {
     public class ColossalBossManager : CharacterManager
     {
+        public int CurrentState { get; private set; }
+        
         #region FSM State
 
         public ColossalBossWakeState WakeState { get; private set; }
@@ -27,6 +29,8 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
         protected override void Start()
         {
             base.Start();
+
+            CurrentState = 1;
             
             StateMachine.Initialize(WakeState);
         }
@@ -34,7 +38,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
         protected override void InitializeFsm()
         {
             base.InitializeFsm();
-
+            
             WakeState = new ColossalBossWakeState(this, "wake");
             IdleState = new ColossalBossIdleState(this, "idle");
             BuffState = new ColossalBossBuffState(this, "buff");
@@ -57,13 +61,13 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
             switch (health)
             {
                 case > 40:
-                    IdleState.SetState(1);
+                    CurrentState = 1;
                     break;
                 case > 30:
-                    IdleState.SetState(2);
+                    CurrentState = 2;
                     break;
                 case < 20:
-                    IdleState.SetState(3);
+                    CurrentState = 3;
                     break;
             }
             

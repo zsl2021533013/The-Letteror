@@ -7,18 +7,20 @@ namespace Character.Enemy.Boss.Base.Core.Core_Component
 {
     public class BossSenseCore : SenseCore
     {
-        private Transform _playerTransform;
+        protected Transform playerTransform;
 
-        public int ChaseDirection => coreManager.MoveCore.Position.x > _playerTransform.position.x ? -1 : 1;
+        public float PlayerPositionX => playerTransform.position.x;
+        
+        public int PlayerDirection => coreManager.MoveCore.Position.x > playerTransform.position.x ? -1 : 1;
 
         protected virtual void Start()
         {
-            _playerTransform = GameManager.Instance.PlayerTransform;
+            playerTransform = GameManager.Instance.PlayerTransform;
         }
 
         public bool JudgeArrive(float stopDistance)
         {
-            if (Mathf.Abs(coreManager.MoveCore.Position.x - _playerTransform.position.x) < stopDistance)
+            if (Mathf.Abs(coreManager.MoveCore.Position.x - playerTransform.position.x) < stopDistance)
             {
                 return true;
             }

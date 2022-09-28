@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State
 {
-    public class BloodKingJumpAttackState : BloodKingAbilityState
+    public class BloodKingTransformState : BloodKingAbilityState
     {
-        protected BloodKingJumpAttackState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        protected BloodKingTransformState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
     }

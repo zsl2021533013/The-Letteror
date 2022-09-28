@@ -6,23 +6,21 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 {
     public class HeartHolderIdleState : HeartHoarderState
     {
-        private int _currentState; //Boss目前状态
         private int _attackType;
         private int _formerAttackType;
         
         public HeartHolderIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
-            _currentState = 1;
         }
 
         public override void OnEnter()
         {
             base.OnEnter();
 
-            _attackType = Random.Range(0, _currentState);
+            _attackType = Random.Range(0, manager.CurrentState);
             if (_attackType == _formerAttackType)
             {
-                _attackType = (_attackType + 1) % _currentState;
+                _attackType = (_attackType + 1) % manager.CurrentState;
             }
             _formerAttackType = _attackType;
 
@@ -42,7 +40,5 @@ namespace Character.Enemy.Boss.Heart_Hoarder
                     break;
             }
         }
-
-        public void SetState(int currentState) => _currentState = currentState;
     }
 }

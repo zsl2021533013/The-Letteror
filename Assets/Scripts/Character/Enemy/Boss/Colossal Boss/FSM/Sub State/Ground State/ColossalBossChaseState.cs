@@ -18,15 +18,15 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
         {
             base.OnEnter();
 
-            _currentState = manager.IdleState.CurrentState;
+            _currentState = manager.CurrentState;
             
             switch (coreManager.MoveCore.Direction)
             {
-                case 1 when coreManager.MoveCore.Attack2Direction == -1:
+                case 1 when coreManager.SenseCore.PlayerDirection == -1:
                     manager.TurnLeftState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnLeftState);
                     return;
-                case -1 when coreManager.MoveCore.Attack2Direction == 1:
+                case -1 when coreManager.SenseCore.PlayerDirection == 1:
                     manager.TurnRightState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnRightState);
                     return;
@@ -41,11 +41,11 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
 
             switch (coreManager.MoveCore.Direction)
             {
-                case 1 when coreManager.MoveCore.Attack2Direction == -1:
+                case 1 when coreManager.SenseCore.PlayerDirection == -1:
                     manager.TurnLeftState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnLeftState);
                     return;
-                case -1 when coreManager.MoveCore.Attack2Direction == 1:
+                case -1 when coreManager.SenseCore.PlayerDirection == 1:
                     manager.TurnRightState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnRightState);
                     return;
