@@ -5,11 +5,14 @@ namespace Character.Enemy.Core.Core_Component
 {
     public class EnemyMoveCore : MoveCore
     {
-        public void Flip()
-        {
-            tempVector3.Set(-transform.localScale.x, 1, 1);
-            transform.localScale = tempVector3;
-        }
+        [Header("Patrol State")] 
+        public float patrolRange;
+        
+        [Header("Idle State")] 
+        public float waitTime;
+        
+        [Header("Attack State")] 
+        public float attackCoolDown;
 
         public bool JudgeArrive(float positionX)
         {

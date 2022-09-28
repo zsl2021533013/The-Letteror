@@ -9,19 +9,10 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
         [Header("Heart Hoarder Only")] 
         public float leftPointX;
         public float rightPointX;
-        public float stopDistance;
 
-        private float _targetPoint; 
-        private Transform _playerTransform;
-        
-        public int ChaseDirection
-        {
-            get
-            {
-                _targetPoint = _playerTransform.position.x;
-                return Position.x > _playerTransform.position.x ? -1 : 1;
-            }
-        }
+        private float _targetPoint;
+
+        public float Distance => Mathf.Abs(Position.x - _targetPoint);
         
         public int Attack2Direction
         {
@@ -32,40 +23,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
                 return Position.x > _targetPoint ? -1 : 1;
             }
         }
-        
-        protected override void Start()
-        {
-            base.Start();
-            
-            _playerTransform = GameManager.Instance.PlayerTransform;
-        }
-        
-        public void Flip()
-        {
-            tempVector3.Set(-transform.localScale.x, 1, 1);
-            transform.localScale = tempVector3;
-        }
-        
-        public bool JudgeArrivePoint()
-        {
-            if (Mathf.Abs(Position.x - _targetPoint) < stopDistance)
-            {
-                return true;
-            }
 
-            return false;
-        }
-        
-        public bool JudgeArrivePlayer()
-        {
-            if (Mathf.Abs(Position.x - _playerTransform.position.x) < stopDistance)
-            {
-                return true;
-            }
-
-            return false;
-        }
-        
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;

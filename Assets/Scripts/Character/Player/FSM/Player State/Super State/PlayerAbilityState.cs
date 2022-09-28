@@ -8,8 +8,7 @@ namespace Character.Player.FSM.Player_State.Super_State
         protected bool isAbilityDone;
 
         private bool isGrounded;
-
-
+        
         public PlayerAbilityState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {

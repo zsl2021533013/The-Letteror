@@ -22,11 +22,11 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
             
             switch (coreManager.MoveCore.Direction)
             {
-                case 1 when coreManager.MoveCore.ChaseDirection == -1:
+                case 1 when coreManager.MoveCore.Attack2Direction == -1:
                     manager.TurnLeftState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnLeftState);
                     return;
-                case -1 when coreManager.MoveCore.ChaseDirection == 1:
+                case -1 when coreManager.MoveCore.Attack2Direction == 1:
                     manager.TurnRightState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnRightState);
                     return;
@@ -41,17 +41,17 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
 
             switch (coreManager.MoveCore.Direction)
             {
-                case 1 when coreManager.MoveCore.ChaseDirection == -1:
+                case 1 when coreManager.MoveCore.Attack2Direction == -1:
                     manager.TurnLeftState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnLeftState);
                     return;
-                case -1 when coreManager.MoveCore.ChaseDirection == 1:
+                case -1 when coreManager.MoveCore.Attack2Direction == 1:
                     manager.TurnRightState.SetFormerState(this);
                     stateMachine.TranslateToState(manager.TurnRightState);
                     return;
             }
             
-            if (coreManager.MoveCore.JudgeArrivePlayer())
+            if (coreManager.SenseCore.InAttackRange)
             {
                 _attackType = Random.Range(0, _currentState);
                 if (_attackType == _formerAttackType)

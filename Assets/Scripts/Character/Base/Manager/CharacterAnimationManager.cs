@@ -16,7 +16,7 @@ namespace Character.Base.Manager
         public void SetBool(string name, bool value) => animator.SetBool(name, value);
         
         public void SetFloat(string name, float value) => animator.SetFloat(name, value);
-        
+
         public void AnimationFinish() => manager.StateMachine.CurrentState.AnimationFinish();
     }
 }

@@ -102,7 +102,7 @@ namespace Character.Player.Manager
             AirUpwardsAttackState = new PlayerAirUpwardsAttackState(this, "airUpwardsAttack");
             AirDownwardsAttackState = new PlayerAirDownwardsAttackState(this, "airDownwardsAttack");
             SpecialIdleAttackState = new PlayerSpecialIdleAttackState(this, "groundAttack1");
-            SpecialDashAttackState = new PlayerSpecialDashAttackState(this, "groundAttack1");
+            SpecialDashAttackState = new PlayerSpecialDashAttackState(this, "specialHorizontalAttack");
             SpecialUpwardsAttackState = new PlayerSpecialUpwardsAttackState(this, "groundAttack1");
             SpecialDownwardsAttackState = new PlayerSpecialDownwardsAttackState(this, "groundAttack1");
 

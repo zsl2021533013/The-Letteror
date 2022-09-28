@@ -39,7 +39,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
 
             CheckJumping();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.movementVelocity * _movementInput.x);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * _movementInput.x);
             coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
             
            manager.AnimationManager.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));

@@ -6,8 +6,7 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
     public class EnemyChaseState : EnemyGroundState
     {
         private bool _inFlipRange;
-
-
+        
         public EnemyChaseState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {

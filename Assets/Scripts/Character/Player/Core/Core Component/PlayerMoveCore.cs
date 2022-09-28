@@ -30,8 +30,7 @@ namespace Character.Player.Core.Core_Component
                 
             if (inputDirection == -Direction)
             {
-                tempVector3.Set(inputDirection, 1, 1);
-                transform.localScale = tempVector3;
+                Flip();
             }
         }
 

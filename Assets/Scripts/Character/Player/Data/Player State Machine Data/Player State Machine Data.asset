@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6582fbd1bd4a6c816fd59bd7a0107c, type: 3}
   m_Name: Player State Machine Data
   m_EditorClassIdentifier: 
-  movementVelocity: 10
   jumpVelocity: 21
   amountOfJump: 2
   coyoteTime: 0.2
@@ -32,7 +31,7 @@ MonoBehaviour:
   airUpwardsAttackVelocityY: 13
   airDownwardsAttackVelocityY: 15
   airAttackCoolDown: 0.5
-  specialAttackVelocityX: 20
+  specialAttackVelocityX: 18
   specialUpwardsAttackVelocityY: 20
   specialDownwardsAttackVelocityY: 0
-  specialAttackCoolDown: 1
+  specialAttackCoolDown: 0.5

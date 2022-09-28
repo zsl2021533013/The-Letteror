@@ -5,33 +5,25 @@ namespace Character.Base.Core.Core_Component
 {
     public class MoveCore : CoreComponent
     {
-        [Header("Idle State")] 
-        public float waitTime;
-        
         [Header("Move State")] 
         public float moveVelocity;
 
-        [Header("Attack State")] 
-        public float attackCoolDown;
-
-        [Header("Patrol State")] 
-        public float patrolRange;
-        
-        protected new Transform transform;
+        protected Transform characterTransform;
         protected Vector2 tempVector2;
         protected Vector3 tempVector3;
         
         public Rigidbody2D Rb { get; private set; }
         public Vector2 CurrentVelocity { get; private set; }
-        public int Direction => transform.localScale.x > 0f ? 1 : -1;
-        public Vector2 Position => transform.position;
+        
+        public int Direction => characterTransform.localScale.x > 0f ? 1 : -1;
+        public Vector2 Position => characterTransform.position;
 
         protected override void Awake()
         {
             base.Awake();
 
             Rb = GetComponentInParent<Rigidbody2D>();
-            transform = Rb.transform;
+            characterTransform = Rb.transform;
         }
 
         protected virtual void Start()
@@ -44,6 +36,12 @@ namespace Character.Base.Core.Core_Component
             CurrentVelocity = Rb.velocity;
         }
 
+        public void Flip()
+        {
+            tempVector3.Set(-characterTransform.localScale.x, 1, 1);
+            characterTransform.localScale = tempVector3;
+        }
+        
         public void SetVelocity(Vector2 velocity)
         {
             Rb.velocity = velocity;
@@ -71,25 +69,23 @@ namespace Character.Base.Core.Core_Component
         public void Freeze(Vector2 position)
         {
             Rb.velocity = Vector2.zero;
-            transform.position = position;
+            characterTransform.position = position;
         }
         
         public void FreezeX(Vector2 position)
         {
             tempVector2.Set(0f, Rb.velocity.y);
             Rb.velocity = tempVector2;
-            tempVector2.Set(position.x, transform.position.y);
-            transform.position = tempVector2;
+            tempVector2.Set(position.x, characterTransform.position.y);
+            characterTransform.position = tempVector2;
         }
         
         public void FreezeY(Vector2 position)
         {
             tempVector2.Set(Rb.velocity.x, 0f);
             Rb.velocity = tempVector2;
-            tempVector2.Set(transform.position.x, position.y);
-            transform.position = tempVector2;
+            tempVector2.Set(characterTransform.position.x, position.y);
+            characterTransform.position = tempVector2;
         }
-
-
     }
 }

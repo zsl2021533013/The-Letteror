@@ -32,7 +32,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
             
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.Direction);
 
-            if (coreManager.MoveCore.JudgeArrivePoint())
+            if (coreManager.SenseCore.InTargetPoint)
             {
                 stateMachine.TranslateToState(manager.Attack2StopState);
             }

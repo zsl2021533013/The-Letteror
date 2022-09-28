@@ -15,10 +15,10 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         {
             base.OnUpdate();
 
-            coreManager.CharacterTransform.localScale = new Vector3(coreManager.MoveCore.ChaseDirection, 1, 1);
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.ChaseDirection);
+            coreManager.CharacterTransform.localScale = new Vector3(coreManager.SenseCore.ChaseDirection, 1, 1);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.SenseCore.ChaseDirection);
             
-            if (coreManager.MoveCore.JudgeArrive())
+            if (coreManager.SenseCore.InAttack1Range)
             {
                 stateMachine.TranslateToState(manager.Attack1StopState);
                 return;
