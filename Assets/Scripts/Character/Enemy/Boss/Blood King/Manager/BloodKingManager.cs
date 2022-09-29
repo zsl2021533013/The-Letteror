@@ -1,14 +1,20 @@
 ﻿using Character.Base.Manager;
+using Character.Enemy.Boss.Blood_King.Core.Core_Manager;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State;
+using Character.Enemy.Boss.Blood_King.FSM.Super_State;
 using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.Manager
 {
     public class BloodKingManager : CharacterManager
     {
+        public GameObject HeartPrefab;
+        
+        protected new BloodKingCoreManager CoreManager { get; private set; }
+        
         public int CurrentState { get; private set; }
         
         #region FSM Component
@@ -41,12 +47,19 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         #endregion
         
         #endregion
-        
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            CoreManager = (BloodKingCoreManager)base.CoreManager;
+        }
+
         protected override void Start()
         {
             base.Start();
 
-            CurrentState = 1;
+            CurrentState = 4;
             
             StateMachine.Initialize(IdleState);
             
@@ -84,7 +97,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             base.Damaged();
 
-            int health = BattleManager.BattleData.health;
+            /*int health = BattleManager.BattleData.health;
             switch (health)
             {
                 case > 40:
@@ -96,7 +109,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
                 case < 20:
                     CurrentState = 3;
                     break;
-            }
+            }*/
 
             BattleManager.Flash();
         }
@@ -106,6 +119,12 @@ namespace Character.Enemy.Boss.Blood_King.Manager
             base.Death();
             
             StateMachine.TranslateToState(DeathState);
+        }
+
+        public void HeartAttack()
+        {
+            GameObject heart = Instantiate(HeartPrefab);
+            heart.transform.position = new Vector2(CoreManager.SenseCore.PlayerPositionX, -2.54f);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Character.Enemy.Boss.Base.Core.Core_Component
         protected Transform playerTransform;
 
         public float PlayerPositionX => playerTransform.position.x;
-        
+        public Vector2 PlayerPosition => playerTransform.position;
         public int PlayerDirection => coreManager.MoveCore.Position.x > playerTransform.position.x ? -1 : 1;
 
         protected virtual void Start()

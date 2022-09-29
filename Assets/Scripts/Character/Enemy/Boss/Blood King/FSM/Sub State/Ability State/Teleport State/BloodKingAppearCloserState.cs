@@ -6,7 +6,10 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
 {
     public class BloodKingAppearCloserState : BloodKingAbilityState
     {
+        private int _currentState;
         private int _appearType;
+        private int _attackType;
+        private int _formerAttackType;
 
         public BloodKingAppearCloserState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
@@ -56,7 +59,31 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
 
         protected override void OnAnimationFinish()
         {
-            stateMachine.TranslateToState(manager.ChargeState);
+            _currentState = manager.CurrentState;
+            
+            _attackType = Random.Range(0, _currentState);
+            if (_attackType == _formerAttackType)
+            {
+                _attackType = (_attackType + 1) % _currentState;
+            }
+            _formerAttackType = _attackType;
+            
+            
+            switch (_attackType)
+            {
+                case 0:
+                    stateMachine.TranslateToState(manager.Attack1State);
+                    break;
+                case 1:
+                    stateMachine.TranslateToState(manager.Attack4_1State);
+                    break;
+                case 2:
+                    stateMachine.TranslateToState(manager.Attack3_1State);
+                    break;
+                default:
+                    stateMachine.TranslateToState(manager.Attack3_1State);
+                    break;
+            }
         }
     }
 }

@@ -129,7 +129,8 @@ namespace Character.Player.Manager
         {
             base.Damaged();
             
-            StateMachine.TranslateToState(DamagedState);
+            BattleManager.Flash();
+            //StateMachine.TranslateToState(DamagedState);
         }
 
         public override void Death()

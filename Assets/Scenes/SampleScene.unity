@@ -168,14 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac907633b314833a34671f7a2d123ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1Range: 2
-  attack3Range: 2
-  attack4Range: 2
+  attack1Range: 1.5
+  attack3Range: 8
+  attack4Range: 8
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
   playerSensor: {fileID: 568031548}
-  upwardsSensorSize: {x: 1, y: 6}
+  upwardsSensorSize: {x: 3, y: 6}
 --- !u!1 &14872552
 GameObject:
   m_ObjectHideFlags: 0
@@ -55562,7 +55562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3825a3e470504d25bd48a9339b60341e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagedMaterial: {fileID: 0}
+  damagedMaterial: {fileID: 2100000, guid: 9668b3183072c5a4ca29a75bdbbebfdc, type: 2}
 --- !u!61 &116546287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56043,7 +56043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217832835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.69, y: 0, z: 0}
+  m_LocalPosition: {x: -17.69, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56066,8 +56066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Player
-  isDoubleJumpEnable: 0
-  isWallSlideEnable: 0
+  isDoubleJumpEnable: 1
+  isWallSlideEnable: 1
   isDashEnable: 1
 --- !u!114 &217832840
 MonoBehaviour:
@@ -56527,7 +56527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568031547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56746,7 +56746,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11312866, y: 0.5544515}
+  m_Offset: {x: 0.11312866, y: 0.5574171}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56757,7 +56757,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1037693, y: 1.5738338}
+  m_Size: {x: 1.1037693, y: 1.5679027}
   m_EdgeRadius: 0
 --- !u!4 &571262649
 Transform:
@@ -56789,6 +56789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Blood King
+  HeartPrefab: {fileID: 6553630664366134507, guid: 29e732ad1238fde4d8ec79c104458cf7, type: 3}
 --- !u!1 &609239699
 GameObject:
   m_ObjectHideFlags: 3
@@ -59596,7 +59597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411566937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.69, y: 3, z: -10}
+  m_LocalPosition: {x: -17.69, y: -0.20000005, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -74165,7 +74166,7 @@ MonoBehaviour:
   leftPointX: -31
   rightPointX: -7
   attack3_4Veclocity: 5
-  attack4_2Veclocity: 12
+  attack4_2Veclocity: 15
   attack4_3Veclocity: 6
   attack3_2Offset: -2
   attack3_3Offset: 6
@@ -74825,7 +74826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102319151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.69, y: 3, z: -10}
+  m_LocalPosition: {x: -17.69, y: -0.20000005, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74971,7 +74972,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.72001815}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -74982,7 +74983,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.875, y: 2.0625}
+  m_Size: {x: 3.875, y: 3.5025363}
   m_EdgeRadius: 0
 --- !u!95 &2130901556
 Animator:
