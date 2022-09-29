@@ -12,8 +12,8 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
         public override void OnEnter()
         {
             base.OnEnter();
-            
-            coreManager.MoveCore.MoveToOffset(coreManager.MoveCore.attack3_2Offset);
+
+            coreManager.MoveCore.MoveToOffset(coreManager.MoveCore.attack3_2Offset * coreManager.MoveCore.Direction);
         }
         
         protected override void OnAnimationFinish()

@@ -12,12 +12,16 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
         public override void OnEnter()
         {
             base.OnEnter();
-
-
+            
             coreManager.MoveCore.MoveTo(coreManager.SenseCore.DistanceToPlayer(coreManager.MoveCore.leftPointX) >
                                         coreManager.SenseCore.DistanceToPlayer(coreManager.MoveCore.rightPointX)
                 ? coreManager.MoveCore.LeftPointPosition
                 : coreManager.MoveCore.RightPointPosition);
+            
+            if (coreManager.MoveCore.Direction != coreManager.SenseCore.PlayerDirection)
+            {
+                coreManager.MoveCore.Flip();
+            }
         }
 
         protected override void OnAnimationFinish()

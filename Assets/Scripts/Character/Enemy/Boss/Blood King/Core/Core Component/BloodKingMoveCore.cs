@@ -10,8 +10,8 @@ namespace Character.Enemy.Boss.Blood_King.Core.Core_Component
         public float rightPointX;
         
         public float attack3_4Veclocity;
-        public float attack4_1Veclocity;
         public float attack4_2Veclocity;
+        public float attack4_3Veclocity;
 
         public float attack3_2Offset;
         public float attack3_3Offset;

@@ -77,7 +77,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
             Attack4_2State = new BloodKingAttack4_2State(this, "attack4_2");
             Attack4_3State = new BloodKingAttack4_3State(this, "attack4_3");
             BlueAttackState = new BloodKingBlueAttackState(this, "blueAttack");
-            JumpAttackState = new BloodKingJumpAttackState(this, "attack5");
+            JumpAttackState = new BloodKingJumpAttackState(this, "jumpAttack");
         }
 
         public override void Damaged()

@@ -9,5 +9,12 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
         public BloodKingAttack4_3State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
+        
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.attack4_3Veclocity * coreManager.MoveCore.Direction);
+        }
     }
 }

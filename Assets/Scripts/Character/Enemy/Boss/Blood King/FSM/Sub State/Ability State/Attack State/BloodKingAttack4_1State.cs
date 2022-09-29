@@ -13,7 +13,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.attack4_1Veclocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(0f);
         }
 
         protected override void OnAnimationFinish()

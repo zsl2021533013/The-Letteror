@@ -151,7 +151,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 568031548}
   m_Father: {fileID: 998226588}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -170,6 +171,11 @@ MonoBehaviour:
   attack1Range: 2
   attack3Range: 2
   attack4Range: 2
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  playerSensor: {fileID: 568031548}
+  upwardsSensorSize: {x: 1, y: 6}
 --- !u!1 &14872552
 GameObject:
   m_ObjectHideFlags: 0
@@ -56497,6 +56503,37 @@ Transform:
   m_Father: {fileID: 1107175814}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &568031547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568031548}
+  m_Layer: 0
+  m_Name: Player Sensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &568031548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568031547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3529503}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570680029
 GameObject:
   m_ObjectHideFlags: 0
@@ -74128,8 +74165,8 @@ MonoBehaviour:
   leftPointX: -31
   rightPointX: -7
   attack3_4Veclocity: 5
-  attack4_1Veclocity: 15
-  attack4_2Veclocity: 6
+  attack4_2Veclocity: 12
+  attack4_3Veclocity: 6
   attack3_2Offset: -2
   attack3_3Offset: 6
 --- !u!1 &1826597654

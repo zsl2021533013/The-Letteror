@@ -47,6 +47,16 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
                     }
                     break;
             }
+            
+            if (coreManager.MoveCore.Direction != coreManager.SenseCore.PlayerDirection)
+            {
+                coreManager.MoveCore.Flip();
+            }
+        }
+
+        protected override void OnAnimationFinish()
+        {
+            stateMachine.TranslateToState(manager.ChargeState);
         }
     }
 }

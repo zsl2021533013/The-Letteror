@@ -14,7 +14,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State
 
         protected override void OnAnimationFinish()
         {
-            _attackType = Random.Range(1, 2);
+            _attackType = Random.Range(0, 2);
 
             switch (_attackType)
             {
