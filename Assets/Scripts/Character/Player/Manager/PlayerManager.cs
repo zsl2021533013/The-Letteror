@@ -75,9 +75,9 @@ namespace Character.Player.Manager
             StateMachine.Initialize(IdleState);
         }
 
-        protected override void InitializeFsm()
+        protected override void InitializeFSM()
         {
-            base.InitializeFsm();
+            base.InitializeFSM();
             
             IdleState = new PlayerIdleState(this, "idle");
             MoveState = new PlayerMoveState(this, "move");
@@ -103,7 +103,7 @@ namespace Character.Player.Manager
             AirDownwardsAttackState = new PlayerAirDownwardsAttackState(this, "airDownwardsAttack");
             SpecialIdleAttackState = new PlayerSpecialIdleAttackState(this, "groundAttack1");
             SpecialDashAttackState = new PlayerSpecialDashAttackState(this, "specialHorizontalAttack");
-            SpecialUpwardsAttackState = new PlayerSpecialUpwardsAttackState(this, "groundAttack1");
+            SpecialUpwardsAttackState = new PlayerSpecialUpwardsAttackState(this, "specialUpwardsAttack");
             SpecialDownwardsAttackState = new PlayerSpecialDownwardsAttackState(this, "groundAttack1");
 
             #endregion

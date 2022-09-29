@@ -35,9 +35,9 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
             StateMachine.Initialize(WakeState);
         }
 
-        protected override void InitializeFsm()
+        protected override void InitializeFSM()
         {
-            base.InitializeFsm();
+            base.InitializeFSM();
             
             WakeState = new ColossalBossWakeState(this, "wake");
             IdleState = new ColossalBossIdleState(this, "idle");

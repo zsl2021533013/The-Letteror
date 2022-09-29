@@ -7,8 +7,8 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
     public class BloodKingAppearCloserState : BloodKingAbilityState
     {
         private int _appearType;
-        
-        protected BloodKingAppearCloserState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+
+        public BloodKingAppearCloserState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
 

@@ -1,11 +1,12 @@
 ﻿using Character.Base.Manager;
 using Character.Enemy.Boss.Blood_King.FSM.Super_State;
+using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_State
 {
-    public class BloodKingAttack1State : BloodKingAbilityState
+    public class BloodKingAttack4_3State : BloodKingAbilityState
     {
-        public BloodKingAttack1State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingAttack4_3State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
     }

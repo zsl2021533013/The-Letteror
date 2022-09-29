@@ -7,7 +7,9 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
 {
     public class BloodKingIdleState : BloodKingState
     {
-        protected BloodKingIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        private int _attackType;
+        
+        public BloodKingIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
 
@@ -15,17 +17,24 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
         {
             base.OnEnter();
 
-            switch (manager.CurrentState)
+            _attackType = Random.Range(0, 1);
+            
+            switch (_attackType)
             {
                 case 0:
+                    stateMachine.TranslateToState(manager.ChargeState);
                     break;
                 case 1:
+                    stateMachine.TranslateToState(manager.DisappearFartherState);
                     break;
                 case 2:
+                    stateMachine.TranslateToState(manager.DisappearCloserState);
                     break;
                 case 3:
+                    stateMachine.TranslateToState(manager.Attack3_1State);
                     break;
                 default:
+                    stateMachine.TranslateToState(manager.JumpAttackState);
                     break;
             }
         }

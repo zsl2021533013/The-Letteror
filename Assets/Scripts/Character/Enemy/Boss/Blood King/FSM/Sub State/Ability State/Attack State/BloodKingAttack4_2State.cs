@@ -5,7 +5,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
 {
     public class BloodKingAttack4_2State : BloodKingAbilityState
     {
-        protected BloodKingAttack4_2State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingAttack4_2State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
 
@@ -14,6 +14,11 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
             base.OnEnter();
             
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.attack4_2Veclocity * coreManager.MoveCore.Direction);
+        }
+        
+        protected override void OnAnimationFinish()
+        {
+            stateMachine.TranslateToState(manager.Attack4_3State);
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
 {
     public class BloodKingAppearFartherState : BloodKingAbilityState
     {
-        protected BloodKingAppearFartherState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingAppearFartherState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
 

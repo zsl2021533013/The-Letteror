@@ -49,9 +49,9 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             StateMachine.Initialize(IdleState);
         }
 
-        protected override void InitializeFsm()
+        protected override void InitializeFSM()
         {
-            base.InitializeFsm();
+            base.InitializeFSM();
 
             IdleState = new HeartHolderIdleState(this, "idle");
 

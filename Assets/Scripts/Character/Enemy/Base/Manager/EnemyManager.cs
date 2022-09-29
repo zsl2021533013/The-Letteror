@@ -35,9 +35,9 @@ namespace Character.Enemy.Manager
             StateMachine.Initialize(IdleState);
         }
         
-        protected override void InitializeFsm()
+        protected override void InitializeFSM()
         {
-            base.InitializeFsm();
+            base.InitializeFSM();
             
             IdleState = new EnemyIdleState(this, "idle");
             ChaseState = new EnemyChaseState(this, "move");

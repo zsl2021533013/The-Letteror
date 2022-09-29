@@ -5,7 +5,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
 {
     public class BloodKingDisappearCloserState : BloodKingAbilityState
     {
-        protected BloodKingDisappearCloserState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingDisappearCloserState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
         

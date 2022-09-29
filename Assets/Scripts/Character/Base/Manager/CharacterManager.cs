@@ -19,7 +19,7 @@ namespace Character.Base.Manager
 
         protected virtual void Start()
         {
-            InitializeFsm();
+            InitializeFSM();
         }
 
         protected virtual void Update()
@@ -33,7 +33,7 @@ namespace Character.Base.Manager
             StateMachine.CurrentState.OnFixedUpdate();
         }
 
-        protected virtual void InitializeFsm()
+        protected virtual void InitializeFSM()
         {
             StateMachine = new CharacterStateMachine();
         }

@@ -6,7 +6,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
 {
     public class BloodKingBlueChaseState : BloodKingState
     {
-        protected BloodKingBlueChaseState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingBlueChaseState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
 

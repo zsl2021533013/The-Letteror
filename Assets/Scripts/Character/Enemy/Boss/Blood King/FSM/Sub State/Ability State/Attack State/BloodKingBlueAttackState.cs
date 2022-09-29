@@ -5,7 +5,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
 {
     public class BloodKingBlueAttackState : BloodKingAbilityState
     {
-        protected BloodKingBlueAttackState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingBlueAttackState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
     }

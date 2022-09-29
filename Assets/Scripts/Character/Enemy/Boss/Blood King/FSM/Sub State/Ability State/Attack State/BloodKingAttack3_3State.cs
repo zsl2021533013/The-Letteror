@@ -5,7 +5,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
 {
     public class BloodKingAttack3_3State : BloodKingAbilityState
     {
-        protected BloodKingAttack3_3State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingAttack3_3State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
         
@@ -13,7 +13,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
         {
             base.OnEnter();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.attack3_3Veclocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.MoveToOffset(coreManager.MoveCore.attack3_3Offset);
         }
         
         protected override void OnAnimationFinish()

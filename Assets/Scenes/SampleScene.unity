@@ -164,10 +164,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3529502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf24b28fed9544b79483bdd3ff6cd587, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ac907633b314833a34671f7a2d123ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 6
+  attack1Range: 2
+  attack3Range: 2
+  attack4Range: 2
 --- !u!1 &14872552
 GameObject:
   m_ObjectHideFlags: 0
@@ -56665,27 +56667,14 @@ GameObject:
   - component: {fileID: 571262649}
   - component: {fileID: 571262648}
   - component: {fileID: 571262647}
-  - component: {fileID: 571262646}
+  - component: {fileID: 571262650}
   m_Layer: 8
   m_Name: Blood King
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &571262646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571262645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3b4a5656c9465d9d8bd98bdb6b6592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Colossal Boss
+  m_IsActive: 1
 --- !u!50 &571262647
 Rigidbody2D:
   serializedVersion: 4
@@ -56720,7 +56709,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26421165, y: -0.22303915}
+  m_Offset: {x: 0.11312866, y: 0.5544515}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56731,7 +56720,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.138567, y: 5.730071}
+  m_Size: {x: 1.1037693, y: 1.5738338}
   m_EdgeRadius: 0
 --- !u!4 &571262649
 Transform:
@@ -56741,7 +56730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571262645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.22, y: -1.91, z: 0}
+  m_LocalPosition: {x: -26.66, y: -1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56750,6 +56739,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &571262650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571262645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062ae4f5181d450a8e51d1dc553fed61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Blood King
 --- !u!1 &609239699
 GameObject:
   m_ObjectHideFlags: 3
@@ -57974,7 +57976,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 998226587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e3c68356b44ab7a310dd1abb159cf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a392ba1005c4914a953698ed8ac409c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1014271948
@@ -58609,7 +58611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1110311239
 Rigidbody2D:
   serializedVersion: 4
@@ -59893,6 +59895,8 @@ MonoBehaviour:
   - _name: Heart Hoarder
     _data: {fileID: 11400000, guid: 10a6719bd78d7e14280f1032b961c1bd, type: 2}
   - _name: Colossal Boss
+    _data: {fileID: 11400000, guid: 10a6719bd78d7e14280f1032b961c1bd, type: 2}
+  - _name: Blood King
     _data: {fileID: 11400000, guid: 10a6719bd78d7e14280f1032b961c1bd, type: 2}
 --- !u!4 &1582466291
 Transform:
@@ -74117,12 +74121,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1825148500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fbbd064cc654d40afaebd471c418cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf51052a6274fe2a3ffa065e0061477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveVelocity: 8
   leftPointX: -31
   rightPointX: -7
+  attack3_4Veclocity: 5
+  attack4_1Veclocity: 15
+  attack4_2Veclocity: 6
+  attack3_2Offset: -2
+  attack3_3Offset: 6
 --- !u!1 &1826597654
 GameObject:
   m_ObjectHideFlags: 0
@@ -74930,7 +74939,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 12.625, y: 4.9375}
-    newSize: {x: 7.4375, y: 2.125}
+    newSize: {x: 12.625, y: 4.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -75004,7 +75013,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.4375, y: 2.125}
+  m_Size: {x: 12.625, y: 4.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
