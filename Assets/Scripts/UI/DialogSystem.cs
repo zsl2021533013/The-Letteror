@@ -35,7 +35,7 @@ public class DialogSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (line == textList.Count)
             {
@@ -79,11 +79,6 @@ public class DialogSystem : MonoBehaviour
         {
             case"0":
                 faceImage.sprite = face01;
-                line++;
-                break;
-
-            case "1":
-                faceImage.sprite = face02;
                 line++;
                 break;
         }
