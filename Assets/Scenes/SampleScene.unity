@@ -56066,7 +56066,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Player
+<<<<<<< Updated upstream
   isDoubleJumpEnable: 1
+=======
+  isDoubleJumpEnable: 0
+>>>>>>> Stashed changes
   isWallSlideEnable: 1
   isDashEnable: 1
 --- !u!114 &217832840
