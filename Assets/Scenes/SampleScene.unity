@@ -55978,7 +55978,6 @@ GameObject:
   - component: {fileID: 217832838}
   - component: {fileID: 217832837}
   - component: {fileID: 217832836}
-  - component: {fileID: 217832843}
   - component: {fileID: 217832840}
   - component: {fileID: 217832839}
   m_Layer: 7
@@ -56081,136 +56080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1e3a9cebd45804e95192fdd016dec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &217832843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217832835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 43ecf9e40a8338141ba8dac1c36cb8e9, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217832840}
-        m_TargetAssemblyTypeName: Character.Player.Input_System.InputHandler, Assembly-CSharp
-        m_MethodName: OnMoveInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6ace6f53-521f-41e7-92b2-3ae33a1b46fe
-    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217832840}
-        m_TargetAssemblyTypeName: Character.Player.Input_System.InputHandler, Assembly-CSharp
-        m_MethodName: OnJumpInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d5f8ed10-1f29-4f7d-9ae7-8383f2016e89
-    m_ActionName: Player/Jump[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217832840}
-        m_TargetAssemblyTypeName: Character.Player.Input_System.PlayerInputHandler,
-          Assembly-CSharp
-        m_MethodName: OnDashInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 4d74cd24-51d1-4d5a-91d2-10731df670c8
-    m_ActionName: Player/Dash[/Keyboard/shift,/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217832840}
-        m_TargetAssemblyTypeName: Character.Player.Input_System.PlayerInputHandler,
-          Assembly-CSharp
-        m_MethodName: OnRollInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 937ad24b-7fe2-4507-94c7-fef5f43fbc42
-    m_ActionName: Player/Roll[/Keyboard/shift,/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217832840}
-        m_TargetAssemblyTypeName: Character.Player.Input_System.PlayerInputHandler,
-          Assembly-CSharp
-        m_MethodName: OnAttackInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 5a952b02-b89d-4594-af29-881184bc6b38
-    m_ActionName: Player/Attack[/Mouse/leftButton,/XInputControllerWindows/buttonWest]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217832840}
-        m_TargetAssemblyTypeName: Character.Player.Input_System.PlayerInputHandler,
-          Assembly-CSharp
-        m_MethodName: OnSpecialAttackInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 8443106e-e655-4c9c-8275-de4c54866cbb
-    m_ActionName: Player/Special Attack[/Keyboard/i,/XInputControllerWindows/buttonNorth]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyborad
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  isInputEnable: 0
 --- !u!1 &262324101
 GameObject:
   m_ObjectHideFlags: 0
@@ -56711,7 +56581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &571262647
 Rigidbody2D:
   serializedVersion: 4

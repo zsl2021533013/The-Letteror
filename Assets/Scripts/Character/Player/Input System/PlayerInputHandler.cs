@@ -15,6 +15,7 @@ namespace Character.Player.Input_System
 
     public class PlayerInputHandler : MonoBehaviour
     {
+        public bool isInputEnable;
         public Vector2 MovementInput { get; private set; }
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
@@ -22,6 +23,8 @@ namespace Character.Player.Input_System
         public bool RollInput { get; private set; }
         public bool AttackInput { get; private set; }
         public bool SpecialAttackInput { get; private set; }
+        
+        private InputControls controls;
 
         public PlayerInputDirection InputDirection
         {
@@ -51,11 +54,39 @@ namespace Character.Player.Input_System
             }
         }
 
+        private void Awake()
+        {
+            controls = new InputControls();
+            controls.Enable();
+
+            controls.Player.Move.performed += OnMoveInput;
+            controls.Player.Move.canceled += OnMoveInput;
+            
+            controls.Player.Jump.started += OnJumpInput;
+            controls.Player.Jump.canceled += OnJumpInput;
+            
+            controls.Player.Dash.started += OnDashInput;
+            
+            controls.Player.Roll.started += OnRollInput;
+
+            controls.Player.Attack.started += OnAttackInput;
+            
+            controls.Player.SpecialAttack.started += OnSpecialAttackInput;
+        }   
+
         #region Input Event
 
         public void OnMoveInput(InputAction.CallbackContext ctx)
         {
-            MovementInput = ctx.ReadValue<Vector2>();
+            if (ctx.performed)
+            {
+                MovementInput = ctx.ReadValue<Vector2>();
+            }
+
+            if (ctx.canceled)
+            {
+                MovementInput = Vector2.zero;
+            }
         }
 
         public void OnJumpInput(InputAction.CallbackContext ctx)

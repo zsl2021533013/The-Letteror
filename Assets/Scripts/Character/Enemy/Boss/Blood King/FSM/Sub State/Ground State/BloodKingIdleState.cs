@@ -61,8 +61,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
             }
             
             _attackType = Random.Range(0, _currentState);
-            Debug.Log("Attack Type " + _attackType);
-            Debug.Log("Former Attack Type " + _formerAttackType);
+
             if (_attackType == _formerAttackType)
             {
                 _attackType = (_attackType + 1) % _currentState;
