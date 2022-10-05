@@ -9,6 +9,7 @@ namespace Character.Base.Manager
     public class CharacterBattleManager : MonoBehaviour
     {
         public Material damagedMaterial;
+        public Material defaultMaterial;
         
         protected CharacterBattleManager targetBattleManager;
         protected CharacterManager manager;
@@ -16,7 +17,6 @@ namespace Character.Base.Manager
         private bool _isImmortal;
         private CharacterBattleData _battleData;
         private SpriteRenderer _spriteRenderer;
-        private Material _originMaterial;
 
         public CharacterBattleData BattleData => _battleData;
         public bool IsImmortal => _isImmortal;
@@ -91,14 +91,13 @@ namespace Character.Base.Manager
         
         public void Flash()
         {
-            _originMaterial = _spriteRenderer.material;
             _spriteRenderer.material = damagedMaterial;
             Invoke(nameof(ResetMaterial), 0.1f);
         }
 
         private void ResetMaterial()
         {
-            _spriteRenderer.material = _originMaterial;
+            _spriteRenderer.material = defaultMaterial;
         }
 
         public void StartImmortal() => _isImmortal = true;

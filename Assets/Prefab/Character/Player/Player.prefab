@@ -287,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43ae5dfa3e5fb8747a604a1b83b110ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -390,6 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagedMaterial: {fileID: 2100000, guid: 9668b3183072c5a4ca29a75bdbbebfdc, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 43ae5dfa3e5fb8747a604a1b83b110ad, type: 2}
 --- !u!1 &2662147733705345768
 GameObject:
   m_ObjectHideFlags: 0
