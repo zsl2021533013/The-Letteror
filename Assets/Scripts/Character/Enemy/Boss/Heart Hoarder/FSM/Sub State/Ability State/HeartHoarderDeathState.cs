@@ -12,7 +12,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder.FSM.Sub_State.Ability_State
 
         protected override void OnAnimationFinish()
         {
-            
+            manager.DestroyCharacter();
         }
     }
 }

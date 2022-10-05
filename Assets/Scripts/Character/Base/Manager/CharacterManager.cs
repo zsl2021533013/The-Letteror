@@ -7,6 +7,7 @@ namespace Character.Base.Manager
     public class CharacterManager : MonoBehaviour
     {
         public new string name;
+        public GameObject deadCharacter;
         public CoreManager CoreManager { get; protected set; }
         public CharacterBattleManager BattleManager { get; protected set; }
         public CharacterAnimationManager AnimationManager { get; protected set; }
@@ -71,6 +72,18 @@ namespace Character.Base.Manager
 
         public virtual void Death()
         {
+        }
+
+        public virtual void DestroyCharacter()
+        {
+            Destroy(gameObject);
+            
+            if (deadCharacter)
+            {
+                GameObject newCharacter = Instantiate(deadCharacter);
+                newCharacter.transform.position = transform.position;
+                newCharacter.transform.localScale = transform.localScale;
+            }
         }
     }
 }
