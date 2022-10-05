@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Resources/Audio&Sound.meta
+guid: 3dea38350bb2d224bbd3ddcfd4d474aa
+folderAsset: yes
+DefaultImporter:
+========
+guid: 60e4c72fa8b2b0441b3f5791c9e54bf9
+NativeFormatImporter:
+>>>>>>>> d5852d1c493d15fc8c32f8004e80024fd0518c39:Assets/Animation/Animations/Character/NPCs/Guard_Idle.anim.meta
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

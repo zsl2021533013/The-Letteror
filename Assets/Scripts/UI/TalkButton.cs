@@ -30,7 +30,7 @@ public class TalkButton : MonoBehaviour
 
     private void Update()
     {
-        if (Button.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (Button.activeSelf && Input.GetKeyDown(KeyCode.W))
         {
             talkUI.SetActive(true);
         }

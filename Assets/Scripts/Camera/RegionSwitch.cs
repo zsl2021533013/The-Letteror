@@ -7,6 +7,7 @@ public class RegionSwitch : MonoBehaviour
     private void Awake()
     {
         CinVC = GetComponentInChildren<CinemachineVirtualCamera>();
+        CinVC.Follow = GameObject.FindGameObjectWithTag("Player").transform.GetChild(1);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
