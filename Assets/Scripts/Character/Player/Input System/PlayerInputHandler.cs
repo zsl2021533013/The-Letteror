@@ -1,4 +1,5 @@
 using System;
+using Tool.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,7 +14,7 @@ namespace Character.Player.Input_System
         Right
     }
 
-    public class PlayerInputHandler : MonoBehaviour
+    public class PlayerInputHandler : Singleton<PlayerInputHandler>
     {
         public bool isInputEnable;
         public Vector2 MovementInput { get; private set; }
@@ -24,7 +25,7 @@ namespace Character.Player.Input_System
         public bool AttackInput { get; private set; }
         public bool SpecialAttackInput { get; private set; }
         
-        private InputControls controls;
+        public InputControls Controls{ get; private set; }
 
         public PlayerInputDirection InputDirection
         {
@@ -56,22 +57,22 @@ namespace Character.Player.Input_System
 
         private void Awake()
         {
-            controls = new InputControls();
-            controls.Enable();
+            Controls = new InputControls();
+            Controls.Enable();
 
-            controls.Player.Move.performed += OnMoveInput;
-            controls.Player.Move.canceled += OnMoveInput;
+            Controls.Player.Move.performed += OnMoveInput;
+            Controls.Player.Move.canceled += OnMoveInput;
             
-            controls.Player.Jump.started += OnJumpInput;
-            controls.Player.Jump.canceled += OnJumpInput;
+            Controls.Player.Jump.started += OnJumpInput;
+            Controls.Player.Jump.canceled += OnJumpInput;
             
-            controls.Player.Dash.started += OnDashInput;
+            Controls.Player.Dash.started += OnDashInput;
             
-            controls.Player.Roll.started += OnRollInput;
+            Controls.Player.Roll.started += OnRollInput;
 
-            controls.Player.Attack.started += OnAttackInput;
+            Controls.Player.Attack.started += OnAttackInput;
             
-            controls.Player.SpecialAttack.started += OnSpecialAttackInput;
+            Controls.Player.SpecialAttack.started += OnSpecialAttackInput;
         }   
 
         #region Input Event
