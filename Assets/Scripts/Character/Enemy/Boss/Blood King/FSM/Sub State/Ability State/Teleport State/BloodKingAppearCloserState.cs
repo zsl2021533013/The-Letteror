@@ -51,7 +51,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
                     break;
             }
             
-            if (coreManager.MoveCore.Direction != coreManager.SenseCore.PlayerDirection)
+            if (coreManager.MoveCore.CharacterDirection != coreManager.SenseCore.PlayerDirection)
             {
                 coreManager.MoveCore.Flip();
             }

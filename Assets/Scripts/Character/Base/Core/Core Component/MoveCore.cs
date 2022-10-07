@@ -14,9 +14,9 @@ namespace Character.Base.Core.Core_Component
         
         public Rigidbody2D Rb { get; private set; }
         public Vector2 CurrentVelocity { get; private set; }
-        
-        public int Direction => characterTransform.localScale.x > 0f ? 1 : -1;
         public Vector2 Position => characterTransform.position;
+        public int MoveDirection => CurrentVelocity.x == 0f ? 0 : CurrentVelocity.x > 0f ? 1 : -1;
+        public int CharacterDirection => characterTransform.localScale.x > 0f ? 1 : -1;
 
         protected override void Awake()
         {
@@ -47,7 +47,7 @@ namespace Character.Base.Core.Core_Component
             Rb.velocity = velocity;
         }
         
-        public void SetVelocity(float velocity, Vector2 angle,int direction)
+        public void SetVelocity(float velocity, Vector2 angle, int direction)
         {
             angle.Normalize();
             tempVector2.Set(velocity * angle.x * direction, velocity * angle.y);

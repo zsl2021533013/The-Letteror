@@ -18,7 +18,7 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
 
             if (inChaseRange && !inAttackRange)
             {
-                coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.Direction);
+                coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
                 return;
             }
 

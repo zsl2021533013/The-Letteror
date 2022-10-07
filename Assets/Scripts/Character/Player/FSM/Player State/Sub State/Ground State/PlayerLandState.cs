@@ -10,6 +10,13 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ground_State
         {
         }
 
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            coreManager.MoveCore.SetVelocityX(0f);
+        }
+
         public override void OnUpdate()
         {
             base.OnUpdate();

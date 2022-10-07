@@ -11,8 +11,6 @@ using Character.Player.FSM.Player_State.Sub_State.Wall_State;
 using Character.Player.Input_System;
 using Game_Manager;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using Update = Unity.VisualScripting.Update;
 
 namespace Character.Player.Manager
 {
@@ -22,6 +20,7 @@ namespace Character.Player.Manager
         public bool isDoubleJumpEnable;
         public bool isWallSlideEnable;
         public bool isDashEnable;
+        public bool isSpecialDashEnable;
         
         public PlayerInputHandler Input { get; private set; }
         public new PlayerCoreManager CoreManager { get; private set; }
@@ -37,6 +36,7 @@ namespace Character.Player.Manager
         public PlayerWallJumpState WallJumpState { get; private set; }
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
+        public PlayerSpecialDashState SpecialDashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
         public PlayerDamagedState DamagedState { get; private set; }
         public PlayerDeathState DeathState { get; private set; }
@@ -88,6 +88,7 @@ namespace Character.Player.Manager
             WallJumpState = new PlayerWallJumpState(this, "inAir");
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
+            SpecialDashState = new PlayerSpecialDashState(this, "idle");
             RollState = new PlayerRollState(this, "roll");
             DamagedState = new PlayerDamagedState(this, "damaged");
             DeathState = new PlayerDeathState(this, "death");

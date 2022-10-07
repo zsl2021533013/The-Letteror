@@ -29,12 +29,10 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack
         {
             base.OnUpdate();
             
-            UpdateInput(manager.Input);
-            
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * movementInput.x);
         }
 
-        private void UpdateInput(PlayerInputHandler input)
+        protected override void UpdateInput(PlayerInputHandler input)
         {
             movementInput = input.MovementInput;
         }

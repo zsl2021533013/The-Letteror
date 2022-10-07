@@ -14,10 +14,11 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         public override void OnEnter()
         {
             base.OnEnter();
-            
-            coreManager.MoveCore.SetVelocity(coreManager.MoveCore.StateMachineData.wallJumpVelocity, coreManager.MoveCore.StateMachineData.wallJumpAngle, -coreManager.MoveCore.Direction);
 
-            coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
+            coreManager.MoveCore.SetVelocity(coreManager.MoveCore.StateMachineData.wallJumpVelocity,
+                coreManager.MoveCore.StateMachineData.wallJumpAngle, -coreManager.MoveCore.CharacterDirection);
+
+            coreManager.MoveCore.CheckFlip(manager.Input);
             manager.JumpState.DecreaseAmountOfJumps();
         }
 

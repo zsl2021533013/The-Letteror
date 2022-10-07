@@ -63,6 +63,7 @@ namespace Character.Player.FSM.Player_State.Super_State
         {
             input.ResetJumpInput();
             input.ResetDashInput();
+            input.ResetSpecialDashInput();
             input.ResetAttackInput();
             input.ResetSpecialAttackInput();
         }

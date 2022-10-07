@@ -23,7 +23,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ground_State
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * movementInput.x);
             manager.AnimationManager.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
            
-            coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
+            coreManager.MoveCore.CheckFlip(manager.Input);
             
             if (Mathf.Abs(movementInput.x) <= 0.1f)
             {

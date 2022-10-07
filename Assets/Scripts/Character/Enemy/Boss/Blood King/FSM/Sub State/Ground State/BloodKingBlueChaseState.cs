@@ -14,11 +14,11 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
         {
             base.OnUpdate();
 
-            if (coreManager.MoveCore.Direction != coreManager.SenseCore.PlayerDirection)
+            if (coreManager.MoveCore.CharacterDirection != coreManager.SenseCore.PlayerDirection)
             {
                 coreManager.MoveCore.Flip();
             }
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
             
             if (coreManager.SenseCore.InAttack1Range)
             {

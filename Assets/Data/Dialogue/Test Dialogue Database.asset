@@ -114,7 +114,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Title
-      value: New Conversation 1
+      value: Test 1
       type: 0
       typeString: 
     - title: Description
@@ -235,7 +235,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: AB
+        value: AAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBB
         type: 0
         typeString: 
       - title: Sequence
@@ -296,7 +296,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: AAA
+        value: AAAAAAAAAAAAAA
         type: 0
         typeString: 
       - title: Sequence
@@ -311,8 +311,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["A"] == true
-      userScript: 
+      conditionsString: Variable["A"] == false
+      userScript: Variable["A"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -345,7 +345,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: BBB
+        value: BBBBBBBBBBBBBBB
         type: 0
         typeString: 
       - title: Sequence
@@ -360,7 +360,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["A"] == false
+      conditionsString: Variable["A"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -373,7 +373,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 1.1499999
   syncInfo:
     syncActors: 0
     syncItems: 0

@@ -20,7 +20,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
 
             _currentState = manager.CurrentState;
             
-            switch (coreManager.MoveCore.Direction)
+            switch (coreManager.MoveCore.CharacterDirection)
             {
                 case 1 when coreManager.SenseCore.PlayerDirection == -1:
                     manager.TurnLeftState.SetFormerState(this);
@@ -37,9 +37,9 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
         {
             base.OnUpdate();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
 
-            switch (coreManager.MoveCore.Direction)
+            switch (coreManager.MoveCore.CharacterDirection)
             {
                 case 1 when coreManager.SenseCore.PlayerDirection == -1:
                     manager.TurnLeftState.SetFormerState(this);

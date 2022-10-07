@@ -5,6 +5,9 @@ namespace Character.Player.Core.Data
     [CreateAssetMenu(fileName = "New Player State Machine Data",menuName = "Data/Player Data/Player State Machine Data")]
     public class PlayerStateMachineData : ScriptableObject
     {
+        [Header("Move State")]
+        public float smoothDampTime;
+        
         [Header(("Jump State"))]
         public float jumpVelocity;
         public int amountOfJump;
@@ -27,6 +30,10 @@ namespace Character.Player.Core.Data
         [Header("Dash State")] 
         public float dashVelocity;
         public int amountOfDash;
+
+        [Header("Special Dash State")] 
+        public float pauseTime;
+        public float specialDashVelocity;
 
         [Header("Roll State")] 
         public float rollVelocity;

@@ -28,7 +28,7 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.OnUpdate();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
             
             if (coreManager.MoveCore.JudgeArrive(_targetX))
             {
@@ -42,7 +42,7 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
             _targetX = _startPositionX + Random.Range(-coreManager.MoveCore.patrolRange, coreManager.MoveCore.patrolRange);
 
             _moveDirection = _targetX > coreManager.MoveCore.Position.x ? 1 : -1;
-            if (_moveDirection == -coreManager.MoveCore.Direction)
+            if (_moveDirection == -coreManager.MoveCore.CharacterDirection)
             {
                 coreManager.MoveCore.Flip();
             }

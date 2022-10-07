@@ -17,7 +17,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
             Debug.Log("Dash Attack");
             Debug.Log(manager.Input.MovementInput);
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.specialAttackVelocityX *
-                                              coreManager.MoveCore.Direction);
+                                              coreManager.MoveCore.CharacterDirection);
             coreManager.MoveCore.FreezeY(startPosition);
         }
 

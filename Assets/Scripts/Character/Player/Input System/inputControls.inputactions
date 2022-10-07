@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Special Dash",
+                    "type": "Button",
+                    "id": "16ff7ecc-50d3-440e-8f1e-c045d1188c6c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Roll",
                     "type": "Button",
                     "id": "937ad24b-7fe2-4507-94c7-fef5f43fbc42",
@@ -300,6 +309,28 @@
                     "processors": "",
                     "groups": "XBox",
                     "action": "Special Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c6e1aae3-6f97-4f67-ad41-6c479a00d58c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyborad",
+                    "action": "Special Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99d91411-8a0e-4e47-b172-a5e16bb7ea58",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XBox",
+                    "action": "Special Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

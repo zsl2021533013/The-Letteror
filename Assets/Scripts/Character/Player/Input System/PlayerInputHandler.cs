@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Character.Player.Input_System
 {
-    public enum PlayerInputDirection
+    public enum PlayerInputDirectionType
     {
         None,
         Up,
@@ -21,42 +21,58 @@ namespace Character.Player.Input_System
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
         public bool DashInput { get; private set; }
+        public bool SpecialDashInput { get; private set; }
         public bool RollInput { get; private set; }
         public bool AttackInput { get; private set; }
         public bool SpecialAttackInput { get; private set; }
         
         public InputControls Controls{ get; private set; }
 
-        public PlayerInputDirection InputDirection
+        public int InputDirection
+        {
+            get
+            {
+                if (MovementInput.x == 0f)
+                {
+                    return 0;
+                }
+
+                return MovementInput.x > 0f ? 1 : -1;
+            }
+        }
+        
+        public PlayerInputDirectionType InputDirectionType
         {
             get
             {
                 if (MovementInput == Vector2.zero)
                 {
-                    return PlayerInputDirection.None;
+                    return PlayerInputDirectionType.None;
                 }
                 
                 if (Mathf.Abs(MovementInput.x) > Mathf.Abs(MovementInput.y))
                 {
                     if (MovementInput.x < 0)
                     {
-                        return PlayerInputDirection.Left;
+                        return PlayerInputDirectionType.Left;
                     }
 
-                    return PlayerInputDirection.Right;
+                    return PlayerInputDirectionType.Right;
                 }
 
                 if (MovementInput.y < 0)
                 {
-                    return PlayerInputDirection.Down;
+                    return PlayerInputDirectionType.Down;
                 }
 
-                return PlayerInputDirection.Up;
+                return PlayerInputDirectionType.Up;
             }
         }
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+            
             Controls = new InputControls();
             Controls.Enable();
 
@@ -67,6 +83,9 @@ namespace Character.Player.Input_System
             Controls.Player.Jump.canceled += OnJumpInput;
             
             Controls.Player.Dash.started += OnDashInput;
+            
+            Controls.Player.SpecialDash.started += OnSpecialDashInput;
+            Controls.Player.SpecialDash.canceled += OnSpecialDashInput;
             
             Controls.Player.Roll.started += OnRollInput;
 
@@ -111,6 +130,19 @@ namespace Character.Player.Input_System
                 DashInput = true;
             }
         }
+        
+        public void OnSpecialDashInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                SpecialDashInput = true;
+            }
+
+            if (ctx.canceled)
+            {
+                SpecialDashInput = false;
+            }
+        }
 
         public void OnRollInput(InputAction.CallbackContext ctx)
         {
@@ -143,10 +175,11 @@ namespace Character.Player.Input_System
         
         public void ResetJumpInput() => JumpInput = false;
         public void ResetDashInput() => DashInput = false;
+        public void ResetSpecialDashInput() => SpecialDashInput = false;
         public void ResetRollInput() => RollInput = false;
         public void ResetAttackInput() => AttackInput = false;
         public void ResetSpecialAttackInput() => SpecialAttackInput = false;
-        
+
         #endregion
 
     }

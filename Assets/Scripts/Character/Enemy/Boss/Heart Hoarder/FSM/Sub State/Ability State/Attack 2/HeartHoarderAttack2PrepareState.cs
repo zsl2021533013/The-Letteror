@@ -14,7 +14,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         {
             base.OnUpdate();
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
         }
 
         protected override void OnAnimationFinish()

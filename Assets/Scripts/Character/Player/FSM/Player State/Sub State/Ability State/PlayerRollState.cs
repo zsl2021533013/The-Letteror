@@ -17,7 +17,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             manager.BattleManager.StartImmortal();
             
             coreManager.MoveCore.SetVelocityY(0f);
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.rollVelocity * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.rollVelocity * coreManager.MoveCore.CharacterDirection);
         }
 
         public override void OnExit()

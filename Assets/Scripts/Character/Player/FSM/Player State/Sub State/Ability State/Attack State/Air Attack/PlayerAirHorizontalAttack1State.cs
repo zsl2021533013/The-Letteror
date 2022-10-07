@@ -20,15 +20,13 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
             base.OnEnter();
 
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.airAttack1VelocityX *
-                                              coreManager.MoveCore.Direction);
+                                              coreManager.MoveCore.CharacterDirection);
             coreManager.MoveCore.FreezeY(startPosition);
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
-            
-            UpdateInput(manager.Input);
             
             coreManager.MoveCore.FreezeY(startPosition);
         }
@@ -45,8 +43,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
                 isAbilityDone = true;
             }
         }
-        
-        private void UpdateInput(PlayerInputHandler input)
+
+        protected override void UpdateInput(PlayerInputHandler input)
         {
             _attackInput = input.AttackInput;
         }

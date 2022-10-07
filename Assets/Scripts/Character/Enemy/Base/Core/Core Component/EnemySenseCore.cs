@@ -14,16 +14,16 @@ namespace Character.Enemy.Core.Core_Component
         [SerializeField] private float specialAttackDistance;
 
         public bool InChaseRange => Physics2D.Raycast(playerSensor.position,
-            Vector2.right * coreManager.MoveCore.Direction, playerFrontCheckDistance, playerLayerMask);
+            Vector2.right * coreManager.MoveCore.CharacterDirection, playerFrontCheckDistance, playerLayerMask);
         
         public bool InFlipRange => Physics2D.Raycast(playerSensor.position,
-            Vector2.left * coreManager.MoveCore.Direction, playerBackCheckDistance, playerLayerMask);
+            Vector2.left * coreManager.MoveCore.CharacterDirection, playerBackCheckDistance, playerLayerMask);
         
         public bool InAttackRange => Physics2D.Raycast(playerSensor.position,
-            Vector2.right * coreManager.MoveCore.Direction, attackDistance, playerLayerMask);
+            Vector2.right * coreManager.MoveCore.CharacterDirection, attackDistance, playerLayerMask);
         
         public bool InSpecialAttackRange => Physics2D.Raycast(playerSensor.position,
-            Vector2.right * coreManager.MoveCore.Direction, specialAttackDistance, playerLayerMask); 
+            Vector2.right * coreManager.MoveCore.CharacterDirection, specialAttackDistance, playerLayerMask); 
         
         protected override void OnDrawGizmosSelected()
         {

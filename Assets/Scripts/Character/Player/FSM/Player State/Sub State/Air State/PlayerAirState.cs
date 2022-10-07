@@ -10,14 +10,21 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private bool _jumpInput;
         private bool _jumpInputStop;
         private bool _dashInput;
+        private bool _specialDashInput;
         private bool _attackInput;
         private bool _specialAttackInput;
+        
         private bool _isJumping;
         private bool _isGrounded;
         private bool _isTouchingWall;
         private bool _isTouchingLedge;
-        private bool _coyoteTime;
+        private bool _isTouchingDashFruit;
+        
         private Collider2D _oneWayPlatformCollider;
+
+        private bool _coyoteTime;
+        private float _targetVelocityX;
+        private float _smoothDampVelocity;
 
         public PlayerAirState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
@@ -28,19 +35,21 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         {
             base.OnEnter();
             
-           ResetTriggers(manager.Input);
+            ResetTriggers(manager.Input);
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
             
-            UpdateInput(manager.Input);
-
             CheckJumping();
+
+            _targetVelocityX = Mathf.SmoothDamp(manager.CoreManager.MoveCore.CurrentVelocity.x,
+                coreManager.MoveCore.moveVelocity * _movementInput.x, ref _smoothDampVelocity,
+                manager.CoreManager.MoveCore.StateMachineData.smoothDampTime);
+            coreManager.MoveCore.SetVelocityX(_targetVelocityX);
             
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * _movementInput.x);
-            coreManager.MoveCore.CheckFlip(manager.Input.MovementInput.x);
+            coreManager.MoveCore.CheckFlip(manager.Input);
             
            manager.AnimationManager.SetFloat("velocityX", Mathf.Abs(coreManager.MoveCore.CurrentVelocity.x));
            manager.AnimationManager.SetFloat("velocityY", coreManager.MoveCore.CurrentVelocity.y);
@@ -59,8 +68,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             
             if (_jumpInput && manager.JumpState.CheckAmountOfJump())
             {
-                stateMachine.TranslateToState(manager.JumpState);
                 manager.Input.ResetJumpInput();
+                stateMachine.TranslateToState(manager.JumpState);
                 return;
             }
             
@@ -68,6 +77,12 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             {
                 manager.Input.ResetDashInput();
                 stateMachine.TranslateToState(manager.DashState);
+                return;
+            }
+
+            if (_specialDashInput && _isTouchingDashFruit)
+            {
+                stateMachine.TranslateToState(manager.SpecialDashState);
                 return;
             }
 
@@ -83,7 +98,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                 return;
             }
 
-            if (manager.isWallSlideEnable && _isTouchingWall && JudgeDirection(manager.Input.InputDirection,coreManager.MoveCore.Direction) &&
+            if (manager.isWallSlideEnable && _isTouchingWall && JudgeDirection(manager.Input.InputDirectionType,coreManager.MoveCore.CharacterDirection) &&
                 coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
                 stateMachine.TranslateToState(manager.WallSlideState);
@@ -101,6 +116,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             _isTouchingWall = coreManager.SenseCore.DetectWall;
             _isTouchingLedge = coreManager.SenseCore.DetectLedge;
             _oneWayPlatformCollider = coreManager.SenseCore.DetectOneWayPlatform;
+            _isTouchingDashFruit = coreManager.SenseCore.DetectDashFruit;
             
             if (_isTouchingWall && !_isTouchingLedge && !_oneWayPlatformCollider)
             {
@@ -108,12 +124,13 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             }
         }
 
-        private void UpdateInput(PlayerInputHandler input)
+        protected override void UpdateInput(PlayerInputHandler input)
         {
             _movementInput = input.MovementInput;
             _jumpInput = input.JumpInput;
             _jumpInputStop = input.JumpInputStop;
             _dashInput = input.DashInput;
+            _specialDashInput = input.SpecialDashInput;
             _attackInput = input.AttackInput;
             _specialAttackInput = input.SpecialAttackInput;
         }
@@ -149,15 +166,15 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private void CheckAirAttack()
         {
             manager.Input.ResetAttackInput();
-            switch (manager.Input.InputDirection)
+            switch (manager.Input.InputDirectionType)
             {
-                case PlayerInputDirection.Up:
+                case PlayerInputDirectionType.Up:
                     if (manager.AirUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirUpwardsAttackState);
                     }
                     break;
-                case PlayerInputDirection.Down:
+                case PlayerInputDirectionType.Down:
                     if (manager.AirDownwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.AirDownwardsAttackState);
@@ -175,15 +192,15 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private void CheckSpecialAttack()
         {
             manager.Input.ResetSpecialAttackInput();
-            switch (manager.Input.InputDirection)
+            switch (manager.Input.InputDirectionType)
             {
-                case PlayerInputDirection.Up:
+                case PlayerInputDirectionType.Up:
                     if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case PlayerInputDirection.Down:
+                case PlayerInputDirectionType.Down:
                     if (manager.SpecialDownwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDownwardsAttackState);
@@ -198,14 +215,14 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
             }
         }
 
-        private bool JudgeDirection(PlayerInputDirection inputDirection,int playerDirection)
+        private bool JudgeDirection(PlayerInputDirectionType inputDirectionType,int playerDirection)
         {
-            if (inputDirection == PlayerInputDirection.Right && playerDirection == 1)
+            if (inputDirectionType == PlayerInputDirectionType.Right && playerDirection == 1)
             {
                 return true;
             }
             
-            if(inputDirection == PlayerInputDirection.Left && playerDirection == -1)
+            if(inputDirectionType == PlayerInputDirectionType.Left && playerDirection == -1)
             {
                 return true;
             }
@@ -216,6 +233,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private void ResetTriggers(PlayerInputHandler input)
         {
             input.ResetDashInput();
+            input.ResetSpecialDashInput();
             input.ResetAttackInput();
             input.ResetSpecialAttackInput();
         }
@@ -223,5 +241,6 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         public void StartCoyoteTime() => _coyoteTime = true;
 
         public void StartJumping() => _isJumping = true;
+        public void EndJumping() => _isJumping = false;
     }
 } 

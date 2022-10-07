@@ -16,7 +16,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
             base.OnEnter();
 
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.groundAttack1VelocityX * coreManager.MoveCore.Direction);
+            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.StateMachineData.groundAttack1VelocityX * coreManager.MoveCore.CharacterDirection);
             coreManager.MoveCore.FreezeY(startPosition);
         }
 
@@ -28,9 +28,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
             {
                 return;
             }
-
-            UpdateInput(manager.Input);
-
+            
             coreManager.MoveCore.FreezeY(startPosition);
         }
 
@@ -47,7 +45,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
             }
         }
 
-        private void UpdateInput(PlayerInputHandler input)
+        protected override void UpdateInput(PlayerInputHandler input)
         {
             _attackInput = input.AttackInput;
         }
