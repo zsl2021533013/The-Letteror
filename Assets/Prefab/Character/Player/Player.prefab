@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1e3a9cebd45804e95192fdd016dec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInputEnable: 0
+  _isInputEnable: 1
 --- !u!114 &2662147733844279189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,7 +791,7 @@ MonoBehaviour:
   isDoubleJumpEnable: 1
   isWallSlideEnable: 1
   isDashEnable: 1
-  isSpecialDashEnable: 0
+  isSpecialDashEnable: 1
 --- !u!1 &2662147734006066535
 GameObject:
   m_ObjectHideFlags: 0
