@@ -180,6 +180,24 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                         stateMachine.TranslateToState(manager.AirDownwardsAttackState);
                     }
                     break;
+                case PlayerInputDirectionType.Left:
+                    if (manager.AirHorizontalAttack1State.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.AirHorizontalAttack1State);
+                    }
+                    break;
+                case PlayerInputDirectionType.Right:
+                    if (manager.AirHorizontalAttack1State.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.AirHorizontalAttack1State);
+                    }
+                    break;
+                case PlayerInputDirectionType.None:
+                    if (manager.AirHorizontalAttack1State.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.AirHorizontalAttack1State);
+                    }
+                    break;
                 default:
                     if (manager.AirHorizontalAttack1State.AttackEnable)
                     {
@@ -201,9 +219,27 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                     }
                     break;
                 case PlayerInputDirectionType.Down:
-                    if (manager.SpecialDownwardsAttackState.AttackEnable)
+                    if (manager.SpecialDownwardsAttack1State.AttackEnable)
                     {
-                        stateMachine.TranslateToState(manager.SpecialDownwardsAttackState);
+                        stateMachine.TranslateToState(manager.SpecialDownwardsAttack1State);
+                    }
+                    break;
+                case PlayerInputDirectionType.Left:
+                    if (manager.SpecialDashAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
+                    }
+                    break;
+                case PlayerInputDirectionType.Right:
+                    if (manager.SpecialDashAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
+                    }
+                    break;
+                case PlayerInputDirectionType.None:
+                    if (manager.SpecialDashAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
                 default:

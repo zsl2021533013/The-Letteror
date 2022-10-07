@@ -38,6 +38,7 @@ namespace Character.Player.Manager
         public PlayerDashState DashState { get; private set; }
         public PlayerSpecialDashState SpecialDashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
+        public PlayerGainAbilityState GainAbilityState { get; private set; }
         public PlayerDamagedState DamagedState { get; private set; }
         public PlayerDeathState DeathState { get; private set; }
 
@@ -53,7 +54,9 @@ namespace Character.Player.Manager
         public PlayerSpecialIdleAttackState SpecialIdleAttackState { get; private set; }
         public PlayerSpecialDashAttackState SpecialDashAttackState { get; private set; }
         public PlayerSpecialUpwardsAttackState SpecialUpwardsAttackState { get; private set; }
-        public PlayerSpecialDownwardsAttackState SpecialDownwardsAttackState { get; private set; }
+        public PlayerSpecialDownwardsAttack1State SpecialDownwardsAttack1State { get; private set; }
+        public PlayerSpecialDownwardsAttack2State SpecialDownwardsAttack2State { get; private set; }
+        public PlayerSpecialDownwardsAttack3State SpecialDownwardsAttack3State { get; private set; }
         
         #endregion
         
@@ -90,6 +93,7 @@ namespace Character.Player.Manager
             DashState = new PlayerDashState(this, "dash");
             SpecialDashState = new PlayerSpecialDashState(this, "idle");
             RollState = new PlayerRollState(this, "roll");
+            GainAbilityState = new PlayerGainAbilityState(this, "gainAbility");
             DamagedState = new PlayerDamagedState(this, "damaged");
             DeathState = new PlayerDeathState(this, "death");
 
@@ -105,8 +109,10 @@ namespace Character.Player.Manager
             SpecialIdleAttackState = new PlayerSpecialIdleAttackState(this, "groundAttack1");
             SpecialDashAttackState = new PlayerSpecialDashAttackState(this, "specialHorizontalAttack");
             SpecialUpwardsAttackState = new PlayerSpecialUpwardsAttackState(this, "specialUpwardsAttack");
-            SpecialDownwardsAttackState = new PlayerSpecialDownwardsAttackState(this, "groundAttack1");
-
+            SpecialDownwardsAttack1State = new PlayerSpecialDownwardsAttack1State(this, "specialDownwardsAttack1");
+            SpecialDownwardsAttack2State = new PlayerSpecialDownwardsAttack2State(this, "specialDownwardsAttack2");
+            SpecialDownwardsAttack3State = new PlayerSpecialDownwardsAttack3State(this, "specialDownwardsAttack3");
+            
             #endregion
         }
 

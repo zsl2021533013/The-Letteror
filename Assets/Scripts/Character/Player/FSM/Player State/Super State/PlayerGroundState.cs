@@ -14,7 +14,10 @@ namespace Character.Player.FSM.Player_State.Super_State
         private bool _rollInput;
         private bool _attackInput;
         private bool _specialAttackInput;
+        
         private bool _isGrounded;
+        private bool _isTouchingNewAbility;
+        
         private PlayerInputDirectionType _inputDirectionType;
         private Collider2D _oneWayPlatformCollider;
         
@@ -51,12 +54,16 @@ namespace Character.Player.FSM.Player_State.Super_State
             {
                 coreManager.MoveCore.DisableOneWayPlatform(_oneWayPlatformCollider);
             }
-            
-            if (_jumpInput &&manager.JumpState.CheckAmountOfJump())
+
+            switch (_jumpInput)
             {
-               manager.Input.ResetJumpInput();
-                stateMachine.TranslateToState(manager.JumpState);
-                return;
+                case true when _isTouchingNewAbility:
+                    stateMachine.TranslateToState(manager.GainAbilityState);
+                    return;
+                case true when manager.JumpState.CheckAmountOfJump():
+                    manager.Input.ResetJumpInput();
+                    stateMachine.TranslateToState(manager.JumpState);
+                    return;
             }
 
             if (manager.isDashEnable && _dashInput &&manager.DashState.CheckAmountOfDash())
@@ -86,6 +93,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             base.DoChecks();
 
             _isGrounded = coreManager.SenseCore.DetectGround;
+            _isTouchingNewAbility = coreManager.SenseCore.DetectNewAbility;
             _oneWayPlatformCollider = coreManager.SenseCore.DetectOneWayPlatform;
         }
 

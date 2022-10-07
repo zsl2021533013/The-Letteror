@@ -11,6 +11,7 @@ namespace Character.Player.Core.Core_Component
         public Transform wallSensor;
         public Transform ledgeSensor;
         public Transform specialDashSensor;
+        public Transform newAbilitySensor;
 
         [Header("Ground Sensor")]
         public LayerMask groundLayerMask;
@@ -27,6 +28,10 @@ namespace Character.Player.Core.Core_Component
         [Header("Special Dash Sensor")] 
         public float specialDashSensorRadius;
         public LayerMask specialDashLayerMask;
+
+        [Header("New Ability Sensor")] 
+        public float newAbilitySensorRadius;
+        public LayerMask newAbilityLayerMask;
         
         public Collider2D DetectOneWayPlatform => Physics2D.OverlapBox(oneWayPlatformSensor.position, 
             oneWayPlatformSensorSize, 0f, oneWayPlatformLayerMask);
@@ -44,6 +49,9 @@ namespace Character.Player.Core.Core_Component
 
         public bool DetectDashFruit => Physics2D.OverlapCircle(specialDashSensor.position,
             specialDashSensorRadius, specialDashLayerMask);
+        
+        public bool DetectNewAbility => Physics2D.OverlapCircle(newAbilitySensor.position,
+            newAbilitySensorRadius, newAbilityLayerMask);
         
         public Vector2 GetCornerPosition()
         {
@@ -75,6 +83,9 @@ namespace Character.Player.Core.Core_Component
             
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(specialDashSensor.position, specialDashSensorRadius);
+            
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(newAbilitySensor.position, newAbilitySensorRadius);
         }
     }
 }
