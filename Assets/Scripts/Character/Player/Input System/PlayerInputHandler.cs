@@ -16,7 +16,6 @@ namespace Character.Player.Input_System
 
     public class PlayerInputHandler : Singleton<PlayerInputHandler>
     {
-        public bool isInputEnable;
         public Vector2 MovementInput { get; private set; }
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
@@ -28,6 +27,8 @@ namespace Character.Player.Input_System
         
         public InputControls Controls{ get; private set; }
 
+        public bool _isInputEnable;
+        
         public int InputDirection
         {
             get
@@ -92,12 +93,17 @@ namespace Character.Player.Input_System
             Controls.Player.Attack.started += OnAttackInput;
             
             Controls.Player.SpecialAttack.started += OnSpecialAttackInput;
-        }   
+        }
+
+        public void DisableInput() => _isInputEnable = false;
+        public void EnableInput() => _isInputEnable = true;
 
         #region Input Event
 
-        public void OnMoveInput(InputAction.CallbackContext ctx)
+        private void OnMoveInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.performed)
             {
                 MovementInput = ctx.ReadValue<Vector2>();
@@ -109,8 +115,10 @@ namespace Character.Player.Input_System
             }
         }
 
-        public void OnJumpInput(InputAction.CallbackContext ctx)
+        private void OnJumpInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.started)
             {
                 JumpInput = true;
@@ -123,16 +131,20 @@ namespace Character.Player.Input_System
             }
         }
 
-        public void OnDashInput(InputAction.CallbackContext ctx)
+        private void OnDashInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.started)
             {
                 DashInput = true;
             }
         }
-        
-        public void OnSpecialDashInput(InputAction.CallbackContext ctx)
+
+        private void OnSpecialDashInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.started)
             {
                 SpecialDashInput = true;
@@ -144,24 +156,30 @@ namespace Character.Player.Input_System
             }
         }
 
-        public void OnRollInput(InputAction.CallbackContext ctx)
+        private void OnRollInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.started)
             {
                 RollInput = true;
             }
         }
 
-        public void OnAttackInput(InputAction.CallbackContext ctx)
+        private void OnAttackInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.started)
             {
                 AttackInput = true;
             }
         }
-        
-        public void OnSpecialAttackInput(InputAction.CallbackContext ctx)
+
+        private void OnSpecialAttackInput(InputAction.CallbackContext ctx)
         {
+            if(!_isInputEnable) return;
+            
             if (ctx.started)
             {
                 SpecialAttackInput = true;
