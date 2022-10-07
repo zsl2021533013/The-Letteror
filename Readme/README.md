@@ -10,6 +10,7 @@
 4. 翻滚键（shift，B）
 5. 冲刺键（大写，右肩键）
 6. 特殊攻击键（I 键，Y 键）
+7. 特殊冲刺键（鼠标右键，左肩键）
 
 Parallax Controller 使用方法：
 1. 将组件直接添加到需要视差效果的瓦片中即可
@@ -23,3 +24,6 @@ Camera Confiner 用法：
 单向平台用法：
 1. 添加 TileMap Collider 2D（勾选复合使用），Composite Collider 2D（勾选由效果器使用），Platform Effector 2D
 将碰撞层级改为 OneWayPlatform
+
+Dash Fruit 使用方法:
+1. 将物体添加好 Rigidbody2D 和 Collider 后，将 Rigidbody2D 类型设置为 Static，将物体 Layer 改为 DashFruit
