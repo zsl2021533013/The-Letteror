@@ -32,6 +32,37 @@ Transform:
   m_Father: {fileID: 2662147733844279188}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &909981492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 909981493}
+  m_Layer: 0
+  m_Name: Special Dash Sensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &909981493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909981492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2662147732556282610}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533624988
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +180,7 @@ Transform:
   - {fileID: 2662147733334738141}
   - {fileID: 2662147734006066532}
   - {fileID: 2662147732603755961}
+  - {fileID: 909981493}
   m_Father: {fileID: 2662147733705345769}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -167,6 +199,7 @@ MonoBehaviour:
   groundSensor: {fileID: 2662147732588150293}
   wallSensor: {fileID: 2662147733334738141}
   ledgeSensor: {fileID: 2662147734006066532}
+  specialDashSensor: {fileID: 909981493}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 1088
@@ -177,6 +210,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   oneWayPlatformSensorSize: {x: 0.4, y: 1.5}
+  specialDashSensorRadius: 1.5
+  specialDashLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!1 &2662147732588150292
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +791,7 @@ MonoBehaviour:
   isDoubleJumpEnable: 1
   isWallSlideEnable: 1
   isDashEnable: 1
+  isSpecialDashEnable: 0
 --- !u!1 &2662147734006066535
 GameObject:
   m_ObjectHideFlags: 0
