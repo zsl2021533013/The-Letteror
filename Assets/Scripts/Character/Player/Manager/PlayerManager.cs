@@ -91,7 +91,7 @@ namespace Character.Player.Manager
             WallJumpState = new PlayerWallJumpState(this, "inAir");
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
-            SpecialDashState = new PlayerSpecialDashState(this, "idle");
+            SpecialDashState = new PlayerSpecialDashState(this, "specialDash");
             RollState = new PlayerRollState(this, "roll");
             GainAbilityState = new PlayerGainAbilityState(this, "gainAbility");
             DamagedState = new PlayerDamagedState(this, "damaged");
