@@ -255,6 +255,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-6953407579061219485
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: specialDash
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 0}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 1
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1109 &-6898948916122861699
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -314,6 +339,33 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-6087878589284911823
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Special_Dash
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -6953407579061219485}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: dc0402d8c4f066e4486fa677e53bb0a4, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1109 &-5460533443088053970
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -646,10 +698,10 @@ AnimatorStateMachine:
     m_Position: {x: 390, y: 860, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6269802629367675678}
-    m_Position: {x: 390, y: 1280, z: 0}
+    m_Position: {x: 390, y: 1340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8230587375146903433}
-    m_Position: {x: 390, y: 1350, z: 0}
+    m_Position: {x: 390, y: 1410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 513075832177981177}
     m_Position: {x: 390, y: 980, z: 0}
@@ -668,6 +720,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -1129569445934522173}
     m_Position: {x: 390, y: 1220, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -6087878589284911823}
+    m_Position: {x: 390, y: 1280, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
@@ -694,6 +749,7 @@ AnimatorStateMachine:
   - {fileID: -6885639732310691923}
   - {fileID: 8632617750966626731}
   - {fileID: -4266024423562500882}
+  - {fileID: 5252098828844148609}
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
@@ -1141,6 +1197,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: dash
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: specialDash
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1625,7 +1687,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 7510c8aa00086e24d9b394943ef317f0, type: 2}
     m_Threshold: -20
-    m_Position: {x: 1, y: 18}
+    m_Position: {x: 0, y: -10}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: velocityY
@@ -1641,18 +1703,34 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 47c8c2ecac917d842a697047e7d54370, type: 2}
     m_Threshold: 15
-    m_Position: {x: 0, y: 18}
+    m_Position: {x: 0, y: 10}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: velocityY
     m_Mirror: 0
-  m_BlendParameter: velocityY
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 4b6d951ace2532846b828494dda1f276, type: 2}
+    m_Threshold: 30
+    m_Position: {x: 20, y: -10}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: velocityY
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 31a3c126dc9758c468721b4f8b887174, type: 2}
+    m_Threshold: 45
+    m_Position: {x: 20, y: 10}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: velocityY
+    m_Mirror: 0
+  m_BlendParameter: velocityX
   m_BlendParameterY: velocityY
   m_MinThreshold: -20
-  m_MaxThreshold: 15
+  m_MaxThreshold: 45
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
-  m_BlendType: 0
+  m_BlendType: 2
 --- !u!1101 &4432884234591307522
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1770,6 +1848,23 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1109 &5252098828844148609
+AnimatorTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: specialDash
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -6087878589284911823}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 1
 --- !u!1101 &5911321019819478288
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
