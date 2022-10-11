@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6662d52f9c280cd44bbb6dcf2f851c25
+guid: a73c31dac24e979409758e94b3819815
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,64 +104,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SuperAtkDownBegin110x180_0
+      name: Special Downwards Attack 1 200x180_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 110
+        width: 200
         height: 180
       alignment: 9
-      pivot: {x: 0.54545456, y: 0.44444445}
+      pivot: {x: 0.55, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e58d19db21bc6544a809639ab21ec861
-      internalID: 37610461
+      spriteID: b51f52eda4d87a842a296e1a7f1dde8c
+      internalID: 1483546528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuperAtkDownBegin110x180_1
+      name: Special Downwards Attack 1 200x180_1
       rect:
         serializedVersion: 2
-        x: 110
+        x: 200
         y: 0
-        width: 110
+        width: 200
         height: 180
       alignment: 9
-      pivot: {x: 0.54545456, y: 0.44444445}
+      pivot: {x: 0.55, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c76eedff5be7c24dbca4b5dd1d9b68e
-      internalID: 955516605
+      spriteID: 6422737c14c0dd34ba7619f04860d2bc
+      internalID: -1178321396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuperAtkDownBegin110x180_2
+      name: Special Downwards Attack 1 200x180_2
       rect:
         serializedVersion: 2
-        x: 220
+        x: 400
         y: 0
-        width: 110
+        width: 200
         height: 180
       alignment: 9
-      pivot: {x: 0.54545456, y: 0.44444445}
+      pivot: {x: 0.55, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a3f1cd9e11124845925c1cc45b2f2ce
-      internalID: -1437236683
+      spriteID: 96cb535f20f312b4c9ffd9806433362b
+      internalID: -870554803
       vertices: []
       indices: 
       edges: []
@@ -177,9 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SuperAtkDownBegin110x180_0: 37610461
-      SuperAtkDownBegin110x180_2: -1437236683
-      SuperAtkDownBegin110x180_1: 955516605
+      Special Downwards Attack 1 200x180_0: 1483546528
+      Special Downwards Attack 1 200x180_1: -1178321396
+      Special Downwards Attack 1 200x180_2: -870554803
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

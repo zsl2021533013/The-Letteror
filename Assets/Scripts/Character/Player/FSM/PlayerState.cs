@@ -28,5 +28,14 @@ namespace Character.Player.FSM
         protected virtual void UpdateInput(PlayerInputHandler input)
         {
         }
+
+        public override void OnCharacterDie()
+        {
+            if (manager.IsDead)
+            {
+                manager.ResetDead();
+                stateMachine.TranslateToState(manager.DeathState);
+            }
+        }
     }
 }

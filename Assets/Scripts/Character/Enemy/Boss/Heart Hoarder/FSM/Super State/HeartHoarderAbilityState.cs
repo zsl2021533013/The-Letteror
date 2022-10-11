@@ -23,6 +23,11 @@ namespace Character.Enemy.Boss.Heart_Hoarder.FSM.Super_State
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (isAnimationFinish)
             {
                 OnAnimationFinish();

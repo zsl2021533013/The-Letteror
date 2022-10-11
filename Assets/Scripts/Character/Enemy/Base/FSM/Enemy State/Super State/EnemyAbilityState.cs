@@ -23,6 +23,11 @@ namespace Character.Enemy.Base.FSM.Enemy_State.Super_State
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (isAnimationFinish)
             {
                 OnAnimationFinish();

@@ -43,7 +43,9 @@ namespace Character.Base.FSM.Base_State
 
         public virtual void OnUpdate()
         {
-            
+            OnCharacterDamaged();
+
+            OnCharacterDie();
         }
 
         public virtual void OnFixedUpdate()
@@ -56,5 +58,15 @@ namespace Character.Base.FSM.Base_State
         }
 
         public void AnimationFinish() => isAnimationFinish = true;
+
+        public virtual void OnCharacterDamaged()
+        {
+            
+        }
+
+        public virtual void OnCharacterDie()
+        {
+            
+        }
     }
 }

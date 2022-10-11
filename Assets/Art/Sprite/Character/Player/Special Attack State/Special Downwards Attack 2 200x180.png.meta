@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3aadc7eb7767e0d43b4492c9f1dc4ab0
+guid: eb4152bbdc1f3b2408d5e318657c97ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Special Downwards Attack 2 110x180_0
+      name: Special Downwards Attack 2 200x180_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1eb1fc8c0fdc63419b1fa278470a7b8
-      internalID: 590597823
+      spriteID: c45289852253f494caf51f120f409f1c
+      internalID: -1404669646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Special Downwards Attack 2 110x180_1
+      name: Special Downwards Attack 2 200x180_1
       rect:
         serializedVersion: 2
         x: 200
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eba4506eaae46e468a58e421bc5274b
-      internalID: 331453104
+      spriteID: dcb165d7404be6a409dd05d2552e8a4a
+      internalID: 62499472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Special Downwards Attack 2 110x180_2
+      name: Special Downwards Attack 2 200x180_2
       rect:
         serializedVersion: 2
         x: 400
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6e2fc51e8aa0a4468380ba1514f585f
-      internalID: 1327999098
+      spriteID: 39b3a3b7dcabfd94581f6741c5e88fb2
+      internalID: 292706007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Special Downwards Attack 2 110x180_3
+      name: Special Downwards Attack 2 200x180_3
       rect:
         serializedVersion: 2
         x: 600
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b095523b2336a77409be774feded1b17
-      internalID: -1964425429
+      spriteID: 0a5e25f0c465e62409c3ef7b6a20859e
+      internalID: -438531750
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Special Downwards Attack 2 110x180_0: 590597823
-      Special Downwards Attack 2 110x180_2: 1327999098
-      Special Downwards Attack 2 110x180_3: -1964425429
-      Special Downwards Attack 2 110x180_1: 331453104
+      Special Downwards Attack 2 200x180_1: 62499472
+      Special Downwards Attack 2 200x180_3: -438531750
+      Special Downwards Attack 2 200x180_2: 292706007
+      Special Downwards Attack 2 200x180_0: -1404669646
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,4 +1,5 @@
-﻿using Character.Base.Manager;
+﻿using Character.Base.Data;
+using Character.Base.Manager;
 using Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ability_State;
 using Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State;
 using UnityEngine;
@@ -72,13 +73,6 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
             }
             
             BattleManager.Flash();
-        }
-
-        public override void Death()
-        {
-            base.Death();
-            
-            StateMachine.TranslateToState(DeathState);
         }
     }
 }

@@ -28,5 +28,18 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State
 
             _inFlipRange = coreManager.SenseCore.InFlipRange;
         }
+
+        protected override void OnAnimationFinish()
+        {
+            if (manager.IsDamaged)
+            {
+                manager.ResetDamaged();
+                return;
+            }
+        }
+
+        public override void OnCharacterDamaged()
+        {
+        }
     }
 }

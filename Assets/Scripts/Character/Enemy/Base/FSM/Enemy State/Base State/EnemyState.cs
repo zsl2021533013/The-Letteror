@@ -1,6 +1,7 @@
 using Character.Base.FSM.Base_State;
 using Character.Base.Manager;
 using Character.Enemy.Core.Core_Manager;
+using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State;
 using Character.Enemy.Manager;
 
 namespace Character.Enemy.FSM
@@ -14,6 +15,26 @@ namespace Character.Enemy.FSM
         {
             this.manager = (EnemyManager)manager;
             coreManager = (EnemyCoreManager)manager.CoreManager;
+        }
+
+        public override void OnCharacterDie()
+        {
+            if (manager.IsDead)
+            {
+                manager.ResetDead();
+                stateMachine.TranslateToState(manager.DeathState);
+                return;
+            }
+        }
+
+        public override void OnCharacterDamaged()
+        {
+            if (manager.IsDamaged)
+            {
+                manager.ResetDamaged();
+                stateMachine.TranslateToState(manager.DamagedState);
+                return;
+            }
         }
     }
 }

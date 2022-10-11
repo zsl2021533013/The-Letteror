@@ -15,6 +15,11 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Super_State
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (isAnimationFinish)
             {
                 OnAnimationFinish();

@@ -29,8 +29,11 @@ namespace Character.Player.FSM.Player_State.Super_State
         {
             base.OnUpdate();
 
-            jumpInput =manager.Input.JumpInput;
-            
+            if (isStateFinished)
+            {
+                return;
+            }
+
             if (_isGrounded && !grabInput)
             {
                 stateMachine.TranslateToState(manager.IdleState);
@@ -57,6 +60,13 @@ namespace Character.Player.FSM.Player_State.Super_State
 
             _isGrounded = coreManager.SenseCore.DetectGround;
             _isTouchingWall = coreManager.SenseCore.DetectWall;
+        }
+
+        protected override void UpdateInput(PlayerInputHandler input)
+        {
+            base.UpdateInput(input);
+            
+            jumpInput = input.JumpInput;
         }
 
         private void ResetTriggers(PlayerInputHandler input)

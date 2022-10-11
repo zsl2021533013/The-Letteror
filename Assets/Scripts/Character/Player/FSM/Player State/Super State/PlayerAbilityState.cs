@@ -25,6 +25,11 @@ namespace Character.Player.FSM.Player_State.Super_State
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (isAnimationFinish)
             {
                 OnAnimationFinish();

@@ -36,6 +36,11 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
         {
             base.OnUpdate();
             
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             ChooseAttackType();
         }
 

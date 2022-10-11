@@ -15,6 +15,11 @@ namespace Character.Enemy.Boss.Heart_Hoarder
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             coreManager.CharacterTransform.localScale = new Vector3(coreManager.SenseCore.PlayerDirection, 1, 1);
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.SenseCore.PlayerDirection);
             

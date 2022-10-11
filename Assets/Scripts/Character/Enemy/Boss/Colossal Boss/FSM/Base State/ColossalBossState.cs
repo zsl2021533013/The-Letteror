@@ -15,5 +15,14 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Base_State
             this.manager = (ColossalBossManager)manager;
             coreManager = (ColossalBossCoreManager)base.coreManager;
         }
+        
+        public override void OnCharacterDie()
+        {
+            if (manager.IsDead)
+            {
+                manager.ResetDead();
+                stateMachine.TranslateToState(manager.DeathState);
+            }
+        }
     }
 }

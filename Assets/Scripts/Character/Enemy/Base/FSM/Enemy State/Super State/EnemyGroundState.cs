@@ -18,6 +18,11 @@ namespace Character.Enemy.Base.FSM.Enemy_State.Super_State
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (inAttackRange && manager.AttackState.AttackEnable)
             {
                 stateMachine.TranslateToState(manager.AttackState);

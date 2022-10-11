@@ -1,4 +1,5 @@
-﻿using Character.Base.Manager;
+﻿using Character.Base.Data;
+using Character.Base.Manager;
 using Character.Enemy.Boss.Blood_King.Core.Core_Manager;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_State;
@@ -112,13 +113,6 @@ namespace Character.Enemy.Boss.Blood_King.Manager
             }*/
 
             BattleManager.Flash();
-        }
-
-        public override void Death()
-        {
-            base.Death();
-            
-            StateMachine.TranslateToState(DeathState);
         }
 
         public void HeartAttack()

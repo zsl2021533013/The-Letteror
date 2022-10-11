@@ -12,24 +12,25 @@ namespace Character.Base.Manager
         public Material defaultMaterial;
         
         protected CharacterBattleManager targetBattleManager;
-        protected CharacterManager manager;
-        
+
         private bool _isImmortal;
         private CharacterBattleData _battleData;
         private SpriteRenderer _spriteRenderer;
 
+        public CharacterManager Manager { get; private set; }
+        
         public CharacterBattleData BattleData => _battleData;
         public bool IsImmortal => _isImmortal;
         
         protected virtual void Awake()
         {
-            manager = GetComponentInParent<CharacterManager>();
+            Manager = GetComponentInParent<CharacterManager>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Start()
         {
-            _battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(manager.name));
+            _battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(Manager.name));
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -37,55 +38,22 @@ namespace Character.Base.Manager
             if (col.CompareTag("Player") || col.CompareTag("Enemy"))
             {
                 targetBattleManager = col.GetComponent<CharacterManager>().BattleManager;
-                manager.TryToDamage(targetBattleManager);
-            }
-        }
-
-        public void TryToDamage(CharacterBattleManager targetBattleManager)
-        {
-            if (targetBattleManager.IsImmortal)
-            {
-                return;
-            }
-            
-            targetBattleManager.Damaged(_battleData);
-        }
-        
-        public void TryToDamage(int attack)
-        {
-            if (targetBattleManager.IsImmortal)
-            {
-                return;
-            }
-            
-            targetBattleManager.Damaged(attack);
-        }
-        
-        public void Damaged(CharacterBattleData targetBattleData)
-        {
-            _battleData.health -= targetBattleData.attack;
-            if (_battleData.health <= 0)
-            {
-                _battleData.health = 0;
-                manager.Death();
-            }
-            else
-            {
-                manager.Damaged();
+                Manager.TryToDamage(targetBattleManager);
             }
         }
 
         public void Damaged(int attack)
         {
             _battleData.health -= attack;
-            if (_battleData.health <= 0)
+            
+            if (_battleData.health > 0)
             {
-                _battleData.health = 0;
-                manager.Death();
+                Manager.Damaged();
             }
             else
             {
-                manager.Damaged();
+                _battleData.health = 0;
+                Manager.Die();
             }
         }
         

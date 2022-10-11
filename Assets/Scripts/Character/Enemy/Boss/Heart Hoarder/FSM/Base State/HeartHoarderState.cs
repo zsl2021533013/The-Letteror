@@ -14,5 +14,14 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             this.manager = (HeartHoarderManager)manager;
             coreManager = (HeartHoarderCoreManager)manager.CoreManager;   
         }
+        
+        public override void OnCharacterDie()
+        {
+            if (manager.IsDead)
+            {
+                manager.ResetDead();
+                stateMachine.TranslateToState(manager.DeathState);
+            }
+        }
     }
 }

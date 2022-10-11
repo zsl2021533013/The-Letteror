@@ -37,6 +37,11 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
         {
             base.OnUpdate();
             
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
 
             switch (coreManager.MoveCore.CharacterDirection)

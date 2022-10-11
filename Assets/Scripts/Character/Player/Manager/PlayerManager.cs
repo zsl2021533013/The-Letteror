@@ -1,3 +1,4 @@
+using Character.Base.Data;
 using Character.Base.Manager;
 using Character.Player.Core.Core_Manager;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State;
@@ -135,16 +136,16 @@ namespace Character.Player.Manager
         public override void Damaged()
         {
             base.Damaged();
-            
+
+            GameManager.Instance.RefreshUI(BattleManager.BattleData);
             BattleManager.Flash();
-            //StateMachine.TranslateToState(DamagedState);
         }
 
-        public override void Death()
+        public override void Die()
         {
-            base.Death();
+            base.Die();
             
-            StateMachine.TranslateToState(DeathState);
+            GameManager.Instance.RefreshUI(BattleManager.BattleData);
         }
     }
 }

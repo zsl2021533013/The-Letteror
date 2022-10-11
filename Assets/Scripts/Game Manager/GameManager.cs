@@ -1,4 +1,6 @@
-﻿using Tool.Generic;
+﻿using Character.Base.Data;
+using Character.Player.Data.Player_Battle_Data;
+using Tool.Generic;
 using UnityEngine;
 
 namespace Game_Manager
@@ -18,6 +20,11 @@ namespace Game_Manager
         {
             PlayerTransform = playerTransform;
             Debug.Log("Game Manager has registered player");
+        }
+
+        public void RefreshUI(CharacterBattleData battleData)
+        {
+            UIManager.Instance.RefreshHealthUI(battleData.health);
         }
     }
 }

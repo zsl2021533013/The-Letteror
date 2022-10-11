@@ -37,6 +37,11 @@ namespace Character.Player.FSM.Player_State.Super_State
         public override void OnUpdate()
         {
             base.OnUpdate();
+         
+            if (isStateFinished)
+            {
+                return;
+            }
             
             if (_attackInput)
             {

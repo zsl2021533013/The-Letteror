@@ -1,4 +1,5 @@
 ﻿using System;
+using Character.Base.Data;
 using Character.Base.Manager;
 using Character.Enemy.Boss.Heart_Hoarder.FSM.Sub_State.Ability_State;
 using Unity.VisualScripting;
@@ -99,13 +100,6 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             }
 
             BattleManager.Flash();
-        }
-
-        public override void Death()
-        {
-            base.Death();
-            
-            StateMachine.TranslateToState(DeathState);
         }
     }
 }

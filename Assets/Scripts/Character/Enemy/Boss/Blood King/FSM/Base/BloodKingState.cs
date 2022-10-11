@@ -16,5 +16,14 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Base
             this.manager = (BloodKingManager)manager;
             coreManager = (BloodKingCoreManager)base.coreManager;
         }
+
+        public override void OnCharacterDie()
+        {
+            if (manager.IsDead)
+            {
+                manager.ResetDead();
+                stateMachine.TranslateToState(manager.DeathState);
+            }
+        }
     }
 }
