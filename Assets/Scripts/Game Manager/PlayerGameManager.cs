@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game_Manager
 {
-    public class GameManager : Singleton<GameManager>
+    public class PlayerGameManager : Singleton<PlayerGameManager>
     {
         public Transform PlayerTransform { get; private set; }
 
@@ -20,11 +20,6 @@ namespace Game_Manager
         {
             PlayerTransform = playerTransform;
             Debug.Log("Game Manager has registered player");
-        }
-
-        public void RefreshUI(CharacterBattleData battleData)
-        {
-            UIManager.Instance.RefreshHealthUI(battleData.health);
         }
     }
 }

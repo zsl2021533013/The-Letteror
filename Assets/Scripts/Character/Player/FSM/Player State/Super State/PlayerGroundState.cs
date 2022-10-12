@@ -17,6 +17,7 @@ namespace Character.Player.FSM.Player_State.Super_State
         
         private bool _isGrounded;
         private bool _isTouchingNewAbility;
+        private bool _isInteracting;
         
         private PlayerInputDirectionType _inputDirectionType;
         private Collider2D _oneWayPlatformCollider;
@@ -65,6 +66,8 @@ namespace Character.Player.FSM.Player_State.Super_State
                 case true when _isTouchingNewAbility:
                     stateMachine.TranslateToState(manager.GainAbilityState);
                     return;
+                case true when _isInteracting:
+                    break;
                 case true when manager.JumpState.CheckAmountOfJump():
                     manager.Input.ResetJumpInput();
                     stateMachine.TranslateToState(manager.JumpState);
@@ -99,6 +102,7 @@ namespace Character.Player.FSM.Player_State.Super_State
 
             _isGrounded = coreManager.SenseCore.DetectGround;
             _isTouchingNewAbility = coreManager.SenseCore.DetectNewAbility;
+            _isInteracting = coreManager.SenseCore.DetectInteract;
             _oneWayPlatformCollider = coreManager.SenseCore.DetectOneWayPlatform;
         }
 

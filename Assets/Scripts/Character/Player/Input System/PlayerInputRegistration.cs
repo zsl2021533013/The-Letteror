@@ -14,13 +14,10 @@ public class PlayerInputRegistration : MonoBehaviour
     protected static bool isRegistered = false;
     private bool didIRegister = false;
 
-    private void Start()
-    {
-        controls = PlayerInputHandler.Instance.Controls;
-    }
-
     private void OnEnable()
     {
+        controls = PlayerInputHandler.Instance.Controls;
+        
         if (!isRegistered)
         {
             isRegistered = true;

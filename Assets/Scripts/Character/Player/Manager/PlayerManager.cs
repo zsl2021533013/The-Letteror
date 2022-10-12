@@ -17,15 +17,20 @@ namespace Character.Player.Manager
 {
     public class PlayerManager : CharacterManager
     {
+        [SerializeField] private GameObject floatDamagePrefab;
+        private GameObject tempFloatDamage;
+        
         [Header("Player Ability Active")] 
         public bool isDoubleJumpEnable;
         public bool isWallSlideEnable;
         public bool isDashEnable;
         public bool isSpecialDashEnable;
         
+        public PlayerGameManager GameManager { get; private set; }
+        public PlayerUIManager UIManager { get; private set; }
         public PlayerInputHandler Input { get; private set; }
         public new PlayerCoreManager CoreManager { get; private set; }
-        
+
         #region Player FSM Attribute
         
         public PlayerIdleState IdleState { get; private set; }
@@ -74,9 +79,22 @@ namespace Character.Player.Manager
         protected override void Start()
         {
             base.Start();
+
+            GameManager = PlayerGameManager.Instance;
+            UIManager = PlayerUIManager.Instance;
             
-            GameManager.Instance.RegisterPlayer(transform);
+            GameManager.RegisterPlayer(transform);
+            
             StateMachine.Initialize(IdleState);
+            
+            if (!GameManager)
+            {
+                Debug.LogError("Missing Game Manager");
+            }
+            if (!UIManager)
+            {
+                Debug.LogError("Missing UI Manager");
+            }
         }
 
         protected override void InitializeFSM()
@@ -137,7 +155,7 @@ namespace Character.Player.Manager
         {
             base.Damaged();
 
-            GameManager.Instance.RefreshUI(BattleManager.BattleData);
+            UIManager.RefreshHealthUI(BattleManager.BattleData.health);
             BattleManager.Flash();
         }
 
@@ -145,7 +163,17 @@ namespace Character.Player.Manager
         {
             base.Die();
             
-            GameManager.Instance.RefreshUI(BattleManager.BattleData);
+            UIManager.RefreshHealthUI(BattleManager.BattleData.health);
+        }
+
+        public void CloseHUD()
+        {
+            UIManager.CloseHUD();
+        }
+
+        public void OpenHUD()
+        {
+            UIManager.OpenHUD();
         }
     }
 }

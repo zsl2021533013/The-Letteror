@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e9139347159b0bc47b7c453a1bfba3fe
+guid: fbbfbb765c4c3a942ae88bd46f83f551
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JumpY2 200x180_0
+      name: MiddleTrans200x180_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,50 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 197929668d6aec6498fa6794519c4917
-      internalID: 1309682621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpY2 200x180_1
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 0
-        width: 200
-        height: 180
-      alignment: 9
-      pivot: {x: 0.55, y: 0.44444445}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 725de0eea1d1bf34daee37ba82f4d7a4
-      internalID: 1047256808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpY2 200x180_2
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 200
-        height: 180
-      alignment: 9
-      pivot: {x: 0.55, y: 0.44444445}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9020ef0a2757e145b9e94dfa5ab44ea
-      internalID: -1666292433
+      spriteID: 52797f62033b48447b8c0f0e5b0af355
+      internalID: -883146345
       vertices: []
       indices: 
       edges: []
@@ -177,9 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      JumpY2 200x180_0: 1309682621
-      JumpY2 200x180_1: 1047256808
-      JumpY2 200x180_2: -1666292433
+      MiddleTrans200x180_0: -883146345
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
