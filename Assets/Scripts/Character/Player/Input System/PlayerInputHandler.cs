@@ -258,7 +258,7 @@ namespace Character.Player.Input_System
         public void ResetAttackInput() => AttackInput = false;
         public void ResetSpecialAttackInput() => SpecialAttackInput = false;
         public void ResetInteractInput() => InteractInput = false;
-
+        
         #endregion
 
     }

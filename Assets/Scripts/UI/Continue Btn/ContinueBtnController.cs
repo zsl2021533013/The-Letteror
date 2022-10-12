@@ -9,23 +9,12 @@ namespace UI.Continue_Btn
     {
         [SerializeField] private UnityEvent onContinueInput;
 
-        private PlayerInputHandler _input;
         private bool _interactInput;
-
-        private void Start()
-        {
-            _input = PlayerInputHandler.Instance;
-
-            if (!_input)
-            {
-                Debug.LogError("Missing Input Handler");
-            }
-        }
 
         private void Update()
         {
-            _interactInput = _input.InteractInput;
-            
+            _interactInput = PlayerInputHandler.Instance.InteractInput;
+
             if (_interactInput)
             {
                 onContinueInput.Invoke();
