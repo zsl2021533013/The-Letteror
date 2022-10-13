@@ -535,7 +535,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -457182219
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1934998073, guid: 448075c68dcf9e64c93cafdfaf881ab2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -680,10 +680,10 @@ GameObject:
   - component: {fileID: 2662147733844279195}
   - component: {fileID: 693271466}
   - component: {fileID: 3410888353091727112}
+  - component: {fileID: 5735287368771631088}
   - component: {fileID: 2662147733844279194}
   - component: {fileID: 2662147733844279189}
   - component: {fileID: 1400901678}
-  - component: {fileID: 5735287368771631088}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -975,6 +975,25 @@ MonoBehaviour:
     onDialogueSystemUnpause:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &5735287368771631088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2662147733844279185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9481d631e872c45a9f702509a148ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagSpecificElements: []
+  layerSpecificElements:
+  - layerMask:
+      serializedVersion: 2
+      m_Bits: 16384
+    defaultUseMessage: 
+    UIElements: {fileID: 5491727230503087076, guid: ca7b28006ccbd1141b218875d85a7d8b, type: 3}
 --- !u!114 &2662147733844279194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,25 +1038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67b545779e706f4cb271eaf0ba95823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5735287368771631088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2662147733844279185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9481d631e872c45a9f702509a148ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagSpecificElements: []
-  layerSpecificElements:
-  - layerMask:
-      serializedVersion: 2
-      m_Bits: 16384
-    defaultUseMessage: 
-    UIElements: {fileID: 5491727230503087076, guid: ca7b28006ccbd1141b218875d85a7d8b, type: 3}
 --- !u!1 &2662147734006066535
 GameObject:
   m_ObjectHideFlags: 0
