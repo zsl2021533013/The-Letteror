@@ -1,6 +1,8 @@
+using System;
 using Character.Base.Data;
 using Character.Base.Manager;
 using Character.Player.Core.Core_Manager;
+using Character.Player.Data.Player_Ability_Data;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
@@ -12,21 +14,17 @@ using Character.Player.FSM.Player_State.Sub_State.Wall_State;
 using Character.Player.Input_System;
 using Game_Manager;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Character.Player.Manager
 {
     public class PlayerManager : CharacterManager
     {
-        [SerializeField] private GameObject floatDamagePrefab;
-        private GameObject tempFloatDamage;
+        /*[SerializeField] private GameObject floatDamagePrefab;
+        private GameObject tempFloatDamage;*/
         
-        [Header("Player Ability Active")] 
-        public bool isDoubleJumpEnable;
-        public bool isWallSlideEnable;
-        public bool isDashEnable;
-        public bool isSpecialDashEnable;
-        
-        public GameManager GameManager { get; private set; }
+        public bool IsGainAbility { get; set; }
+        public PlayerAbilityData AbilityData { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
         public PlayerInputHandler Input { get; private set; }
         public new PlayerCoreManager CoreManager { get; private set; }
@@ -80,20 +78,27 @@ namespace Character.Player.Manager
         {
             base.Start();
 
-            GameManager = GameManager.Instance;
             UIManager = PlayerUIManager.Instance;
             
-            GameManager.RegisterPlayer(transform);
+            GameManager.Instance.RegisterPlayer(transform);
             
             StateMachine.Initialize(IdleState);
-            
-            if (!GameManager)
-            {
-                Debug.LogError("Missing Game Manager");
-            }
+
             if (!UIManager)
             {
                 Debug.LogError("Missing UI Manager");
+            }
+            
+            AbilityData = GameManager.Instance.AbilityData;
+        }
+
+        protected override void Update()
+        {
+            base.Update();
+
+            if (CoreManager.SenseCore.DetectTrigger)
+            {
+                CoreManager.SenseCore.GetTrigger().Interact(this);
             }
         }
 
@@ -175,5 +180,9 @@ namespace Character.Player.Manager
         {
             UIManager.OpenHUD();
         }
+
+        public void UpdateAbilityData(PlayerAbilityData abilityData) => AbilityData = abilityData;
+
+        public void ResetGainAbility() => IsGainAbility = false;
     }
 }

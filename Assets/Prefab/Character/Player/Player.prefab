@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206426205}
   m_Layer: 0
-  m_Name: New Ability Sensor
+  m_Name: Trigger Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206426204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.244, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968356420}
   m_Layer: 0
-  m_Name: Interact Sensor
+  m_Name: NPC Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,28 +264,28 @@ MonoBehaviour:
   wallSensor: {fileID: 2662147733334738141}
   ledgeSensor: {fileID: 2662147734006066532}
   specialDashSensor: {fileID: 909981493}
-  newAbilitySensor: {fileID: 1206426205}
-  interactSensor: {fileID: 1968356420}
+  triggerSensor: {fileID: 1206426205}
+  NPCSensor: {fileID: 1968356420}
+  oneWayPlatformSensor: {fileID: 2662147732603755961}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 1088
   groundSensorSize: {x: 0.5, y: 0.55}
   wallCheckDistance: 0.5
-  oneWayPlatformSensor: {fileID: 2662147732603755961}
+  oneWayPlatformSensorSize: {x: 0.4, y: 1.5}
   oneWayPlatformLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  oneWayPlatformSensorSize: {x: 0.4, y: 1.5}
   specialDashSensorRadius: 1.5
   specialDashLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  newAbilitySensorRadius: 1
-  newAbilityLayerMask:
+  triggerSensorSize: {x: 0.4, y: 1.5}
+  triggerLayerMask:
     serializedVersion: 2
     m_Bits: 8192
-  interactSensorRadius: 2
-  interactLayerMask:
+  NPCSensorRadius: 2
+  NPCLayerMask:
     serializedVersion: 2
     m_Bits: 16384
 --- !u!1 &2662147732588150292
@@ -1021,11 +1021,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Player
   deadCharacter: {fileID: 0}
-  floatDamagePrefab: {fileID: 0}
-  isDoubleJumpEnable: 1
-  isWallSlideEnable: 1
-  isDashEnable: 1
-  isSpecialDashEnable: 1
 --- !u!114 &1400901678
 MonoBehaviour:
   m_ObjectHideFlags: 0

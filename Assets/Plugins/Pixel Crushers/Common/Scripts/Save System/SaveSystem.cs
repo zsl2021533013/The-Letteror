@@ -725,6 +725,7 @@ namespace PixelCrushers
             if (m_savers.Count <= 0) return;
             m_tmpSavers.Clear();
             m_tmpSavers.AddRange(m_savers); // Make a copy in case a saver ends up removing multiple savers.
+            
             for (int i = m_tmpSavers.Count - 1; i >= 0; i--) // A saver may remove itself from list during apply.
             {
                 try

@@ -24,7 +24,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
            manager.AirState.StartJumping();
         }
 
-        public bool CheckAmountOfJump() => _amountOfJumpsLeft - (manager.isDoubleJumpEnable ? 0 : 1) > 0;
+        public bool CheckAmountOfJump() => _amountOfJumpsLeft - (manager.AbilityData.isDoubleJumpEnable ? 0 : 1) > 0;
 
         public void ResetAmountOfJump() => _amountOfJumpsLeft = coreManager.MoveCore.StateMachineData.amountOfJump;
 

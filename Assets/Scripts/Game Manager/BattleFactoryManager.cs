@@ -4,6 +4,7 @@ using Character.Base.Data;
 using JetBrains.Annotations;
 using Tool.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game_Manager
 {
@@ -12,13 +13,13 @@ namespace Game_Manager
         [Serializable]
         public struct BattleAttribute
         {
-            public string _name;
-            public CharacterBattleData _data;
+            public string characterName;
+            public CharacterBattleData data;
         }
         
         public BattleAttribute[] battleAttributes;
         public Dictionary<string, CharacterBattleData> battleDataDict;
-
+        
         protected override void Awake()
         {
             base.Awake();
@@ -26,21 +27,21 @@ namespace Game_Manager
             battleDataDict = new Dictionary<string, CharacterBattleData>();
             foreach (var battleAttribute in battleAttributes)
             {
-                if (!battleDataDict.ContainsKey(battleAttribute._name))
+                if (!battleDataDict.ContainsKey(battleAttribute.characterName))
                 {
-                    battleDataDict.Add(battleAttribute._name, battleAttribute._data);
+                    battleDataDict.Add(battleAttribute.characterName, battleAttribute.data);
                 }
             }
         }
 
-        public CharacterBattleData GetBattleData(string name)
+        public CharacterBattleData GetBattleData(string characterName)
         {
-            if (battleDataDict.ContainsKey(name))
+            if (battleDataDict.ContainsKey(characterName))
             {
-                return battleDataDict[name];
+                return battleDataDict[characterName];
             }
 
-            Debug.LogError("Can't find" + name + "in factory");
+            Debug.LogError("Can't find " + characterName + " in factory");
             return default;
         }
     }

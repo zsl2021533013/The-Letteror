@@ -16,8 +16,7 @@ namespace Character.Player.FSM.Player_State.Super_State
         private bool _specialAttackInput;
         
         private bool _isGrounded;
-        private bool _isTouchingNewAbility;
-        private bool _isInteracting;
+        private bool _isDetectNPC;
         
         private PlayerInputDirectionType _inputDirectionType;
         private Collider2D _oneWayPlatformCollider;
@@ -43,6 +42,13 @@ namespace Character.Player.FSM.Player_State.Super_State
             {
                 return;
             }
+
+            if (manager.IsGainAbility)
+            {
+                manager.ResetGainAbility();
+                stateMachine.TranslateToState(manager.GainAbilityState);
+                return;
+            }
             
             if (_attackInput)
             {
@@ -63,10 +69,7 @@ namespace Character.Player.FSM.Player_State.Super_State
 
             switch (_jumpInput)
             {
-                case true when _isTouchingNewAbility:
-                    stateMachine.TranslateToState(manager.GainAbilityState);
-                    return;
-                case true when _isInteracting:
+                case true when _isDetectNPC:
                     break;
                 case true when manager.JumpState.CheckAmountOfJump():
                     manager.Input.ResetJumpInput();
@@ -74,23 +77,23 @@ namespace Character.Player.FSM.Player_State.Super_State
                     return;
             }
 
-            if (manager.isDashEnable && _dashInput &&manager.DashState.CheckAmountOfDash())
+            if (manager.AbilityData.isDashEnable && _dashInput &&manager.DashState.CheckAmountOfDash())
             {
-               manager.Input.ResetDashInput();
+                manager.Input.ResetDashInput();
                 stateMachine.TranslateToState(manager.DashState);
                 return;
             }
             
             if (_rollInput)
             {
-               manager.Input.ResetRollInput();
+                manager.Input.ResetRollInput();
                 stateMachine.TranslateToState(manager.RollState);
                 return;
             }
 
             if (!_isGrounded)
             {
-               manager.AirState.StartCoyoteTime();
+                manager.AirState.StartCoyoteTime();
                 stateMachine.TranslateToState(manager.AirState);
                 return;
             }
@@ -101,8 +104,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             base.DoChecks();
 
             _isGrounded = coreManager.SenseCore.DetectGround;
-            _isTouchingNewAbility = coreManager.SenseCore.DetectNewAbility;
-            _isInteracting = coreManager.SenseCore.DetectInteract;
+            _isDetectNPC = coreManager.SenseCore.DetectNPC;
             _oneWayPlatformCollider = coreManager.SenseCore.DetectOneWayPlatform;
         }
 
@@ -143,31 +145,40 @@ namespace Character.Player.FSM.Player_State.Super_State
         private void CheckSpecialAttack()
         {
             manager.Input.ResetSpecialAttackInput();
+            
             switch (manager.Input.InputDirectionType)
             {
-                case PlayerInputDirectionType.Up:
+                case PlayerInputDirectionType.Up when manager.AbilityData.isSpecialUpwardsAttackEnable:
                     if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case PlayerInputDirectionType.Left:
+                case PlayerInputDirectionType.Down when manager.AbilityData.isSpecialDownwardsAttackEnable:
+                    if (manager.SpecialDownwardsAttack1State.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialDownwardsAttack1State);
+                    }
+                    break;
+                case PlayerInputDirectionType.Left when manager.AbilityData.isSpecialHorizontalAttackEnable:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
-                case PlayerInputDirectionType.Right:
+                case PlayerInputDirectionType.Right when manager.AbilityData.isSpecialHorizontalAttackEnable:
+                    if (manager.SpecialDashAttackState.AttackEnable)
+                    {
+                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
+                    }
+                    break;
+                case PlayerInputDirectionType.None when manager.AbilityData.isSpecialHorizontalAttackEnable:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
                 default:
-                    if (manager.SpecialIdleAttackState.AttackEnable)
-                    {
-                        stateMachine.TranslateToState(manager.SpecialIdleAttackState);
-                    }
                     break;
             }
         }

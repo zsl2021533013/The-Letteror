@@ -73,7 +73,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                 return;
             }
             
-            if (manager.isDashEnable && _dashInput && manager.DashState.CheckAmountOfDash())
+            if (manager.AbilityData.isDashEnable && _dashInput && manager.DashState.CheckAmountOfDash())
             {
                 manager.Input.ResetDashInput();
                 stateMachine.TranslateToState(manager.DashState);
@@ -98,7 +98,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                 return;
             }
 
-            if (manager.isWallSlideEnable && _isTouchingWall && JudgeDirection(manager.Input.InputDirectionType,coreManager.MoveCore.CharacterDirection) &&
+            if (manager.AbilityData.isWallSlideEnable && _isTouchingWall && JudgeDirection(manager.Input.InputDirectionType,coreManager.MoveCore.CharacterDirection) &&
                 coreManager.MoveCore.CurrentVelocity.y < 0.1f) 
             {
                 stateMachine.TranslateToState(manager.WallSlideState);
@@ -210,43 +210,40 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
         private void CheckSpecialAttack()
         {
             manager.Input.ResetSpecialAttackInput();
+            
             switch (manager.Input.InputDirectionType)
             {
-                case PlayerInputDirectionType.Up:
+                case PlayerInputDirectionType.Up when manager.AbilityData.isSpecialUpwardsAttackEnable:
                     if (manager.SpecialUpwardsAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case PlayerInputDirectionType.Down:
+                case PlayerInputDirectionType.Down when manager.AbilityData.isSpecialDownwardsAttackEnable:
                     if (manager.SpecialDownwardsAttack1State.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDownwardsAttack1State);
                     }
                     break;
-                case PlayerInputDirectionType.Left:
+                case PlayerInputDirectionType.Left when manager.AbilityData.isSpecialHorizontalAttackEnable:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
-                case PlayerInputDirectionType.Right:
+                case PlayerInputDirectionType.Right when manager.AbilityData.isSpecialHorizontalAttackEnable:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
-                case PlayerInputDirectionType.None:
+                case PlayerInputDirectionType.None when manager.AbilityData.isSpecialHorizontalAttackEnable:
                     if (manager.SpecialDashAttackState.AttackEnable)
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
                 default:
-                    if (manager.SpecialDashAttackState.AttackEnable)
-                    {
-                        stateMachine.TranslateToState(manager.SpecialDashAttackState);
-                    }
                     break;
             }
         }

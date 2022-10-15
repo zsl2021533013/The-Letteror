@@ -1,6 +1,8 @@
 ﻿using Character.Base.Core.Core_Component;
+using Environment.Trigger.Base;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Character.Player.Core.Core_Component
 {
@@ -11,8 +13,9 @@ namespace Character.Player.Core.Core_Component
         public Transform wallSensor;
         public Transform ledgeSensor;
         public Transform specialDashSensor;
-        public Transform newAbilitySensor;
-        public Transform interactSensor;
+        public Transform triggerSensor;
+        public Transform NPCSensor;
+        public Transform oneWayPlatformSensor;
 
         [Header("Ground Sensor")]
         public LayerMask groundLayerMask;
@@ -22,21 +25,20 @@ namespace Character.Player.Core.Core_Component
         public float wallCheckDistance;
         
         [Header("One Way Platform Sensor")] 
-        public Transform oneWayPlatformSensor;
-        public LayerMask oneWayPlatformLayerMask;
         public Vector2 oneWayPlatformSensorSize;
+        public LayerMask oneWayPlatformLayerMask;
 
         [Header("Special Dash Sensor")] 
         public float specialDashSensorRadius;
         public LayerMask specialDashLayerMask;
 
-        [Header("New Ability Sensor")] 
-        public float newAbilitySensorRadius;
-        public LayerMask newAbilityLayerMask;
+        [Header("Trigger Sensor")] 
+        public Vector2 triggerSensorSize;
+        public LayerMask triggerLayerMask;
         
-        [Header("Interact Sensor")]
-        public float interactSensorRadius;
-        public LayerMask interactLayerMask;
+        [Header("NPC Sensor")]
+        public float NPCSensorRadius;
+        public LayerMask NPCLayerMask;
         
         public Collider2D DetectOneWayPlatform => Physics2D.OverlapBox(oneWayPlatformSensor.position, 
             oneWayPlatformSensorSize, 0f, oneWayPlatformLayerMask);
@@ -55,11 +57,11 @@ namespace Character.Player.Core.Core_Component
         public bool DetectDashFruit => Physics2D.OverlapCircle(specialDashSensor.position,
             specialDashSensorRadius, specialDashLayerMask);
         
-        public bool DetectNewAbility => Physics2D.OverlapCircle(newAbilitySensor.position,
-            newAbilitySensorRadius, newAbilityLayerMask);
+        public bool DetectTrigger => Physics2D.OverlapBox(triggerSensor.position, 
+            triggerSensorSize, 0f, triggerLayerMask);
         
-        public bool DetectInteract => Physics2D.OverlapCircle(interactSensor.position,
-            interactSensorRadius, interactLayerMask);
+        public bool DetectNPC => Physics2D.OverlapCircle(NPCSensor.position,
+            NPCSensorRadius, NPCLayerMask);
         
         public Vector2 GetCornerPosition()
         {
@@ -79,6 +81,13 @@ namespace Character.Player.Core.Core_Component
                 ledgeSensor.position.y - distanceY);
         }
 
+        public TriggerBase GetTrigger()
+        {
+            Collider2D trigger = Physics2D.OverlapBox(triggerSensor.position, triggerSensorSize, 0f, triggerLayerMask);
+            TriggerBase targetTrigger = trigger.transform.GetComponent<TriggerBase>();
+            return targetTrigger;
+        }
+        
         protected override void OnDrawGizmosSelected()
         {
             base.OnDrawGizmosSelected();
@@ -93,10 +102,10 @@ namespace Character.Player.Core.Core_Component
             Gizmos.DrawWireSphere(specialDashSensor.position, specialDashSensorRadius);
             
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(newAbilitySensor.position, newAbilitySensorRadius);
+            Gizmos.DrawWireCube(triggerSensor.position, triggerSensorSize);
             
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(interactSensor.position, interactSensorRadius);
+            Gizmos.DrawWireSphere(NPCSensor.position, NPCSensorRadius);
         }
     }
 }
