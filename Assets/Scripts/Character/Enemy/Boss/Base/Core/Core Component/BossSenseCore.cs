@@ -15,7 +15,7 @@ namespace Character.Enemy.Boss.Base.Core.Core_Component
 
         protected virtual void Start()
         {
-            playerTransform = PlayerGameManager.Instance.PlayerTransform;
+            playerTransform = GameManager.Instance.PlayerTransform;
         }
 
         public bool JudgeArrive(float stopDistance)

@@ -35,6 +35,6 @@ MonoBehaviour:
   airDownwardsAttackVelocityY: 15
   airAttackCoolDown: 0.5
   specialAttackVelocityX: 18
-  specialUpwardsAttackVelocityY: 20
+  specialUpwardsAttackVelocityY: 30
   specialDownwardsAttackVelocityY: 40
   specialAttackCoolDown: 0.5

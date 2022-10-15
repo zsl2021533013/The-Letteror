@@ -1,0 +1,1684 @@
+fileFormatVersion: 2
+guid: e0d30a79e31c985458679adbe4eced24
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7460a0e72800e4da501a10fe3e2fdb
+      internalID: -16782739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 238
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc65cdb0f7fd1bb4cb2e2ebd3e2dad1f
+      internalID: 1665595455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 238
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b95802592a4fa4caaf3deacf4d5c40
+      internalID: 995203986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90664d31257cdbd468506b5abcd29e23
+      internalID: 786349330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b617ddeeb0a72084faf4dd6b5d606a81
+      internalID: -901136470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_5
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f8f0e3ee9624d408feff3b9fa21f1b
+      internalID: -736547236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_6
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628918834e009f949b2b75d91ea79da0
+      internalID: 167424158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab26ba47aafb1f469a8ffa6b067ce6f
+      internalID: -748330701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_8
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea5fe9e9b71c5f49a9a4e2fdd8d9958
+      internalID: -1502041119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_9
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168a44b0003d24a45a42ef2ee7c21bb2
+      internalID: 1840473282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_10
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 204
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa453f180993843428e6246e901bb090
+      internalID: -150268200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d549e031695434b4299ea82d409a764c
+      internalID: 40689593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_12
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825823aa668dbbb4da80219d989baab2
+      internalID: 552476150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a172671ef8123649998d16753b0121b
+      internalID: 996146506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_14
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18f525682f809b44b267d211f7c14a7
+      internalID: 1682248898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_15
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcb502d1707f334da1287fc5af49034
+      internalID: 1233996460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_16
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30d8424047e0d2449de2c8f470ee5d4
+      internalID: -157445114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_17
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb551c76ceb9b4d458664a3fda6af04b
+      internalID: 2021219815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_18
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fb2fa6a951c5146b9e5710e52eab7b
+      internalID: -1229855896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_19
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f3a4c935af2ba429e2ba7e79d7e3c9
+      internalID: 948912758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_20
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f256b62c4fa9143995d754114a958a
+      internalID: 1303938420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_21
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b059c7b7000e4c4ca9625d26fc3a789
+      internalID: 2005635651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_22
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3334c9a783d078046abe392f511fefee
+      internalID: -131115500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_23
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf78df840d0801446bf5e89f7031d9d2
+      internalID: -1207304683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_24
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 170
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08bb9cf700eaec4596a456ec2218537
+      internalID: -156273948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143bb2eb8f0db3040bb913d9b2612bc4
+      internalID: 670600230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_26
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a875f6d50e1dc40af644b41de354b2
+      internalID: 913127749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_27
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328ac86922ad7a240b2c634eb1d2043b
+      internalID: 372296006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_28
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186d1059c1b8f124a88c74f501427116
+      internalID: -2091853701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_29
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edc8cf5923f64741be9ebaa33425d15
+      internalID: -395674774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_30
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c6b523575970d4ea4bc53ad2169eee
+      internalID: -779027755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_31
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c79bdf18861aca4aa1a66be3e37172e
+      internalID: 102652592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_32
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b068d2648c8af0c488894c07eb6eee06
+      internalID: -1154318647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_33
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858734855083ca24d87b6c848da27e16
+      internalID: 1116852892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_34
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721d4aa0475067d40a999ae84e4870bc
+      internalID: 817002211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_35
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5800669fcbd0e3f43856ef3050909d42
+      internalID: -457351913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_36
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf6d155b10997445b17b1df1a1dfc49
+      internalID: -516212202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_37
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 136
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fe7a66f9ef63d4986f9d522ff294d9
+      internalID: 1939501867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aefb2f703d974c4db6a12d1c9d7b9ca
+      internalID: -1390554219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_39
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 102
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b3fbcca7daa4146a23e4c0e82d5851
+      internalID: 2145684324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_40
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 102
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac821874f69a00e48ade58974439afd4
+      internalID: 1548903721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_41
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 102
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05c06843729d624e87f842d29f8b1a7
+      internalID: 893461083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_42
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 102
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de540681f92ca54cbc8465245b27527
+      internalID: -1607671661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_43
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 102
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7986cbcc5fa83d34194940f9dbb1fddf
+      internalID: 676281046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b309373d4e7074d4b9a7b6e4c709a160
+      internalID: 1586404744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_45
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7295127efad131d4592c5fb836de6cb9
+      internalID: 62183166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_46
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49675739a9c17af4c9b2ee53592e2e6f
+      internalID: -2112567097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_47
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fccbab1aaff21746b75bf7eeb884290
+      internalID: -367033504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_48
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b113a18a05f8241b25fee3fb7845d1
+      internalID: -640212031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_49
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7acb20eded1a9043a7a3136f2642f41
+      internalID: -272694796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_50
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61076854064ef5b4da640f75d64dc5e5
+      internalID: -680459870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_51
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3505f1d16487744a4b3747a3be410f
+      internalID: 1187056014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_52
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b87ee447ec4c14188a3fa3f88cd675
+      internalID: -2105037295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_53
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413f8f199f413cc49bea8c254745f0a0
+      internalID: 391136020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_54
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db98c8480e80c4041a0e7094357a43cd
+      internalID: 2087112679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_55
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56502e98b02ebea42b3c1715bdf66f73
+      internalID: -206351861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_56
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6034f6f062e94e41bce286a2135a5b7
+      internalID: 1472960262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_57
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee742b1bf26ffc47adaa109409961c9
+      internalID: 1114983324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_58
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70396d790b89eb54fbc7531c436b463e
+      internalID: -152982492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_59
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 68
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cef679fdb977db4daca540c6b7d7137
+      internalID: 736929617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44e211b181141b4f9122a1a961559b9
+      internalID: -666023896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_61
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 34
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c67ad3f952a9a14b89e9a711e583dbb
+      internalID: -1773428933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_62
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 34
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d9b9f374fb3bd40a927a018cdfe4ce
+      internalID: 314259403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5073b9de04779164d887005d8c23fd35
+      internalID: 2121945416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_64
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e262adce88204924eb25f498f274aaae
+      internalID: 1834056375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_65
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fb3c1c42974cc46ac86a0492faca88
+      internalID: -977465233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_66
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f183cafe8cd99c34480c0db418bfc00b
+      internalID: 573343326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_67
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17fcb1c7b2d13246a726bcf2f347e28
+      internalID: 711523044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_68
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462b762bdb7dd5d4386eefb08c5e9785
+      internalID: -1408482474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_69
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c750960166f62e94990b155ac12bdeec
+      internalID: 523628259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Redblaster119x34(1)_70
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 0
+        width: 119
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af523e6141fb03d4d9dc45023ffbd6e4
+      internalID: -395723228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Redblaster119x34(1)_15: 1233996460
+      Redblaster119x34(1)_66: 573343326
+      Redblaster119x34(1)_41: 893461083
+      Redblaster119x34(1)_14: 1682248898
+      Redblaster119x34(1)_35: -457351913
+      Redblaster119x34(1)_16: -157445114
+      Redblaster119x34(1)_48: -640212031
+      Redblaster119x34(1)_64: 1834056375
+      Redblaster119x34(1)_36: -516212202
+      Redblaster119x34(1)_57: 1114983324
+      Redblaster119x34(1)_49: -272694796
+      Redblaster119x34(1)_44: 1586404744
+      Redblaster119x34(1)_30: -779027755
+      Redblaster119x34(1)_55: -206351861
+      Redblaster119x34(1)_69: 523628259
+      Redblaster119x34(1)_38: -1390554219
+      Redblaster119x34(1)_68: -1408482474
+      Redblaster119x34(1)_5: -736547236
+      Redblaster119x34(1)_50: -680459870
+      Redblaster119x34(1)_17: 2021219815
+      Redblaster119x34(1)_0: -16782739
+      Redblaster119x34(1)_21: 2005635651
+      Redblaster119x34(1)_29: -395674774
+      Redblaster119x34(1)_32: -1154318647
+      Redblaster119x34(1)_67: 711523044
+      Redblaster119x34(1)_60: -666023896
+      Redblaster119x34(1)_27: 372296006
+      Redblaster119x34(1)_61: -1773428933
+      Redblaster119x34(1)_9: 1840473282
+      Redblaster119x34(1)_37: 1939501867
+      Redblaster119x34(1)_8: -1502041119
+      Redblaster119x34(1)_10: -150268200
+      Redblaster119x34(1)_25: 670600230
+      Redblaster119x34(1)_65: -977465233
+      Redblaster119x34(1)_2: 995203986
+      Redblaster119x34(1)_20: 1303938420
+      Redblaster119x34(1)_12: 552476150
+      Redblaster119x34(1)_39: 2145684324
+      Redblaster119x34(1)_53: 391136020
+      Redblaster119x34(1)_24: -156273948
+      Redblaster119x34(1)_6: 167424158
+      Redblaster119x34(1)_59: 736929617
+      Redblaster119x34(1)_43: 676281046
+      Redblaster119x34(1)_13: 996146506
+      Redblaster119x34(1)_62: 314259403
+      Redblaster119x34(1)_47: -367033504
+      Redblaster119x34(1)_56: 1472960262
+      Redblaster119x34(1)_54: 2087112679
+      Redblaster119x34(1)_58: -152982492
+      Redblaster119x34(1)_19: 948912758
+      Redblaster119x34(1)_1: 1665595455
+      Redblaster119x34(1)_28: -2091853701
+      Redblaster119x34(1)_40: 1548903721
+      Redblaster119x34(1)_11: 40689593
+      Redblaster119x34(1)_45: 62183166
+      Redblaster119x34(1)_31: 102652592
+      Redblaster119x34(1)_33: 1116852892
+      Redblaster119x34(1)_34: 817002211
+      Redblaster119x34(1)_51: 1187056014
+      Redblaster119x34(1)_18: -1229855896
+      Redblaster119x34(1)_4: -901136470
+      Redblaster119x34(1)_22: -131115500
+      Redblaster119x34(1)_70: -395723228
+      Redblaster119x34(1)_3: 786349330
+      Redblaster119x34(1)_26: 913127749
+      Redblaster119x34(1)_7: -748330701
+      Redblaster119x34(1)_23: -1207304683
+      Redblaster119x34(1)_42: -1607671661
+      Redblaster119x34(1)_46: -2112567097
+      Redblaster119x34(1)_52: -2105037295
+      Redblaster119x34(1)_63: 2121945416
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

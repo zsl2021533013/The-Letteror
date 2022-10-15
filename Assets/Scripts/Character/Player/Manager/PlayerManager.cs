@@ -26,7 +26,7 @@ namespace Character.Player.Manager
         public bool isDashEnable;
         public bool isSpecialDashEnable;
         
-        public PlayerGameManager GameManager { get; private set; }
+        public GameManager GameManager { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
         public PlayerInputHandler Input { get; private set; }
         public new PlayerCoreManager CoreManager { get; private set; }
@@ -80,7 +80,7 @@ namespace Character.Player.Manager
         {
             base.Start();
 
-            GameManager = PlayerGameManager.Instance;
+            GameManager = GameManager.Instance;
             UIManager = PlayerUIManager.Instance;
             
             GameManager.RegisterPlayer(transform);
