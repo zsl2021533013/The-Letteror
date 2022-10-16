@@ -14,6 +14,7 @@ namespace Character.Player.FSM.Player_State.Super_State
         private bool _rollInput;
         private bool _attackInput;
         private bool _specialAttackInput;
+        private bool _gainAbility;
         
         private bool _isGrounded;
         private bool _isDetectNPC;
@@ -43,9 +44,9 @@ namespace Character.Player.FSM.Player_State.Super_State
                 return;
             }
 
-            if (manager.IsGainAbility)
+            if (_gainAbility)
             {
-                manager.ResetGainAbility();
+                manager.Input.ResetGainAbility();
                 stateMachine.TranslateToState(manager.GainAbilityState);
                 return;
             }
@@ -64,7 +65,7 @@ namespace Character.Player.FSM.Player_State.Super_State
 
             if (_inputDirectionType == PlayerInputDirectionType.Down && _oneWayPlatformCollider)
             {
-                coreManager.MoveCore.DisableOneWayPlatform(_oneWayPlatformCollider);
+                coreManager.MoveCore.DisableCollision(_oneWayPlatformCollider);
             }
 
             switch (_jumpInput)
@@ -124,6 +125,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             _attackInput = input.AttackInput;
             _specialAttackInput = input.SpecialAttackInput;
             _inputDirectionType = input.InputDirectionType;
+            _gainAbility = input.IsGainAbility;
         }
 
         private void ResetTriggers(PlayerInputHandler input)

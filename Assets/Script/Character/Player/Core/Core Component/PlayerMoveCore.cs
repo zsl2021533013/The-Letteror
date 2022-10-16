@@ -34,10 +34,10 @@ namespace Character.Player.Core.Core_Component
             }
         }
 
-        public void DisableOneWayPlatform(Collider2D oneWayPlatformCollider)
+        public void DisableCollision(Collider2D targetCollider)
         {
             StartCoroutine(WaitAndDisconnectCollider(PlayerMoveCollider, 
-                oneWayPlatformCollider, 0.25f));
+                targetCollider, 0.3f));
         }
         
         IEnumerator WaitAndDisconnectCollider(Collider2D collider1, Collider2D collider2, float time)

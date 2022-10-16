@@ -26,6 +26,8 @@ namespace Character.Player.Input_System
         public bool SpecialAttackInput { get; private set; }
         public bool InteractInput { get; private set; }
         
+        public bool IsGainAbility { get; private set; }
+        
         public InputControls Controls{ get; private set; }
 
         public bool _isInputEnable;
@@ -246,6 +248,11 @@ namespace Character.Player.Input_System
             }
         }
 
+        public void GainAbility()
+        {
+            IsGainAbility = true;
+        }
+        
         #endregion
         
 
@@ -258,7 +265,8 @@ namespace Character.Player.Input_System
         public void ResetAttackInput() => AttackInput = false;
         public void ResetSpecialAttackInput() => SpecialAttackInput = false;
         public void ResetInteractInput() => InteractInput = false;
-        
+        public void ResetGainAbility() => IsGainAbility = false;
+
         #endregion
 
     }

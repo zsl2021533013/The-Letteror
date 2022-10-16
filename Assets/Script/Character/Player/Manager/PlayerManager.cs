@@ -22,8 +22,7 @@ namespace Character.Player.Manager
     {
         /*[SerializeField] private GameObject floatDamagePrefab;
         private GameObject tempFloatDamage;*/
-        
-        public bool IsGainAbility { get; set; }
+
         public Vector2 FormerOnGroundPosition { get; set; }
         public PlayerAbilityData AbilityData { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
@@ -185,7 +184,5 @@ namespace Character.Player.Manager
         public void UpdateAbilityData(PlayerAbilityData abilityData) => AbilityData = abilityData;
 
         public void UpdateFormerPosition(Vector2 position) => FormerOnGroundPosition = position;
-
-        public void ResetGainAbility() => IsGainAbility = false;
     }
 }

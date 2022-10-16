@@ -2,6 +2,7 @@
 using Character.Base.Manager;
 using Character.Player.FSM.Player_State.Super_State;
 using Character.Player.Input_System;
+using Script.Environment;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
     {
         private Vector2 _movementInput;
         private bool _specialDashInput;
+
+        private DashFruitController _dashFruit;
         
         public PlayerSpecialDashState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
@@ -24,6 +27,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             startTime = Time.unscaledTime;
 
             coreManager.MoveCore.OpenArrow();
+            _dashFruit = coreManager.SenseCore.GetDashFruit();
+            _dashFruit.PlayerEnter();
         }
 
         public override void OnUpdate()
@@ -52,6 +57,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             base.OnExit();
             
             coreManager.MoveCore.CloseArrow();
+            _dashFruit.PlayerExit();
         }
 
         protected override void UpdateInput(PlayerInputHandler input)

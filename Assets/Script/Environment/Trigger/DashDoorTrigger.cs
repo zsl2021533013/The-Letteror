@@ -26,19 +26,7 @@ namespace Environment.Trigger
 
             if (manager.StateMachine.CurrentState is PlayerDashState or PlayerSpecialDashAttackState)
             {
-                _enterTime = Time.time;
-            }
-        }
-
-        private void Update()
-        {
-            if (Time.time > _enterTime + 0.5f)
-            {
-                _collider2D.enabled = true;
-            }
-            else
-            {
-                _collider2D.enabled = false;
+                manager.CoreManager.MoveCore.DisableCollision(_collider2D);
             }
         }
     }

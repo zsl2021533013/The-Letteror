@@ -7,11 +7,17 @@ namespace Environment.Trigger.New_Ability_Trigger.Base
 {
     public class NewAbilityBaseTrigger : TriggerBase
     {
+        public GameObject destroyedThronePrefab;
+        
         public override void Interact(PlayerManager manager)
         {
             base.Interact(manager);
 
-            manager.IsGainAbility = true;
+            manager.Input.GainAbility();
+
+            GameObject newObject = Instantiate(destroyedThronePrefab);
+            newObject.transform.position = transform.position;
+            
             Destroy(gameObject); //Destroy 将在下一帧执行，此处写法无误
         }
     }

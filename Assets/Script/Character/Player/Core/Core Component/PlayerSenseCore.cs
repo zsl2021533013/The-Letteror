@@ -1,5 +1,6 @@
 ﻿using Character.Base.Core.Core_Component;
 using Environment.Trigger.Base;
+using Script.Environment;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -86,6 +87,14 @@ namespace Character.Player.Core.Core_Component
             Collider2D trigger = Physics2D.OverlapBox(triggerSensor.position, triggerSensorSize, 0f, triggerLayerMask);
             TriggerBase targetTrigger = trigger.transform.GetComponent<TriggerBase>();
             return targetTrigger;
+        }
+        
+        public DashFruitController GetDashFruit()
+        {
+            Collider2D trigger = Physics2D.OverlapCircle(specialDashSensor.position,
+                specialDashSensorRadius, specialDashLayerMask);
+            DashFruitController targetDashFruit = trigger.transform.GetComponent<DashFruitController>();
+            return targetDashFruit;
         }
         
         protected override void OnDrawGizmosSelected()

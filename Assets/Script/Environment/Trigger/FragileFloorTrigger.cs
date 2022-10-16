@@ -25,5 +25,10 @@ namespace Environment.Trigger
                 _animator.SetBool("disappear", true);
             }
         }
+
+        public void OnAnimationFinish()
+        {
+            Destroy(gameObject);
+        }
     }
 }
