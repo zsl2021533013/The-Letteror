@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections;
 using Character.Base.Data;
 using Game_Manager;
-using UnityEditor.U2D.Animation;
+using UnityEditor;
 using UnityEngine;
 
 namespace Character.Base.Manager
@@ -16,6 +17,7 @@ namespace Character.Base.Manager
         private bool _isImmortal;
         private CharacterBattleData _battleData;
         private SpriteRenderer _spriteRenderer;
+        private Coroutine _immortalCoroutine;
 
         public CharacterManager Manager { get; private set; }
         
@@ -44,6 +46,11 @@ namespace Character.Base.Manager
 
         public void Damaged(int attack)
         {
+            if (IsImmortal)
+            {
+                return;
+            }
+            
             _battleData.health -= attack;
             
             if (_battleData.health > 0)
@@ -68,6 +75,19 @@ namespace Character.Base.Manager
             _spriteRenderer.material = defaultMaterial;
         }
 
+        public void StartImmortalForSeconds(float time)
+        {
+            StopAllCoroutines();
+            _immortalCoroutine = StartCoroutine(StartImmortalForSecondsEnumerator(time));
+        }
+
+        IEnumerator StartImmortalForSecondsEnumerator(float time)
+        {
+            StartImmortal();
+            yield return new WaitForSeconds(time);
+            EndImmortal();
+        }
+        
         public void StartImmortal() => _isImmortal = true;
         public void EndImmortal() => _isImmortal = false;
     }

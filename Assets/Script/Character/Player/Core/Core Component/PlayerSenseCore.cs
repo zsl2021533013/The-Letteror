@@ -36,6 +36,7 @@ namespace Character.Player.Core.Core_Component
         [Header("Trigger Sensor")] 
         public Vector2 triggerSensorSize;
         public LayerMask triggerLayerMask;
+        public float aheadSenseDistance;
         
         [Header("NPC Sensor")]
         public float NPCSensorRadius;
@@ -60,6 +61,9 @@ namespace Character.Player.Core.Core_Component
         
         public bool DetectTrigger => Physics2D.OverlapBox(triggerSensor.position, 
             triggerSensorSize, 0f, triggerLayerMask);
+
+        public bool DetectTriggerAhead => Physics2D.Raycast(triggerSensor.position,
+            coreManager.MoveCore.CharacterDirection * Vector2.right, aheadSenseDistance, triggerLayerMask);
         
         public bool DetectNPC => Physics2D.OverlapCircle(NPCSensor.position,
             NPCSensorRadius, NPCLayerMask);
@@ -86,6 +90,14 @@ namespace Character.Player.Core.Core_Component
         {
             Collider2D trigger = Physics2D.OverlapBox(triggerSensor.position, triggerSensorSize, 0f, triggerLayerMask);
             TriggerBase targetTrigger = trigger.transform.GetComponent<TriggerBase>();
+            return targetTrigger;
+        }
+        
+        public TriggerBase GetTriggerAhead()
+        {
+            Collider2D triggeCollider = Physics2D.Raycast(triggerSensor.position,
+                coreManager.MoveCore.CharacterDirection * Vector2.right, aheadSenseDistance, triggerLayerMask).collider;
+            TriggerBase targetTrigger = triggeCollider.transform.GetComponent<TriggerBase>();
             return targetTrigger;
         }
         
