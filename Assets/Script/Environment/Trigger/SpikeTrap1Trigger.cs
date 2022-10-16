@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Environment.Trigger
 {
-    public class SpikeTrapTrigger : TriggerBase
+    public class SpikeTrap1Trigger : TriggerBase
     {
         [SerializeField] private int attack;
         [SerializeField] private Vector2 returnOffset;

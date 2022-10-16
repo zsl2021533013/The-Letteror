@@ -23,6 +23,8 @@ namespace Character.Player.Manager
         /*[SerializeField] private GameObject floatDamagePrefab;
         private GameObject tempFloatDamage;*/
 
+        public float immortalTimeAfterDamaged;
+            
         public Vector2 FormerOnGroundPosition { get; set; }
         public PlayerAbilityData AbilityData { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
@@ -161,6 +163,7 @@ namespace Character.Player.Manager
             base.Damaged();
 
             UIManager.RefreshHealthUI(BattleManager.BattleData.health);
+            BattleManager.StartImmortalForSeconds(immortalTimeAfterDamaged);
             BattleManager.Flash();
         }
 

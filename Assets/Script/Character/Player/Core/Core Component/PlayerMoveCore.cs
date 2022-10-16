@@ -34,12 +34,12 @@ namespace Character.Player.Core.Core_Component
             }
         }
 
-        public void DisableCollision(Collider2D targetCollider)
+        public void DisableCollisionForSeconds(Collider2D targetCollider)
         {
             StartCoroutine(WaitAndDisconnectCollider(PlayerMoveCollider, 
                 targetCollider, 0.3f));
         }
-        
+
         IEnumerator WaitAndDisconnectCollider(Collider2D collider1, Collider2D collider2, float time)
         {
             Physics2D.IgnoreCollision(collider1, collider2);

@@ -24,9 +24,9 @@ namespace Environment.Trigger
         {
             base.Interact(manager);
 
-            if (manager.StateMachine.CurrentState is PlayerDashState or PlayerSpecialDashAttackState)
+            if (manager.StateMachine.CurrentState is PlayerDashState)
             {
-                manager.CoreManager.MoveCore.DisableCollision(_collider2D);
+                manager.CoreManager.MoveCore.DisableCollisionForSeconds(_collider2D);
             }
         }
     }

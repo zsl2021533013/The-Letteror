@@ -65,7 +65,7 @@ namespace Character.Player.FSM.Player_State.Super_State
 
             if (_inputDirectionType == PlayerInputDirectionType.Down && _oneWayPlatformCollider)
             {
-                coreManager.MoveCore.DisableCollision(_oneWayPlatformCollider);
+                coreManager.MoveCore.DisableCollisionForSeconds(_oneWayPlatformCollider);
             }
 
             switch (_jumpInput)
