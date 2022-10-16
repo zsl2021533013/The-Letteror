@@ -22,7 +22,7 @@ MonoBehaviour:
   wallJumpTime: 0.1
   wallJumpAngle: {x: 1, y: 3}
   startOffset: {x: 0.35, y: 0.6}
-  dashVelocity: 30
+  dashVelocity: 20
   amountOfDash: 1
   pauseTime: 2
   specialDashVelocity: 25
