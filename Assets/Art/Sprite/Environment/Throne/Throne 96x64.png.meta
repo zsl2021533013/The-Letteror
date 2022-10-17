@@ -828,16 +828,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Throne 96x64_27: -1622819332
+      Throne 96x64_29: -1596451550
       Throne 96x64_0: -610386069
       Throne 96x64_22: -1664550355
+      Throne 96x64_11: 1934052680
       Throne 96x64_10: 1507836093
       Throne 96x64_24: 183679387
       Throne 96x64_16: -1610938307
       Throne 96x64_8: 306089238
       Throne 96x64_14: 829527792
       Throne 96x64_25: -402827330
-      Throne 96x64_29: -1596451550
       Throne 96x64_28: -1603874162
       Throne 96x64_4: 124695
       Throne 96x64_1: -1472891784
@@ -858,10 +858,10 @@ TextureImporter:
       Throne 96x64_9: 1260429520
       Throne 96x64_19: 1116882809
       Throne 96x64_6: -583693140
-      Throne 96x64_13: 1537880367
-      Throne 96x64_17: -1878055046
-      Throne 96x64_11: 1934052680
       Throne 96x64_23: -695079877
+      Throne 96x64_17: -1878055046
+      Throne 96x64_27: -1622819332
+      Throne 96x64_13: 1537880367
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
