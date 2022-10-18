@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206426204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.244, z: 0}
+  m_LocalPosition: {x: 0, y: -0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,14 +118,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533624988}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.737, y: -0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.4, z: 0.1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216178520}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1533624990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 732571461
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f834413531a709c4f9a4714b418dc7fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b0431132fda028428f9289373b9ceaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   oneWayPlatformSensor: {fileID: 2662147732603755961}
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 9280
   groundSensorSize: {x: 0.5, y: 0.55}
   wallCheckDistance: 0.5
   oneWayPlatformSensorSize: {x: 0.4, y: 1.5}
@@ -280,10 +280,11 @@ MonoBehaviour:
   specialDashLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  triggerSensorSize: {x: 0.4, y: 1.5}
+  triggerSensorSize: {x: 0.6, y: 1.5}
   triggerLayerMask:
     serializedVersion: 2
     m_Bits: 8192
+  aheadSenseDistance: 2
   NPCSensorRadius: 2
   NPCLayerMask:
     serializedVersion: 2
@@ -722,7 +723,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008138776, y: -0.2160573}
+  m_Offset: {x: -0.009484291, y: -0.22341192}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -733,7 +734,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6902945, y: 1.4994414}
+  m_Size: {x: 0.5544071, y: 1.4870212}
   m_EdgeRadius: 0
 --- !u!50 &2662147733844279190
 Rigidbody2D:
@@ -1021,6 +1022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Player
   deadCharacter: {fileID: 0}
+  immortalTimeAfterDamaged: 1
 --- !u!114 &1400901678
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3940,6 +3940,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_181
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb9edd3c3e333a47be936042af33c58
+      internalID: 1033974820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -4095,6 +4116,7 @@ TextureImporter:
       DARK Edition Tileset No background_160: -817733170
       DARK Edition Tileset No background_169: -1055677783
       DARK Edition Tileset No background_109: 534154204
+      DARK Edition Tileset No background_181: 1033974820
       DARK Edition Tileset No background_116: -923242588
       DARK Edition Tileset No background_161: -1149342453
       DARK Edition Tileset No background_2: -591313206
