@@ -1,4 +1,5 @@
 using System;
+using Game_Manager;
 using UnityEngine;
 
 namespace Environment.Parallax
@@ -10,7 +11,7 @@ namespace Environment.Parallax
         private float constraintXMin;
         [SerializeField]
         private float constraintXMax;*/
-    
+        
         private Camera _cam;
         private float _cameraPositionX;
 
@@ -38,11 +39,22 @@ namespace Environment.Parallax
             _startZ = position.z;
         }
 
+        private void Start()
+        {
+            GameManager.Instance.RegisterParallaxController(this);
+        }
+
         private void FixedUpdate()
         {
             /*float targetX = Mathf.Clamp(_startX + Travel * ParallaxFactor, constraintXMin, constraintXMax);*/
             _newPosition.Set(_startX + Travel * ParallaxFactor, _startY, _startZ);
             transform.position = _newPosition;
+        }
+
+        public void UpdateParallaxController()
+        {
+            _cam = Camera.main;
+            _cameraPositionX = _cam.transform.position.x;
         }
 
         /*private void OnDrawGizmosSelected()

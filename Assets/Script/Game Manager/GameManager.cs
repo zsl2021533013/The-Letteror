@@ -1,6 +1,8 @@
-﻿using Character.Player.Data.Player_Ability_Data;
+﻿using System.Collections.Generic;
+using Character.Player.Data.Player_Ability_Data;
 using Character.Player.Data.Player_Battle_Data;
 using Character.Player.Manager;
+using Environment.Parallax;
 using Tool.Generic;
 using UnityEngine;
 
@@ -11,21 +13,19 @@ namespace Game_Manager
         [SerializeField] private PlayerAbilityData _abilityDataTemplate;
         [SerializeField] private PlayerBattleData _battleDataTemplate;
 
+        public List<ParallaxController> parallaxControllers;
+        
         public PlayerAbilityData AbilityData;
-        public PlayerBattleData BattleData { get; private set; }
+        public PlayerBattleData BattleData;
         public Transform PlayerTransform { get; private set; }
         public PlayerManager PlayerManager { get; private set; }
-
-        public void RegisterPlayer(Transform playerTransform)
-        {
-            PlayerTransform = playerTransform;
-            PlayerManager = PlayerTransform.GetComponent<PlayerManager>();
-            Debug.Log("Game Manager has registered player");
-        }
+        
 
         protected override void Awake()
         {
             base.Awake();
+            
+            parallaxControllers.Clear();
 
             if (!AbilityData)
             {
@@ -35,6 +35,26 @@ namespace Game_Manager
             if (!BattleData)
             {
                 InitializedBattleData();
+            }
+        }
+        
+        public void RegisterPlayer(Transform playerTransform)
+        {
+            PlayerTransform = playerTransform;
+            PlayerManager = PlayerTransform.GetComponent<PlayerManager>();
+            Debug.Log("Game Manager has registered player");
+        }
+
+        public void RegisterParallaxController(ParallaxController parallaxController)
+        {
+            parallaxControllers.Add(parallaxController);
+        }
+
+        public void UpdateParallaxControllers()
+        {
+            foreach (var parallaxController in parallaxControllers)
+            {
+                parallaxController.UpdateParallaxController();
             }
         }
 
