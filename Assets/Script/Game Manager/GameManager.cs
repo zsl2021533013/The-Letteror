@@ -12,8 +12,6 @@ namespace Game_Manager
     {
         [SerializeField] private PlayerAbilityData _abilityDataTemplate;
         [SerializeField] private PlayerBattleData _battleDataTemplate;
-
-        public List<ParallaxController> parallaxControllers;
         
         public PlayerAbilityData AbilityData;
         public PlayerBattleData BattleData;
@@ -25,8 +23,6 @@ namespace Game_Manager
         {
             base.Awake();
             
-            parallaxControllers.Clear();
-
             if (!AbilityData)
             {
                 InitializedAbilityData();
@@ -43,19 +39,6 @@ namespace Game_Manager
             PlayerTransform = playerTransform;
             PlayerManager = PlayerTransform.GetComponent<PlayerManager>();
             Debug.Log("Game Manager has registered player");
-        }
-
-        public void RegisterParallaxController(ParallaxController parallaxController)
-        {
-            parallaxControllers.Add(parallaxController);
-        }
-
-        public void UpdateParallaxControllers()
-        {
-            foreach (var parallaxController in parallaxControllers)
-            {
-                parallaxController.UpdateParallaxController();
-            }
         }
 
         public void EnableDoubleJump()

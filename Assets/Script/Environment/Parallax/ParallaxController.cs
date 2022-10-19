@@ -35,22 +35,11 @@ namespace Environment.Parallax
             _startZ = position.z;
         }
 
-        private void Start()
-        {
-            GameManager.Instance.RegisterParallaxController(this);
-        }
-
         private void FixedUpdate()
         {
             float targetX = Mathf.Clamp(_startX + Travel * ParallaxFactor, minX, maxX);
             _newPosition.Set(targetX, _startY, _startZ);
             transform.position = _newPosition;
-        }
-
-        public void UpdateParallaxController()
-        {
-            _cam = Camera.main;
-            _cameraStartPositionX = _cam.transform.position.x;
         }
 
         private void OnDrawGizmosSelected()
