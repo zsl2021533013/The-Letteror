@@ -1,0 +1,1046 @@
+fileFormatVersion: 2
+guid: 5d1e51a455719f24588651e34831b654
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tree Tileset4_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 428
+        width: 117
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c06ad44fa9e35a45a6cc22c21e3564d
+      internalID: -1719788897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 428
+        width: 67
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d9105af36fed647bfc7c6f6b30b5b3
+      internalID: -1474234623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 352
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c37c13fea650d4ebfed727238c2291
+      internalID: -366126967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 379
+        width: 34
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.31034482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e532c174cb0967a44b0e818b53aa85d9
+      internalID: -481051909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 337
+        width: 38
+        height: 81
+      alignment: 9
+      pivot: {x: 0.68421054, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84485a6c46db64e4b8f1fbf2023e5cda
+      internalID: -254057141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 428
+        width: 67
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f633139d49f8a4897f2a731f531bc2
+      internalID: 1767260320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 428
+        width: 117
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9195a8d0ea2aa41be313f5e373122b
+      internalID: -1174543268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 337
+        width: 38
+        height: 81
+      alignment: 9
+      pivot: {x: 0.68421054, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2e8f0040470ad45859ca84517bf690
+      internalID: -540359446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_8
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 379
+        width: 34
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.31034482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d94534bfee1f44085f74c345ce3757
+      internalID: 347286022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_9
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 352
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3c2ccc4b6c7844b8437017472d9616
+      internalID: -1202305446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 309
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d96234c5859b64da235edaa8a12adc
+      internalID: 1243107432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_11
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 299
+        width: 51
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df779943fa56e4c4190491049f87a97e
+      internalID: -2029876902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_12
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 299
+        width: 51
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d52b24cbbfb884b97d31661d4b41c4
+      internalID: -1224437532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_13
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 309
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c77c4b319071bc4fb417408844a4aad
+      internalID: 1574303860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_14
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 227
+        width: 11
+        height: 38
+      alignment: 9
+      pivot: {x: 0.09090909, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e97fb6850ad0414cb270498b4466b3c
+      internalID: 1037044156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_15
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 208
+        width: 11
+        height: 55
+      alignment: 9
+      pivot: {x: 0.90909094, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe0ad126b218174b9a657476465ef8d
+      internalID: -322193563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_16
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 208
+        width: 11
+        height: 55
+      alignment: 9
+      pivot: {x: 1.4545455, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5da36b221b70ad479cc29e48263c4c6
+      internalID: 1709011184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_17
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 227
+        width: 11
+        height: 38
+      alignment: 9
+      pivot: {x: 0.90909094, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d200ac58a662adf4d84fad3fd3cfc899
+      internalID: 1881932287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 196
+        width: 38
+        height: 10
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf75ebfa173c07b4e8bbd815341178c5
+      internalID: -399257765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_19
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 202
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe716c3717223f42a729550b38683a3
+      internalID: 808376150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_20
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 179
+        width: 53
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add604e644cbbd74d8d425d5dcf0d84b
+      internalID: -1772748806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 202
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc96de43f4631d48a39ff3061f6b8e2
+      internalID: -1398912311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_22
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 202
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68eb3bba0928ba458802cf1427832b7
+      internalID: -1319460962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_23
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 202
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d569de64112803343ae975fc4426151f
+      internalID: 602046315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_24
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 202
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f029a831d28a6243ad3f55cbf9ff6e6
+      internalID: 2070129244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_25
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 179
+        width: 53
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde886bb01bd7744a91724639d1b5ce
+      internalID: 2146152345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_26
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 202
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b31b1dc55266e24db08cc3d870caf93
+      internalID: -1397982866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_27
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 196
+        width: 38
+        height: 10
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a509d0ff562dfb847abfe6e1b39607b6
+      internalID: -227367801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_28
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 99
+        width: 68
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5322581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed5202e7afe15b4dae40853eba5b3d6
+      internalID: -86305912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_29
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 115
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60ca332d3fc9f64aa6d33e60d5622b3
+      internalID: -2124038255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_30
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 115
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.40425533, y: 0.42222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f4ddca491311c4db483ed203ce440c
+      internalID: 1744384936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_31
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 99
+        width: 68
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5441176, y: 0.5483871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e729e79c35d2c6a4cbf33a8e785558ae
+      internalID: 1862710830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_32
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 81
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c10feaa6a49a1489e8cc8ad0772b65
+      internalID: -1721767069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_33
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 62
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2be4495b8cc7eb4e9483f4a27faccf1
+      internalID: 550251171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_34
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 62
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a7b0877431984449c2dd769cc58577
+      internalID: -1630838761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_35
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 81
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1168e9c4ee30c514cb964307327b06dd
+      internalID: -1020429172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_36
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 46
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380173731ae7f11418855787bef112b7
+      internalID: -1546576536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_37
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 74
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc4b7c952a38bd499a0b8ad3016f569
+      internalID: -291633326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_38
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 74
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa70c157ae7bea740bb6d8f648f27730
+      internalID: -2138476539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_39
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 46
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9324470fdb092418b8714201c8ae5d
+      internalID: 897988404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_40
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 41
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78f08c8e2fd9694d9de6036d9aac8f1
+      internalID: 457518409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Tileset4_41
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 41
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b612f7cebfb20449447f59b23209f4
+      internalID: -1524978411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tree Tileset4_3: -1474234623
+      Tree Tileset4_33: -1721767069
+      Tree Tileset4_41: 457518409
+      Tree Tileset4_10: -1202305446
+      Tree Tileset4_13: -1224437532
+      Tree Tileset4_17: 1709011184
+      Tree Tileset4_7: -1174543268
+      Tree Tileset4_31: 1744384936
+      Tree Tileset4_11: 1243107432
+      Tree Tileset4_4: -366126967
+      Tree Tileset4_1: 1801219141
+      Tree Tileset4_0: -254057141
+      Tree Tileset4_24: 602046315
+      Tree Tileset4_39: -2138476539
+      Tree Tileset4_30: -2124038255
+      Tree Tileset4_23: -1319460962
+      Tree Tileset4_9: 347286022
+      Tree Tileset4_25: 2070129244
+      Tree Tileset4_22: -1398912311
+      Tree Tileset4_19: -399257765
+      Tree Tileset4_35: -1630838761
+      Tree Tileset4_20: 808376150
+      Tree Tileset4_36: -1020429172
+      Tree Tileset4_12: -2029876902
+      Tree Tileset4_37: -1546576536
+      Tree Tileset4_5: -481051909
+      Tree Tileset4_21: -1772748806
+      Tree Tileset4_28: -227367801
+      Tree Tileset4_26: 2146152345
+      Tree Tileset4_6: 1767260320
+      Tree Tileset4_38: -291633326
+      Tree Tileset4_18: 1881932287
+      Tree Tileset4_15: 1037044156
+      Tree Tileset4_2: -1719788897
+      Tree Tileset4_8: -540359446
+      Tree Tileset4_14: 1574303860
+      Tree Tileset4_27: -1397982866
+      Tree Tileset4_34: 550251171
+      Tree Tileset4_32: 1862710830
+      Tree Tileset4_29: -86305912
+      Tree Tileset4_40: 897988404
+      Tree Tileset4_16: -322193563
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

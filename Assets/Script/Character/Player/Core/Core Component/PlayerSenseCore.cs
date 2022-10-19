@@ -104,7 +104,7 @@ namespace Character.Player.Core.Core_Component
         public DashFruitController GetDashFruit()
         {
             Collider2D trigger = Physics2D.OverlapCircle(specialDashSensor.position,
-                specialDashSensorRadius, specialDashLayerMask);
+                specialDashSensorRadius + 1f, specialDashLayerMask); // 加 1f 预防极限情况
             DashFruitController targetDashFruit = trigger.transform.GetComponent<DashFruitController>();
             return targetDashFruit;
         }
