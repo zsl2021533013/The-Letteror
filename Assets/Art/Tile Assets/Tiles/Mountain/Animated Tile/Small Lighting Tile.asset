@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Small Lighting Tile
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 299590910, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -576418795, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 1400234585, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -1216537625, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 645570584, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -883357442, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 1551455434, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -803050021, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 1353783946, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -759429921, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 1592209277, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 86660012, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -53221481, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 1760627825, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 510109614, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -857140877, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: 1561916827, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  - {fileID: -29146317, guid: 3eb4f647b848c634d8ede0106af1067f, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
