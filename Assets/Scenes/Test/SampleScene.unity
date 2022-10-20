@@ -74410,6 +74410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double Jump Power Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 191192746101106002, guid: 894be0fb74997ec4ab5da4b7917f7d79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 191192746101106006, guid: 894be0fb74997ec4ab5da4b7917f7d79, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -74513,6 +74517,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b29fbf4b07ee2648851c781ca025f84, type: 3}
+--- !u!1001 &652115343881202584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 36.35205
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630539, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 652115344903630550, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
+      propertyPath: m_Name
+      value: Smoke Flame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0c209a28f3aff8428a6b134e6c70c1d, type: 3}
 --- !u!1001 &2447124785666159710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74777,67 +74838,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55da05825c09fa54091485fc6636c85a, type: 3}
---- !u!1001 &4170556645250213182
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_RootOrder
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 36.35205
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875437, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875440, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_Name
-      value: Spike Trap 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170556645435875440, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb34eac3dbafd7d499ad6b842e4b490e, type: 3}
 --- !u!1001 &5105112723287537290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74905,6 +74905,10 @@ PrefabInstance:
     - target: {fileID: 7653794510771159107, guid: 17b243270f4e2534893febb19b80ad87, type: 3}
       propertyPath: m_Name
       value: Special Downwards Attack Power Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7653794510771159107, guid: 17b243270f4e2534893febb19b80ad87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7653794510771159111, guid: 17b243270f4e2534893febb19b80ad87, type: 3}
       propertyPath: m_RootOrder
@@ -75020,6 +75024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall Slide Power Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 2665021800432703755, guid: 59ed00c81d8b1894fb3ffddd21980a1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2665021800432703759, guid: 59ed00c81d8b1894fb3ffddd21980a1b, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -75076,6 +75084,10 @@ PrefabInstance:
     - target: {fileID: 3306589138667871026, guid: 2ed5eea950a538d4a96c2759d342df0f, type: 3}
       propertyPath: m_Name
       value: Special Dash Power Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306589138667871026, guid: 2ed5eea950a538d4a96c2759d342df0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3306589138667871030, guid: 2ed5eea950a538d4a96c2759d342df0f, type: 3}
       propertyPath: m_RootOrder
@@ -75235,6 +75247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dash Power Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 3140737752283412351, guid: b8350b55b0f0cba449463ea55511f33f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8350b55b0f0cba449463ea55511f33f, type: 3}
 --- !u!1001 &8008695124465031623
@@ -75300,6 +75316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dash Door
       objectReference: {fileID: 0}
+    - target: {fileID: 691902658346438652, guid: 148e3b26470391343b50322b267904aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148e3b26470391343b50322b267904aa, type: 3}
 --- !u!1001 &8674476965989192617
@@ -75357,6 +75377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Special Upwards Attack Power Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 7075219518562139503, guid: 792b1a90d5a4b8b41aaacabdad6a2ee9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 792b1a90d5a4b8b41aaacabdad6a2ee9, type: 3}
 --- !u!1001 &8742415275703106332
@@ -75369,6 +75393,10 @@ PrefabInstance:
     - target: {fileID: 5705705523776926635, guid: 9f26cdeb5ce4e0a4db0c55499ac002db, type: 3}
       propertyPath: m_Name
       value: Special Horizontal Power Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705705523776926635, guid: 9f26cdeb5ce4e0a4db0c55499ac002db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5705705523776926639, guid: 9f26cdeb5ce4e0a4db0c55499ac002db, type: 3}
       propertyPath: m_RootOrder

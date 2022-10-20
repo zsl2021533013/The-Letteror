@@ -227,7 +227,7 @@
                 {
                     "name": "",
                     "id": "7fad1dbc-f8aa-4b22-af2b-8be02dd1895a",
-                    "path": "<XInputController>/rightShoulder",
+                    "path": "<XInputController>/rightTrigger",
                     "interactions": "",
                     "processors": "AxisDeadzone",
                     "groups": "XBox",
