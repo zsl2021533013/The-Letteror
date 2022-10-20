@@ -8,6 +8,7 @@ namespace Character.Player.Data.Player_Ability_Data
         public bool isDoubleJumpEnable;
         public bool isWallSlideEnable;
         public bool isDashEnable;
+        public bool isSpecialDashEnable;
         public bool isSpecialUpwardsAttackEnable;
         public bool isSpecialHorizontalAttackEnable;
         public bool isSpecialDownwardsAttackEnable;

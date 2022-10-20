@@ -76,6 +76,12 @@ namespace Game_Manager
             AbilityData.isSpecialDownwardsAttackEnable = true;
             UpdatePlayerAbilityData();
         }
+        
+        public void EnableSpecialDash()
+        {
+            AbilityData.isSpecialDashEnable = true;
+            UpdatePlayerAbilityData();
+        } 
 
         private void UpdatePlayerAbilityData() => PlayerManager.UpdateAbilityData(AbilityData);
 

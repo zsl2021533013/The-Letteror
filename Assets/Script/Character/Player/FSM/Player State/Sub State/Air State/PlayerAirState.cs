@@ -80,7 +80,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Air_State
                 return;
             }
 
-            if (_specialDashInput && _isTouchingDashFruit)
+            if (manager.AbilityData.isSpecialDashEnable && _specialDashInput && _isTouchingDashFruit)
             {
                 stateMachine.TranslateToState(manager.SpecialDashState);
                 return;

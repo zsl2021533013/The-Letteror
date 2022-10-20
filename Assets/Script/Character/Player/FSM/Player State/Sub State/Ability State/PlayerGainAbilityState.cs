@@ -16,5 +16,12 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             
             coreManager.MoveCore.SetVelocityX(0f);
         }
+
+        protected override void OnAnimationFinish()
+        {
+            base.OnAnimationFinish();
+            
+            manager.Input.ResetGainAbility();
+        }
     }
 }
