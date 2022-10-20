@@ -6,15 +6,16 @@ namespace Environment.Trigger
 {
     public class SpikeTrap1Trigger : TriggerBase
     {
+        [SerializeField] private Transform resetPosition;
         [SerializeField] private int attack;
-        [SerializeField] private Vector2 returnOffset;
         
         public override void Interact(PlayerManager manager)
         {
             base.Interact(manager);
             
             manager.BattleManager.Damaged(attack);
-            manager.CoreManager.MoveCore.SetPosition(manager.FormerOnGroundPosition + returnOffset);
+            manager.CoreManager.MoveCore.SetPosition(resetPosition.position);
+            manager.CoreManager.MoveCore.SetVelocity(Vector2.zero);
         }
     }
 }
