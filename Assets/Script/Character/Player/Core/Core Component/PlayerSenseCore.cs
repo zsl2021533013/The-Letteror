@@ -105,8 +105,16 @@ namespace Character.Player.Core.Core_Component
         {
             Collider2D trigger = Physics2D.OverlapCircle(specialDashSensor.position,
                 specialDashSensorRadius + 1f, specialDashLayerMask); // 加 1f 预防极限情况
-            DashFruitController targetDashFruit = trigger.transform.GetComponent<DashFruitController>();
-            return targetDashFruit;
+            
+            if (trigger)
+            {
+                DashFruitController targetDashFruit = trigger.transform.GetComponent<DashFruitController>();
+                return targetDashFruit;
+            }
+            else
+            {
+                return null;
+            }
         }
         
         protected override void OnDrawGizmosSelected()

@@ -28,7 +28,16 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
 
             coreManager.MoveCore.OpenArrow();
             _dashFruit = coreManager.SenseCore.GetDashFruit();
-            _dashFruit.PlayerEnter();
+
+            if (_dashFruit)
+            {
+                _dashFruit.PlayerEnter();
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                isAbilityDone = true;
+            }
         }
 
         public override void OnUpdate()
@@ -57,7 +66,11 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             base.OnExit();
             
             coreManager.MoveCore.CloseArrow();
-            _dashFruit.PlayerExit();
+
+            if (_dashFruit)
+            {
+                _dashFruit.PlayerExit();
+            }
         }
 
         protected override void UpdateInput(PlayerInputHandler input)
