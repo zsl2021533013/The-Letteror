@@ -17,16 +17,9 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
             base.OnEnter();
             
             coreManager.MoveCore.SetVelocityY(-coreManager.MoveCore.StateMachineData.specialDownwardsAttackVelocityY);
-            coreManager.MoveCore.FreezeX(startPosition);
+            coreManager.MoveCore.SetVelocityX(0f);
         }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-            
-            coreManager.MoveCore.FreezeX(startPosition);
-        }
-
+        
         protected override void OnAnimationFinish()
         {
             stateMachine.TranslateToState(manager.SpecialDownwardsAttack2State);

@@ -14,13 +14,19 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
         }
 
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            coreManager.MoveCore.SetVelocityX(0f);
+        }
+
         public override void OnUpdate()
         {
             base.OnUpdate();
 
             coreManager.MoveCore.SetVelocityY(-coreManager.MoveCore.StateMachineData.specialDownwardsAttackVelocityY);
-            coreManager.MoveCore.FreezeX(startPosition);
-            
+
             if (_isGrounded)
             {
                 stateMachine.TranslateToState(manager.SpecialDownwardsAttack3State);
