@@ -9,10 +9,12 @@ namespace Environment.Trigger
 {
     public class FragileFloorTrigger : TriggerBase
     {
+        private BoxCollider2D _boxCollider2D;
         private Animator _animator;
 
         private void Awake()
         {
+            _boxCollider2D = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
         }
 
@@ -22,6 +24,7 @@ namespace Environment.Trigger
 
             if (manager.StateMachine.CurrentState is PlayerSpecialDownwardsAttack2State or PlayerSpecialUpwardsAttackState)
             {
+                _boxCollider2D.enabled = false;
                 _animator.SetBool("disappear", true);
             }
         }
