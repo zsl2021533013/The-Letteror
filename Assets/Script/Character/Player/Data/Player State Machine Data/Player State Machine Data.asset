@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothDampTime: 0.15
   jumpVelocity: 21
-  amountOfJump: 2
+  jumpAmount: 2
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
   wallSlideVelocity: 2
@@ -39,3 +39,4 @@ MonoBehaviour:
   specialDownwardsAttackVelocityY: 40
   specialDownwardsAttackStopVelocityY: 10
   specialAttackCoolDown: 0.5
+  specialAttackAmount: 1

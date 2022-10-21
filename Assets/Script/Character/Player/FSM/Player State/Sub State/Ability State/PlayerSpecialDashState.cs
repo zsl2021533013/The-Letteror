@@ -23,7 +23,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
         {
             base.OnEnter();
 
-            manager.ResetJumpAndDash();
+            manager.ResetAbility();
             manager.JumpState.DecreaseAmountOfJumps();
             
             Time.timeScale = 0f;

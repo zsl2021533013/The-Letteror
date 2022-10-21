@@ -25,7 +25,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
 
             ResetTriggers(manager.Input);
             
-            manager.ResetJumpAndDash();
+            manager.ResetAbility();
             
             manager.transform.position = _detectedPosition;
             

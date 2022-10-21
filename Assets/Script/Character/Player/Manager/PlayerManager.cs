@@ -57,7 +57,6 @@ namespace Character.Player.Manager
         public PlayerAirHorizontalAttack2State AirHorizontalAttack2State { get; private set; }
         public PlayerAirUpwardsAttackState AirUpwardsAttackState { get; private set; }
         public PlayerAirDownwardsAttackState AirDownwardsAttackState { get; private set; }
-        public PlayerSpecialIdleAttackState SpecialIdleAttackState { get; private set; }
         public PlayerSpecialDashAttackState SpecialDashAttackState { get; private set; }
         public PlayerSpecialUpwardsAttackState SpecialUpwardsAttackState { get; private set; }
         public PlayerSpecialDownwardsAttack1State SpecialDownwardsAttack1State { get; private set; }
@@ -132,7 +131,6 @@ namespace Character.Player.Manager
             AirHorizontalAttack2State = new PlayerAirHorizontalAttack2State(this, "airHorizontalAttack2");
             AirUpwardsAttackState = new PlayerAirUpwardsAttackState(this, "airUpwardsAttack");
             AirDownwardsAttackState = new PlayerAirDownwardsAttackState(this, "airDownwardsAttack");
-            SpecialIdleAttackState = new PlayerSpecialIdleAttackState(this, "groundAttack1");
             SpecialDashAttackState = new PlayerSpecialDashAttackState(this, "specialHorizontalAttack");
             SpecialUpwardsAttackState = new PlayerSpecialUpwardsAttackState(this, "specialUpwardsAttack");
             SpecialDownwardsAttack1State = new PlayerSpecialDownwardsAttack1State(this, "specialDownwardsAttack1");
@@ -142,10 +140,13 @@ namespace Character.Player.Manager
             #endregion
         }
 
-        public void ResetJumpAndDash()
+        public void ResetAbility()
         {
             JumpState.ResetAmountOfJump();
             DashState.ResetAmountOfDash();
+            SpecialDashAttackState.ResetAmountOfSpecialAttack();
+            SpecialUpwardsAttackState.ResetAmountOfSpecialAttack();
+            SpecialDownwardsAttack1State.ResetAmountOfSpecialAttack();
         }
 
         public override void TryToDamage(CharacterBattleManager targetBattleManager)

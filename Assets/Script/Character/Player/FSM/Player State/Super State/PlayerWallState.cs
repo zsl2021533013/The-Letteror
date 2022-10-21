@@ -22,7 +22,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             base.OnEnter();
 
             ResetTriggers(manager.Input);
-            manager.ResetJumpAndDash();
+            manager.ResetAbility();
         }
 
         public override void OnUpdate()

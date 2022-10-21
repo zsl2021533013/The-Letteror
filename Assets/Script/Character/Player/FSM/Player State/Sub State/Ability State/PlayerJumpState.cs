@@ -10,7 +10,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
         public PlayerJumpState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
-            _amountOfJumpsLeft = coreManager.MoveCore.StateMachineData.amountOfJump;
+            _amountOfJumpsLeft = coreManager.MoveCore.StateMachineData.jumpAmount;
         }
 
         
@@ -21,12 +21,12 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
             coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.StateMachineData.jumpVelocity);
             isAbilityDone = true;
             DecreaseAmountOfJumps();
-           manager.AirState.StartJumping();
+            manager.AirState.StartJumping();
         }
 
         public bool CheckAmountOfJump() => _amountOfJumpsLeft - (manager.AbilityData.isDoubleJumpEnable ? 0 : 1) > 0;
 
-        public void ResetAmountOfJump() => _amountOfJumpsLeft = coreManager.MoveCore.StateMachineData.amountOfJump;
+        public void ResetAmountOfJump() => _amountOfJumpsLeft = coreManager.MoveCore.StateMachineData.jumpAmount;
 
         public void DecreaseAmountOfJumps() => --_amountOfJumpsLeft;
 

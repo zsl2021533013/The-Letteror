@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Character.Player.Core.Data
 {
@@ -10,7 +11,7 @@ namespace Character.Player.Core.Data
         
         [Header(("Jump State"))]
         public float jumpVelocity;
-        public int amountOfJump;
+        public int jumpAmount;
         
         [Header("In Air State")]
         public float coyoteTime;
@@ -55,5 +56,6 @@ namespace Character.Player.Core.Data
         public float specialDownwardsAttackVelocityY;
         public float specialDownwardsAttackStopVelocityY;
         public float specialAttackCoolDown;
+        public int specialAttackAmount;
     }
 }

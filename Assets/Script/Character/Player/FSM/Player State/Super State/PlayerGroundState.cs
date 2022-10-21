@@ -32,7 +32,7 @@ namespace Character.Player.FSM.Player_State.Super_State
             base.OnEnter();
 
            ResetTriggers(manager.Input);
-           manager.ResetJumpAndDash();
+           manager.ResetAbility();
         }
 
         public override void OnUpdate()
@@ -158,31 +158,31 @@ namespace Character.Player.FSM.Player_State.Super_State
             switch (manager.Input.InputDirectionType)
             {
                 case PlayerInputDirectionType.Up when manager.AbilityData.isSpecialUpwardsAttackEnable:
-                    if (manager.SpecialUpwardsAttackState.AttackEnable)
+                    if (manager.SpecialUpwardsAttackState.CheckAmountOfSpecialAttack())
                     {
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
                 case PlayerInputDirectionType.Down when manager.AbilityData.isSpecialDownwardsAttackEnable:
-                    if (manager.SpecialDownwardsAttack1State.AttackEnable)
+                    if (manager.SpecialDownwardsAttack1State.CheckAmountOfSpecialAttack())
                     {
                         stateMachine.TranslateToState(manager.SpecialDownwardsAttack1State);
                     }
                     break;
                 case PlayerInputDirectionType.Left when manager.AbilityData.isSpecialHorizontalAttackEnable:
-                    if (manager.SpecialDashAttackState.AttackEnable)
+                    if (manager.SpecialDashAttackState.CheckAmountOfSpecialAttack())
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
                 case PlayerInputDirectionType.Right when manager.AbilityData.isSpecialHorizontalAttackEnable:
-                    if (manager.SpecialDashAttackState.AttackEnable)
+                    if (manager.SpecialDashAttackState.CheckAmountOfSpecialAttack())
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
                     break;
                 case PlayerInputDirectionType.None when manager.AbilityData.isSpecialHorizontalAttackEnable:
-                    if (manager.SpecialDashAttackState.AttackEnable)
+                    if (manager.SpecialDashAttackState.CheckAmountOfSpecialAttack())
                     {
                         stateMachine.TranslateToState(manager.SpecialDashAttackState);
                     }
