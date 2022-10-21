@@ -23,9 +23,15 @@ namespace Environment.Trigger
         {
             base.Interact(manager);
 
-            if (manager.StateMachine.CurrentState is PlayerSpecialDownwardsAttack2State or PlayerSpecialUpwardsAttackState)
+            if (manager.StateMachine.CurrentState is PlayerSpecialDownwardsAttack2State)
             {
                 _animator.SetBool(Disappear, true);
+            }
+
+            if (manager.StateMachine.CurrentState is PlayerSpecialUpwardsAttackState)
+            {
+                _animator.SetBool(Disappear, true);
+                _boxCollider2D.enabled = false;
             }
         }
 

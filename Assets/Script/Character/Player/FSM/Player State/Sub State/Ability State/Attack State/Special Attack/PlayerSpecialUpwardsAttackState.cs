@@ -23,15 +23,7 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
             coreManager.MoveCore.SetVelocityY(coreManager.MoveCore.StateMachineData.specialUpwardsAttackVelocityY);
             coreManager.MoveCore.FreezeX(startPosition);
         }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-            
-            coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * movementInput.x);
-        }
-
-
+        
         protected override void UpdateInput(PlayerInputHandler input)
         {
             base.UpdateInput(input);
