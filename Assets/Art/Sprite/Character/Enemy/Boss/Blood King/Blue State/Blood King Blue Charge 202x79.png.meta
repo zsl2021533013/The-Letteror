@@ -167,27 +167,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blood King Blue Charge 202x79_3
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 0
-        width: 186
-        height: 79
-      alignment: 9
-      pivot: {x: 0.3214286, y: 0.1265823}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bcc58a8e991caf4a911c28b352884fc
-      internalID: 824499355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Blood King Blue Charge 202x79_4
       rect:
         serializedVersion: 2

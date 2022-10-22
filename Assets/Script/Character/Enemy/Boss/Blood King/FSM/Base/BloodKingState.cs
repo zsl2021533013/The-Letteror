@@ -17,13 +17,6 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Base
             coreManager = (BloodKingCoreManager)base.coreManager;
         }
 
-        public override void OnEnter()
-        {
-            base.OnEnter();
-            
-            Debug.Log(_animBoolName);
-        }
-
         public override void OnCharacterDie()
         {
             if (manager.IsDead)

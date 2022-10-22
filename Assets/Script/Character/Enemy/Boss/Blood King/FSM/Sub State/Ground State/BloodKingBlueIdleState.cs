@@ -30,7 +30,6 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
 
             if (manager.CurrentState > 1)
             {
-                Debug.Log(manager.CurrentState);
                 stateMachine.TranslateToState(manager.Transform2State);
                 return;
             }

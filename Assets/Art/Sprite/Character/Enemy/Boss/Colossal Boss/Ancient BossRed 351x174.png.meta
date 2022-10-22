@@ -1,0 +1,4126 @@
+fileFormatVersion: 2
+guid: 3fba27c6dd0a11c43a4f71d72d6e910f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e248c806222a6d749b0266a8d30bc8d3
+      internalID: -1790511100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc5bd8128da6944b939c371a6001722
+      internalID: 2036000458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d956ebe664d5e4b91eb38d691049be
+      internalID: -1706054009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_3
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876641b70f7614d4497f389ea6c3ec73
+      internalID: 1949727686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_4
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9720d45e2b1e64db27e222c6a478b1
+      internalID: 159083791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_5
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca1c16684b14cf4bb79610aee69cb0f
+      internalID: 1520530071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_6
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115421ae151ab9b48b99d4fb31078f4f
+      internalID: -1120649017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_7
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ce53bd6dd53734b948d56da172382b
+      internalID: -261769581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_8
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043266d7fe49d1949a7d9ef665a19a84
+      internalID: 1437313300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_9
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7142e0e61c3e50746bb718aa00f8587e
+      internalID: -1275858748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_10
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71046e38f8965e44693174ba3e86deaa
+      internalID: -331259719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_11
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 1914
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05856aaf5904b4e4ea6c18b90948c882
+      internalID: -1908174285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48bf2ac890bb5f40a3a96ec6d061df7
+      internalID: -1282958545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b15363bee887c044b2a5ce04feba714
+      internalID: -1024877834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_14
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3a9ee0ba6a96948a59df46ea56f223
+      internalID: 644642862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_15
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba3bfa406f244a45b886141871887a6
+      internalID: 1327439403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_16
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5d427d712e3764a973906155e26269
+      internalID: -408847219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_17
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a543b34abf9004c9f8e36650765065
+      internalID: -1404130158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_18
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e57f9ef8c5f1754baffd8760d20cd4b
+      internalID: -1886657448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_19
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e4eb4edf862aa43b69f66f0e9c190b
+      internalID: -1686096357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_20
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951d5638123514f4c80ced515076c4a5
+      internalID: 571588733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_21
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763c5bca5e3901745bf73372c6744936
+      internalID: -1296094149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_22
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a251d003ea63248b4a00307ce5ac60
+      internalID: 1254597564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_23
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ddfe9db06d90a4ba82e47f4c3a95fc
+      internalID: 996891095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_24
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cc0e07ba3082346bfff26d90bffb49
+      internalID: 1218059740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_25
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20c27aaf49731949b61ec1b26497cff
+      internalID: -1080555986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_26
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413c43f82609a994f879cbfad8490a13
+      internalID: -1545520096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_27
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172ab5ffdbe43bb43a6c30b7c70a9e6f
+      internalID: -989613765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_28
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7fba6e5bbd376488c524bc408df532
+      internalID: 1344327150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_29
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3788ff9813f3a3d4dbd5f6945345ed94
+      internalID: -1281177150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_30
+      rect:
+        serializedVersion: 2
+        x: 6318
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18cb6ae0a2760249a41068cdd8941d5
+      internalID: 262094843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_31
+      rect:
+        serializedVersion: 2
+        x: 6669
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ce2ce45d04a30499d28cdfd6c0ca7d
+      internalID: 1738148837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_32
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c397ccccc875c646a623ba0d8710411
+      internalID: 1768374756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_33
+      rect:
+        serializedVersion: 2
+        x: 7371
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864dc082b1fe1934b88126c1e137b088
+      internalID: 938236946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_34
+      rect:
+        serializedVersion: 2
+        x: 7722
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca71a0657c88947468db5de4a974154f
+      internalID: 428310015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_35
+      rect:
+        serializedVersion: 2
+        x: 8073
+        y: 1740
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0aa6fd4ce9ea94c93252dc0c5b0a2c
+      internalID: 939498312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f3ba881e2e57747b19a1098d68c8e6
+      internalID: -597787441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_37
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45402fd12159024c85953df5d832736
+      internalID: -680121343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_38
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c8b01e0a5dd904a9646b7c1a788926
+      internalID: 421161497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_39
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c097def2137b54e8abf802abe147d8
+      internalID: -578208228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_40
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5921c169d3c4648be034fee97879a0
+      internalID: 657382880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_41
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5520122e9d0a7b745a5611a75113ddbc
+      internalID: 1903152380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_42
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8b8d7904767e643a55cf2fdc5b4434
+      internalID: 1222278010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_43
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce35cff8e2fc4c547a2682dfad73dbee
+      internalID: 1155253747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_44
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ed4f7ce71664c48824341dc128a06f
+      internalID: 1405406965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_45
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99b8164a2f55b149a94161dc9771151
+      internalID: 1511386906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_46
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d788ecfd1453eb140a3bcd9fe38dfae3
+      internalID: 2103959814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_47
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7551a88b7c666349a6e7e4a10bc6a95
+      internalID: -1093342408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_48
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0889e4279de944445b115b092fc8ae6e
+      internalID: -868695294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_49
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b14d5b061289f5498bf0b87f72224ae
+      internalID: 1180280536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_50
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4be24b374f2004b9b2a900a6dc6afe
+      internalID: 894960653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_51
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033786bf3f0a6ae4593fe9caff96fbe7
+      internalID: 231025397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_52
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc12dc3518e8584994b34ceba8729ea
+      internalID: -2044855211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_53
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c37f5a0f0f14f4b885d8a44b348e94
+      internalID: -232759628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_54
+      rect:
+        serializedVersion: 2
+        x: 6318
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c7109bc2692eb498973678b7f6f139
+      internalID: -1700897238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_55
+      rect:
+        serializedVersion: 2
+        x: 6669
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4289bd9a94fca594eb97a95569d1ea21
+      internalID: 1179257613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_56
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75ef5692561d8a4a84f99465e25fb69
+      internalID: -1831811518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_57
+      rect:
+        serializedVersion: 2
+        x: 7371
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826646e34f0847540a7b5386a95eb3a8
+      internalID: 1707163110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_58
+      rect:
+        serializedVersion: 2
+        x: 7722
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f9ad6cfb12f29469c2589b7f5403f2
+      internalID: 311393508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_59
+      rect:
+        serializedVersion: 2
+        x: 8073
+        y: 1566
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8e7d6e57942604ab01c01921571ec2
+      internalID: -1939962851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ceb576b53063a4cb2e07f3ce5ccaf7
+      internalID: -590812962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_61
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d9c79490139c64fa546b54097e81f4
+      internalID: -370624660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_62
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fedd8c98a5d2542b08a7ae58f853c6
+      internalID: 837736559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_63
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33df2d43972791c41be2beb8b51c2431
+      internalID: -1668913376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_64
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e75ed1c92d343143917d5e492411dd7
+      internalID: -567051374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_65
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f5a862a795df44dbf5b7599d4218f0
+      internalID: 1243593545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_66
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3928f6db4e14b1948b694ed5456b2c2d
+      internalID: -2078358953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_67
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1392
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dec8f4e415d84e4c80546e0428622b9
+      internalID: -1532022599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9295f3329f2d12f48b93201cab628188
+      internalID: -290169522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_69
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cdf95b768849244a0b2487bbe5e2f7
+      internalID: 1147455609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_70
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a84c74f732b48439b542b81c8b21c9
+      internalID: -872732531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_71
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007324d00cbde2a49bbf4523a4528b66
+      internalID: -1206423313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_72
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13700cf3ad9c1c42b00151e3d7c4d31
+      internalID: -1715820663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_73
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1038cac11832a4eb6dd5e47b63f655
+      internalID: 617141829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_74
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1218
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b16fbca265d7d344a65483833d4775c
+      internalID: 703006277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdcbda22ac15d94c988899862c91474
+      internalID: 789311049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_76
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43d60c6f257f974daccb58f25aaa824
+      internalID: -53559718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_77
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd71be486556ff4db63f7094fe48132
+      internalID: -1440787881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_78
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47afd72bf4b0f8b4bb68b8be8fe74eeb
+      internalID: 1971967100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_79
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862d5522d1a41ac41bc96a8b64a0ffa4
+      internalID: 1350089382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_80
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517a388259dfd904faee9f1368397cf8
+      internalID: 330109401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_81
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f438c21d57f6f0f439b8c183939ebad1
+      internalID: 812936880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_82
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810aaf818c4ef4a469869e4092cd2cb8
+      internalID: -1583224249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_83
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca44d838849bb9b47a9e97a69428c29f
+      internalID: -781289426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_84
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c492213767ab94e9dd5b0da2e95472
+      internalID: 1403476676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_85
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0329d018c48c33f47aa121451c8cb617
+      internalID: 175335662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_86
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f968a67e8c99545b59c31e6861b553
+      internalID: 316545658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_87
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1e8f7c1a2355741b32791fa2439835
+      internalID: -1416512107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_88
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f960a7596f9b3e4cad902644648b065
+      internalID: -1900649537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_89
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80e885eee40f5948930caa1326e2eee
+      internalID: 1132950718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_90
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712c97790570f6644a6baec1b85ffc7b
+      internalID: 1457129684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_91
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 1044
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc90f2e5b0050d64fbba96f6fdf81718
+      internalID: -476285541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90daff2d397deca4e862566252d4b8f3
+      internalID: -386864123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_93
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6e9ea78f9bde943acfaa6f2b58c4fd
+      internalID: 1937588870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_94
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e0b521abf8f2d48b74d96919299ea5
+      internalID: -355241060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_95
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d5127cd2cbfae4ba269ff6408344ef
+      internalID: -1285442158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_96
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f860e62ca4ad074dbfcd7ab8cd891f6
+      internalID: -1116690859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_97
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d3b56655f8c0a489bc4a1ac1015cca
+      internalID: -190890402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_98
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 870
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1edc3a1a873044687852b93424cdd6
+      internalID: 222844079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273734edd632ad649845623b4bdace6c
+      internalID: -1937971330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_100
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 696
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0efaba027f7dd4490c5e1838ea0d70
+      internalID: 2072900604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_101
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 696
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c4fb3d0cef9804c98289556fd21812
+      internalID: 1255002565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff526a08daf5b2046b7c44dc58b2dd7e
+      internalID: -1741072459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_103
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90259d5044855c459f92f4d4de9c1b8
+      internalID: 1893406987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_104
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5529d1d6fef96694d917e37629c457ce
+      internalID: -2121855891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_105
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3861dd1611ba63344bbf3f999d0b89d5
+      internalID: 1953095003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_106
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8d7bcd745ddc144b193ee4094039fb
+      internalID: -2121239682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_107
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f43bc71bc7ac1041acdc691ff862949
+      internalID: -1671259581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_108
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b27448eabe4f654396a5da3fa2fd631
+      internalID: -1318381881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_109
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f03c2b2f49b3d34cac922c324547890
+      internalID: 1580642783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_110
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7199e9cf5b8d0324287913bdecd6a333
+      internalID: 674436858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_111
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584bd41b3bb5a03499dfbe7d4da82cbd
+      internalID: -488108317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_112
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737d37d13703d6d4ab51d391ff049ecd
+      internalID: 234999301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_113
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fb7ef48b0fd6c4ea5dd45555bdd91e
+      internalID: 1489069469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_114
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18668ae3a0320e548a696506dea2269f
+      internalID: 1100394938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_115
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fac6d815c2685419b458e5a7ccbf72
+      internalID: 1538570387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_116
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae67f1025f25f1c4e851e8102c8ad5f3
+      internalID: -1139961437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_117
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a7beea5a705de4295fc6474f3fe5c4
+      internalID: 420773164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_118
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e69035f3a0b484f94216f64ab6367e
+      internalID: 217203898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_119
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea02d8a75ea6be4c9e62776e735971d
+      internalID: 1024212713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_120
+      rect:
+        serializedVersion: 2
+        x: 6318
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17944d4c6355c9a46803da3ae7eb1920
+      internalID: -692534261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_121
+      rect:
+        serializedVersion: 2
+        x: 6669
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c605754ad70837429a8c84e6344c03f
+      internalID: 1453470309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_122
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820ee812e9654544492ec9a9a3401b11
+      internalID: 1392139704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_123
+      rect:
+        serializedVersion: 2
+        x: 7371
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acb0eef0c30fd541bc975c7c5bd5b07
+      internalID: 1901050733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_124
+      rect:
+        serializedVersion: 2
+        x: 7722
+        y: 522
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce51a7f2e7b26b4ab2b21a81cdce413
+      internalID: -768914495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb718b08e4db676408f9a1613699c9bf
+      internalID: -1071830170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_126
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcd92faee3388548a0a9c9096e6daf5
+      internalID: -1624739468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_127
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d16ca30abe97642a649be64b01da2c
+      internalID: 1353704531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_128
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29e10535f2ef2649835cc482e17287d
+      internalID: -1961950188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_129
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d6fea3996324d4eb93dc8a81ad3a44
+      internalID: 1596677270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_130
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3897313769363428f6c70a63b0578d
+      internalID: 1841106260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_131
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfea3ae921a6cb4b869105e355976b1
+      internalID: 943267970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_132
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04ab946565994448a56d918ed05462f
+      internalID: 307291804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_133
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffbb02e157c3634aa52b31ed38dcfd5
+      internalID: -402147252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_134
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b141a7a7a213d4487302c92fb9d1c4
+      internalID: 1226474558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_135
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b887999cc2a85c7439589525024124e9
+      internalID: 2135010916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_136
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecaa47159130e24099fdf021ee4f272
+      internalID: -778398537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_137
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43f273c6d2dbb340a97b930169eadda
+      internalID: 1595890139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_138
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4205b5a83b6a8e541b66d169e691cf53
+      internalID: -1148983060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_139
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20db2d48288ca5247aa488c321775f7a
+      internalID: 888677889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_140
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25c5b328c7513a40856a21fc5017ee6
+      internalID: -544797274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_141
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3156a55d2dcdf58459f8a5ea5fe2d975
+      internalID: 602382097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_142
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32aa84e8ce87ddd4e8b22d904a647cd5
+      internalID: -223980279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_143
+      rect:
+        serializedVersion: 2
+        x: 6318
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb02feb811d84e4187693f41f43d2df
+      internalID: 426744641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_144
+      rect:
+        serializedVersion: 2
+        x: 6669
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9243ebfaf6572247b381a122be10827
+      internalID: 1218991084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_145
+      rect:
+        serializedVersion: 2
+        x: 7020
+        y: 348
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f80900aba7319041ad37d4719170014
+      internalID: 535972685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_146
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4529eceea9b9644babf734196bd026
+      internalID: -1081175829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_147
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3259fa8c1f2974b9b14673182325ee
+      internalID: -973773118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_148
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c337ca28f23aa4b428ed4a0fcb5ce7ca
+      internalID: 912728381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_149
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531744c5448eaba40b031ac289c87f0d
+      internalID: -902830123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_150
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db0400c7aa3e114d89f47c9fbb872e2
+      internalID: -1672761182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_151
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c9332837e76b84c89dc90c76d76130
+      internalID: -202160196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_152
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdff8f840b837dc46bedba429c77c394
+      internalID: -889550501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_153
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438bfb2f77f316c4bbebf55829a26c5a
+      internalID: -355590258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_154
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2db97e76d4c984e8c4e356b5d9a513
+      internalID: -1266811721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_155
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db30b3b25b83a244808285f3b97f5c6
+      internalID: 1785749109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_156
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64326c9d348f8114f812cbea371ab3e7
+      internalID: 951993949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_157
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68905f7f1eda38b44bfa13d94726673e
+      internalID: 506262175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_158
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51146d21a7ea82144b61166815daf869
+      internalID: -1954416178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_159
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6fee9ba86e7a240931fc9c3b6e0bbe
+      internalID: 728659806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_160
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d251f5a95d81924196623999f723e3e
+      internalID: -1852983763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_161
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af961165ecbe53945815a4d821a6c7b6
+      internalID: 994504615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_162
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4662780f0989914eb57dbef1e487179
+      internalID: 1280574730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_163
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 174
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac9023c6dc810e4f8f51e941acc19fe
+      internalID: 381321263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_164
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb1d90569ccbd14b8468bb5feab0a23
+      internalID: -262374575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_165
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34d8a9118a9b314897c2e75b6a6c47a
+      internalID: -1906845972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_166
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff1b9cd3a7716140960f24f0b2739c5
+      internalID: -127575812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_167
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd50e035404c1c4785c8c731ddc994b
+      internalID: 2055075323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_168
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c343eab9c2a7d41af505cbb6d6a7ed
+      internalID: 671483214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_169
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f99ee64c1ee42f478edc216dd1f8332
+      internalID: -383810393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_170
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09294b562eb3505409cf6450215966a8
+      internalID: -1766310464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_171
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275c34149bbf54e4fb48cfdbf2e4d86e
+      internalID: -1611048473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_172
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbe341b1906f1e4d98c1524802f5de1
+      internalID: -165835404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_173
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e88e923aef7155468d2adc37e1eec55
+      internalID: 1348742742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_174
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d036bf972b22ec4d89592b9eb8f482f
+      internalID: 433720553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_175
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0161d0cf9797440b033cbc3f4d92c4
+      internalID: -1973474649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_176
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adab1b8acca2244cbf094196278057d
+      internalID: -1674008082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_177
+      rect:
+        serializedVersion: 2
+        x: 4563
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01d4d5d680e3c643ab9d46260cdb0bd
+      internalID: 1167373528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_178
+      rect:
+        serializedVersion: 2
+        x: 4914
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c190eb61ea7524093042381893328f
+      internalID: 426827932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_179
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e623282b89e9643af2c5f1553d51f0
+      internalID: -1426026208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_180
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3df971dd74a7345bd2e068ff8f5da9
+      internalID: -1864823674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient BossRed 351x174_181
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 0
+        width: 351
+        height: 174
+      alignment: 9
+      pivot: {x: 0.44302, y: 0.2844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc85cfa1ee9270e4c993396278dc8691
+      internalID: 1682029724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ancient BossRed 351x174_81: 812936880
+      Ancient BossRed 351x174_129: 1596677270
+      Ancient BossRed 351x174_74: 703006277
+      Ancient BossRed 351x174_42: 1222278010
+      Ancient BossRed 351x174_86: 316545658
+      Ancient BossRed 351x174_1: 2036000458
+      Ancient BossRed 351x174_116: -1139961437
+      Ancient BossRed 351x174_139: 888677889
+      Ancient BossRed 351x174_68: -290169522
+      Ancient BossRed 351x174_76: -53559718
+      Ancient BossRed 351x174_57: 1707163110
+      Ancient BossRed 351x174_95: -1285442158
+      Ancient BossRed 351x174_121: 1453470309
+      Ancient BossRed 351x174_20: 571588733
+      Ancient BossRed 351x174_38: 421161497
+      Ancient BossRed 351x174_152: -889550501
+      Ancient BossRed 351x174_155: 1785749109
+      Ancient BossRed 351x174_71: -1206423313
+      Ancient BossRed 351x174_11: -1908174285
+      Ancient BossRed 351x174_79: 1350089382
+      Ancient BossRed 351x174_105: 1953095003
+      Ancient BossRed 351x174_40: 657382880
+      Ancient BossRed 351x174_149: -902830123
+      Ancient BossRed 351x174_151: -202160196
+      Ancient BossRed 351x174_83: -781289426
+      Ancient BossRed 351x174_118: 217203898
+      Ancient BossRed 351x174_10: -331259719
+      Ancient BossRed 351x174_72: -1715820663
+      Ancient BossRed 351x174_132: 307291804
+      Ancient BossRed 351x174_61: -370624660
+      Ancient BossRed 351x174_36: -597787441
+      Ancient BossRed 351x174_98: 222844079
+      Ancient BossRed 351x174_97: -190890402
+      Ancient BossRed 351x174_92: -386864123
+      Ancient BossRed 351x174_8: 1437313300
+      Ancient BossRed 351x174_43: 1155253747
+      Ancient BossRed 351x174_12: -1282958545
+      Ancient BossRed 351x174_154: -1266811721
+      Ancient BossRed 351x174_137: 1595890139
+      Ancient BossRed 351x174_162: 1280574730
+      Ancient BossRed 351x174_101: 1255002565
+      Ancient BossRed 351x174_27: -989613765
+      Ancient BossRed 351x174_93: 1937588870
+      Ancient BossRed 351x174_102: -1741072459
+      Ancient BossRed 351x174_133: -402147252
+      Ancient BossRed 351x174_15: 1327439403
+      Ancient BossRed 351x174_146: -1081175829
+      Ancient BossRed 351x174_2: -1706054009
+      Ancient BossRed 351x174_7: -261769581
+      Ancient BossRed 351x174_164: -262374575
+      Ancient BossRed 351x174_104: -2121855891
+      Ancient BossRed 351x174_124: -768914495
+      Ancient BossRed 351x174_165: -1906845972
+      Ancient BossRed 351x174_159: 728659806
+      Ancient BossRed 351x174_171: -1611048473
+      Ancient BossRed 351x174_88: -1900649537
+      Ancient BossRed 351x174_21: -1296094149
+      Ancient BossRed 351x174_158: -1954416178
+      Ancient BossRed 351x174_87: -1416512107
+      Ancient BossRed 351x174_84: 1403476676
+      Ancient BossRed 351x174_125: -1071830170
+      Ancient BossRed 351x174_82: -1583224249
+      Ancient BossRed 351x174_63: -1668913376
+      Ancient BossRed 351x174_66: -2078358953
+      Ancient BossRed 351x174_39: -578208228
+      Ancient BossRed 351x174_163: 381321263
+      Ancient BossRed 351x174_34: 428310015
+      Ancient BossRed 351x174_6: -1120649017
+      Ancient BossRed 351x174_122: 1392139704
+      Ancient BossRed 351x174_142: -223980279
+      Ancient BossRed 351x174_94: -355241060
+      Ancient BossRed 351x174_19: -1686096357
+      Ancient BossRed 351x174_148: 912728381
+      Ancient BossRed 351x174_169: -383810393
+      Ancient BossRed 351x174_80: 330109401
+      Ancient BossRed 351x174_110: 674436858
+      Ancient BossRed 351x174_181: 1682029724
+      Ancient BossRed 351x174_25: -1080555986
+      Ancient BossRed 351x174_100: 2072900604
+      Ancient BossRed 351x174_170: -1766310464
+      Ancient BossRed 351x174_47: -1093342408
+      Ancient BossRed 351x174_77: -1440787881
+      Ancient BossRed 351x174_53: -232759628
+      Ancient BossRed 351x174_60: -590812962
+      Ancient BossRed 351x174_127: 1353704531
+      Ancient BossRed 351x174_136: -778398537
+      Ancient BossRed 351x174_134: 1226474558
+      Ancient BossRed 351x174_23: 996891095
+      Ancient BossRed 351x174_115: 1538570387
+      Ancient BossRed 351x174_73: 617141829
+      Ancient BossRed 351x174_48: -868695294
+      Ancient BossRed 351x174_50: 894960653
+      Ancient BossRed 351x174_78: 1971967100
+      Ancient BossRed 351x174_45: 1511386906
+      Ancient BossRed 351x174_31: 1738148837
+      Ancient BossRed 351x174_144: 1218991084
+      Ancient BossRed 351x174_178: 426827932
+      Ancient BossRed 351x174_176: -1674008082
+      Ancient BossRed 351x174_35: 939498312
+      Ancient BossRed 351x174_55: 1179257613
+      Ancient BossRed 351x174_112: 234999301
+      Ancient BossRed 351x174_46: 2103959814
+      Ancient BossRed 351x174_126: -1624739468
+      Ancient BossRed 351x174_103: 1893406987
+      Ancient BossRed 351x174_114: 1100394938
+      Ancient BossRed 351x174_168: 671483214
+      Ancient BossRed 351x174_49: 1180280536
+      Ancient BossRed 351x174_108: -1318381881
+      Ancient BossRed 351x174_75: 789311049
+      Ancient BossRed 351x174_70: -872732531
+      Ancient BossRed 351x174_113: 1489069469
+      Ancient BossRed 351x174_33: 938236946
+      Ancient BossRed 351x174_99: -1937971330
+      Ancient BossRed 351x174_175: -1973474649
+      Ancient BossRed 351x174_24: 1218059740
+      Ancient BossRed 351x174_96: -1116690859
+      Ancient BossRed 351x174_16: -408847219
+      Ancient BossRed 351x174_143: 426744641
+      Ancient BossRed 351x174_156: 951993949
+      Ancient BossRed 351x174_167: 2055075323
+      Ancient BossRed 351x174_52: -2044855211
+      Ancient BossRed 351x174_28: 1344327150
+      Ancient BossRed 351x174_161: 994504615
+      Ancient BossRed 351x174_106: -2121239682
+      Ancient BossRed 351x174_65: 1243593545
+      Ancient BossRed 351x174_130: 1841106260
+      Ancient BossRed 351x174_37: -680121343
+      Ancient BossRed 351x174_54: -1700897238
+      Ancient BossRed 351x174_56: -1831811518
+      Ancient BossRed 351x174_91: -476285541
+      Ancient BossRed 351x174_107: -1671259581
+      Ancient BossRed 351x174_51: 231025397
+      Ancient BossRed 351x174_174: 433720553
+      Ancient BossRed 351x174_29: -1281177150
+      Ancient BossRed 351x174_123: 1901050733
+      Ancient BossRed 351x174_67: -1532022599
+      Ancient BossRed 351x174_135: 2135010916
+      Ancient BossRed 351x174_179: -1426026208
+      Ancient BossRed 351x174_138: -1148983060
+      Ancient BossRed 351x174_109: 1580642783
+      Ancient BossRed 351x174_147: -973773118
+      Ancient BossRed 351x174_180: -1864823674
+      Ancient BossRed 351x174_62: 837736559
+      Ancient BossRed 351x174_18: -1886657448
+      Ancient BossRed 351x174_120: -692534261
+      Ancient BossRed 351x174_177: 1167373528
+      Ancient BossRed 351x174_131: 943267970
+      Ancient BossRed 351x174_44: 1405406965
+      Ancient BossRed 351x174_173: 1348742742
+      Ancient BossRed 351x174_166: -127575812
+      Ancient BossRed 351x174_90: 1457129684
+      Ancient BossRed 351x174_141: 602382097
+      Ancient BossRed 351x174_5: 1520530071
+      Ancient BossRed 351x174_17: -1404130158
+      Ancient BossRed 351x174_58: 311393508
+      Ancient BossRed 351x174_64: -567051374
+      Ancient BossRed 351x174_22: 1254597564
+      Ancient BossRed 351x174_119: 1024212713
+      Ancient BossRed 351x174_30: 262094843
+      Ancient BossRed 351x174_4: 159083791
+      Ancient BossRed 351x174_32: 1768374756
+      Ancient BossRed 351x174_157: 506262175
+      Ancient BossRed 351x174_85: 175335662
+      Ancient BossRed 351x174_145: 535972685
+      Ancient BossRed 351x174_89: 1132950718
+      Ancient BossRed 351x174_0: -1790511100
+      Ancient BossRed 351x174_59: -1939962851
+      Ancient BossRed 351x174_69: 1147455609
+      Ancient BossRed 351x174_153: -355590258
+      Ancient BossRed 351x174_3: 1949727686
+      Ancient BossRed 351x174_172: -165835404
+      Ancient BossRed 351x174_41: 1903152380
+      Ancient BossRed 351x174_117: 420773164
+      Ancient BossRed 351x174_150: -1672761182
+      Ancient BossRed 351x174_111: -488108317
+      Ancient BossRed 351x174_160: -1852983763
+      Ancient BossRed 351x174_14: 644642862
+      Ancient BossRed 351x174_140: -544797274
+      Ancient BossRed 351x174_128: -1961950188
+      Ancient BossRed 351x174_13: -1024877834
+      Ancient BossRed 351x174_9: -1275858748
+      Ancient BossRed 351x174_26: -1545520096
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

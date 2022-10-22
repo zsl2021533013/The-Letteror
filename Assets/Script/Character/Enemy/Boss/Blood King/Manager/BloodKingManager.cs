@@ -59,7 +59,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
 
             CurrentState = 1;
             
-            StateMachine.Initialize(Transform2State);
+            StateMachine.Initialize(Transform1State);
         }
 
         protected override void InitializeFSM()
@@ -92,16 +92,16 @@ namespace Character.Enemy.Boss.Blood_King.Manager
             int health = BattleManager.BattleData.health;
             switch (health)
             {
-                case > 40:
+                case > 45:
                     CurrentState = 1;
                     break;
-                case > 30:
+                case > 35:
                     CurrentState = 2;
                     break;
                 case > 20:
                     CurrentState = 3;
                     break;
-                case > 0:
+                case > 15:
                     CurrentState = 4;
                     break;
                 default:
@@ -115,7 +115,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         public void HeartAttack()
         {
             GameObject heart = Instantiate(HeartPrefab);
-            heart.transform.position = new Vector2(CoreManager.SenseCore.PlayerPositionX, -2.54f);
+            heart.transform.position = new Vector2(CoreManager.SenseCore.PlayerPositionX, -4.2f);
         }
 
         public void SetCollider(Vector2 offset, Vector2 size)

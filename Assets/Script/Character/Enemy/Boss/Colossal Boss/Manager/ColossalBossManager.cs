@@ -14,7 +14,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
 
         public ColossalBossWakeState WakeState { get; private set; }
         public ColossalBossIdleState IdleState { get; private set; }
-        public ColossalBossBuffState BuffState { get; private set; }
+        public ColossalBossUpwardsAttackState UpwardsAttackState { get; private set; }
         public ColossalBossChaseState ChaseState { get; private set; }
         public ColossalBossAttack1State Attack1State { get; private set; }
         public ColossalBossAttack2State Attack2State { get; private set; }
@@ -42,7 +42,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
             
             WakeState = new ColossalBossWakeState(this, "wake");
             IdleState = new ColossalBossIdleState(this, "idle");
-            BuffState = new ColossalBossBuffState(this, "buff");
+            UpwardsAttackState = new ColossalBossUpwardsAttackState(this, "upwardsAttack");
             ChaseState = new ColossalBossChaseState(this, "move");
             Attack1State = new ColossalBossAttack1State(this, "attack1");
             Attack2State = new ColossalBossAttack2State(this, "attack2");

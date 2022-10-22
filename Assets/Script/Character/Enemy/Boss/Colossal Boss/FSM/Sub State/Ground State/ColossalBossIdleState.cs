@@ -9,6 +9,9 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
     {
         private int _attackType;
         private int _formerAttackType;
+        private int _currentState;
+
+        private bool _isPlayerUpwards;
         
         public ColossalBossIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
@@ -18,25 +21,46 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State
         {
             base.OnEnter();
 
-            _attackType = Random.Range(0, manager.CurrentState);
+            _currentState = manager.CurrentState;
+            
+            if (_isPlayerUpwards)
+            {
+                _attackType = Random.Range(0, _currentState);
+
+                if (_attackType > 0)
+                {
+                    stateMachine.TranslateToState(manager.UpwardsAttackState);
+                    return;
+                }
+            }
+            
+            _attackType = Random.Range(0, _currentState);
             if (_attackType == _formerAttackType)
             {
-                _attackType = (_attackType + 1) % manager.CurrentState;
+                _attackType = (_attackType + 1) % _currentState;
             }
             _formerAttackType = _attackType;
             
             switch (_attackType)
             {
                 case 0:
+                case 2:   
                     stateMachine.TranslateToState(manager.ChaseState);
                     break;
                 case 1:
-                    stateMachine.TranslateToState(manager.BuffState);
-                    break;
-                case 2:
                     stateMachine.TranslateToState(manager.Attack2State);
                     break;
+                default:
+                    stateMachine.TranslateToState(manager.ChaseState);
+                    break;
             }
+        }
+
+        public override void DoChecks()
+        {
+            base.DoChecks();
+            
+            _isPlayerUpwards = coreManager.SenseCore.DetectPlayerUpwards;
         }
     }
 }

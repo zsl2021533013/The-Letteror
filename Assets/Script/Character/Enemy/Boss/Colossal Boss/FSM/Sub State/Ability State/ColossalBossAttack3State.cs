@@ -9,5 +9,12 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ability_State
         public ColossalBossAttack3State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
+        
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            coreManager.MoveCore.SetVelocityX(0f);
+        }
     }
 }
