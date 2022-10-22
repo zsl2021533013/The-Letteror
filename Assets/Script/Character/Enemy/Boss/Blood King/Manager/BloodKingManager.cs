@@ -57,7 +57,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             base.Start();
 
-            CurrentState = 0;
+            CurrentState = 1;
             
             StateMachine.Initialize(Transform2State);
         }
@@ -122,11 +122,6 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             Collider2D.offset = offset;
             Collider2D.size = size;
-        }
-
-        public void MoveX(float offsetX)
-        {
-            CoreManager.MoveCore.MoveX(offsetX);
         }
     }
 }

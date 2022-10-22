@@ -59,32 +59,29 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_S
 
         protected override void OnAnimationFinish()
         {
-            /*_currentState = manager.CurrentState;
-            
-            _attackType = Random.Range(0, _currentState);
+            _attackType = Random.Range(0, 2);
+
             if (_attackType == _formerAttackType)
             {
-                _attackType = (_attackType + 1) % _currentState;
+                _attackType = (_attackType + 1) % 2;
             }
-            _formerAttackType = _attackType;*/
-            
-            stateMachine.TranslateToState(manager.Attack3State);
-            
-            /*switch (_attackType)
+            _formerAttackType = _attackType;
+
+            switch (_attackType)
             {
                 case 0:
-                    stateMachine.TranslateToState(manager.Attack1State);
+                    stateMachine.TranslateToState(manager.Attack3State);
                     break;
                 case 1:
-                    stateMachine.TranslateToState(manager.Attack4_1State);
+                    stateMachine.TranslateToState(manager.Attack4State);
                     break;
-                case 2:
-                    stateMachine.TranslateToState(manager.Attack3_1State);
+                /*case 2:
+                    stateMachine.TranslateToState(manager.Attack3State);
                     break;
-                default:
-                    stateMachine.TranslateToState(manager.Attack3_1State);
-                    break;
-            }*/
+                case 3:
+                    stateMachine.TranslateToState(manager.DisappearFartherState);
+                    break;*/
+            }
         }
     }
 }

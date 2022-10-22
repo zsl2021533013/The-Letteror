@@ -19,13 +19,5 @@ namespace Script.Character.Enemy.Boss.Blood_King.Component
         {
             _manager.SetCollider(_boxCollider.offset, _boxCollider.size);
         }
-
-        public void CheckOffset()
-        {
-            if (_manager.IdleState.offset > 0f)
-            {
-                
-            }
-        }
     }
 }

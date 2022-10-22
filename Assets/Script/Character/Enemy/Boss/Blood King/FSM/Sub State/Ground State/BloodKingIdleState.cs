@@ -13,7 +13,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
         private bool _isPlayerUpwards;
         private bool _inAttackRange;
 
-        public float offset;
+        private float _offset;
         
         public BloodKingIdleState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
@@ -22,6 +22,12 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
         public override void OnEnter()
         {
             base.OnEnter();
+            
+            if (_offset > 0f)
+            {
+                coreManager.MoveCore.MoveX(_offset * coreManager.MoveCore.CharacterDirection);
+                _offset = -1f;
+            }
         }
 
         public override void OnUpdate()
@@ -32,9 +38,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
             {
                 return;
             }
-            
-            
-            
+
             if (coreManager.MoveCore.CharacterDirection != coreManager.SenseCore.PlayerDirection)
             {
                 coreManager.MoveCore.Flip();
@@ -64,31 +68,29 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
                 return;
             }
             
-            /*_attackType = Random.Range(0, _currentState);
+            _attackType = Random.Range(0, 2);
 
             if (_attackType == _formerAttackType)
             {
-                _attackType = (_attackType + 1) % _currentState;
+                _attackType = (_attackType + 1) % 2;
             }
-            _formerAttackType = _attackType;*/
+            _formerAttackType = _attackType;
 
-            stateMachine.TranslateToState(manager.Attack4State);
-            
-            /*switch (_attackType)
+            switch (_attackType)
             {
                 case 0:
-                    stateMachine.TranslateToState(manager.Attack1State);
+                    stateMachine.TranslateToState(manager.Attack3State);
                     break;
                 case 1:
-                    stateMachine.TranslateToState(manager.Attack4_1State);
+                    stateMachine.TranslateToState(manager.Attack4State);
                     break;
-                case 2:
-                    stateMachine.TranslateToState(manager.Attack3_1State);
+                /*case 2:
+                    stateMachine.TranslateToState(manager.Attack3State);
                     break;
                 case 3:
                     stateMachine.TranslateToState(manager.DisappearFartherState);
-                    break;
-            }*/
+                    break;*/
+            }
         }
         
         public override void DoChecks()
@@ -98,5 +100,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
             _isPlayerUpwards = coreManager.SenseCore.DetectPlayerUpwards;
             _inAttackRange = coreManager.SenseCore.InAttackRange;
         }
+
+        public void SetOffset(float offset) => _offset = offset;
     }
 }

@@ -21,7 +21,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
         {
             base.OnExit();
             
-            coreManager.MoveCore.MoveX(coreManager.MoveCore.CharacterDirection * coreManager.MoveCore.attack3Offset);
+            manager.IdleState.SetOffset(coreManager.MoveCore.attack4Offset);
         }
     }
 }
