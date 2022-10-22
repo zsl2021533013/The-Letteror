@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: 3d3bcbba12db3c942bfe94c4841bbab4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a9806ccda13a948803943ce7b9ccb7
+      internalID: -169177487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb96ecc40e06b842a9db10052a251be
+      internalID: 1371163536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53095b8ac7a71164cb60dbf1cbc6a535
+      internalID: 1875604461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ec552751359f447bbd8f777403e3a6
+      internalID: -464419797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_4
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c25c7d9deaacc044ad5f0273e77786e
+      internalID: -1630154383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_5
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a2ae33782cb9b4f8a0d587458a399f
+      internalID: -1605873031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_6
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c77f64f81477b46905aad571e80894
+      internalID: 181856681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_7
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fd58b63886c1a4bb00d3cdf35ad5e4
+      internalID: -2098986752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_8
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683feaebbf8dafa4490dc9c8bd1780b3
+      internalID: 1398945338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_9
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb24819f8c1d7bf48acf72704c6cbb6a
+      internalID: -1974592280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_10
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6369da0605f9c429e14372a345d6b0
+      internalID: 626667514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_11
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13c149892801a646b03b5619e6c90b1
+      internalID: -981118051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The Blood King Attack 2 202x79_12
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.3564357, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9368f5eb3ade5ec499403f6c6caca202
+      internalID: -1564085523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      The Blood King Attack 2 202x79_2: 1875604461
+      The Blood King Attack 2 202x79_6: 181856681
+      The Blood King Attack 2 202x79_0: -169177487
+      The Blood King Attack 2 202x79_9: -1974592280
+      The Blood King Attack 2 202x79_8: 1398945338
+      The Blood King Attack 2 202x79_10: 626667514
+      The Blood King Attack 2 202x79_7: -2098986752
+      The Blood King Attack 2 202x79_5: -1605873031
+      The Blood King Attack 2 202x79_12: -1564085523
+      The Blood King Attack 2 202x79_3: -464419797
+      The Blood King Attack 2 202x79_4: -1630154383
+      The Blood King Attack 2 202x79_11: -981118051
+      The Blood King Attack 2 202x79_1: 1371163536
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

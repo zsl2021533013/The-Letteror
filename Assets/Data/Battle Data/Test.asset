@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d0593dafec4e44af7b9e2e031ca5c0, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  health: 2
+  health: 111
   attack: 1

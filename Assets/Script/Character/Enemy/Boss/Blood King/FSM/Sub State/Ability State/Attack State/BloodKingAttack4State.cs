@@ -1,14 +1,15 @@
 ﻿using Character.Base.Manager;
 using Character.Enemy.Boss.Blood_King.FSM.Super_State;
+using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_State
 {
-    public class BloodKingBlueAttackState : BloodKingAbilityState
+    public class BloodKingAttack4State : BloodKingAbilityState
     {
-        public BloodKingBlueAttackState(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
+        public BloodKingAttack4State(CharacterManager manager, string animBoolName) : base(manager, animBoolName)
         {
         }
-
+        
         public override void OnEnter()
         {
             base.OnEnter();
@@ -16,9 +17,11 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_Sta
             coreManager.MoveCore.SetVelocityX(0f);
         }
 
-        protected override void OnAnimationFinish()
+        public override void OnExit()
         {
-            stateMachine.TranslateToState(manager.BlueIdleState);
+            base.OnExit();
+
+            manager.IdleState.offset = coreManager.MoveCore.attack4Offset;
         }
     }
 }

@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: b1461a32f9722434a95298bf7b7409d0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff91cc48b6cc20742b3f445bb96ab910
+      internalID: 629733017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee70d3a90d5b5b34e8a671c80b528930
+      internalID: -1051036368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a69f600d10f3b4f8bb6cd1bcb19c83
+      internalID: 31289190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a397b5d95af4448bfd79a505a18177
+      internalID: 452191542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_4
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1919bf3ca3ffceb4f9235e60a862a0ca
+      internalID: 1416392414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_5
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf88351a2995104e8fd9e94ff31f406
+      internalID: 949831292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_6
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00245013678383248a19fcf8bdd43efe
+      internalID: 1621426053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_7
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9871eeaf8b7c2ae49831e2f07c631c3f
+      internalID: -1062644697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_8
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4f01beee115bb4cbc1807ba21343ca
+      internalID: -482557203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_9
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039ee9bd902bda0498d2be1f027b96cf
+      internalID: 45936156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_10
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8038ef61f41724aa3c6fe3eedf2a1e
+      internalID: -1178329274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_11
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf33c702c916c743b064abc678bbb2b
+      internalID: -1689721249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood King Jump Slam 202x79_12
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 0
+        width: 202
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4356436, y: 0.1265823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b135a525f86c2042b8a58c3d5571e22
+      internalID: 912672985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blood King Jump Slam 202x79_10: -1178329274
+      Blood King Jump Slam 202x79_12: 912672985
+      Blood King Jump Slam 202x79_8: -482557203
+      Blood King Jump Slam 202x79_1: -1051036368
+      Blood King Jump Slam 202x79_6: 1621426053
+      Blood King Jump Slam 202x79_3: 452191542
+      Blood King Jump Slam 202x79_0: 629733017
+      Blood King Jump Slam 202x79_5: 949831292
+      Blood King Jump Slam 202x79_11: -1689721249
+      Blood King Jump Slam 202x79_9: 45936156
+      Blood King Jump Slam 202x79_2: 31289190
+      Blood King Jump Slam 202x79_7: -1062644697
+      Blood King Jump Slam 202x79_4: 1416392414
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

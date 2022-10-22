@@ -8,13 +8,9 @@ namespace Character.Enemy.Boss.Blood_King.Core.Core_Component
         [Header("Heart Hoarder Only")] 
         public float leftPointX;
         public float rightPointX;
-        
-        public float attack3_4Veclocity;
-        public float attack4_2Veclocity;
-        public float attack4_3Veclocity;
 
-        public float attack3_2Offset;
-        public float attack3_3Offset;
+        public float attack3Offset;
+        public float attack4Offset;
         
         public Vector2 LeftPointPosition => new(leftPointX, Position.y);
         public Vector2 RightPointPosition => new(rightPointX, Position.y);
@@ -31,7 +27,7 @@ namespace Character.Enemy.Boss.Blood_King.Core.Core_Component
             coreManager.CharacterTransform.position = new Vector3(newPositionX, Position.y);
         }
         
-        public void MoveToOffset(float offsetX)
+        public void MoveX(float offsetX)
         {
             coreManager.CharacterTransform.position += new Vector3(offsetX, 0f);
         } 

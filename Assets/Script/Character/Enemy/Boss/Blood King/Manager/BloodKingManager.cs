@@ -14,34 +14,30 @@ namespace Character.Enemy.Boss.Blood_King.Manager
     {
         public GameObject HeartPrefab;
         
-        protected new BloodKingCoreManager CoreManager { get; private set; }
-        
+        public BoxCollider2D Collider2D { get; private set; }
         public int CurrentState { get; private set; }
         
+        protected new BloodKingCoreManager CoreManager { get; private set; }
         #region FSM Component
         
         public BloodKingIdleState IdleState { get; private set; }
-        public BloodKingChargeState ChargeState { get; private set; }
+        public BloodKingBlueIdleState BlueIdleState { get; private set; }
         public BloodKingAppearCloserState AppearCloserState { get; private set; }
         public BloodKingAppearFartherState AppearFartherState { get; private set; }
         public BloodKingDisappearCloserState DisappearCloserState { get; private set; }
         public BloodKingDisappearFartherState DisappearFartherState { get; private set; }
-        public BloodKingBlueChargeState BlueChargeState { get; private set; }
+        
         public BloodKingBlueChaseState BlueChaseState { get; private set; }
-        public BloodKingTransformState TransformState { get; private set; }
+        public BloodKingTransform1State Transform1State { get; private set; }
+        public BloodKingTransform2State Transform2State { get; private set; }
         public BloodKingDeathState DeathState { get; private set; }
 
         #region Attack State
 
         public BloodKingAttack1State Attack1State { get; private set; }
         public BloodKingAttack2State Attack2State { get; private set; }
-        public BloodKingAttack3_1State Attack3_1State { get; private set; }
-        public BloodKingAttack3_2State Attack3_2State { get; private set; }
-        public BloodKingAttack3_3State Attack3_3State { get; private set; }
-        public BloodKingAttack3_4State Attack3_4State { get; private set; }
-        public BloodKingAttack4_1State Attack4_1State { get; private set; }
-        public BloodKingAttack4_2State Attack4_2State { get; private set; }
-        public BloodKingAttack4_3State Attack4_3State { get; private set; }
+        public BloodKingAttack3State Attack3State { get; private set; }
+        public BloodKingAttack4State Attack4State { get; private set; }
         public BloodKingJumpAttackState JumpAttackState { get; private set; }
         public BloodKingBlueAttackState BlueAttackState { get; private set; }
 
@@ -53,6 +49,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             base.Awake();
 
+            Collider2D = GetComponent<BoxCollider2D>();
             CoreManager = (BloodKingCoreManager)base.CoreManager;
         }
 
@@ -60,10 +57,9 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             base.Start();
 
-            CurrentState = 4;
+            CurrentState = 0;
             
-            StateMachine.Initialize(IdleState);
-            
+            StateMachine.Initialize(Transform2State);
         }
 
         protected override void InitializeFSM()
@@ -71,25 +67,20 @@ namespace Character.Enemy.Boss.Blood_King.Manager
             base.InitializeFSM();
 
             IdleState = new BloodKingIdleState(this, "idle");
-            BlueChaseState = new BloodKingBlueChaseState(this, "move");
+            BlueIdleState = new BloodKingBlueIdleState(this, "blueIdle");
+            BlueChaseState = new BloodKingBlueChaseState(this, "blueChase");
             AppearCloserState = new BloodKingAppearCloserState(this, "appear");
             AppearFartherState = new BloodKingAppearFartherState(this, "appear");
             DisappearCloserState = new BloodKingDisappearCloserState(this, "disappear");
             DisappearFartherState = new BloodKingDisappearFartherState(this, "disappear");
-            BlueChargeState = new BloodKingBlueChargeState(this, "blueCharge");
-            ChargeState = new BloodKingChargeState(this, "charge");
-            TransformState = new BloodKingTransformState(this, "transform");
+            Transform1State = new BloodKingTransform1State(this, "transform1");
+            Transform2State = new BloodKingTransform2State(this, "transform2");
             DeathState = new BloodKingDeathState(this, "death");
             
             Attack1State = new BloodKingAttack1State(this, "attack1");
             Attack2State = new BloodKingAttack2State(this, "attack2");
-            Attack3_1State = new BloodKingAttack3_1State(this, "attack3_1");
-            Attack3_2State = new BloodKingAttack3_2State(this, "attack3_2");
-            Attack3_3State = new BloodKingAttack3_3State(this, "attack3_3");
-            Attack3_4State = new BloodKingAttack3_4State(this, "attack3_4");
-            Attack4_1State = new BloodKingAttack4_1State(this, "attack4_1");
-            Attack4_2State = new BloodKingAttack4_2State(this, "attack4_2");
-            Attack4_3State = new BloodKingAttack4_3State(this, "attack4_3");
+            Attack3State = new BloodKingAttack3State(this, "attack3");
+            Attack4State = new BloodKingAttack4State(this, "attack4");
             BlueAttackState = new BloodKingBlueAttackState(this, "blueAttack");
             JumpAttackState = new BloodKingJumpAttackState(this, "jumpAttack");
         }
@@ -98,7 +89,7 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             base.Damaged();
 
-            /*int health = BattleManager.BattleData.health;
+            int health = BattleManager.BattleData.health;
             switch (health)
             {
                 case > 40:
@@ -107,10 +98,16 @@ namespace Character.Enemy.Boss.Blood_King.Manager
                 case > 30:
                     CurrentState = 2;
                     break;
-                case < 20:
+                case > 20:
                     CurrentState = 3;
                     break;
-            }*/
+                case > 0:
+                    CurrentState = 4;
+                    break;
+                default:
+                    CurrentState = 4;
+                    break;
+            }
 
             BattleManager.Flash();
         }
@@ -119,6 +116,17 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             GameObject heart = Instantiate(HeartPrefab);
             heart.transform.position = new Vector2(CoreManager.SenseCore.PlayerPositionX, -2.54f);
+        }
+
+        public void SetCollider(Vector2 offset, Vector2 size)
+        {
+            Collider2D.offset = offset;
+            Collider2D.size = size;
+        }
+
+        public void MoveX(float offsetX)
+        {
+            CoreManager.MoveCore.MoveX(offsetX);
         }
     }
 }
