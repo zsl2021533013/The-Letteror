@@ -91,6 +91,7 @@ namespace Character.Player.Manager
             }
             
             AbilityData = GameManager.Instance.AbilityData;
+            BattleManager.SetBattleData(GameManager.Instance.BattleData);
         }
 
         protected override void Update()
@@ -162,8 +163,9 @@ namespace Character.Player.Manager
         public override void Damaged()
         {
             base.Damaged();
-
-            UIManager.RefreshHealthUI(BattleManager.BattleData.health);
+            
+            UIManager.RefreshHealthUI(GameManager.Instance.BattleData.health);
+            
             BattleManager.StartImmortalForSeconds(immortalTimeAfterDamaged);
             BattleManager.Flash();
         }
@@ -172,7 +174,7 @@ namespace Character.Player.Manager
         {
             base.Die();
             
-            UIManager.RefreshHealthUI(BattleManager.BattleData.health);
+            UIManager.RefreshHealthUI(GameManager.Instance.BattleData.health);
         }
 
         public void CloseHUD()
@@ -183,10 +185,10 @@ namespace Character.Player.Manager
         public void OpenHUD()
         {
             UIManager.OpenHUD();
-        }
+        } // 将在对话系统中使用
 
         public void UpdateAbilityData(PlayerAbilityData abilityData) => AbilityData = abilityData;
-
+        
         public void UpdateFormerPosition(Vector2 position) => FormerOnGroundPosition = position;
     }
 }

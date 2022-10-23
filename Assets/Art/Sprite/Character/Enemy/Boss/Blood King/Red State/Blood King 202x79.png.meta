@@ -3391,7 +3391,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BloodKing168x79_92: -1206015272
-      BloodKing168x79_109: -1588770406
       BloodKing168x79_18: 916817898
       BloodKing168x79_81: -1469006993
       BloodKing168x79_118: 375019028
@@ -3401,6 +3400,7 @@ TextureImporter:
       BloodKing168x79_88: 97206341
       BloodKing168x79_54: -1135835080
       BloodKing168x79_132: 1279342389
+      BloodKing168x79_133: -2070712456
       BloodKing168x79_116: 1402443615
       BloodKing168x79_67: 1663860082
       BloodKing168x79_93: 902656301
@@ -3448,30 +3448,30 @@ TextureImporter:
       BloodKing168x79_29: -624953195
       BloodKing168x79_72: 1340557864
       BloodKing168x79_58: 628305089
-      Blood King 202x79_0: 2076844019
-      BloodKing168x79_17: -1052540318
+      BloodKing168x79_36: 1913666781
+      BloodKing168x79_50: -556280222
       BloodKing168x79_113: -13332531
       BloodKing168x79_147: 56949404
+      BloodKing168x79_90: -810093037
       BloodKing168x79_78: -666153339
-      BloodKing168x79_16: -1709134700
-      BloodKing168x79_153: 500724398
+      Blood King 202x79_0: 2076844019
+      BloodKing168x79_8: -1480236538
       BloodKing168x79_74: 777322140
-      BloodKing168x79_101: 1554286094
-      BloodKing168x79_36: 1913666781
+      BloodKing168x79_16: -1709134700
       BloodKing168x79_114: -1657093136
       BloodKing168x79_66: -1915793255
       BloodKing168x79_100: -1058461495
       BloodKing168x79_56: 1470547256
       BloodKing168x79_112: 754397304
+      BloodKing168x79_17: -1052540318
       BloodKing168x79_52: 1414122262
       BloodKing168x79_83: -490431313
-      BloodKing168x79_90: -810093037
       BloodKing168x79_5: -2009225587
       BloodKing168x79_35: -589394534
-      BloodKing168x79_8: -1480236538
+      BloodKing168x79_101: 1554286094
       BloodKing168x79_69: -76923763
+      BloodKing168x79_153: 500724398
       BloodKing168x79_149: 2126967710
-      BloodKing168x79_50: -556280222
       BloodKing168x79_123: -650357924
       BloodKing168x79_57: 1945138300
       BloodKing168x79_87: 274964460
@@ -3542,9 +3542,9 @@ TextureImporter:
       BloodKing168x79_135: -878323175
       BloodKing168x79_106: 674465562
       BloodKing168x79_0: -1560278292
-      BloodKing168x79_133: -2070712456
       BloodKing168x79_20: 208062464
       BloodKing168x79_137: -1904995204
+      BloodKing168x79_109: -1588770406
       BloodKing168x79_63: 596213780
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -30,7 +30,7 @@ namespace Character.Base.Manager
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             _battleData = Instantiate(BattleFactoryManager.Instance.GetBattleData(Manager.name));
         }
@@ -87,6 +87,8 @@ namespace Character.Base.Manager
             yield return new WaitForSeconds(time);
             EndImmortal();
         }
+
+        public void SetBattleData(CharacterBattleData battleData) => _battleData = battleData;
         
         public void StartImmortal() => _isImmortal = true;
         public void EndImmortal() => _isImmortal = false;
