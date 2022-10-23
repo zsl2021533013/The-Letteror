@@ -27,8 +27,8 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(new Vector2(leftPointX, 1f), 1f);
-            Gizmos.DrawWireSphere(new Vector2(rightPointX, 1f), 1f);
+            Gizmos.DrawWireSphere(new Vector2(leftPointX, transform.position.y), 1f);
+            Gizmos.DrawWireSphere(new Vector2(rightPointX, transform.position.y), 1f);
         }
     }
 }

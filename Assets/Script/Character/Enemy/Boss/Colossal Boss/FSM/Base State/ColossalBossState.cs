@@ -2,6 +2,7 @@
 using Character.Base.Manager;
 using Character.Enemy.Boss.Colossal_Boss.Core.Core_Manager;
 using Character.Enemy.Boss.Colossal_Boss.Manager;
+using UnityEngine;
 
 namespace Character.Enemy.Boss.Colossal_Boss.FSM.Base_State
 {
