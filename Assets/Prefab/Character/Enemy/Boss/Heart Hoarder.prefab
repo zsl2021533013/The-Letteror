@@ -28,7 +28,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5791817848452291428}
   m_Father: {fileID: 605481534664109223}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44,6 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9266af15eceb48378b89a3fbb57c56a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nearbySensor: {fileID: 5791817848452291428}
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  nearbySensorSize: {x: 20, y: 15}
   attack1Range: 6
 --- !u!1 &605481533986750259
 GameObject:
@@ -90,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveVelocity: 8
-  leftPointX: -31
-  rightPointX: -7
-  middlePointX: -19
+  leftPointX: 224
+  rightPointX: 254
+  middlePointX: 239
 --- !u!1 &605481534329535347
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Heart Hoarder
   deadCharacter: {fileID: 3632098566247529481, guid: 5b37721b6b534b344ac6023969cb11ca, type: 3}
+  doorControllers:
+  - {fileID: 0}
 --- !u!114 &1593660013600480352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,3 +507,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagedMaterial: {fileID: 2100000, guid: 9668b3183072c5a4ca29a75bdbbebfdc, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 43ae5dfa3e5fb8747a604a1b83b110ad, type: 2}
+--- !u!1 &1962671225540325438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5791817848452291428}
+  m_Layer: 0
+  m_Name: Nearby Sensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5791817848452291428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962671225540325438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 605481532873471826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

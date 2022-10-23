@@ -6,7 +6,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
 {
     public class ColossalBossMoveCore : MoveCore
     {
-        [Header("Heart Hoarder Only")] 
+        [Header("Colossal Boss Only")] 
         public float leftPointX;
         public float rightPointX;
 

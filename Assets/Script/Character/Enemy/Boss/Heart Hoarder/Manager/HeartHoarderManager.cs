@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Character.Base.Data;
 using Character.Base.Manager;
 using Character.Enemy.Boss.Heart_Hoarder.FSM.Sub_State.Ability_State;
+using Script.Environment.Boss_Room_Door;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,11 +11,15 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 {
     public class HeartHoarderManager : CharacterManager
     {
-        public int CurrentState { get; private set; } 
-        
+        public int CurrentState { get; private set; }
+
+        public List<BossRoomDoorController> doorControllers;
+
         #region FSM Attribute
 
-        public HeartHolderIdleState IdleState { get; private set; } 
+        public HeartHolderIdleState IdleState { get; private set; }
+        public HeartHoarderSleepState SleepState { get; private set; }
+        public HeartHoarderWakeState WakeState { get; private set; }
 
         #region Attack 1
         public HeartHoarderChaseState ChaseState { get; private set; } 
@@ -47,7 +53,7 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 
             CurrentState = 1;
             
-            StateMachine.Initialize(IdleState);
+            StateMachine.Initialize(SleepState);
         }
 
         protected override void InitializeFSM()
@@ -55,7 +61,9 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             base.InitializeFSM();
 
             IdleState = new HeartHolderIdleState(this, "idle");
-
+            SleepState = new HeartHoarderSleepState(this, "sleep");
+            WakeState = new HeartHoarderWakeState(this, "wake");
+            
             #region Attack 1
             ChaseState = new HeartHoarderChaseState(this, "move");
             Attack1StopState = new HeartHoarderAttack1StopState(this, "attack1Stop");
@@ -101,5 +109,22 @@ namespace Character.Enemy.Boss.Heart_Hoarder
 
             BattleManager.Flash();
         }
+
+        public void CloseDoors()
+        {
+            foreach (var controller in doorControllers)
+            {
+                controller.CloseDoor();
+            }
+        }
+        
+        public void OpenDoors()
+        {
+            foreach (var controller in doorControllers)
+            {
+                controller.OpenDoor();
+            }
+        }
     }
+    
 }

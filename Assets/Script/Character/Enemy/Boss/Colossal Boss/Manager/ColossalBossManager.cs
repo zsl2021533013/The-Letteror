@@ -1,7 +1,9 @@
-﻿using Character.Base.Data;
+﻿using System.Collections.Generic;
+using Character.Base.Data;
 using Character.Base.Manager;
 using Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ability_State;
 using Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ground_State;
+using Script.Environment.Boss_Room_Door;
 using UnityEngine;
 
 namespace Character.Enemy.Boss.Colossal_Boss.Manager
@@ -10,8 +12,11 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
     {
         public int CurrentState { get; private set; }
         
+        public List<BossRoomDoorController> doorControllers;
+        
         #region FSM State
 
+        public ColossalBossSleepState SleepState { get; private set; }
         public ColossalBossWakeState WakeState { get; private set; }
         public ColossalBossIdleState IdleState { get; private set; }
         public ColossalBossUpwardsAttackState UpwardsAttackState { get; private set; }
@@ -33,13 +38,14 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
 
             CurrentState = 1;
             
-            StateMachine.Initialize(WakeState);
+            StateMachine.Initialize(SleepState);
         }
 
         protected override void InitializeFSM()
         {
             base.InitializeFSM();
-            
+
+            SleepState = new ColossalBossSleepState(this, "sleep");
             WakeState = new ColossalBossWakeState(this, "wake");
             IdleState = new ColossalBossIdleState(this, "idle");
             UpwardsAttackState = new ColossalBossUpwardsAttackState(this, "upwardsAttack");
@@ -73,6 +79,22 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
             }
             
             BattleManager.Flash();
+        }
+        
+        public void CloseDoors()
+        {
+            foreach (var controller in doorControllers)
+            {
+                controller.CloseDoor();
+            }
+        }
+        
+        public void OpenDoors()
+        {
+            foreach (var controller in doorControllers)
+            {
+                controller.OpenDoor();
+            }
         }
     }
 }

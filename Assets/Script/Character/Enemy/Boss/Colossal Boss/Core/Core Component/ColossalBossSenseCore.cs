@@ -12,7 +12,6 @@ namespace Character.Enemy.Boss.Colossal_Boss.Core.Core_Component
         public float attackRange;
         
         [Header("Upwards Attack Sensor")]
-        public LayerMask playerLayerMask;
         public Transform playerSensor;
         public Vector2 upwardsSensorSize;
         

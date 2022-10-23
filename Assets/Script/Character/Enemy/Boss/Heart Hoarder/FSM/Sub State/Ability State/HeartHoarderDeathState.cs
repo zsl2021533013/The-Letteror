@@ -10,6 +10,13 @@ namespace Character.Enemy.Boss.Heart_Hoarder.FSM.Sub_State.Ability_State
         {
         }
 
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            manager.OpenDoors();
+        }
+
         protected override void OnAnimationFinish()
         {
             manager.DestroyCharacter();
