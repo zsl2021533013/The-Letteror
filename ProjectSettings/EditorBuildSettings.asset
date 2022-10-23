@@ -12,9 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Test/SampleScene2.unity
     guid: 915b7893b31c40848accc68d523d73ee
   - enabled: 1
-    path: Assets/Plugins/Pixel Crushers/Dialogue System/Demo/Scenes/DemoScene1.unity
-    guid: 955abf6400389cf4f8e68ac194db83e0
+    path: Assets/Scenes/Cave.unity
+    guid: 0d29f66a3fb3b384bad26157423acd14
   - enabled: 1
-    path: Assets/Plugins/Pixel Crushers/Dialogue System/Demo/Scenes/DemoScene2.unity
-    guid: d94b3c97c9dfe0d4e8ff547bb0406174
+    path: Assets/Scenes/City.unity
+    guid: 9e0da6fcae934634ea3207bc58ee11c8
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: fcb04e264ad116240b01dc2137e68710
+  - enabled: 1
+    path: Assets/Scenes/InfectedArea.unity
+    guid: 537b4668ec19ebe43be0775d0be00b07
+  - enabled: 1
+    path: Assets/Scenes/MountainTop.unity
+    guid: 0a7809df07f8be94c86430b3cee93fbc
   m_configObjects: {}
