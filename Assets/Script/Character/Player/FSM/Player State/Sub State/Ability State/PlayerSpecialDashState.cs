@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using Character.Base.Manager;
-using Character.Player.FSM.Player_State.Super_State;
-using Character.Player.Input_System;
+﻿using Character.Base.Manager;
+using Script.Character.Player.FSM.Player_State.Super_State;
+using Script.Character.Player.Input_System;
 using Script.Environment;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
-namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
+namespace Script.Character.Player.FSM.Player_State.Sub_State.Ability_State
 {
     public class PlayerSpecialDashState : PlayerAbilityState
     {

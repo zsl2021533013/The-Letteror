@@ -1,5 +1,5 @@
 ﻿using Character.Base.Manager;
-using Character.Player.Input_System;
+using Script.Character.Player.Input_System;
 
 namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack
 {

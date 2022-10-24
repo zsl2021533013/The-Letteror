@@ -1,8 +1,7 @@
-using System;
 using Character.Base.Manager;
-using UnityEngine;
+using Character.Player.Manager;
 
-namespace Character.Player.Manager
+namespace Script.Character.Player.Manager
 {
     public class PlayerAnimationManager : CharacterAnimationManager
     {

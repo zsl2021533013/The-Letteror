@@ -1,6 +1,5 @@
 ﻿using Character.Base.Manager;
-using Character.Player.FSM.Player_State.Super_State;
-using Character.Player.Input_System;
+using Script.Character.Player.Input_System;
 using UnityEngine;
 
 namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack

@@ -965,6 +965,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: b0b31b51-c523-4f4e-bb46-d6c8a32bf494
+        type: 0
+        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -985,8 +989,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 12.633011, y: 34.01831}
+    canvasZoom: 1.0899999
   - id: 3
     fields:
     - title: Title

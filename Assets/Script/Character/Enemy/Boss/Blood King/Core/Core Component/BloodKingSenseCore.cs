@@ -12,7 +12,6 @@ namespace Character.Enemy.Boss.Blood_King.Core.Core_Component
         public float attack4Range;
 
         [Header("Jump Attack Sensor")]
-        public LayerMask playerLayerMask;
         public Transform playerSensor;
         public Vector2 upwardsSensorSize;
         

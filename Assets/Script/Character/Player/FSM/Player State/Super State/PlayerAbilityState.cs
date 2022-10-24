@@ -1,6 +1,6 @@
 ﻿using Character.Base.Manager;
 
-namespace Character.Player.FSM.Player_State.Super_State
+namespace Script.Character.Player.FSM.Player_State.Super_State
 {
     
     public class PlayerAbilityState : PlayerState

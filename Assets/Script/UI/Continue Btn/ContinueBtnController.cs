@@ -1,5 +1,5 @@
 using System;
-using Character.Player.Input_System;
+using Script.Character.Player.Input_System;
 using UnityEngine;
 using UnityEngine.Events;
 

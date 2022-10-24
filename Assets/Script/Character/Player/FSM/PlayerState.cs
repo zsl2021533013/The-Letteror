@@ -1,11 +1,10 @@
 using Character.Base.FSM.Base_State;
 using Character.Base.Manager;
 using Character.Player.Core.Core_Manager;
-using Character.Player.Input_System;
 using Character.Player.Manager;
-using UnityEngine;
+using Script.Character.Player.Input_System;
 
-namespace Character.Player.FSM
+namespace Script.Character.Player.FSM
 {
     public class PlayerState : CharacterState
     {

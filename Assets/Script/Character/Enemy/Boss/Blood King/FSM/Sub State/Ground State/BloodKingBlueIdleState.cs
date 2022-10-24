@@ -17,17 +17,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State
             base.OnEnter();
             
             coreManager.MoveCore.SetVelocityX(0f);
-        }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-
-            if (isStateFinished)
-            {
-                return;
-            }
-
+            
             if (manager.CurrentState > 1)
             {
                 stateMachine.TranslateToState(manager.Transform2State);

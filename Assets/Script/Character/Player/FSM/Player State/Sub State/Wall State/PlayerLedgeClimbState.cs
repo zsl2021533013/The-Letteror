@@ -1,9 +1,9 @@
 ﻿using Character.Base.Manager;
-using Character.Player.Core.Core_Component;
-using Character.Player.Input_System;
+using Character.Player.FSM;
+using Script.Character.Player.Input_System;
 using UnityEngine;
 
-namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
+namespace Script.Character.Player.FSM.Player_State.Sub_State.Wall_State
 {
     public class PlayerLedgeClimbState : PlayerState
     {
@@ -13,6 +13,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         private Vector2 _startPosition;
         private Vector2 _stopPosition;
         private bool _jumpInput;
+        
+        private bool _isTouchingWall;
 
         public PlayerLedgeClimbState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
@@ -39,6 +41,11 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
         public override void OnUpdate()
         {
             base.OnUpdate();
+
+            if (isStateFinished)
+            {
+                return;
+            }
             
             coreManager.MoveCore.Freeze(_startPosition);
 
@@ -48,11 +55,18 @@ namespace Character.Player.FSM.Player_State.Sub_State.Wall_State
                 return;
             }
 
-            if (_inputDirectionType == PlayerInputDirectionType.Down)
+            if (_inputDirectionType == PlayerInputDirectionType.Down || !_isTouchingWall)
             {
                 stateMachine.TranslateToState(manager.AirState);
                 return;
             }
+        }
+
+        public override void DoChecks()
+        {
+            base.DoChecks();
+            
+            _isTouchingWall = coreManager.SenseCore.DetectWall;
         }
 
         public void SetPosition(Vector2 position) => _detectedPosition = position;

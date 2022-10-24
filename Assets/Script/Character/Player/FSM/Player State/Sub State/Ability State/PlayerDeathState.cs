@@ -1,8 +1,7 @@
 ﻿using Character.Base.Manager;
-using Character.Player.FSM.Player_State.Super_State;
-using UnityEngine;
+using Script.Character.Player.FSM.Player_State.Super_State;
 
-namespace Character.Player.FSM.Player_State.Sub_State.Ability_State
+namespace Script.Character.Player.FSM.Player_State.Sub_State.Ability_State
 {
     public class PlayerDeathState : PlayerAbilityState
     {

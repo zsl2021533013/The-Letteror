@@ -2,7 +2,7 @@
 using System.Collections;
 using Character.Base.Core.Core_Component;
 using Character.Player.Core.Data;
-using Character.Player.Input_System;
+using Script.Character.Player.Input_System;
 using Unity.VisualScripting;
 using UnityEngine;
 

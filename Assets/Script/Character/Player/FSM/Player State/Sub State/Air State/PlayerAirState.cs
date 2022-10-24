@@ -1,8 +1,8 @@
 ﻿using Character.Base.Manager;
-using Character.Player.Input_System;
+using Script.Character.Player.Input_System;
 using UnityEngine;
 
-namespace Character.Player.FSM.Player_State.Sub_State.Air_State
+namespace Script.Character.Player.FSM.Player_State.Sub_State.Air_State
 {
     public class PlayerAirState : PlayerState
     {

@@ -1,9 +1,8 @@
 ﻿using Character.Base.Manager;
-using Character.Player.Input_System;
-using UnityEditorInternal;
+using Script.Character.Player.Input_System;
 using UnityEngine;
 
-namespace Character.Player.FSM.Player_State.Super_State
+namespace Script.Character.Player.FSM.Player_State.Super_State
 {
     public class PlayerGroundState : PlayerState
     {

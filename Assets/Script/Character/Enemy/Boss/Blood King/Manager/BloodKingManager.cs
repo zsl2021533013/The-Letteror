@@ -115,7 +115,8 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         public void HeartAttack()
         {
             GameObject heart = Instantiate(HeartPrefab);
-            heart.transform.position = new Vector2(CoreManager.SenseCore.PlayerPositionX, -4.2f);
+            heart.transform.position = new Vector2(CoreManager.SenseCore.PlayerPositionX, 120.63f); 
+            // 120.63f 为一写死的高度，后续应当改进
         }
 
         public void SetCollider(Vector2 offset, Vector2 size)

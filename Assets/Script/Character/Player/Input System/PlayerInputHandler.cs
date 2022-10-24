@@ -1,9 +1,8 @@
-using System;
 using Tool.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Character.Player.Input_System
+namespace Script.Character.Player.Input_System
 {
     public enum PlayerInputDirectionType
     {

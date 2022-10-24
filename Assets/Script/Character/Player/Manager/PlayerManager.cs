@@ -8,11 +8,12 @@ using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Special_Attack;
-using Character.Player.FSM.Player_State.Sub_State.Air_State;
-using Character.Player.FSM.Player_State.Sub_State.Ground_State;
-using Character.Player.FSM.Player_State.Sub_State.Wall_State;
-using Character.Player.Input_System;
 using Game_Manager;
+using Script.Character.Player.FSM.Player_State.Sub_State.Ability_State;
+using Script.Character.Player.FSM.Player_State.Sub_State.Air_State;
+using Script.Character.Player.FSM.Player_State.Sub_State.Ground_State;
+using Script.Character.Player.FSM.Player_State.Sub_State.Wall_State;
+using Script.Character.Player.Input_System;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
