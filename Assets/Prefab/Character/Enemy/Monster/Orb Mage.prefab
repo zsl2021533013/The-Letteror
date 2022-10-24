@@ -573,7 +573,7 @@ MonoBehaviour:
   patrolRange: 2
   waitTime: 2
   attackCoolDown: 3
-  damagedVelocity: 2
+  damagedVelocity: 1
 --- !u!1 &7116293433223680844
 GameObject:
   m_ObjectHideFlags: 0
