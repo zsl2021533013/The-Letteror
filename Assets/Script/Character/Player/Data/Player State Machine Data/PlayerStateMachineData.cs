@@ -55,7 +55,7 @@ namespace Character.Player.Core.Data
         public float specialUpwardsAttackVelocityY;
         public float specialDownwardsAttackVelocityY;
         public float specialDownwardsAttackStopVelocityY;
-        public float specialAttackCoolDown;
+        public float specialDownwardsAttackShakeIntensity;
         public int specialAttackAmount;
     }
 }

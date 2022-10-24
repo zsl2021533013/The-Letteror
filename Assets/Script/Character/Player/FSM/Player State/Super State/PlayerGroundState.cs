@@ -162,12 +162,6 @@ namespace Script.Character.Player.FSM.Player_State.Super_State
                         stateMachine.TranslateToState(manager.SpecialUpwardsAttackState);
                     }
                     break;
-                case PlayerInputDirectionType.Down when manager.AbilityData.isSpecialDownwardsAttackEnable:
-                    if (manager.SpecialDownwardsAttack1State.CheckAmountOfSpecialAttack())
-                    {
-                        stateMachine.TranslateToState(manager.SpecialDownwardsAttack1State);
-                    }
-                    break;
                 case PlayerInputDirectionType.Left when manager.AbilityData.isSpecialHorizontalAttackEnable:
                     if (manager.SpecialDashAttackState.CheckAmountOfSpecialAttack())
                     {

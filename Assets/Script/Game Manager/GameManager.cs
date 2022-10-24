@@ -1,21 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using Character.Base.Data;
 using Character.Player.Data.Player_Ability_Data;
-using Character.Player.Data.Player_Battle_Data;
 using Character.Player.Manager;
-using Environment.Parallax;
 using Tool.Generic;
 using UnityEngine;
 
-namespace Game_Manager
+namespace Script.Game_Manager
 {
     public class GameManager : Singleton<GameManager>
     {
         [SerializeField] private PlayerAbilityData _abilityDataTemplate;
         [SerializeField] private CharacterBattleData _battleDataTemplate;
         
-        public PlayerAbilityData AbilityData;
-        public CharacterBattleData BattleData;
+        public PlayerAbilityData AbilityData { get; private set; }
+        public CharacterBattleData BattleData { get; private set; }
         public Transform PlayerTransform { get; private set; }
         public PlayerManager PlayerManager { get; private set; }
         
@@ -88,12 +86,29 @@ namespace Game_Manager
 
         #endregion
 
-        public void ResetHealth() => BattleData.health = _battleDataTemplate.health;
-        
-        private void UpdatePlayerAbilityData() => PlayerManager.UpdateAbilityData(AbilityData);
-        
-        public void InitializedAbilityData() => AbilityData = Instantiate(_abilityDataTemplate);
+        #region Player Status
 
+        public void ResetHealth() => BattleData.health = _battleDataTemplate.health;
+                
+        private void UpdatePlayerAbilityData() => PlayerManager.UpdateAbilityData(AbilityData);
+                
+        public void InitializedAbilityData() => AbilityData = Instantiate(_abilityDataTemplate);
+        
         public void InitializedBattleData() => BattleData = Instantiate(_battleDataTemplate);
+
+        #endregion
+
+        public void StopForSeconds(float time)
+        {
+            StopAllCoroutines();
+            StartCoroutine(StopForSecondsIEnumerator(time));
+        }
+
+        private IEnumerator StopForSecondsIEnumerator(float time)
+        {
+            Time.timeScale = 0f;
+            yield return new WaitForSecondsRealtime(time);
+            Time.timeScale = 1f;
+        }
     }
 }

@@ -27,8 +27,8 @@ MonoBehaviour:
   pauseTime: 2
   specialDashVelocity: 25
   rollVelocity: 10
-  groundAttack1VelocityX: 0
-  groundAttack2VelocityX: 0
+  groundAttack1VelocityX: 1
+  groundAttack2VelocityX: 1
   airAttack1VelocityX: 0.5
   airAttack2VelocityX: 0.8
   airUpwardsAttackVelocityY: 13
@@ -38,5 +38,5 @@ MonoBehaviour:
   specialUpwardsAttackVelocityY: 25
   specialDownwardsAttackVelocityY: 40
   specialDownwardsAttackStopVelocityY: 10
-  specialAttackCoolDown: 0.5
+  specialDownwardsAttackShakeIntensity: 20
   specialAttackAmount: 1

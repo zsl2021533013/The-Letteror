@@ -14,6 +14,8 @@ using Script.Character.Player.FSM.Player_State.Sub_State.Air_State;
 using Script.Character.Player.FSM.Player_State.Sub_State.Ground_State;
 using Script.Character.Player.FSM.Player_State.Sub_State.Wall_State;
 using Script.Character.Player.Input_System;
+using Script.Environment.Camera;
+using Script.Game_Manager;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -25,6 +27,11 @@ namespace Character.Player.Manager
         private GameObject tempFloatDamage;*/
 
         public float immortalTimeAfterDamaged;
+        public float damagedPauseTime;
+        public float attackPauseTime;
+        public float damagedCameraShakeIntensity;
+        public float attackCameraShakeIntensity;
+        public float cameraShakeTime;
             
         public Vector2 FormerOnGroundPosition { get; set; }
         public PlayerAbilityData AbilityData { get; private set; }
@@ -159,6 +166,10 @@ namespace Character.Player.Manager
             {
                 CoreManager.MoveCore.SetVelocityY(CoreManager.MoveCore.StateMachineData.airDownwardsAttackVelocityY);
             }
+
+            ShakeCamera(attackCameraShakeIntensity, cameraShakeTime);
+            
+            StopForSeconds(attackPauseTime);
         }
 
         public override void Damaged()
@@ -169,6 +180,10 @@ namespace Character.Player.Manager
             
             BattleManager.StartImmortalForSeconds(immortalTimeAfterDamaged);
             BattleManager.Flash();
+
+            ShakeCamera(damagedCameraShakeIntensity, cameraShakeTime);
+            
+            StopForSeconds(damagedPauseTime);
         }
 
         public override void Die()
@@ -191,5 +206,15 @@ namespace Character.Player.Manager
         public void UpdateAbilityData(PlayerAbilityData abilityData) => AbilityData = abilityData;
         
         public void UpdateFormerPosition(Vector2 position) => FormerOnGroundPosition = position;
+
+        public void ShakeCamera(float intensity, float time)
+        {
+            PlayerCameraController.Instance.ShakeCamera(intensity, time);
+        }
+
+        public void StopForSeconds(float time)
+        {
+            GameManager.Instance.StopForSeconds(time);
+        }
     }
 }

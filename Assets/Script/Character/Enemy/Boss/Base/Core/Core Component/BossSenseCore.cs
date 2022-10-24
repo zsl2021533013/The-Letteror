@@ -1,6 +1,7 @@
 ﻿using System;
 using Character.Base.Core.Core_Component;
 using Game_Manager;
+using Script.Game_Manager;
 using UnityEngine;
 
 namespace Character.Enemy.Boss.Base.Core.Core_Component

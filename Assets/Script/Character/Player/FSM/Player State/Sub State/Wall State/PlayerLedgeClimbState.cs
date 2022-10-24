@@ -54,7 +54,7 @@ namespace Script.Character.Player.FSM.Player_State.Sub_State.Wall_State
                 stateMachine.TranslateToState(manager.WallJumpState);
                 return;
             }
-
+            //
             if (_inputDirectionType == PlayerInputDirectionType.Down || !_isTouchingWall)
             {
                 stateMachine.TranslateToState(manager.AirState);
@@ -65,7 +65,7 @@ namespace Script.Character.Player.FSM.Player_State.Sub_State.Wall_State
         public override void DoChecks()
         {
             base.DoChecks();
-            
+
             _isTouchingWall = coreManager.SenseCore.DetectWall;
         }
 

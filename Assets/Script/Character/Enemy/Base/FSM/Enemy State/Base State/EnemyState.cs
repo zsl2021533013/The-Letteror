@@ -3,6 +3,7 @@ using Character.Base.Manager;
 using Character.Enemy.Core.Core_Manager;
 using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State;
 using Character.Enemy.Manager;
+using UnityEngine;
 
 namespace Character.Enemy.FSM
 {

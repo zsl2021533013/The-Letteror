@@ -20,6 +20,8 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State
             {
                 coreManager.MoveCore.Flip();
             }
+            
+            coreManager.MoveCore.SetVelocityX(-coreManager.MoveCore.damagedVelocity * coreManager.MoveCore.CharacterDirection);
         }
 
         public override void DoChecks()
@@ -36,6 +38,8 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State
                 manager.ResetDamaged();
                 return;
             }
+            
+            base.OnAnimationFinish();
         }
 
         public override void OnCharacterDamaged()

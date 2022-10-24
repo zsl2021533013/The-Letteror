@@ -1,6 +1,7 @@
 ﻿using Character.Player.Manager;
 using Environment.Trigger.New_Ability_Trigger.Base;
 using Game_Manager;
+using Script.Game_Manager;
 using UnityEngine;
 
 namespace Environment.Trigger.New_Ability_Trigger.Special_Dash_Trigger

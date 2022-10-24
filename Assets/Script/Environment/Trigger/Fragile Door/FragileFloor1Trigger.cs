@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Special_Attack;
+﻿using System.Collections;
 using Character.Player.Manager;
 using Environment.Trigger.Base;
 using UnityEngine;

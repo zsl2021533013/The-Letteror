@@ -4,6 +4,7 @@ using Character.Player.Manager;
 using Environment.Trigger.Base;
 using Game_Manager;
 using PixelCrushers;
+using Script.Game_Manager;
 using UnityEngine;
 
 namespace Script.Environment.Trigger.Save_Trigger

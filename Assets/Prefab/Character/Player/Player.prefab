@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206426204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.22, z: 0}
+  m_LocalPosition: {x: -0.01, y: -0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,11 +267,14 @@ MonoBehaviour:
   triggerSensor: {fileID: 1206426205}
   NPCSensor: {fileID: 1968356420}
   oneWayPlatformSensor: {fileID: 2662147732603755961}
+  groundSensorSize: {x: 0.5, y: 0.55}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 9280
-  groundSensorSize: {x: 0.5, y: 0.55}
   wallCheckDistance: 0.5
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 8256
   oneWayPlatformSensorSize: {x: 0.4, y: 1.5}
   oneWayPlatformLayerMask:
     serializedVersion: 2
@@ -280,7 +283,7 @@ MonoBehaviour:
   specialDashLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  triggerSensorSize: {x: 0.6, y: 1.5}
+  triggerSensorSize: {x: 0.6, y: 1.55}
   triggerLayerMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -1023,6 +1026,11 @@ MonoBehaviour:
   name: Player
   deadCharacter: {fileID: 0}
   immortalTimeAfterDamaged: 1
+  damagedPauseTime: 0.2
+  attackPauseTime: 0.05
+  damagedCameraShakeIntensity: 5
+  attackCameraShakeIntensity: 1
+  cameraShakeTime: 0.1
 --- !u!114 &1400901678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,7 +1067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2662147734006066535}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -19,12 +19,13 @@ namespace Character.Player.Core.Core_Component
         public Transform oneWayPlatformSensor;
 
         [Header("Ground Sensor")]
-        public LayerMask groundLayerMask;
         public Vector2 groundSensorSize;
+        public LayerMask groundLayerMask;
         
         [Header("Wall Sensor")]
         public float wallCheckDistance;
-        
+        public LayerMask wallLayerMask;
+
         [Header("One Way Platform Sensor")] 
         public Vector2 oneWayPlatformSensorSize;
         public LayerMask oneWayPlatformLayerMask;
@@ -50,11 +51,11 @@ namespace Character.Player.Core.Core_Component
 
         public bool DetectWall => Physics2D.Raycast(wallSensor.position,
             Vector2.right * coreManager.MoveCore.CharacterDirection,
-            wallCheckDistance, groundLayerMask);
+            wallCheckDistance, wallLayerMask);
 
         public bool DetectLedge => Physics2D.Raycast(ledgeSensor.position,
             Vector2.right * coreManager.MoveCore.CharacterDirection,
-            wallCheckDistance, groundLayerMask);
+            wallCheckDistance, wallLayerMask);
 
         public bool DetectDashFruit => Physics2D.OverlapCircle(specialDashSensor.position,
             specialDashSensorRadius, specialDashLayerMask);

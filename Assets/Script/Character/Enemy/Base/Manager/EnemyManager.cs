@@ -3,12 +3,15 @@ using Character.Base.Manager;
 using Character.Enemy.Core.Core_Manager;
 using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State;
 using Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State;
+using Script.Character.Damaged_Effect;
 
 namespace Character.Enemy.Manager
 {
     public class EnemyManager : CharacterManager
     {
         public new EnemyCoreManager CoreManager { get; private set; }
+
+        public DamagedEffectController EffectController { get; private set; }
         
         #region FSM Attribute
         
@@ -27,6 +30,7 @@ namespace Character.Enemy.Manager
             base.Awake();
 
             CoreManager = (EnemyCoreManager)base.CoreManager;
+            EffectController = GetComponentInChildren<DamagedEffectController>();
         }
 
         protected override void Start()
@@ -47,6 +51,13 @@ namespace Character.Enemy.Manager
             PatrolState = new EnemyPatrolState(this, "move");
             DamagedState = new EnemyDamagedState(this, "damaged");
             DeathState = new EnemyDeathState(this, "death");
+        }
+
+        public override void Damaged()
+        {
+            base.Damaged();
+            
+            EffectController.Damaged();
         }
     }
 }

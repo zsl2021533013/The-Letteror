@@ -14,6 +14,9 @@ namespace Character.Enemy.Core.Core_Component
         [Header("Attack State")] 
         public float attackCoolDown;
 
+        [Header("Damaged State")] 
+        public float damagedVelocity;
+
         public bool JudgeArrive(float positionX)
         {
             if (Mathf.Abs(Position.x - positionX) < 0.1f)
@@ -26,9 +29,9 @@ namespace Character.Enemy.Core.Core_Component
         
         private void OnDrawGizmosSelected()
         {
-            /*Gizmos.color = Color.blue;
-            Gizmos.DrawRay(transform.position, Vector3.right * enemyData.patrolRange);
-            Gizmos.DrawRay(transform.position, Vector3.left * enemyData.patrolRange);*/
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position, Vector3.right * patrolRange);
+            Gizmos.DrawRay(transform.position, Vector3.left * patrolRange);
         }
     }
 }
