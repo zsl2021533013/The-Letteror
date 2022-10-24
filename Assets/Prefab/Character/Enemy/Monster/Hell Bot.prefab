@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 7608819192803836504}
   - component: {fileID: 7608819192803836505}
   - component: {fileID: 7608819192803836506}
+  - component: {fileID: 1139630837}
   m_Layer: 8
   m_Name: Hell Bot
   m_TagString: Enemy
@@ -197,7 +198,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 81a052a360d9058418455151784f24f2, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -216,6 +217,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Hell Bot
   deadCharacter: {fileID: 0}
+--- !u!114 &1139630837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608819192803836507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03526e258566dc247a4eb8525aeeb667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
+  m_mode: 1
+  m_destroyMode: 0
+  m_destroyedVersionPrefab: {fileID: 0}
 --- !u!1 &7608819193467702918
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +614,7 @@ MonoBehaviour:
   patrolRange: 6
   waitTime: 1
   attackCoolDown: 1
-  damagedVelocity: 5
+  damagedVelocity: 1
 --- !u!1 &7608819194118163142
 GameObject:
   m_ObjectHideFlags: 0

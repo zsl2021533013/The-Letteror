@@ -27,6 +27,11 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
         public override void OnUpdate()
         {
             base.OnUpdate();
+
+            if (isStateFinished)
+            {
+                return;
+            }
             
             coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
             

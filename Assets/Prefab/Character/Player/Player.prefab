@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Player
   deadCharacter: {fileID: 0}
-  immortalTimeAfterDamaged: 1
+  immortalTimeAfterDamaged: 0.1
   damagedPauseTime: 0.2
   attackPauseTime: 0.05
   damagedCameraShakeIntensity: 5

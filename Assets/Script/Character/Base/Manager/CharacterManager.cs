@@ -88,7 +88,7 @@ namespace Character.Base.Manager
             Destroy(gameObject);
 
             if (!deadCharacter) return;
-            
+            Debug.Log(1);
             GameObject newCharacter = Instantiate(deadCharacter);
             newCharacter.transform.position = transform.position;
             newCharacter.transform.localScale = transform.localScale;

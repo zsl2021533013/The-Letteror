@@ -22,6 +22,11 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.OnUpdate();
             
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (Time.time > startTime + coreManager.MoveCore.waitTime)
             {
                 stateMachine.TranslateToState(manager.PatrolState);

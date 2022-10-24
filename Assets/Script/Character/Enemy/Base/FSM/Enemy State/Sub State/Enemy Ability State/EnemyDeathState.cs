@@ -20,6 +20,8 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State
             {
                 coreManager.MoveCore.Flip();
             }
+            
+            coreManager.MoveCore.SetVelocityX(0f);
         }
 
         public override void DoChecks()
@@ -31,7 +33,7 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ability_State
         
         protected override void OnAnimationFinish()
         {
-            
+            manager.DestroyCharacter();
         }
     }
 }

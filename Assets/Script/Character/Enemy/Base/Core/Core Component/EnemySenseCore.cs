@@ -21,9 +21,22 @@ namespace Character.Enemy.Core.Core_Component
         
         public bool InAttackRange => Physics2D.Raycast(playerSensor.position,
             Vector2.right * coreManager.MoveCore.CharacterDirection, attackDistance, playerLayerMask);
-        
-        public bool InSpecialAttackRange => Physics2D.Raycast(playerSensor.position,
-            Vector2.right * coreManager.MoveCore.CharacterDirection, specialAttackDistance, playerLayerMask); 
+
+        public bool InSpecialAttackRange
+        {
+            get
+            {
+                if (specialAttackDistance < 0f)
+                {
+                    return false;
+                }
+                else
+                {
+                    return Physics2D.Raycast(playerSensor.position,
+                        Vector2.right * coreManager.MoveCore.CharacterDirection, specialAttackDistance, playerLayerMask); 
+                } 
+            }
+        }
         
         protected override void OnDrawGizmosSelected()
         {

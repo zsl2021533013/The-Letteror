@@ -16,6 +16,11 @@ namespace Character.Enemy.FSM.Enemy_State.Sub_State.Enemy_Ground_State
         {
             base.OnUpdate();
 
+            if (isStateFinished)
+            {
+                return;
+            }
+            
             if (inChaseRange && !inAttackRange)
             {
                 coreManager.MoveCore.SetVelocityX(coreManager.MoveCore.moveVelocity * coreManager.MoveCore.CharacterDirection);
