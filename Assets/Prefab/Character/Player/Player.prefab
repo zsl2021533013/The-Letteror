@@ -274,7 +274,7 @@ MonoBehaviour:
   wallCheckDistance: 0.5
   wallLayerMask:
     serializedVersion: 2
-    m_Bits: 8256
+    m_Bits: 64
   oneWayPlatformSensorSize: {x: 0.4, y: 1.5}
   oneWayPlatformLayerMask:
     serializedVersion: 2

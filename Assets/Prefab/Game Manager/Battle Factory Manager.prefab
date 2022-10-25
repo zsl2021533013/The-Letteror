@@ -45,21 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleAttributes:
-  - characterName: Player
-    data: {fileID: 11400000, guid: 466fcbdb939a3ab46926c73a0884203c, type: 2}
-  - characterName: 
-    data: {fileID: 0}
-  - characterName: 
-    data: {fileID: 0}
-  - characterName: 
-    data: {fileID: 0}
-  - characterName: 
-    data: {fileID: 0}
-  - characterName: 
-    data: {fileID: 0}
-  - characterName: 
-    data: {fileID: 0}
-  - characterName: 
-    data: {fileID: 0}
+  - characterName: Blinding Spider
+    data: {fileID: 11400000, guid: 1afded1ae567faa47a5aa8bf2b84cdd8, type: 2}
+  - characterName: Flower
+    data: {fileID: 11400000, guid: 12ca5e76d053a0d4c984c643e0436d09, type: 2}
+  - characterName: Ghoul
+    data: {fileID: 11400000, guid: cea63a2176cd44c418a665738b08357d, type: 2}
+  - characterName: Hell Bot
+    data: {fileID: 11400000, guid: 0fc969b40000e854e83042daa6397aba, type: 2}
+  - characterName: Orb Mage
+    data: {fileID: 11400000, guid: 0fb103be158d4554dad9949bd2bc85a7, type: 2}
+  - characterName: Temple Guard
+    data: {fileID: 11400000, guid: 5e6cb901082f82a489d5ecc9e7689041, type: 2}
+  - characterName: Heart Hoarder
+    data: {fileID: 11400000, guid: 10a6719bd78d7e14280f1032b961c1bd, type: 2}
+  - characterName: Colossal Boss
+    data: {fileID: 11400000, guid: 6ec2c4984b1c896499a5f3435a927652, type: 2}
   - characterName: 
     data: {fileID: 0}

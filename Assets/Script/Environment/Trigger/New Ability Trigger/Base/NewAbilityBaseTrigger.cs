@@ -1,7 +1,7 @@
 ﻿using System;
-using Character.Player.Manager;
 using Environment.Trigger.Base;
 using Game_Manager;
+using Script.Character.Player.Manager;
 using UnityEngine;
 
 namespace Environment.Trigger.New_Ability_Trigger.Base

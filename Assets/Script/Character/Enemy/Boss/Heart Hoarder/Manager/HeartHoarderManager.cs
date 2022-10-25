@@ -96,13 +96,13 @@ namespace Character.Enemy.Boss.Heart_Hoarder
             int health = BattleManager.BattleData.health;
             switch (health)
             {
-                case > 40:
+                case > 20:
                     CurrentState = 1;
                     break;
-                case > 30:
+                case > 10:
                     CurrentState = 2;
                     break;
-                case < 20:
+                default:
                     CurrentState = 3;
                     break;
             }

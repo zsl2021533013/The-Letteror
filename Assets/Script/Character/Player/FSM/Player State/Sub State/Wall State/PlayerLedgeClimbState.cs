@@ -14,8 +14,6 @@ namespace Script.Character.Player.FSM.Player_State.Sub_State.Wall_State
         private Vector2 _stopPosition;
         private bool _jumpInput;
         
-        private bool _isTouchingWall;
-
         public PlayerLedgeClimbState(CharacterManager manager, string animBoolName) : base(manager,
             animBoolName)
         {
@@ -54,19 +52,12 @@ namespace Script.Character.Player.FSM.Player_State.Sub_State.Wall_State
                 stateMachine.TranslateToState(manager.WallJumpState);
                 return;
             }
-            //
-            if (_inputDirectionType == PlayerInputDirectionType.Down || !_isTouchingWall)
+            
+            if (_inputDirectionType == PlayerInputDirectionType.Down)
             {
                 stateMachine.TranslateToState(manager.AirState);
                 return;
             }
-        }
-
-        public override void DoChecks()
-        {
-            base.DoChecks();
-
-            _isTouchingWall = coreManager.SenseCore.DetectWall;
         }
 
         public void SetPosition(Vector2 position) => _detectedPosition = position;

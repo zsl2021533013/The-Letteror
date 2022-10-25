@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 7116293432513660490}
   - component: {fileID: 7116293432513660489}
   - component: {fileID: 7116293432513660488}
+  - component: {fileID: 7033033688046993034}
   m_Layer: 8
   m_Name: Orb Mage
   m_TagString: Enemy
@@ -525,6 +526,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Orb Mage
   deadCharacter: {fileID: 0}
+--- !u!114 &7033033688046993034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116293432513660599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03526e258566dc247a4eb8525aeeb667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
+  m_mode: 1
+  m_destroyMode: 0
+  m_destroyedVersionPrefab: {fileID: 0}
 --- !u!1 &7116293433110755179
 GameObject:
   m_ObjectHideFlags: 0

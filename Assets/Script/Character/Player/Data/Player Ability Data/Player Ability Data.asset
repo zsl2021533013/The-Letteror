@@ -16,6 +16,6 @@ MonoBehaviour:
   isWallSlideEnable: 1
   isDashEnable: 1
   isSpecialDashEnable: 1
-  isSpecialUpwardsAttackEnable: 1
-  isSpecialHorizontalAttackEnable: 1
+  isSpecialUpwardsAttackEnable: 0
+  isSpecialHorizontalAttackEnable: 0
   isSpecialDownwardsAttackEnable: 1

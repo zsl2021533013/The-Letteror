@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using Character.Base.Data;
 using Character.Player.Data.Player_Ability_Data;
-using Character.Player.Manager;
+using Script.Character.Player.Manager;
 using Tool.Generic;
 using UnityEngine;
 

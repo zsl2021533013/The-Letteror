@@ -1,5 +1,4 @@
 using Character.Base.Manager;
-using Character.Player.Manager;
 
 namespace Script.Character.Player.Manager
 {

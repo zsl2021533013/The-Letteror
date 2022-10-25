@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Temple Guard
+  m_Controller: {fileID: 9100000, guid: 9ae1cfde8b699e041b1a136ed91986f6, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a82b089f0b2de1448991436f347bbf28, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a6dc2a76b5db55f43b7154e40d56c0b3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 26bece5f6fda0fa409bb55f584891998, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 61549692747f53444ac0dbcad33f3132, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4114e151ee3586840bea2cd4ffe00dac, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c2a7fa39de6838c4c82b5c67d7573f6b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d666cf7175faa964789ce9e76a4a6972, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ff9222c94085c954ea79ed0c09f07b75, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cbcb3d44d07b60e4cac0e5dd034e64bb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f5abbdbe203b16d4aa8a41bb356eac52, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e848ca5070b63d64a8beb964127b0bd6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 23262f6dea6841b4a8264ce0940fbc3b, type: 2}

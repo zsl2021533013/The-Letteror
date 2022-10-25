@@ -1,6 +1,6 @@
-﻿using Character.Player.Manager;
-using Environment.Trigger.New_Ability_Trigger.Base;
+﻿using Environment.Trigger.New_Ability_Trigger.Base;
 using Game_Manager;
+using Script.Character.Player.Manager;
 using Script.Game_Manager;
 using UnityEngine;
 

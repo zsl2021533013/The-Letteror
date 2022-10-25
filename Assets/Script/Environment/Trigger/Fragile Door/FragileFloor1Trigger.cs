@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using Character.Player.Manager;
 using Environment.Trigger.Base;
+using Script.Character.Player.Manager;
 using UnityEngine;
 
 namespace Environment.Trigger

@@ -2,9 +2,9 @@
 using System.Collections;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Special_Attack;
-using Character.Player.Manager;
 using Environment.Trigger.Base;
 using Script.Character.Player.FSM.Player_State.Sub_State.Ability_State;
+using Script.Character.Player.Manager;
 using UnityEngine;
 
 namespace Environment.Trigger

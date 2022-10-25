@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveVelocity: 4
-  patrolRange: 6
+  patrolRange: 2
   waitTime: 1
   attackCoolDown: 1
   damagedVelocity: 1

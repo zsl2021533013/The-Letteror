@@ -1,5 +1,5 @@
 ﻿using System;
-using Character.Player.Manager;
+using Script.Character.Player.Manager;
 using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.Manager

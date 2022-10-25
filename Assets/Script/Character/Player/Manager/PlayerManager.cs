@@ -1,9 +1,6 @@
-using System;
-using Character.Base.Data;
 using Character.Base.Manager;
 using Character.Player.Core.Core_Manager;
 using Character.Player.Data.Player_Ability_Data;
-using Character.Player.FSM.Player_State.Sub_State.Ability_State;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack;
@@ -17,9 +14,8 @@ using Script.Character.Player.Input_System;
 using Script.Environment.Camera;
 using Script.Game_Manager;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
-namespace Character.Player.Manager
+namespace Script.Character.Player.Manager
 {
     public class PlayerManager : CharacterManager
     {
@@ -53,7 +49,6 @@ namespace Character.Player.Manager
         public PlayerSpecialDashState SpecialDashState { get; private set; }
         public PlayerRollState RollState { get; private set; }
         public PlayerGainAbilityState GainAbilityState { get; private set; }
-        public PlayerDamagedState DamagedState { get; private set; }
         public PlayerDeathState DeathState { get; private set; }
 
         #region Attack State
@@ -128,7 +123,6 @@ namespace Character.Player.Manager
             SpecialDashState = new PlayerSpecialDashState(this, "specialDash");
             RollState = new PlayerRollState(this, "roll");
             GainAbilityState = new PlayerGainAbilityState(this, "gainAbility");
-            DamagedState = new PlayerDamagedState(this, "damaged");
             DeathState = new PlayerDeathState(this, "death");
 
             #region Attack State 

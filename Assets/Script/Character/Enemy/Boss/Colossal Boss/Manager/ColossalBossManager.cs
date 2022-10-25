@@ -67,13 +67,13 @@ namespace Character.Enemy.Boss.Colossal_Boss.Manager
             int health = BattleManager.BattleData.health;
             switch (health)
             {
-                case > 40:
+                case > 30:
                     CurrentState = 1;
                     break;
-                case > 30:
+                case > 20:
                     CurrentState = 2;
                     break;
-                case < 20:
+                default:
                     CurrentState = 3;
                     break;
             }

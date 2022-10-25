@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveVelocity: 8
-  leftPointX: -31
-  rightPointX: -7
+  leftPointX: 83
+  rightPointX: 112
   attack3Offset: 3.7
   attack4Offset: 4.7
 --- !u!1 &5412408100141465420
@@ -187,7 +187,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 15.666667, y: 6.5833335}
+  m_Size: {x: 14, y: 6.5833335}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -231,7 +231,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.3214286, y: 0.1265823}
     oldSize: {x: 14, y: 6.5833335}
-    newSize: {x: 15.666667, y: 6.5833335}
+    newSize: {x: 14, y: 6.5833335}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

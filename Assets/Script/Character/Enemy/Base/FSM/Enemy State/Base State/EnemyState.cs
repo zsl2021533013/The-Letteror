@@ -18,13 +18,6 @@ namespace Character.Enemy.FSM
             coreManager = (EnemyCoreManager)manager.CoreManager;
         }
 
-        public override void OnEnter()
-        {
-            base.OnEnter();
-            
-            Debug.Log(_animBoolName);
-        }
-
         public override void OnCharacterDie()
         {
             if (manager.IsDead)

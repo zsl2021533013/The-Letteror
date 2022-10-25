@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3614306398037502797}
   - component: {fileID: 3614306398037502796}
   - component: {fileID: 3614306398037502787}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Blinding Spider (Dead)
-  m_TagString: Enemy
+  m_TagString: DeadEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

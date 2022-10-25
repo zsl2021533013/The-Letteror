@@ -1,4 +1,4 @@
-using Character.Player.Manager;
+using Script.Character.Player.Manager;
 using UnityEngine;
 
 namespace Environment.Trigger.Base

@@ -56,12 +56,22 @@ namespace Character.Base.Core.Core_Component
         
         public void SetVelocityX(float velocityX)
         {
+            if (float.IsNaN(velocityX))
+            {
+                return; // 时停时似乎会出现分母为 0 的情况，此时便会报错，故需要特判
+            }
+            
             tempVector2.Set(velocityX, Rb.velocity.y);
             Rb.velocity = tempVector2;
         }
         
         public void SetVelocityY(float velocityY)
         {
+            if (float.IsNaN(velocityY))
+            {
+                return;
+            }
+            
             tempVector2.Set(Rb.velocity.x, velocityY);
             Rb.velocity = tempVector2;
         }

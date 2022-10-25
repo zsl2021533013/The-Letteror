@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
-using Character.Player.Manager;
 using Environment.Trigger.Base;
 using Game_Manager;
 using PixelCrushers;
+using Script.Character.Player.Manager;
 using Script.Game_Manager;
 using UnityEngine;
 
