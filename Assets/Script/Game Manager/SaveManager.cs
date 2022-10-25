@@ -10,8 +10,11 @@ namespace Game_Manager
 {
     public class SaveManager : Singleton<SaveManager>
     {
-        private static string BattleDataPath => Application.persistentDataPath + "/Game Save Data/Player Battle Data";
-        private static string AbilityDataPath => Application.persistentDataPath + "/Game Save Data/Player Ability Data";
+        private static string SaveDataDictionaryPath => Application.persistentDataPath + "/Game Save Data";
+        private static string BattleDataDictionaryPath => SaveDataDictionaryPath + "/Player Battle Data";
+        private static string AbilityDataDictionaryPath => SaveDataDictionaryPath + "/Player Ability Data";
+        public static string BattleDataFilePath => BattleDataDictionaryPath + "/Player Battle Data Save.txt";
+        public static string AbilityDataFilePath => AbilityDataDictionaryPath + "/Player Ability Data Save.txt";
 
         private static readonly BinaryFormatter BinaryFormatter = new BinaryFormatter();
 
@@ -29,9 +32,18 @@ namespace Game_Manager
             LoadPlayerBattleData();
         }
 
+        public static void InitializeData()
+        {
+            GameManager.Instance.InitializeAbilityData();
+            GameManager.Instance.InitializeBattleData();
+
+            SavePlayerAbilityData();
+            SavePlayerBattleData();
+        }
+
         private static void SavePlayerAbilityData()
         {
-            FileStream fileStream = File.Create(AbilityDataPath + "/Player Ability Data Save.txt");
+            FileStream fileStream = File.Create(AbilityDataFilePath);
             var json = JsonUtility.ToJson(GameManager.Instance.AbilityData, true);
             BinaryFormatter.Serialize(fileStream, json);
             fileStream.Close();
@@ -40,7 +52,7 @@ namespace Game_Manager
 
         private static void SavePlayerBattleData()
         {
-            FileStream fileStream = File.Create(BattleDataPath + "/Player Battle Data Save.txt");
+            FileStream fileStream = File.Create(BattleDataFilePath);
             string json = JsonUtility.ToJson(GameManager.Instance.BattleData, true);
             BinaryFormatter.Serialize(fileStream, json);
             fileStream.Close();
@@ -49,32 +61,34 @@ namespace Game_Manager
 
         private static void LoadPlayerAbilityData()
         {
-            if (File.Exists(AbilityDataPath + "/Player Ability Data Save.txt"))
+            if (File.Exists(AbilityDataFilePath))
             {
-                FileStream fileStream = File.Open(AbilityDataPath + "/Player Ability Data Save.txt", FileMode.Open);
+                FileStream fileStream = File.Open(AbilityDataFilePath, FileMode.Open);
                 JsonUtility.FromJsonOverwrite((string)BinaryFormatter.Deserialize(fileStream),
                     GameManager.Instance.AbilityData);
                 fileStream.Close();
             }
             else
             {
-                GameManager.Instance.InitializedAbilityData();
+                GameManager.Instance.InitializeAbilityData();
+                SavePlayerAbilityData();
             }
             Debug.Log("Player Ability Data has loaded");
         }
 
         private static void LoadPlayerBattleData()
         {
-            if (File.Exists(BattleDataPath + "/Player Battle Data Save.txt"))
+            if (File.Exists(BattleDataFilePath))
             {
-                FileStream fileStream = File.Open(BattleDataPath + "/Player Battle Data Save.txt", FileMode.Open);
+                FileStream fileStream = File.Open(BattleDataFilePath, FileMode.Open);
                 JsonUtility.FromJsonOverwrite((string)BinaryFormatter.Deserialize(fileStream),
                     GameManager.Instance.BattleData);
                 fileStream.Close();
             }
             else
             {
-                GameManager.Instance.InitializedBattleData();
+                GameManager.Instance.InitializeBattleData();
+                SavePlayerBattleData();
             }
             GameManager.Instance.PlayerManager.BattleManager.SetBattleData(GameManager.Instance.BattleData);
             Debug.Log("Player Battle Data has loaded");
@@ -82,17 +96,17 @@ namespace Game_Manager
 
         private static void JudgeGameDirectory()
         {
-            if (!Directory.Exists(Application.persistentDataPath + "/Game Save Data"))
+            if (!Directory.Exists(SaveDataDictionaryPath))
             {
-                Directory.CreateDirectory(Application.persistentDataPath + "/Game Save Data");
+                Directory.CreateDirectory(SaveDataDictionaryPath);
             }
-            if (!Directory.Exists(BattleDataPath))
+            if (!Directory.Exists(BattleDataDictionaryPath))
             {
-                Directory.CreateDirectory(BattleDataPath);
+                Directory.CreateDirectory(BattleDataDictionaryPath);
             }
-            if (!Directory.Exists(AbilityDataPath))
+            if (!Directory.Exists(AbilityDataDictionaryPath))
             {
-                Directory.CreateDirectory(AbilityDataPath);
+                Directory.CreateDirectory(AbilityDataDictionaryPath);
             }
         }
     }

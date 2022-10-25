@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9462936faf5741209792c59652b0f986, type: 3}
   m_Name: Player Ability Data
   m_EditorClassIdentifier: 
-  isDoubleJumpEnable: 0
-  isWallSlideEnable: 0
-  isDashEnable: 0
-  isSpecialDashEnable: 0
-  isSpecialUpwardsAttackEnable: 0
-  isSpecialHorizontalAttackEnable: 0
-  isSpecialDownwardsAttackEnable: 0
+  isDoubleJumpEnable: 1
+  isWallSlideEnable: 1
+  isDashEnable: 1
+  isSpecialDashEnable: 1
+  isSpecialUpwardsAttackEnable: 1
+  isSpecialHorizontalAttackEnable: 1
+  isSpecialDownwardsAttackEnable: 1

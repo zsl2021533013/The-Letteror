@@ -24,12 +24,12 @@ namespace Script.Game_Manager
             
             if (!AbilityData)
             {
-                InitializedAbilityData();
+                InitializeAbilityData();
             }
 
             if (!BattleData)
             {
-                InitializedBattleData();
+                InitializeBattleData();
             }
         }
         
@@ -92,9 +92,9 @@ namespace Script.Game_Manager
                 
         private void UpdatePlayerAbilityData() => PlayerManager.UpdateAbilityData(AbilityData);
                 
-        public void InitializedAbilityData() => AbilityData = Instantiate(_abilityDataTemplate);
+        public void InitializeAbilityData() => AbilityData = Instantiate(_abilityDataTemplate);
         
-        public void InitializedBattleData() => BattleData = Instantiate(_battleDataTemplate);
+        public void InitializeBattleData() => BattleData = Instantiate(_battleDataTemplate);
 
         #endregion
 

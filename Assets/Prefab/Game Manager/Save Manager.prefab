@@ -129,7 +129,7 @@ MonoBehaviour:
   m_version: 0
   m_saveCurrentScene: 1
   m_framesToWaitBeforeApplyData: 1
-  m_debug: 0
+  m_debug: 1
 --- !u!114 &4082665962132450072
 MonoBehaviour:
   m_ObjectHideFlags: 0
