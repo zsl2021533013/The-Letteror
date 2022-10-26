@@ -26,7 +26,6 @@ namespace Script.Character.Player.Input_System
                 InputDeviceManager.RegisterInputAction("Move", controls.Player.Move);
                 InputDeviceManager.RegisterInputAction("Jump", controls.Player.Jump);
                 InputDeviceManager.RegisterInputAction("Dash", controls.Player.Dash);
-                InputDeviceManager.RegisterInputAction("Roll", controls.Player.Roll);
                 InputDeviceManager.RegisterInputAction("Attack", controls.Player.Attack);
                 InputDeviceManager.RegisterInputAction("SpecialAttack", controls.Player.SpecialAttack);
             }
@@ -44,7 +43,6 @@ namespace Script.Character.Player.Input_System
                 InputDeviceManager.UnregisterInputAction("Move");
                 InputDeviceManager.UnregisterInputAction("Jump");
                 InputDeviceManager.UnregisterInputAction("Dash");
-                InputDeviceManager.UnregisterInputAction("Roll");
                 InputDeviceManager.UnregisterInputAction("Attack");
                 InputDeviceManager.UnregisterInputAction("SpecialAttack");
             }

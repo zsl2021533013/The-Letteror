@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Roll",
-                    "type": "Button",
-                    "id": "937ad24b-7fe2-4507-94c7-fef5f43fbc42",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "5a952b02-b89d-4594-af29-881184bc6b38",
@@ -73,7 +64,7 @@
                 {
                     "name": "",
                     "id": "d922eb1f-7c19-45d0-9fec-7ccfb1363ed5",
-                    "path": "<XInputController>/leftStick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "StickDeadzone",
                     "groups": "XBox",
@@ -193,17 +184,6 @@
                 },
                 {
                     "name": "",
-                    "id": "fcccb78c-09d2-4f89-8e11-8f0ec5acbe8b",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "AxisDeadzone",
-                    "groups": "XBox",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dfc40acf-3ef7-49fa-80e2-901b18428e33",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -215,8 +195,19 @@
                 },
                 {
                     "name": "",
+                    "id": "fcccb78c-09d2-4f89-8e11-8f0ec5acbe8b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "XBox",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a52c86e6-dc37-4f27-85e8-625421bbc3c4",
-                    "path": "<Keyboard>/capsLock",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyborad",
@@ -227,33 +218,11 @@
                 {
                     "name": "",
                     "id": "7fad1dbc-f8aa-4b22-af2b-8be02dd1895a",
-                    "path": "<XInputController>/rightTrigger",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "AxisDeadzone",
                     "groups": "XBox",
                     "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "723678dc-7612-4cf4-8501-9a066674c623",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyborad",
-                    "action": "Roll",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e353a5b8-366c-49dd-9f24-f10ac7e3fca9",
-                    "path": "<XInputController>/buttonEast",
-                    "interactions": "",
-                    "processors": "AxisDeadzone",
-                    "groups": "XBox",
-                    "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -282,7 +251,7 @@
                 {
                     "name": "",
                     "id": "fe5bfb32-f2cd-4197-bd2b-370f6dbd55fe",
-                    "path": "<XInputController>/buttonWest",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "XBox",
@@ -304,7 +273,7 @@
                 {
                     "name": "",
                     "id": "9f08acdf-95a7-40b9-b1d1-6faf08bbe04f",
-                    "path": "<XInputController>/buttonNorth",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "XBox",
@@ -326,7 +295,7 @@
                 {
                     "name": "",
                     "id": "99d91411-8a0e-4e47-b172-a5e16bb7ea58",
-                    "path": "<XInputController>/leftShoulder",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "XBox",

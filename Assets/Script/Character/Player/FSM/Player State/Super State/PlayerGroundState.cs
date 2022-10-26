@@ -10,7 +10,6 @@ namespace Script.Character.Player.FSM.Player_State.Super_State
 
         private bool _jumpInput;
         private bool _dashInput;
-        private bool _rollInput;
         private bool _attackInput;
         private bool _specialAttackInput;
         private bool _gainAbility;
@@ -83,13 +82,6 @@ namespace Script.Character.Player.FSM.Player_State.Super_State
                 stateMachine.TranslateToState(manager.DashState);
                 return;
             }
-            
-            if (_rollInput)
-            {
-                manager.Input.ResetRollInput();
-                stateMachine.TranslateToState(manager.RollState);
-                return;
-            }
 
             if (!_isGrounded)
             {
@@ -120,7 +112,6 @@ namespace Script.Character.Player.FSM.Player_State.Super_State
             movementInput = input.MovementInput;
             _jumpInput = input.JumpInput;
             _dashInput = input.DashInput;
-            _rollInput = input.RollInput;
             _attackInput = input.AttackInput;
             _specialAttackInput = input.SpecialAttackInput;
             _inputDirectionType = input.InputDirectionType;

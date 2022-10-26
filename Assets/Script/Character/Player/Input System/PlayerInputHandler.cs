@@ -20,7 +20,6 @@ namespace Script.Character.Player.Input_System
         public bool JumpInputStop { get; private set; }
         public bool DashInput { get; private set; }
         public bool SpecialDashInput { get; private set; }
-        public bool RollInput { get; private set; }
         public bool AttackInput { get; private set; }
         public bool SpecialAttackInput { get; private set; }
         public bool InteractInput { get; private set; }
@@ -91,8 +90,6 @@ namespace Script.Character.Player.Input_System
             Controls.Player.SpecialDash.started += OnSpecialDashInput;
             Controls.Player.SpecialDash.canceled += OnSpecialDashInput;
             
-            Controls.Player.Roll.started += OnRollInput;
-
             Controls.Player.Attack.started += OnAttackInput;
             
             Controls.Player.SpecialAttack.started += OnSpecialAttackInput;
@@ -112,8 +109,6 @@ namespace Script.Character.Player.Input_System
             Controls.Player.SpecialDash.started -= OnSpecialDashInput;
             Controls.Player.SpecialDash.canceled -= OnSpecialDashInput;
             
-            Controls.Player.Roll.started -= OnRollInput;
-
             Controls.Player.Attack.started -= OnAttackInput;
             
             Controls.Player.SpecialAttack.started -= OnSpecialAttackInput;
@@ -197,20 +192,6 @@ namespace Script.Character.Player.Input_System
             }
         }
 
-        private void OnRollInput(InputAction.CallbackContext ctx)
-        {
-            if(!_isInputEnable)
-            {
-                RollInput = false;
-                return;
-            }
-            
-            if (ctx.started)
-            {
-                RollInput = true;
-            }
-        }
-
         private void OnAttackInput(InputAction.CallbackContext ctx)
         {
             if(!_isInputEnable)
@@ -260,7 +241,6 @@ namespace Script.Character.Player.Input_System
         public void ResetJumpInput() => JumpInput = false;
         public void ResetDashInput() => DashInput = false;
         public void ResetSpecialDashInput() => SpecialDashInput = false;
-        public void ResetRollInput() => RollInput = false;
         public void ResetAttackInput() => AttackInput = false;
         public void ResetSpecialAttackInput() => SpecialAttackInput = false;
         public void ResetInteractInput() => InteractInput = false;

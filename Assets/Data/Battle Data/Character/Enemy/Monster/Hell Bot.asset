@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af18cd363810492ab963c8d4078c65b5, type: 3}
   m_Name: Hell Bot
   m_EditorClassIdentifier: 
-  health: 3
+  health: 4
   attack: 1

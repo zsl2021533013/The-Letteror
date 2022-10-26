@@ -12,7 +12,7 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State
 
         protected override void OnAnimationFinish()
         {
-            
+            manager.OpenDoors();
         }
     }
 }

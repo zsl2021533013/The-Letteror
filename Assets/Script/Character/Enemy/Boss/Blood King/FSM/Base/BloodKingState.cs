@@ -2,6 +2,7 @@
 using Character.Base.Manager;
 using Character.Enemy.Boss.Blood_King.Core.Core_Manager;
 using Character.Enemy.Boss.Blood_King.Manager;
+using Script.Character.Enemy.Boss.Blood_King.Manager;
 using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.FSM.Base

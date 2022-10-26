@@ -1,18 +1,19 @@
-﻿using Character.Base.Data;
+﻿using System.Collections.Generic;
 using Character.Base.Manager;
 using Character.Enemy.Boss.Blood_King.Core.Core_Manager;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Teleport_State;
 using Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ground_State;
-using Character.Enemy.Boss.Blood_King.FSM.Super_State;
+using Script.Environment.Boss_Room_Door;
 using UnityEngine;
 
-namespace Character.Enemy.Boss.Blood_King.Manager
+namespace Script.Character.Enemy.Boss.Blood_King.Manager
 {
     public class BloodKingManager : CharacterManager
     {
         public GameObject HeartPrefab;
+        public List<BossRoomDoorController> doorControllers;
         
         public BoxCollider2D Collider2D { get; private set; }
         public int CurrentState { get; private set; }
@@ -92,17 +93,14 @@ namespace Character.Enemy.Boss.Blood_King.Manager
             int health = BattleManager.BattleData.health;
             switch (health)
             {
-                case > 45:
+                case > 40:
                     CurrentState = 1;
                     break;
-                case > 35:
+                case > 30:
                     CurrentState = 2;
                     break;
                 case > 20:
                     CurrentState = 3;
-                    break;
-                case > 15:
-                    CurrentState = 4;
                     break;
                 default:
                     CurrentState = 4;
@@ -123,6 +121,22 @@ namespace Character.Enemy.Boss.Blood_King.Manager
         {
             Collider2D.offset = offset;
             Collider2D.size = size;
+        }
+        
+        public void CloseDoors()
+        {
+            foreach (var controller in doorControllers)
+            {
+                controller.CloseDoor();
+            }
+        }
+        
+        public void OpenDoors()
+        {
+            foreach (var controller in doorControllers)
+            {
+                controller.OpenDoor();
+            }
         }
     }
 }

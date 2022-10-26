@@ -1,5 +1,6 @@
 using System;
 using Character.Enemy.Boss.Blood_King.Manager;
+using Script.Character.Enemy.Boss.Blood_King.Manager;
 using UnityEngine;
 
 namespace Script.Character.Enemy.Boss.Blood_King.Component

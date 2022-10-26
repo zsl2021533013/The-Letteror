@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7716090937698877836}
   - component: {fileID: 7716090937698877843}
   - component: {fileID: 7716090937698877841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss Room Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

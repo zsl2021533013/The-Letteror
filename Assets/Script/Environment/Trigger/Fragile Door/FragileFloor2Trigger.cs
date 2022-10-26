@@ -9,6 +9,8 @@ namespace Environment.Trigger
 {
     public class FragileFloor2Trigger : TriggerBase
     {
+        [SerializeField] private float _destroyedPauseTime;
+        
         private BoxCollider2D _boxCollider2D;
         private Animator _animator;
         private static readonly int Disappear = Animator.StringToHash("disappear");
@@ -26,12 +28,14 @@ namespace Environment.Trigger
             if (manager.StateMachine.CurrentState is PlayerSpecialDownwardsAttack2State)
             {
                 _animator.SetBool(Disappear, true);
+                manager.StopForSeconds(_destroyedPauseTime);
             }
 
             if (manager.StateMachine.CurrentState is PlayerSpecialUpwardsAttackState)
             {
                 _animator.SetBool(Disappear, true);
                 _boxCollider2D.enabled = false;
+                manager.StopForSeconds(_destroyedPauseTime);
             }
         }
 

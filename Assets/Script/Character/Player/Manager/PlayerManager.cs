@@ -47,7 +47,6 @@ namespace Script.Character.Player.Manager
         public PlayerLedgeClimbState LedgeClimbState { get; private set; }
         public PlayerDashState DashState { get; private set; }
         public PlayerSpecialDashState SpecialDashState { get; private set; }
-        public PlayerRollState RollState { get; private set; }
         public PlayerGainAbilityState GainAbilityState { get; private set; }
         public PlayerDeathState DeathState { get; private set; }
 
@@ -121,7 +120,6 @@ namespace Script.Character.Player.Manager
             LedgeClimbState = new PlayerLedgeClimbState(this, "ledgeGrab");
             DashState = new PlayerDashState(this, "dash");
             SpecialDashState = new PlayerSpecialDashState(this, "specialDash");
-            RollState = new PlayerRollState(this, "roll");
             GainAbilityState = new PlayerGainAbilityState(this, "gainAbility");
             DeathState = new PlayerDeathState(this, "death");
 

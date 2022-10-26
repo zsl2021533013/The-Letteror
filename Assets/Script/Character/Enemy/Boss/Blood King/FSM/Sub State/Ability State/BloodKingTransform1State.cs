@@ -10,6 +10,13 @@ namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State
         {
         }
 
+        public override void OnEnter()
+        {
+            base.OnEnter();
+            
+            manager.CloseDoors();
+        }
+
         protected override void OnAnimationFinish()
         {
             stateMachine.TranslateToState(manager.BlueIdleState);
