@@ -18,8 +18,16 @@ namespace Game_Manager
 
         private static readonly BinaryFormatter BinaryFormatter = new BinaryFormatter();
 
+        private static bool _skipSavingOnce; // 防止玩家死亡时由于加载场景保存游戏
+        
         public static void Save()
         {
+            if (_skipSavingOnce)
+            {
+                _skipSavingOnce = false;
+                return;
+            }
+            
             JudgeGameDirectory();
             SavePlayerAbilityData();
             SavePlayerBattleData();
@@ -109,5 +117,7 @@ namespace Game_Manager
                 Directory.CreateDirectory(AbilityDataDictionaryPath);
             }
         }
+
+        public static void SkipSaving() => _skipSavingOnce = true;
     }
 }

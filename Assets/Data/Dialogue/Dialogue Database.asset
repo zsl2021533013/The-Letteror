@@ -497,7 +497,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u9001\u4FE1\u4EBA\uFF0C\u4E09\u6728\u9547\u5C31\u5728\u4E1C\u8FB9\uFF0C\u8FD9\u51E0\u5E74\u591A\u6709\u52B3\u70E6\uFF0C\u4E00\u8DEF\u5E73\u5B89\uFF01"
+        value: "\u9001\u4FE1\u4EBA\uFF0C\u4E09\u6728\u9547\u5C31\u5728\u4E1C\u8FB9"
         type: 0
         typeString: 
       - title: Sequence
@@ -511,7 +511,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 5
+        destinationConversationID: 1
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -519,8 +525,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 120
-        y: 270
+        x: 115.48871
+        y: 273.75937
         width: 160
         height: 30
     - id: 6
@@ -578,8 +584,57 @@ MonoBehaviour:
         y: 120
         width: 160
         height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u4E4C\u9E26\u7684\u7FC5\u8180\u5C06\u4E3A\u4F60\u6307\u5F15\u65B9\u5411\uFF01\u8FD9\u51E0\u5E74\u591A\u6709\u52B3\u70E6\uFF0C\u4E00\u8DEF\u5E73\u5B89\uFF01"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 115.48871
+        y: 323.75937
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 12.690056, y: 7.9308105}
+    canvasScrollPosition: {x: 0, y: 53.646523}
     canvasZoom: 1.3299997
   - id: 2
     fields:

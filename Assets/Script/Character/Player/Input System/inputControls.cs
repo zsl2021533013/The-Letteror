@@ -80,6 +80,15 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Select Window"",
+                    ""type"": ""Button"",
+                    ""id"": ""16dbe717-d96e-427b-a8cb-a43addb34620"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -324,6 +333,39 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                     ""action"": ""Special Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe4620f8-5a78-41d7-ad91-82bf4177e7c9"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyborad"",
+                    ""action"": ""Select Window"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9373770-098c-4223-bfca-8f03eba1f9f5"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBox"",
+                    ""action"": ""Select Window"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""278d2f74-cc88-48cd-95b4-7ac2aea04939"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XBox"",
+                    ""action"": ""Select Window"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -366,6 +408,7 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
         m_Player_SpecialDash = m_Player.FindAction("Special Dash", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_SpecialAttack = m_Player.FindAction("Special Attack", throwIfNotFound: true);
+        m_Player_SelectWindow = m_Player.FindAction("Select Window", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -431,6 +474,7 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SpecialDash;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_SpecialAttack;
+    private readonly InputAction m_Player_SelectWindow;
     public struct PlayerActions
     {
         private @InputControls m_Wrapper;
@@ -441,6 +485,7 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
         public InputAction @SpecialDash => m_Wrapper.m_Player_SpecialDash;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @SpecialAttack => m_Wrapper.m_Player_SpecialAttack;
+        public InputAction @SelectWindow => m_Wrapper.m_Player_SelectWindow;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -468,6 +513,9 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                 @SpecialAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpecialAttack;
                 @SpecialAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpecialAttack;
                 @SpecialAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpecialAttack;
+                @SelectWindow.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelectWindow;
+                @SelectWindow.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelectWindow;
+                @SelectWindow.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelectWindow;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -490,6 +538,9 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                 @SpecialAttack.started += instance.OnSpecialAttack;
                 @SpecialAttack.performed += instance.OnSpecialAttack;
                 @SpecialAttack.canceled += instance.OnSpecialAttack;
+                @SelectWindow.started += instance.OnSelectWindow;
+                @SelectWindow.performed += instance.OnSelectWindow;
+                @SelectWindow.canceled += instance.OnSelectWindow;
             }
         }
     }
@@ -520,5 +571,6 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
         void OnSpecialDash(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnSpecialAttack(InputAction.CallbackContext context);
+        void OnSelectWindow(InputAction.CallbackContext context);
     }
 }

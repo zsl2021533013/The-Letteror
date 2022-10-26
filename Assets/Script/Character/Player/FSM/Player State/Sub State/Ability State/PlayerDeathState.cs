@@ -1,4 +1,5 @@
 ﻿using Character.Base.Manager;
+using Game_Manager;
 using PixelCrushers.Wrappers;
 using Script.Character.Player.FSM.Player_State.Super_State;
 
@@ -14,6 +15,7 @@ namespace Script.Character.Player.FSM.Player_State.Sub_State.Ability_State
         {
             base.OnAnimationFinish();
             
+            SaveManager.SkipSaving();
             SaveSystem.LoadFromSlot(0);
         }
     }

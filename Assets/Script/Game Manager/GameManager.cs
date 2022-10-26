@@ -12,7 +12,7 @@ namespace Script.Game_Manager
         [SerializeField] private PlayerAbilityData _abilityDataTemplate;
         [SerializeField] private CharacterBattleData _battleDataTemplate;
 
-        public PlayerAbilityData AbilityData;
+        public PlayerAbilityData AbilityData { get; private set; }
         public CharacterBattleData BattleData { get; private set; }
         public Transform PlayerTransform { get; private set; }
         public PlayerManager PlayerManager { get; private set; }

@@ -208,6 +208,153 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_5
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 162
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 13, z: 13, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d84df24b6ff854f95d990569302457
+      internalID: -140705983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 163
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 5, z: 5, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6b1ea175833fd499b00d0f3dce1571
+      internalID: 292229853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 161
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 15, z: 13, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386b66bf4ccc4c54980c96bb7720b85f
+      internalID: -726332607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_8
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 163
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a21f7e2ee14e74995b823dfcbeb120
+      internalID: -1958849619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_9
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 163
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 14, y: 14, z: 14, w: 14}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981f64c8d72088a40ae31bad9f552714
+      internalID: 330210001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_10
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 222
+        width: 56
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9448421f9dbe0b40ba74fac04d5674f
+      internalID: -1391973136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI - Borders and HP Bars_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 249
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd744a119c6810f418fa4483feca7975
+      internalID: -93175089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -221,9 +368,16 @@ TextureImporter:
     nameFileIdTable:
       UI - Borders and HP Bars_4: 1806143105
       UI - Borders and HP Bars_0: 459050677
+      UI - Borders and HP Bars_7: -726332607
+      UI - Borders and HP Bars_9: 330210001
+      UI - Borders and HP Bars_6: 292229853
       UI - Borders and HP Bars_1: 829624608
+      UI - Borders and HP Bars_10: -1391973136
+      UI - Borders and HP Bars_11: -93175089
       UI - Borders and HP Bars_2: -1473683081
+      UI - Borders and HP Bars_8: -1958849619
       UI - Borders and HP Bars_3: -75902699
+      UI - Borders and HP Bars_5: -140705983
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
