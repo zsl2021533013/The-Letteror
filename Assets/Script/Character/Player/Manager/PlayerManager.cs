@@ -19,9 +19,6 @@ namespace Script.Character.Player.Manager
 {
     public class PlayerManager : CharacterManager
     {
-        /*[SerializeField] private GameObject floatDamagePrefab;
-        private GameObject tempFloatDamage;*/
-
         public float immortalTimeAfterDamaged;
         public float damagedPauseTime;
         public float attackPauseTime;

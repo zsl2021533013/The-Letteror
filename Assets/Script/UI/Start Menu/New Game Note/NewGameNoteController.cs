@@ -1,5 +1,6 @@
 using Game_Manager;
 using PixelCrushers;
+using Script.UI.CG_Player;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -35,9 +36,9 @@ namespace Script.UI.Start_Menu.New_Game_Note
 
         public void OnConfirmBtnPress()
         {
-            SaveManager.InitializeData();
-            SaveSystem.ResetGameState();
-            SaveSystem.LoadScene("City@New Game Spawn Position");
+            CloseNewGameNote();
+            
+            CGPlayerController.Instance.PlayEnterAnimation();
         }
 
         public void OnCancelBtnPress()
