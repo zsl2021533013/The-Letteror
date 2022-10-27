@@ -23,6 +23,7 @@ namespace Script.Character.Player.Input_System
         public bool AttackInput { get; private set; }
         public bool SpecialAttackInput { get; private set; }
         public bool InteractInput { get; private set; }
+        public bool SelectWindowInput { get; private set; }
         
         public bool IsGainAbility { get; private set; }
         
@@ -93,6 +94,8 @@ namespace Script.Character.Player.Input_System
             Controls.Player.Attack.started += OnAttackInput;
             
             Controls.Player.SpecialAttack.started += OnSpecialAttackInput;
+
+            Controls.Player.SelectWindow.started += OnSelectWindowInput;
         }
 
         private void OnDisable()
@@ -112,6 +115,8 @@ namespace Script.Character.Player.Input_System
             Controls.Player.Attack.started -= OnAttackInput;
             
             Controls.Player.SpecialAttack.started -= OnSpecialAttackInput;
+            
+            Controls.Player.SelectWindow.started -= OnSelectWindowInput;
         }
 
         public void DisableInput() => _isInputEnable = false;
@@ -227,6 +232,14 @@ namespace Script.Character.Player.Input_System
                 InteractInput = true;
             }
         }
+        
+        private void OnSelectWindowInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                SelectWindowInput = true;
+            }
+        }
 
         public void GainAbility()
         {
@@ -245,7 +258,8 @@ namespace Script.Character.Player.Input_System
         public void ResetSpecialAttackInput() => SpecialAttackInput = false;
         public void ResetInteractInput() => InteractInput = false;
         public void ResetGainAbility() => IsGainAbility = false;
-
+        public void ResetSelectWindowInput() => SelectWindowInput = false;
+        
         #endregion
 
     }

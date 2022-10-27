@@ -29,7 +29,6 @@ namespace Script.Character.Player.Manager
         public float attackCameraShakeIntensity;
         public float cameraShakeTime;
             
-        public Vector2 FormerOnGroundPosition { get; set; }
         public PlayerAbilityData AbilityData { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
         public PlayerInputHandler Input { get; private set; }
@@ -103,6 +102,12 @@ namespace Script.Character.Player.Manager
             if (CoreManager.SenseCore.DetectTrigger && StateMachine.CurrentState is not PlayerDeathState)
             {
                 CoreManager.SenseCore.GetTrigger().Interact(this);
+            }
+
+            if (Input.SelectWindowInput)
+            {
+                Input.ResetSelectWindowInput();
+                UIManager.OpenOrCloseSelectWindow();
             }
         }
 
@@ -197,8 +202,6 @@ namespace Script.Character.Player.Manager
 
         public void UpdateAbilityData(PlayerAbilityData abilityData) => AbilityData = abilityData;
         
-        public void UpdateFormerPosition(Vector2 position) => FormerOnGroundPosition = position;
-
         public void ShakeCamera(float intensity, float time)
         {
             PlayerCameraController.Instance.ShakeCamera(intensity, time);

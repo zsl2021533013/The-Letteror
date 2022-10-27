@@ -91,13 +91,6 @@ namespace Script.Character.Player.FSM.Player_State.Super_State
             }
         }
 
-        public override void OnExit()
-        {
-            base.OnExit();
-            
-            manager.UpdateFormerPosition(coreManager.MoveCore.Position);
-        }
-
         public override void DoChecks()
         {
             base.DoChecks();

@@ -13,8 +13,8 @@ namespace Game_Manager
         private static string SaveDataDictionaryPath => Application.persistentDataPath + "/Game Save Data";
         private static string BattleDataDictionaryPath => SaveDataDictionaryPath + "/Player Battle Data";
         private static string AbilityDataDictionaryPath => SaveDataDictionaryPath + "/Player Ability Data";
-        public static string BattleDataFilePath => BattleDataDictionaryPath + "/Player Battle Data Save.txt";
-        public static string AbilityDataFilePath => AbilityDataDictionaryPath + "/Player Ability Data Save.txt";
+        private static string BattleDataFilePath => BattleDataDictionaryPath + "/Player Battle Data Save.txt";
+        private static string AbilityDataFilePath => AbilityDataDictionaryPath + "/Player Ability Data Save.txt";
 
         private static readonly BinaryFormatter BinaryFormatter = new BinaryFormatter();
 
@@ -116,6 +116,11 @@ namespace Game_Manager
             {
                 Directory.CreateDirectory(AbilityDataDictionaryPath);
             }
+        }
+
+        public static bool ExistFile()
+        {
+            return (File.Exists(BattleDataFilePath) && File.Exists(AbilityDataFilePath));
         }
 
         public static void SkipSaving() => _skipSavingOnce = true;

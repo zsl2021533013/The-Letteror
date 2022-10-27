@@ -18,11 +18,12 @@ namespace Script.UI.Start_Menu
 
         public void ContinueGame()
         {
-            if (!(File.Exists(SaveManager.BattleDataFilePath) && File.Exists(SaveManager.AbilityDataFilePath)))
+            if (!SaveManager.ExistFile())
             {
                 return;
             }
             
+            SaveManager.SkipSaving();
             SaveSystem.LoadFromSlot(0);
         }
     }

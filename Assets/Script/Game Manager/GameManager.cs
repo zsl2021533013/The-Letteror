@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Character.Base.Data;
 using Character.Player.Data.Player_Ability_Data;
+using Script.Character.Player.Input_System;
 using Script.Character.Player.Manager;
 using Tool.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace Script.Game_Manager
         public CharacterBattleData BattleData { get; private set; }
         public Transform PlayerTransform { get; private set; }
         public PlayerManager PlayerManager { get; private set; }
-        
+        public PlayerInputHandler InputHandler { get; private set; }
 
         protected override void Awake()
         {
@@ -37,6 +38,7 @@ namespace Script.Game_Manager
         {
             PlayerTransform = playerTransform;
             PlayerManager = PlayerTransform.GetComponent<PlayerManager>();
+            InputHandler = PlayerTransform.GetComponent<PlayerInputHandler>();
             Debug.Log("Game Manager has registered player");
         }
 
