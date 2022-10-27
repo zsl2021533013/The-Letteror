@@ -295,7 +295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5412408100706123516
 Transform:
   m_ObjectHideFlags: 0
@@ -374,7 +374,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Blood King
   deadCharacter: {fileID: 0}
+  CGCamera: {fileID: 0}
   HeartPrefab: {fileID: 6553630664366134507, guid: 29e732ad1238fde4d8ec79c104458cf7, type: 3}
+  doorControllers:
+  - {fileID: 0}
 --- !u!1 &5412408100868957171
 GameObject:
   m_ObjectHideFlags: 0

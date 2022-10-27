@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9a1b9d74f9b493a89e4ee808aa53455, type: 3}
-  m_Name: Player
+  m_Name: Player Battle Data
   m_EditorClassIdentifier: 
   health: 15
   attack: 1
+  immortalTimeAfterDamaged: 0.1
+  damagedPauseTime: 0.2
+  attackPauseTime: 0.05
+  damagedCameraShakeIntensity: 5
+  attackCameraShakeIntensity: 1
+  cameraShakeTime: 0.1

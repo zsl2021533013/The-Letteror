@@ -1,9 +1,7 @@
 ﻿using Character.Base.Core.Core_Component;
 using Environment.Trigger.Base;
 using Script.Environment;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Character.Player.Core.Core_Component
 {

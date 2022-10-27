@@ -12,6 +12,8 @@ namespace Script.Character.Enemy.Boss.Blood_King.Manager
 {
     public class BloodKingManager : CharacterManager
     {
+        public GameObject CGCamera;
+        
         public GameObject HeartPrefab;
         public List<BossRoomDoorController> doorControllers;
         
@@ -93,13 +95,13 @@ namespace Script.Character.Enemy.Boss.Blood_King.Manager
             int health = BattleManager.BattleData.health;
             switch (health)
             {
-                case > 40:
+                case > 50:
                     CurrentState = 1;
                     break;
-                case > 30:
+                case > 40:
                     CurrentState = 2;
                     break;
-                case > 20:
+                case > 30:
                     CurrentState = 3;
                     break;
                 default:

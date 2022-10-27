@@ -45,46 +45,46 @@ namespace Script.Game_Manager
         #region Ability Enable
 
         public void EnableDoubleJump()
-                { 
-                    AbilityData.isDoubleJumpEnable = true;
-                    UpdatePlayerAbilityData();
-                }
-                
-                public void EnableWallSlide()
-                { 
-                    AbilityData.isWallSlideEnable = true;
-                    UpdatePlayerAbilityData();
-                }
-                
-                public void EnableDash()
-                {  
-                    AbilityData.isDashEnable = true;
-                    UpdatePlayerAbilityData();
-                }
-                
-                public void EnableSpecialUpwardsAttack()
-                { 
-                    AbilityData.isSpecialUpwardsAttackEnable = true;
-                    UpdatePlayerAbilityData();
-                }
-                
-                public void EnableSpecialHorizontalAttack()
-                {
-                    AbilityData.isSpecialHorizontalAttackEnable = true;
-                    UpdatePlayerAbilityData();
-                }
-                
-                public void EnableSpecialDownwardsAttack()
-                {
-                    AbilityData.isSpecialDownwardsAttackEnable = true;
-                    UpdatePlayerAbilityData();
-                }
-                
-                public void EnableSpecialDash()
-                {
-                    AbilityData.isSpecialDashEnable = true;
-                    UpdatePlayerAbilityData();
-                } 
+        { 
+            AbilityData.isDoubleJumpEnable = true;
+            UpdatePlayerAbilityData();
+        }
+        
+        public void EnableWallSlide()
+        { 
+            AbilityData.isWallSlideEnable = true;
+            UpdatePlayerAbilityData();
+        }
+        
+        public void EnableDash()
+        {  
+            AbilityData.isDashEnable = true;
+            UpdatePlayerAbilityData();
+        }
+        
+        public void EnableSpecialUpwardsAttack()
+        { 
+            AbilityData.isSpecialUpwardsAttackEnable = true;
+            UpdatePlayerAbilityData();
+        }
+        
+        public void EnableSpecialHorizontalAttack()
+        {
+            AbilityData.isSpecialHorizontalAttackEnable = true;
+            UpdatePlayerAbilityData();
+        }
+        
+        public void EnableSpecialDownwardsAttack()
+        {
+            AbilityData.isSpecialDownwardsAttackEnable = true;
+            UpdatePlayerAbilityData();
+        }
+        
+        public void EnableSpecialDash()
+        {
+            AbilityData.isSpecialDashEnable = true;
+            UpdatePlayerAbilityData();
+        } 
 
         #endregion
 

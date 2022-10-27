@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CGController : MonoBehaviour
 {
+    [SerializeField] private GameObject CGCamera;
     [SerializeField] private CGPlayerController _CGPlayerController;
     
     public void OnEnterAnimationFinish()
@@ -14,6 +15,7 @@ public class CGController : MonoBehaviour
         
     public void OnExitAnimationFinish()
     {
+        CGCamera.SetActive(false);
         _CGPlayerController.OnExitAnimationFinish();
     }
 }

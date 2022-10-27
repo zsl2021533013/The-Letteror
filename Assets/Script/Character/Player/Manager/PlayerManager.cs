@@ -1,6 +1,7 @@
 using Character.Base.Manager;
 using Character.Player.Core.Core_Manager;
 using Character.Player.Data.Player_Ability_Data;
+using Character.Player.Data.Player_Battle_Data;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Air_Attack;
 using Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State.Ground_Attack;
@@ -27,6 +28,7 @@ namespace Script.Character.Player.Manager
         public float cameraShakeTime;
             
         public PlayerAbilityData AbilityData { get; private set; }
+        public PlayerBattleData BattleData { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
         public PlayerInputHandler Input { get; private set; }
         public new PlayerCoreManager CoreManager { get; private set; }
@@ -89,6 +91,7 @@ namespace Script.Character.Player.Manager
             }
             
             AbilityData = GameManager.Instance.AbilityData;
+            BattleData = (PlayerBattleData)GameManager.Instance.BattleData;
             BattleManager.SetBattleData(GameManager.Instance.BattleData);
         }
 

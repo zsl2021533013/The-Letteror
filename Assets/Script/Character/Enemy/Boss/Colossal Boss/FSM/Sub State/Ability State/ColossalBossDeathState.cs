@@ -19,6 +19,7 @@ namespace Character.Enemy.Boss.Colossal_Boss.FSM.Sub_State.Ability_State
 
         protected override void OnAnimationFinish()
         {
+            manager.DestroyCharacter();
         }
     }
 }

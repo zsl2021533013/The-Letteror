@@ -1,8 +1,5 @@
-﻿using System;
-using Character.Base.Manager;
+﻿using Character.Base.Manager;
 using Character.Enemy.Boss.Blood_King.FSM.Super_State;
-using Unity.VisualScripting;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 namespace Character.Enemy.Boss.Blood_King.FSM.Sub_State.Ability_State.Attack_State

@@ -19,7 +19,8 @@ namespace Script.UI.CG_Player
 
         public void PlayExitAnimation()
         {
-            CG.SetActive(false);
+            GameManager.Instance.PlayerManager.BattleManager.StartImmortal();
+            CG.SetActive(true);
             _animator.SetTrigger("exit");
         }
         
@@ -35,7 +36,6 @@ namespace Script.UI.CG_Player
         public void OnExitAnimationFinish()
         {
             CG.SetActive(false);
-            GameManager.Instance.PlayerManager.BattleManager.StartImmortal();
         }
 
     }
