@@ -45,6 +45,7 @@ namespace Game_Manager
             GameManager.Instance.InitializeAbilityData();
             GameManager.Instance.InitializeBattleData();
 
+            JudgeGameDirectory();
             SavePlayerAbilityData();
             SavePlayerBattleData();
         }
