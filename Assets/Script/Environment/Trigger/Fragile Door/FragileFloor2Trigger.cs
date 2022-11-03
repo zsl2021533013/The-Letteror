@@ -28,14 +28,14 @@ namespace Environment.Trigger
             if (manager.StateMachine.CurrentState is PlayerSpecialDownwardsAttack2State)
             {
                 _animator.SetBool(Disappear, true);
-                manager.StopForSeconds(_destroyedPauseTime);
+                manager.CoreManager.BattleEffectCore.StopForSeconds(_destroyedPauseTime);
             }
 
             if (manager.StateMachine.CurrentState is PlayerSpecialUpwardsAttackState)
             {
                 _animator.SetBool(Disappear, true);
                 _boxCollider2D.enabled = false;
-                manager.StopForSeconds(_destroyedPauseTime);
+                manager.CoreManager.BattleEffectCore.StopForSeconds(_destroyedPauseTime);
             }
         }
 

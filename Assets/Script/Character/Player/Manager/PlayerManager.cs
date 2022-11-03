@@ -20,13 +20,6 @@ namespace Script.Character.Player.Manager
 {
     public class PlayerManager : CharacterManager
     {
-        public float immortalTimeAfterDamaged;
-        public float damagedPauseTime;
-        public float attackPauseTime;
-        public float damagedCameraShakeIntensity;
-        public float attackCameraShakeIntensity;
-        public float cameraShakeTime;
-            
         public PlayerAbilityData AbilityData { get; private set; }
         public PlayerBattleData BattleData { get; private set; }
         public PlayerUIManager UIManager { get; private set; }
@@ -163,10 +156,10 @@ namespace Script.Character.Player.Manager
             {
                 CoreManager.MoveCore.SetVelocityY(CoreManager.MoveCore.StateMachineData.airDownwardsAttackVelocityY);
             }
-
-            ShakeCamera(attackCameraShakeIntensity, cameraShakeTime);
             
-            StopForSeconds(attackPauseTime);
+            CoreManager.BattleEffectCore.ShakeCamera(CoreManager.BattleEffectCore.attackCameraShakeIntensity, CoreManager.BattleEffectCore.cameraShakeTime);
+            
+            CoreManager.BattleEffectCore.StopForSeconds(CoreManager.BattleEffectCore.attackPauseTime);
         }
 
         public override void Damaged()
@@ -175,12 +168,12 @@ namespace Script.Character.Player.Manager
             
             UIManager.RefreshHealthUI(GameManager.Instance.BattleData.health);
             
-            BattleManager.StartImmortalForSeconds(immortalTimeAfterDamaged);
+            BattleManager.StartImmortalForSeconds(CoreManager.BattleEffectCore.immortalTimeAfterDamaged);
             BattleManager.Flash();
 
-            ShakeCamera(damagedCameraShakeIntensity, cameraShakeTime);
+            CoreManager.BattleEffectCore.ShakeCamera(CoreManager.BattleEffectCore.damagedCameraShakeIntensity, CoreManager.BattleEffectCore.cameraShakeTime);
             
-            StopForSeconds(damagedPauseTime);
+            CoreManager.BattleEffectCore.StopForSeconds(CoreManager.BattleEffectCore.damagedPauseTime);
         }
 
         public override void Die()
@@ -201,15 +194,5 @@ namespace Script.Character.Player.Manager
         } // 将在对话系统中使用
 
         public void UpdateAbilityData(PlayerAbilityData abilityData) => AbilityData = abilityData;
-        
-        public void ShakeCamera(float intensity, float time)
-        {
-            PlayerCameraController.Instance.ShakeCamera(intensity, time);
-        }
-
-        public void StopForSeconds(float time)
-        {
-            GameManager.Instance.StopForSeconds(time);
-        }
     }
 }

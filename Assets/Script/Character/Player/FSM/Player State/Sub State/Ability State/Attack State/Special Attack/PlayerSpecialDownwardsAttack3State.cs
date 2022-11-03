@@ -14,8 +14,8 @@ namespace Character.Player.FSM.Player_State.Sub_State.Ability_State.Attack_State
         {
             base.OnEnter();
 
-            manager.ShakeCamera(coreManager.MoveCore.StateMachineData.specialDownwardsAttackShakeIntensity,
-                manager.cameraShakeTime);
+            coreManager.BattleEffectCore.ShakeCamera(coreManager.BattleEffectCore.specialDownwardsAttackShakeIntensity,
+                coreManager.BattleEffectCore.cameraShakeTime);
         }
     }
 }
